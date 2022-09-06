@@ -1,18 +1,22 @@
 ///
 /// 1_ PATROÓN DE COLORES
 ///
-$principal: #033D5C;
-$secundario: #4AACE0;
-$tercero: #0791DB;
-$cuarto: #1E465C;
-$quinto: #056FA8;
+$principal: #1790b2;
+$secundario: #8adaef;
+$tercero: #25b1d2;
+$cuarto: #bae8f5;
+$quinto: #146178;
+$sexto: #e3f4fb;
+$septimo: #165164;
 ///
 /// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
 /// 
-$primary: $principal;
-$secundary: $secundario;
+$primary: $secundario;
+$secundary: $principal;
 $sucess: $tercero;
 $danger: $cuarto;
-$quinto: $quinto;
+$warning: $quinto;
+$light: $sexto;
+$info: $septimo;
 /////
 @import "../node_modules/bootstrap/scss/bootstrap";
