@@ -1,0 +1,18 @@
+///
+/// 1_ PATROÓN DE COLORES
+///
+$principal: #033D5C;
+$secundario: #4AACE0;
+$tercero: #0791DB;
+$cuarto: #1E465C;
+$quinto: #056FA8;
+///
+/// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
+/// 
+$primary: $principal;
+$secundary: $secundario;
+$sucess: $tercero;
+$danger: $cuarto;
+$quinto: $quinto;
+/////
+@import "../node_modules/bootstrap/scss/bootstrap";
