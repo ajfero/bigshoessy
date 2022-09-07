@@ -9,10 +9,12 @@
     <!--styles-->
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./scss/custom.css">
     <!--scripts-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src=""></script>
 </head>
 
 <body>
@@ -139,7 +141,7 @@
     </div>
 
     <!--Main-->
-    <div role="main" class="container-fluid wx-100 mh-100 h-75 w-75">
+    <div data-aos="fade-down-right" role="main" class="container-fluid wx-100 mh-100 h-75 w-75">
         <div class="row">
             <div class="my-5 shadow border-bottom">
                 <img src="./img/imagen_zapatilla.jpg" class="img-fluid">
@@ -147,8 +149,28 @@
         </div>
     </div>
 
+    <div data-aos="flip-up" role="main" class="container-fluid wx-100 mh-100 h-75 w-75">
+        <div class="row">
+            <div class="my-5 shadow border-bottom">
+                <img src="./img/imagen_zapatilla.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
 
+    <div data-aos="zoom-in-left" role="main" class="container-fluid wx-100 mh-100 h-75 w-75">
+        <div class="row">
+            <div class="my-5 shadow border-bottom">
+                <img src="./img/imagen_zapatilla.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
     <!--Fin de secciones-->
+
+    <script>
+        AOS.init();
+    </script>
+
+
 
 </body>
 
