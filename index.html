@@ -14,75 +14,97 @@
 
 </head>
 
-<body class="  ">
-
-
+<body>
 
 	<!-- navigationBar -->
-	<nav class=" navbar navbar-expand bg-white align-items-center  ">
-		<div class=" container-fluid d-sm-inline text-sm-center text-md-center ">
+	<nav class=" navbar navbar-expand align-items-center bg-secondary ">
+		<div class=" container-fluid container-lg d-lg-inline text-center  ">
+			<!--  logo-sm -->
+			<a class=" d-sm-none d-inline " href="#">
+				<img src=" ./img/bssy-logo.svg " alt="" width="100" height="55" class=" align-text-top "></a>
+			<a class=" d-sm-none d-inline " href="#">
+				<img src=" ./img/bssy.svg " alt="" width="100" height="54" class=" align-text-top  pt-3 "></a>
 
-			<!-- logo-sm -->
-			<div>
-				<a class=" navbar-brand mx-5 " href="#">
-					<img src="./img/bssy-logo.svg" alt="" width="70" height="54" class="d-inline-block align-text-top">
-					<img src="./img/bigShoesSy-letters.svg" alt="" width="180" height="54"
-						class="d-inline-block align-text-top">
-					<svg class="bi" width="32" height="32" fill="currentColor">
-						<use xlink:href="bootstrap-icons.svg#toggles" />
+			<!--1. signIn/singUp-sm -->
+			<div class=" d-sm-none mx-4 ">
+				<a class=" text-xs-center text-sm-center text-md-center" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+						class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+						<path
+							d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
 					</svg>
 				</a>
 			</div>
 
-			<!-- logo-lg -->
-			<!-- <div class="navbar-brand mx-5 d-none d-lg-none ">
-				<a class="d-inline-block align-text-top" href="#">
-					<img src="./img/bssy-logo.svg" alt="" width="70" height="54">
-					<img src="./img/bigShoesSy-letters.svg" alt="" width="180" height="54"
-						class="d-inline-block align-text-top">
-					<svg class="bi" width="32" height="32" fill="currentColor">
-						<use xlink:href="bootstrap-icons.svg#toggles" />
-					</svg>
-				</a>
-			</div> -->
+			<div class="row d-lg-flex justify-content-center ">
+				<!-- Large -->
+				<div class=" container-fluid text-center d-none d-sm-inline-block ">
+					<div class=" navbar navbar-nav m-xl-0 ">
+
+						<!-- logo-lg -->
+						<div class=" container-expand text-center d-none  d-sm-inline-block ">
+							<a class=" d-none d-sm-inline align-items-sm-start ">
+								<a class=" text-xs-center text-sm-center text-md-center " href="#">
+									<img src="./img/bssy-logo.svg" alt="" width="100" height="55"
+										class="d-inline-block align-text-top ">
+								</a>
+								<img src="./img/bigShoesSy-letter-black.svg" alt="" width="200" height="55"
+									class="d-inline-block align-text-top pt-2 ">
+							</a>
+						</div>
+
+						<!--2. signIn/singUp-md -->
+						<div class=" d-lg-none d-inline mx-4">
+							<a class=" text-xs-center text-sm-center text-md-center" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+									class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+									<path
+										d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+								</svg>
+							</a>
+						</div>
+
+						<!-- menu -->
+						<div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
+							<div class=" navbar navbar-nav mx-md-5 mx-lg-0">
+								<div class=" nav-link "><a aria-current="page" href="#">Home</a></div>
+								<div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
+								<div class=" nav-link "><a href="./pages/ofers.html">Ofertas</a></div>
+								<div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
+								<div class=" nav-link "><a href="./pages/contact.html">Contactanos</a></div>
+							</div>
+						</div>
+
+						<!--3. signIn/singUp-md -->
+						<div class=" d-none d-lg-inline d-xl-none mx-4">
+							<a class=" text-xs-center text-sm-center text-md-center" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+									class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+									<path
+										d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+								</svg>
+							</a>
+						</div>
+
+						<!--4. signIn/singUp -->
+						<div class=" container text-center col-lg-2 text-center d-none d-xl-inline  ">
+							<div class=" navbar navbar-nav  ">
+
+								<div class="  ">
+									<div class=" nav-link "><a aria-current="page" href="#">Iniciar</a></div>
+								</div>
+
+								<div class="   ">
+									<div class=" nav-link "><a aria-current="page" href="#">Registrase</a></div>
+
+								</div>
+							</div>
+						</div>
 
 
-			<!-- menu -->
-			<!-- <div class=" container text-center d-xl-inline-block col-xl-5 ">
-				<div class=" navbar navbar-nav mx-5 m-xl-0 ">
-					<div class=" nav-link "><a aria-current="page" href="#">Home</a></div>
-					<div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
-					<div class=" nav-link "><a href="./pages/ofers.html">Ofertas</a></div>
-					<div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
-					<div class=" nav-link "><a href="./pages/contact.html">Contactanos</a></div>
+					</div>
 				</div>
-			</div> -->
-
-			<!--navbar-->
-			<!-- <ul class="nav justify-content-center">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Active</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
-			</ul> -->
-
-			<!-- icon-menu -->
-			<!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-				class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-				<path
-					d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
-			</svg> -->
-
-			<!-- signIn / singUp -->
-
+			</div>
 
 		</div>
 	</nav>
