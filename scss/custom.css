@@ -79,7 +79,6 @@
 *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {

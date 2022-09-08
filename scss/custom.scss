@@ -19,3 +19,8 @@ $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
 @import "../node_modules/bootstrap/scss/bootstrap";
+*,
+*::before,
+*::after {
+    font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
