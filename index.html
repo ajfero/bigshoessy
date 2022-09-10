@@ -22,8 +22,7 @@
                 <!--email-->
                 <div class="d-inline-block px-4">
                     <a class="text-primary" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-mailbox2" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mailbox2" viewBox="0 0 16 16">
                             <path
                                 d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z" />
                             <path
@@ -35,8 +34,7 @@
                 <!--telefono-->
                 <div class=" d-none d-lg-inline-block  aling-self-center ">
                     <a class="text-primary" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                         </svg> 001-983-283
@@ -73,20 +71,49 @@
 
     <!-- navigationBar -->
     <nav class=" navbar navbar-expand-sm align-items-center bg-secondary ">
-        <div class="container container-fluid container-lg d-lg-inline text-center  ">
+        <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
 
-            <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
+            <div class="nav navbar-collapse m-xl-0 justify-content-between">
                 <!--  logo-sm -->
-                <a class=" d-sm-none d-inline " href="#">
-                    <img src=" ./img/bssy-logo.svg " alt="" width="100" height="55" class=" align-text-top "></a>
-                <a class=" d-sm-none d-inline " href="#">
-                    <img src=" ./img/bssy.svg " alt="" width="100" height="54" class=" align-text-top  pt-3 "></a>
-
+                <div class="d-sm-none d-inline ">
+                    <a href="../index.html">
+                        <img src=" ../img/bssy-logo.svg " alt="" width="100" height="55" class=" align-text-top ">
+                    </a>
+                </div>
+                <!--DropDown-->
+                <div class="dropdown d-sm-none d-xs-inline">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                     <img src=" ../img/bssy.svg " alt="" width="100" height="54" class="align-text-top pt-3">
+                    </button>
+                    <ul class="dropdown-menu bg-secondary d-sm-none" aria-labelledby="dropdownMenuButton1">
+                        <li class="dropdown.header bg-light text-center">MENU
+                        </li>
+                        <li class=" dropdown-divider">
+                            <hr/>
+                        </li>
+                        <li class=" dropdown-item"><a href="#">Home</a></li>
+                        <li class=" dropdown-divider">
+                            <hr/>
+                        </li>
+                        <li class=" dropdown-item"><a href="./pages/products.html">Productos</a></li>
+                        <li class=" dropdown-divider">
+                            <hr/>
+                        </li>
+                        <li class=" dropdown-item"><a href="./pages/ofers.html">Ofertas</a></li>
+                        <li class=" dropdown-divider">
+                            <hr/>
+                        </li>
+                        <li class=" dropdown-item"><a href="./pages/about.html">Nosotros</a></li>
+                        <li class=" dropdown-divider">
+                            <hr/>
+                        </li>
+                        <li class=" dropdown-item"><a href="./pages/contact.html">Contactanos</a></li>
+                    </ul>
+                </div>
                 <!--1. signIn/singUp-sm -->
                 <div class=" d-sm-none mx-4 ">
                     <a class="  text-sm-center text-md-center" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                            class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
                             <path
                                 d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                         </svg>
@@ -104,19 +131,16 @@
                         <div class=" container-expand text-center d-none  d-sm-inline-block ">
                             <a class=" d-none d-sm-inline align-items-sm-start ">
                                 <a class=" text-sm-center text-md-center " href="#">
-                                    <img src="./img/bssy-logo.svg" alt="" width="100" height="55"
-                                        class="d-inline-block align-text-top ">
+                                    <img src="./img/bssy-logo.svg" alt="" width="100" height="55" class="d-inline-block align-text-top ">
                                 </a>
-                                <img src="./img/bigShoesSy-letter-black.svg" alt="" width="200" height="55"
-                                    class="d-inline-block align-text-top ">
+                                <img src="./img/bigShoesSy-letter-black.svg" alt="" width="200" height="55" class="d-inline-block align-text-top ">
                             </a>
                         </div>
 
                         <!--2. signIn/singUp-md -->
                         <div class=" d-lg-none d-inline mx-4">
                             <a class=" text-xs-center text-sm-center text-md-center" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                    class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                                 </svg>
@@ -137,8 +161,7 @@
                         <!--3. signIn/singUp-md -->
                         <div class=" d-none d-lg-inline d-xl-none mx-4">
                             <a class=" text-xs-center text-sm-center text-md-center" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                    class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
                                 </svg>
@@ -172,20 +195,16 @@
     <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
     <div id="carouselExampleCaptions" class="carousel slide" style="height: 600px" data-bs-ride="carousel">
         <div class="carousel-indicators text-center d-none d-sm-inline-block ">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                class="active bg-primary bg-opacity-50" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                class="bg-primary bg-opacity-50" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                class="bg-primary bg-opacity-50" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active bg-primary bg-opacity-50" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="bg-primary bg-opacity-50" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="bg-primary bg-opacity-50" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner text-center" style="height: 500px">
             <div class="carousel-item active">
                 <img src="./img/zapatilla-5.jpg" class="img-fluid w-40" style="height: 350px" alt="...">
                 <div class="col-10 d-none d-sm-inline-block d-md-inline-block">
                     <h5 class="text-secondary h2 text-opacity-75">UN COMPROMISO CON LA CALIDAD</h5>
-                    <p class="text-primary text-opacity-75 d-none d-sm-inline-block">En BIG SHOES SY, mejores precios y
-                        productos a tu alcance</p>
+                    <p class="text-primary text-opacity-75 d-none d-sm-inline-block">En BIG SHOES SY, mejores precios y productos a tu alcance</p>
                 </div>
             </div>
 
@@ -193,28 +212,25 @@
                 <img src="./img/zapatilla-4.jpg" class="img-fluid" style="height: 300px" alt="...">
                 <div class="col-10 d-none d-md-inline-block d-sm-inline-block">
                     <h5 class="text-secondary text-opacity-75 h2">CUIDAMOS PRECIOS Y EL AMBIENTE</h5>
-                    <p class="text-primary text-opacity-50">Cada 5 compras realizadas, contribuimos con un porcentaje a
-                        la siembra de arboles.</p>
+                    <p class="text-primary text-opacity-50">Cada 5 compras realizadas, contribuimos con un porcentaje a la siembra de arboles.</p>
                 </div>
             </div>
             <div class="text-center carousel-item" style="height: 350px">
                 <img src="./img/zapatilla-3.jpg" class="img-fluid" style="height: 350px" alt="...">
                 <div class="col-10 d-none d-md-inline-block d-sm-inline-block">
                     <h5 class="text-secondary text-opacity-75 h2 w-100">COMODIDAD Y CONFORT</h5>
-                    <p class="text-primary"> Facilitamos los medios de pagos y envios adicionales para facilitar tu
-                        experiencia</p>
+                    <p class="text-primary"> Facilitamos los medios de pagos y envios adicionales para facilitar tu experiencia
+                    </p>
                 </div>
             </div>
         </div>
 
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -335,8 +351,7 @@
             <!--Social medias-->
             <div class="navbar navbar-flex col-12 d-sm-inline-block text-sm-end justify-content-center">
                 <a href="https://www.twitter.com/">
-                    <svg class="container d-block align-items-center" awidth="86" height="25" viewBox="0 0 86 25"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="container d-block align-items-center" awidth="86" height="25" viewBox="0 0 86 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12.5 0C5.5971 0 0 5.5971 0 12.5C0 19.4029 5.5971 25 12.5 25C19.4029 25 25 19.4029 25 12.5C25 5.5971 19.4029 0 12.5 0ZM12.6507 18.6942C9.58147 18.6942 7.8125 16.6518 7.8125 13.2561V11.7969C7.8125 8.37612 9.58147 6.3058 12.6479 6.3058C15.279 6.3058 17.1875 7.99944 17.1875 10.4185C17.1875 10.4911 17.1289 10.5497 17.0564 10.5497H15.4743C15.3571 10.5497 15.2623 10.4604 15.2511 10.3432C15.1395 8.96205 14.135 8.01618 12.6562 8.01618C10.8343 8.01618 9.80748 9.36942 9.80748 11.7969V13.2645C9.80748 15.6557 10.8371 16.9922 12.6562 16.9922C14.1295 16.9922 15.1311 16.1077 15.2511 14.8214C15.2623 14.707 15.3571 14.6177 15.4743 14.6177H17.0592C17.1317 14.6177 17.1903 14.6763 17.1903 14.7489C17.1903 17.0536 15.2734 18.6942 12.6507 18.6942V18.6942Z"
                             fill="black" />
@@ -352,7 +367,7 @@
     </div>
 
     <!--scripts-->
-    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script>
