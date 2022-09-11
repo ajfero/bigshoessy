@@ -9,7 +9,6 @@ $quinto: #056FA8;
 $sexto: #e3f4fb;
 $septimo: #165164;
 $textDecorationNone: none;
-
 ///
 /// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
 /// 
@@ -20,9 +19,7 @@ $info: $cuarto;
 $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
-
 @import "../node_modules/bootstrap/scss/bootstrap";
-
 *,
 *::before,
 *::after {
@@ -30,5 +27,10 @@ $dark: $septimo;
 }
 
 a {
-    text-decoration: none ;
+    text-decoration: none;
+}
+
+#offcanvasScrolling {
+    background-image: url(../img/sidebar.jpg);
+    object-fit: cover;
 }
