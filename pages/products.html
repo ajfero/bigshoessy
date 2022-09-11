@@ -75,7 +75,7 @@
     <nav class=" navbar navbar-expand-sm align-items-center bg-secondary ">
         <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
 
-            <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between">
+            <div class="nav navbar-collapse m-xl-0 justify-content-between">
                 <!--  logo-sm -->
                 <div class="d-sm-none d-inline ">
                     <a href="../index.html">
@@ -194,120 +194,76 @@
         </div>
     </nav>
 
-
+    <!---------------------------------------------------------------------------------------------------------->
     <!--Categorías para la búsqueda específica-->
-
-    <div class="container-fluid">
-        <div class="">
-            <h1 class="">Categorías</h1>
-            <ul class="">
-                <li class="">
-                    <a class="" href="#">
-                            Género
-                            <i class=""></i>
-                        </a>
-                    <ul class="">
-                        <li><a class="" href="#">Hombre</a></li>
-                        <li><a class="" href="#">Mujer</a></li>
-                    </ul>
-                </li>
-                <li class="">
-                    <a class="">
-                        Ofertas
-                        <i class=""></i>
-                    </a>
-                    <ul id="" class="">
-                        <li><a class="" href="#">Todas las ofertas</a></li>
-                        <li><a class="" href="#">Con cuotas sin interés</a></li>
-                    </ul>
-                </li>
-                <li class="">
-
-                    <a>
-                        Productos
-                        <i class=""></i>
-                    </a>
-                    <ul class="">
-                        <li><a class="" href="#">Zapatillas Urbanas</a></li>
-                        <li><a class="" href="#">Zapatillas Deportivas</a></li>
-                        <li><a class="" href="#">Moda</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!--Fin de Categorías-->
-
-        <!--Barra de búsqueda de artículos-->
-        <div class="">
-            <ul class="">
-                <li class="">
-                    <a class="" href="#">Todos los artículos</a>
-                </li>
-                <li class="">
-                    <a class="" href="#">Hombres</a>
-                </li>
-                <li class="">
-                    <a class="" href="#">Mujeres</a>
-                </li>
-            </ul>
-        </div>
-        <!--Fin de filtrado botton de filtrado rápido-->
-
-        <!--Comienzo de filtrado rapido por desplegable-->
-        <div class="">
-            <div class="">
-                <select class="">
-                                    <option>Productos destacados</option>
-                                    <option>de "A" a la "Z"</option>
-                                    <option>Menores a $15000 </option>
-                                </select>
-            </div>
-        </div>
-    </div>
-    <!--Fin filtrado rápido de botón desplegable-->
-
-    <!--Card con imagen, opciones y carácterísticas-->
-    <div class="">
-        <div class="">
-            <div class="">
-                <img class="" src="#img"> imagen de producto
-                <img class="" src="#img"> imagen de producto
-                <img class="" src="#img"> imagen de producto
-                <div class="">
-                    <ul class=""> Características
-                        <li><a class="" href=""><i class=""></i></a></li>
-                        <li><a class="" href=""><i class=""></i></a></li>
-                        <li><a class="" href=""><i class=""></i></a></li>
-                    </ul>
+    <main class="row">
+        <aside class=" justify-content-between">
+            <!--Titulo y boton-->
+            <div class="container-fluid justify-content-between align-items-center text-center">
+                <div class="col-6 d-inline-block my-2">
+                    <h2>NUESTROS PRODUCTOS</h1>
+                </div>
+                <div class="col-6 d-inline-block">
+                    <button class="btn btn-primary text-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            Filtro de busqueda
+            </button>
                 </div>
             </div>
-            <div class="">
-                <ul class=""> Detalles del Producto
-                    <li>M/L/X/XL</li>
-                    <li class="">
-                        <span class=""></span>
-                        <span class=""></span>
-                        <span class=""></span>
-                        <span class=""></span>
-                        <span class=""></span>
-                    </li>
-                </ul>
-                <ul class=""> otros
-                    <li>
-                        <i class=""></i>
-                        <i class=""></i>
-                        <i class=""></i>
-                        <i class=""></i>
-                        <i class=""></i>
-                    </li>
-                </ul>
-                <p class="">$250.00</p>
-            </div>
-        </div>
-    </div>
-    <!--Fin de Card de producto (De éstas van todos los productos (Como llamarla para no usar tantas líneas?)-->
+            <!--Sidebar/categorias-->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">CATEGORIAS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    </button>
+                </div>
+                <!--Definiendo categorias-->
+                <div class="offcanvas-body">
+                    <ul>
+                        <li class="">
+                            <a href="#">Adidas</a>
+                        </li>
+                        <hr>
+                        <li class="">
+                            <a href="#">Nike</a>
+                        </li>
+                        <hr>
+                        <li class="">
+                            <a href="#">Circa</a>
+                        </li>
+                        <hr>
+                        <li class="">
+                            <a href="#">Fila</a>
+                        </li>
+                        <hr>
+                        <li class="">
+                            <a href="#">Convers</a>
+                        </li>
+                        <hr>
+                        <li class="">
+                            <a href="#">Todas las marcas....</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="">
+                        <select class="">
+                    <option>Productos destacados</option>
+                    <option>de "A" a la "Z"</option>
+                    <option>Menores a $15000 </option>
+                 </select>
+                    </div>
+                    <hr>
+                </div>
 
-    <!--Aca iría un slider que pase las marcas que comercializamos-->
+            </div>
+        </aside>
+
+        <!--Seccion con cards-->
+        <section class="container-fluid d-inline-block" style="padding-left: 30px;">
+            <!--Comienzo de filtrado rapido por desplegable-->
+
+        </section>
+    </main>
+    <!--------------------------------------------------------------------------------------------------->
 
     <!-- Footer -->
     <nav class=" navbar navbar-expand-lg bg-white align-items-center my-xs-0 ">
