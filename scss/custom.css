@@ -12163,14 +12163,12 @@ a {
           align-items: none;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 2000px) {
   .upFixed {
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-}
-@media (min-width: 1500px) {
   .centerClass {
     height: 90vh;
     display: -webkit-box;
