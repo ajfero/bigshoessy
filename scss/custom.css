@@ -12146,4 +12146,41 @@ textarea.form-control-lg {
 
 a {
   text-decoration: none;
+}
+
+.upFixed {
+  position: none;
+  bottom: none;
+  width: none;
+}
+
+.centerClass {
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+}
+
+@media (min-width: 1400px) {
+  .upFixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1500px) {
+  .centerClass {
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }/*# sourceMappingURL=custom.css.map */

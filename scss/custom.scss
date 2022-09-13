@@ -23,6 +23,8 @@ $dark: $septimo;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 1500px );
+
 *,
 *::before,
 *::after {
@@ -31,4 +33,36 @@ $dark: $septimo;
 
 a {
     text-decoration: none ;
+}
+
+.upFixed {
+    position: none;
+    bottom: none;
+    width: none;
+}
+
+.centerClass {
+    justify-content: none;
+    align-items: none;
+}
+
+@include media-breakpoint-up(xxl) {
+
+    .upFixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+
+@include media-breakpoint-up(xxxl) {
+
+    .centerClass {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
