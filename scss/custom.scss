@@ -9,7 +9,6 @@ $quinto: #056FA8;
 $sexto: #e3f4fb;
 $septimo: #165164;
 $textDecorationNone: none;
-
 ///
 /// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
 /// 
@@ -20,11 +19,10 @@ $info: $cuarto;
 $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
-
+//
 @import "../node_modules/bootstrap/scss/bootstrap";
-
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px );
-
+//Contenido general, variables y pages.
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
 *,
 *::before,
 *::after {
@@ -32,9 +30,10 @@ $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 14
 }
 
 a {
-    text-decoration: none ;
+    text-decoration: none;
 }
 
+//Contenido del footer.
 .upFixed {
     position: none;
     bottom: none;
@@ -46,20 +45,109 @@ a {
     align-items: none;
 }
 
-
 @include media-breakpoint-up(xxxl) {
-
     .upFixed {
         position: fixed;
         bottom: 0;
         width: 100%;
     }
-
     .centerClass {
         height: 90vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
 
+//Contenido del Index Carrousel y Section Images.
+.marginCarrousel {
+    height: 400px
+}
+
+.imgCarrousel {
+    height: 300px;
+}
+
+.elementTheCarrousel {
+    height: 350px;
+}
+
+.containerCarrousel {
+    height: 500px;
+}
+
+.pCarrousel {
+    width: auto;
+}
+
+.h1Carrousel {
+    width: auto;
+}
+
+.imgSeccion {
+    width: 75%;
+    max-height: 100vh;
+    height: 75%;
+}
+
+.containerTitleCarrousel {
+    opacity: 0.80;
+}
+
+@include media-breakpoint-up(xs) {
+    .marginCarrousel {
+        height: 400px;
+    }
+    .imgCarrousel {
+        padding-top: 50px;
+        height: 180px;
+    }
+    .imgSeccion {
+        width: 100%;
+    }
+    .containerTitleCarrousel {
+        padding-top: 60px;
+        font-size: 12px;
+    }
+    .h1Carrousel {
+        font-size: 22px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .marginCarrousel {
+        height: 400px;
+    }
+    .imgCarrousel {
+        height: 200px;
+    }
+    .imgSeccion {
+        width: 90%;
+    }
+    .containerTitleCarrousel {
+        padding-top: 60px;
+        font-size: 14px;
+    }
+    .h1Carrousel {
+        font-size: 24px;
+    }
+}
+
+@include media-breakpoint-up (md, lg) {
+    .marginCarrousel {
+        height: 450px;
+    }
+    .imgCarrousel {
+        height: 250px;
+    }
+    .imgSeccion {
+        width: 90%;
+    }
+    .containerTitleCarrousel {
+        padding-top: 60px;
+        font-size: 16px;
+    }
+    .h1Carrousel {
+        font-size: 27px;
+    }
 }
