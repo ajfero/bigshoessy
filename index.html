@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Shoes Sy</title>
 
-    <!-- styles -->
-    <link rel="stylesheet" href="./scss/custom.css">
-    <link rel="icon" type="image/x-icon" href="./img/bssy-logo.svg">
+    <!-- bootstrap 5.2  -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- bootstrap 5.2  -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+    <!-- styles -->
+    <link type="image/x-icon" href="./img/bssy-logo.svg" rel="icon">
+    <link href="./scss/custom.css" rel="stylesheet">
+
 
 </head>
 
@@ -27,12 +28,16 @@
                 <!--email-->
                 <div class="d-inline-block px-4">
                     <a class="text-primary" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-mailbox2" viewBox="0 0 16 16">
+                        <svg class="bi bi-mailbox2" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
                             <path
-                                d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z" />
+                                d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z">
+                            </path>
+
                             <path
-                                d="M12 3H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a4 4 0 0 0-4-4zM8 7a3.99 3.99 0 0 0-1.354-3H12a3 3 0 0 1 3 3v6H8V7zm-3.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0c0 .334-.164.264-.415.157z" />
+                                d="M12 3H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a4 4 0 0 0-4-4zM8 7a3.99 3.99 0 0 0-1.354-3H12a3 3 0 0 1 3 3v6H8V7zm-3.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0c0 .334-.164.264-.415.157z">
+                            </path>
+
                         </svg> info@bigshoessy.com
                     </a>
                 </div>
@@ -40,10 +45,12 @@
                 <!--telefono-->
                 <div class=" d-none d-lg-inline-block  aling-self-center ">
                     <a class="text-primary" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <svg class="bi bi-telephone-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
-                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                            </path>
+
                         </svg> 001-983-283
                     </a>
                 </div>
@@ -51,24 +58,30 @@
 
             <!--Social medias-->
             <div class="navbar navbar-flex px-4 col-12 col-sm-6 d-sm-inline-block text-sm-end ">
-                <a href="http://facebook.com/" class="px-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                        height="16" fill="" class="text-white bi bi-facebook" viewBox="0 0 16 16">
+                <a class="px-3" href="http://facebook.com/"><svg class="text-white bi bi-facebook"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
                         <path
-                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                        </path>
+
                     </svg>
                 </a>
 
-                <a href="https://www.instagram.com/" class="px-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                        height="16" fill="" class="text-white bi bi-instagram" viewBox="0 0 16 16">
+                <a class="px-3" href="https://www.instagram.com/"><svg class="text-white bi bi-instagram"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
                         <path
-                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+
                     </svg>
                 </a>
 
-                <a href="https://www.twitter.com/" class="px-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                        height="16" fill="" class="text-white bi bi-twitter" viewBox="0 0 16 16">
+                <a class="px-3" href="https://www.twitter.com/"><svg class="text-white bi bi-twitter"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
                         <path
-                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                        </path>
+
                     </svg>
                 </a>
             </div>
@@ -83,89 +96,26 @@
             <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
                 <!--  logo-sm -->
                 <a class=" d-sm-none d-inline " href="#">
-                    <img src=" ./img/bssy-logo.svg " alt="" width="100" height="55" class=" align-text-top "></a>
+                    <img class=" align-text-top " src=" ./img/bssy-logo.svg " alt width="100" height="55"></a>
                 <a class=" d-sm-none d-inline " href="#">
-                    <img src=" ./img/bssy.svg " alt="" width="100" height="54" class=" align-text-top  pt-3 "></a>
+                    <img class=" align-text-top  pt-3 " src=" ./img/bssy.svg " alt width="100" height="54"></a>
 
-                <!--1. signIn/singUp-sm -->
+                <!--1. Button trigger modal -> signIn/singUp-sm -->
+                <div class=" d-sm-none m-4 ">
+                    <a class=" text-sm-center text-md-center " data-bs-target="#modal-login" data-bs-toggle="modal"
+                        type="button">
+                        <svg class="bi bi-x-diamond-fill" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z">
+                            </path>
 
-
-                <!-- Button trigger modal -->
-                <a type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class=" d-sm-none mx-4 ">
-                        <a class=" text-sm-center text-md-center " href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
-                            </svg>
-                        </a>
-                    </div>
-                </a>
-
-                <!-- Modal -->
-                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="modalSignin"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-
-                            <!-- header  -->
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalSignin">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-
-                            <!-- body  -->
-                            <div class="modal-body p-5 pt-5">
-                                <form class="">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control rounded-3" id="floatingInput"
-                                            placeholder="name@example.com">
-                                        <label for="floatingInput">Email address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                            placeholder="Password">
-                                        <label for="floatingPassword">Password</label>
-                                    </div>
-                                    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign
-                                        up</button>
-                                    <small class="text-muted">By clicking Sign up, you agree to the terms of
-                                        use.</small>
-                                    <hr class="my-4">
-
-                                    <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                                    <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
-                                        <svg class="bi me-1" width="16" height="16">
-                                            <use xlink:href="#twitter" />
-                                        </svg>
-                                        Sign up with Twitter
-                                    </button>
-                                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-                                        <svg class="bi me-1" width="16" height="16">
-                                            <use xlink:href="#facebook" />
-                                        </svg>
-                                        Sign up with Facebook
-                                    </button>
-                                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-                                        <svg class="bi me-1" width="16" height="16">
-                                            <use xlink:href="#github" />
-                                        </svg>
-                                        Sign up with GitHub
-                                    </button>
-                                </form>
-                            </div>
-
-                            <!-- footer  -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-
-                        </div>
-                    </div>
+                        </svg>
+                    </a>
                 </div>
+
+
+
             </div>
 
 
@@ -178,21 +128,24 @@
                         <div class=" container-expand text-center d-none  d-sm-inline-block ">
                             <a class=" d-none d-sm-inline align-items-sm-start ">
                                 <a class=" text-sm-center text-md-center " href="#">
-                                    <img src="./img/bssy-logo.svg" alt="" width="100" height="55"
-                                        class="d-inline-block align-text-top ">
+                                    <img class="d-inline-block align-text-top " src="./img/bssy-logo.svg" alt
+                                        width="100" height="55">
                                 </a>
-                                <img src="./img/bigShoesSy-letter-black.svg" alt="" width="200" height="55"
-                                    class="d-inline-block align-text-top ">
+                                <img class="d-inline-block align-text-top " src="./img/bigShoesSy-letter-black.svg" alt
+                                    width="200" height="55">
                             </a>
                         </div>
 
                         <!--2. signIn/singUp-md -->
-                        <div class=" d-lg-none d-inline mx-4">
+                        <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal"
+                            type="button">
                             <a class=" text-xs-center text-sm-center text-md-center" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                    class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <svg class="bi bi-x-diamond-fill" xmlns="http://www.w3.org/2000/svg" width="34"
+                                    height="34" fill="currentColor" viewBox="0 0 16 16">
                                     <path
-                                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+                                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z">
+                                    </path>
+
                                 </svg>
                             </a>
                         </div>
@@ -200,7 +153,7 @@
                         <!-- menu -->
                         <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
                             <div class=" navbar navbar-nav mx-md-5 mx-lg-0 ">
-                                <div class=" nav-link " s><a aria-current="page" href="#">Home</a></div>
+                                <div class=" nav-link " s><a href="#" aria-current="page">Home</a></div>
                                 <div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
                                 <div class=" nav-link "><a href="./pages/ofers.html">Ofertas</a></div>
                                 <div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
@@ -209,12 +162,15 @@
                         </div>
 
                         <!--3. signIn/singUp-md -->
-                        <div class=" d-none d-lg-inline d-xl-none mx-4">
+                        <div class=" d-none d-lg-inline d-xl-none mx-4" data-bs-target="#modal-login"
+                            data-bs-toggle="modal" type="button">
                             <a class=" text-xs-center text-sm-center text-md-center" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                    class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                                <svg class="bi bi-x-diamond-fill" xmlns="http://www.w3.org/2000/svg" width="34"
+                                    height="34" fill="currentColor" viewBox="0 0 16 16">
                                     <path
-                                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+                                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z">
+                                    </path>
+
                                 </svg>
                             </a>
                         </div>
@@ -223,12 +179,12 @@
                         <div class=" container text-center col-lg-2 text-center d-none d-xl-inline  ">
                             <div class=" navbar navbar-nav  ">
 
-                                <div class="  ">
-                                    <div class=" nav-link "><a aria-current="page" href="#">Iniciar</a></div>
+                                <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                                    <div class=" nav-link "><a href="#" aria-current="page">Iniciar</a></div>
                                 </div>
 
-                                <div class="   ">
-                                    <div class=" nav-link "><a aria-current="page" href="#">Registrase</a></div>
+                                <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
+                                    <div class=" nav-link "><a href="#" aria-current="page">Registrase</a></div>
 
                                 </div>
                             </div>
@@ -240,22 +196,23 @@
             </div>
 
         </div>
-        </div>
+
     </nav>
 
     <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
-    <div id="carouselExampleCaptions" class="carousel slide marginCarrousel" data-bs-ride="carousel">
+    <div class="carousel slide marginCarrousel" id="carouselExampleCaptions" data-bs-ride="carousel">
         <div class="carousel-indicators text-center d-sm-block botonesCarrousel">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                class="active bg-primary bg-opacity-50" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                class="bg-primary bg-opacity-50" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                class="bg-primary bg-opacity-50" aria-label="Slide 3"></button>
+            <button class="active bg-primary bg-opacity-50" data-bs-slide-to="0"
+                data-bs-target="#carouselExampleCaptions" type="button" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button class="bg-primary bg-opacity-50" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions"
+                type="button" aria-label="Slide 2"></button>
+            <button class="bg-primary bg-opacity-50" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions"
+                type="button" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner text-center containerCarrousel">
             <div class="carousel-item active elementTheCarrousel">
-                <img src="./img/zapatilla-5.jpg" class="img-fluid imgCarrousel d-xl-inline-block" alt="...">
+                <img class="img-fluid imgCarrousel d-xl-inline-block" src="./img/zapatilla-5.jpg" alt="...">
                 <div class="col-12 d-inline-block containerTitleCarrousel">
                     <h5 class="text-secondary h2 h1Carrousel">UN COMPROMISO CON LA CALIDAD</h5>
                     <p class="text-primary d-sm-inline-block pCarrousel">En BIG SHOES SY, mejores precios y productos a
@@ -264,7 +221,7 @@
             </div>
 
             <div class="carousel-item elementTheCarrousel">
-                <img src="./img/zapatilla-4.jpg" class="img-fluid imgCarrousel" alt="...">
+                <img class="img-fluid imgCarrousel" src="./img/zapatilla-4.jpg" alt="...">
                 <div class="col-12 d-inline-block containerTitleCarrousel">
                     <h5 class="text-secondary  h2 h1Carrousel">CUIDAMOS PRECIOS Y EL AMBIENTE</h5>
                     <p class="text-primary pCarrousel">Cada 5 compras realizadas, contribuimos con un porcentaje a la
@@ -272,7 +229,7 @@
                 </div>
             </div>
             <div class="text-center carousel-item elementTheCarrousel">
-                <img src="./img/zapatilla-3.jpg" class="img-fluid imgCarrousel" alt="...">
+                <img class="img-fluid imgCarrousel" src="./img/zapatilla-3.jpg" alt="...">
                 <div class="col-12 d-inline-block containerTitleCarrousel">
                     <h5 class="text-secondary h2 h1Carrousel">COMODIDAD Y CONFORT</h5>
                     <p class="text-primary"> Facilitamos los medios de pagos y envios adicionales para facilitar tu
@@ -283,13 +240,13 @@
         </div>
 
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions"
+            type="button">
             <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions"
+            type="button">
             <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -297,31 +254,31 @@
 
     <!--Main-->
     <main>
-        <div data-aos="fade-down-right" role="main" class="container-fluid imgSeccion g-5">
+        <div class="container-fluid imgSeccion g-5" data-aos="fade-down-right" role="main">
             <div class="row">
                 <div class="my-5 shadow border-bottom">
                     <a href="./pages/products.html">
-                        <img src="./img/productos_destacados.png" class="img-fluid">
+                        <img class="img-fluid" src="./img/productos_destacados.png">
                     </a>
                 </div>
             </div>
         </div>
 
-        <div data-aos="flip-up" role="main" class="container-fluid imgSeccion g-5">
+        <div class="container-fluid imgSeccion g-5" data-aos="flip-up" role="main">
             <div class="row">
                 <div class="my-5 shadow border-bottom">
                     <a href="./pages/ofers.html">
-                        <img src=" ./img/articulos_oferta.png " class="img-fluid ">
+                        <img class="img-fluid " src=" ./img/articulos_oferta.png ">
                     </a>
                 </div>
             </div>
         </div>
 
-        <div data-aos="zoom-in-left " role="main " class="container-fluid imgSeccion g-5">
+        <div class="container-fluid imgSeccion g-5" data-aos="zoom-in-left " role="main ">
             <div class="row ">
                 <div class="my-5 shadow border-bottom ">
                     <a href="./pages/products.html ">
-                        <img src="./img/productos.png " class="img-fluid ">
+                        <img class="img-fluid " src="./img/productos.png ">
                     </a>
 
                 </div>
@@ -414,6 +371,156 @@
         </div>
     </div>
 
+    <!-- Modal logIn -->
+    <div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+
+                <!-- header  -->
+                <div class="modal-header">
+                    <h5 class="modal-title " id="modal-login"> Login</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+                </div>
+
+                <!-- body  -->
+                <div class="modal-body px-5 ">
+                    <form>
+
+                        <!-- email -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control rounded-4" id="floatingInput" type="email"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Correo electronico</label>
+                        </div>
+                        <!-- password -->
+                        <div class="form-floating mb-4">
+                            <input class="form-control rounded-4" id="floatingPassword" type="password"
+                                placeholder="Password">
+                            <label for="floatingPassword">Contraseña</label>
+                            <a class="text-muted fw-bold d-block text-end" href="./pages/login.html"> Olvido su
+                                contraseña.</a>
+                        </div>
+
+                        <!-- enviar form -->
+                        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" type="submit">Iniciar
+                            Sesion</button>
+
+                        <!-- divisor logIn/SignUp -->
+                        <div class="row m-2 ">
+                            <div class="col-5">
+                                <hr class=" my-6 ">
+                            </div>
+                            <div class="col-2 container text-center">
+                                <span>or</span>
+                            </div>
+                            <div class="col-5">
+                                <hr class=" my-6 ">
+                            </div>
+                        </div>
+                        <h2 class="fs-5 text-center ">Registro / Login automatico con tercero</h2>
+                        <!-- github -->
+                        <!-- google -->
+                        <!-- linkedin -->
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                            Registrase / Iniciar con GitHub
+                        </button>
+
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            Registrase / Iniciar con Facebook
+                        </button>
+
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#github"></use>
+                            </svg>
+                            Registrase / Iniciar con Linkein
+                        </button>
+
+                        <hr class="my-6 ">
+                        <small class="text-muted text-center">Con su registro acepta los terminos y condiciones de
+                            uso.</small>
+                    </form>
+                </div>
+
+                <!-- footer  -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal sinUp -->
+    <div class="modal fade " id="modal-signup" aria-hidden="true" aria-labelledby="modal-signup" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- header  -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-login">Modal SignUp</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+                </div>
+
+                <!-- body  -->
+                <div class="modal-body p-5 pt-5">
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input class="form-control rounded-3" id="floatingInput" type="email"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control rounded-3" id="floatingPassword" type="password"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign
+                            up</button>
+                        <small class="text-muted">By clicking Sign up, you agree to the terms of
+                            use.</small>
+                        <hr class="my-4">
+
+                        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                            Sign up with Twitter
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            Sign up with Facebook
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#github"></use>
+                            </svg>
+                            Sign up with GitHub
+                        </button>
+                    </form>
+                </div>
+
+                <!-- footer  -->
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                    <button class="btn btn-primary" type="button">Save changes</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap 5.2  -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" language="javascript"></script>
+
     <!--scripts-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -423,9 +530,6 @@
             delay: 0
         });
     </script>
-
-    <!-- bootstrap 5.2  -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" language="javascript"></script>
 
 </body>
 
