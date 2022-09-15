@@ -20,6 +20,9 @@ $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
 @import "../node_modules/bootstrap/scss/bootstrap";
+//
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
+//
 *,
 *::before,
 *::after {
@@ -36,7 +39,12 @@ a {
 }
 
 .imgBanner {
-    max-height: 800px;
     height: 1000px;
     width: 100%;
+}
+
+@include (xs) {
+    .imgBanner {
+        height: 400px;
+    }
 }
