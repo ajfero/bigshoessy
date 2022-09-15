@@ -38,13 +38,4 @@ a {
     object-fit: cover;
 }
 
-.imgBanner {
-    height: 1000px;
-    width: 100%;
-}
-
-@include (xs) {
-    .imgBanner {
-        height: 400px;
-    }
-}
+//
