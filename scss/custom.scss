@@ -45,6 +45,11 @@ a {
     align-items: none;
 }
 
+// .styleArrows {
+//     font-size: xx-large;
+//     color: black ;
+// }
+
 @include media-breakpoint-up(xxxl) {
     .upFixed {
         position: fixed;
@@ -57,6 +62,7 @@ a {
         justify-content: center;
         align-items: center;
     }
+
 }
 
 //Contenido del Index Carrousel y Section Images.
