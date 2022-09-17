@@ -136,3 +136,21 @@ a {
 .goShop {
     height: 100%;
 }
+
+@include media-breakpoint-up (sm) {
+    .goShop {
+        height: 70%;
+    }
+}
+
+@include media-breakpoint-up (md) {
+    .goShop {
+        height: 80%;
+    }
+}
+
+@include media-breakpoint-up (lg) {
+    .goShop {
+        height: 100%;
+    }
+}

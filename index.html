@@ -172,9 +172,9 @@
     </nav>
     <!--Main-->
     <main>
-        <div data-aos="fade-down-right" role="main" class="container-fluid wx-100 mh-100 w-75" style="width: 80% !important;">
-            <div class="row">
-                <div class="my-5 shadow border-bottom">
+        <div data-aos="fade-down-right" role="main" class="container-fluid wx-100 mh-100 h-75 pt-4" style="width: 80% !important;">
+            <div class="row ">
+                <div class="my-5 shadow border-bottom justify-content-center">
                     <a href="./pages/products.html">
                         <img class="img-fluid" src="./img/productos_destacados.png">
                     </a>
@@ -182,25 +182,27 @@
             </div>
         </div>
         <!--Go shop-->
+
         <div class="row">
-            <div class="col-sm-4 col-sm-4 col-md-4 p-5 aling-items-center">
+            <div class=" d-none d-sm-block col-sm-4 col-sm-4 col-md-4 p-5  aling-items-center">
                 <a href="./pages/products.html"><img src="./img/producto-4.jpg" class="goShop rounded-circle img-fluid border"></a>
-                <h5 class="text-center">Convers</h5>
+                <h5 class="text-center pt-2">Convers</h5>
                 <p class="text-center"><a href="./pages/products.html" class="btn btn-primary">Go Shop</a></p>
             </div>
-            <div class="col-sm-4 col-md-4 p-5">
+            <div class=" d-none d-sm-block col-sm-4 col-md-4 p-5">
                 <a href="./pages/products.html"><img src="./img/producto-6.jpg" class=" goShop rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center">Adidas</h2>
+                <h2 class="h5 text-center pt-2">Adidas</h2>
                 <p class="text-center"><a href="./pages/products.html" class="btn btn-primary">Go Shop</a></p>
             </div>
-            <div class="col-sm-4 col-md-4 p-5">
+            <div class=" d-none d-sm-block col-sm-4 col-md-4 p-5">
                 <a href="./pages/products.html"><img src="./img/producto-7.jpg" class="goShop rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center">Nike</h2>
+                <h2 class="h5 text-center pt-2">Nike</h2>
                 <p class="text-center"><a href="./pages/products.html" class="btn btn-primary">Go Shop</a></p>
             </div>
         </div>
+        </div>
         <!--Fin go-shop-->
-        <div data-aos="flip-up" role="main" class="container-fluid mt-5 wx-100 mh-100 h-75" style="width: 80%;">
+        <div data-aos="flip-up" role="main" class="container-fluid wx-100 mh-100 h-75" style="width: 80%;">
             <div class="row">
                 <div class="my-5 shadow border-bottom">
                     <a href="./pages/ofers.html">
@@ -208,69 +210,70 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
-        <div class="carousel slide marginCarrousel" id="carouselExampleCaptions" data-bs-ride="carousel">
-            <div class="carousel-indicators text-center d-sm-block botonesCarrousel">
-                <button class="active bg-primary bg-opacity-50" data-bs-slide-to="0" data-bs-target="#carouselExampleCaptions" type="button" aria-current="true" aria-label="Slide 1"></button>
-                <button class="bg-primary bg-opacity-50" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions" type="button" aria-label="Slide 2"></button>
-                <button class="bg-primary bg-opacity-50" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions" type="button" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner text-center containerCarrousel">
-                <div class="carousel-item active elementTheCarrousel">
-                    <img class="img-fluid imgCarrousel d-xl-inline-block" src="./img/zapatilla-5.jpg" alt="...">
-                    <div class="col-12 d-inline-block containerTitleCarrousel">
-                        <h5 class="text-secondary h2 h1Carrousel">UN COMPROMISO CON LA CALIDAD</h5>
-                        <p class="text-primary d-sm-inline-block pCarrousel">En BIG SHOES SY, mejores precios y productos a tu alcance</p>
+
+            <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
+            <div class=" carousel slide marginCarrousel d-none d-sm-block" id="carouselExampleCaptions" data-bs-ride="carousel">
+                <div class="carousel-indicators text-center d-sm-block botonesCarrousel">
+                    <button class="active bg-primary bg-opacity-50" data-bs-slide-to="0" data-bs-target="#carouselExampleCaptions" type="button" aria-current="true" aria-label="Slide 1"></button>
+                    <button class="bg-primary bg-opacity-50" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions" type="button" aria-label="Slide 2"></button>
+                    <button class="bg-primary bg-opacity-50" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions" type="button" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner text-center containerCarrousel">
+                    <div class="carousel-item active elementTheCarrousel">
+                        <img class="img-fluid imgCarrousel d-xl-inline-block" src="./img/zapatilla-5.jpg" alt="...">
+                        <div class="col-12 d-inline-block containerTitleCarrousel">
+                            <h5 class="text-secondary h2 h1Carrousel">UN COMPROMISO CON LA CALIDAD</h5>
+                            <p class="text-primary d-sm-inline-block pCarrousel">En BIG SHOES SY, mejores precios y productos a tu alcance</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item elementTheCarrousel">
+                        <img class="img-fluid imgCarrousel" src="./img/zapatilla-4.jpg" alt="...">
+                        <div class="col-12 d-inline-block containerTitleCarrousel">
+                            <h5 class="text-secondary  h2 h1Carrousel">CUIDAMOS PRECIOS Y EL AMBIENTE</h5>
+                            <p class="text-primary pCarrousel">Cada 5 compras realizadas, contribuimos con un porcentaje a la siembra de arboles.</p>
+                        </div>
+                    </div>
+                    <div class="text-center carousel-item elementTheCarrousel">
+                        <img class="img-fluid imgCarrousel" src="./img/zapatilla-3.jpg" alt="...">
+                        <div class="col-12 d-inline-block containerTitleCarrousel">
+                            <h5 class="text-secondary h2 h1Carrousel">COMODIDAD Y CONFORT</h5>
+                            <p class="text-primary"> Facilitamos los medios de pagos y envios adicionales para facilitar tu experiencia
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="carousel-item elementTheCarrousel">
-                    <img class="img-fluid imgCarrousel" src="./img/zapatilla-4.jpg" alt="...">
-                    <div class="col-12 d-inline-block containerTitleCarrousel">
-                        <h5 class="text-secondary  h2 h1Carrousel">CUIDAMOS PRECIOS Y EL AMBIENTE</h5>
-                        <p class="text-primary pCarrousel">Cada 5 compras realizadas, contribuimos con un porcentaje a la siembra de arboles.</p>
-                    </div>
-                </div>
-                <div class="text-center carousel-item elementTheCarrousel">
-                    <img class="img-fluid imgCarrousel" src="./img/zapatilla-3.jpg" alt="...">
-                    <div class="col-12 d-inline-block containerTitleCarrousel">
-                        <h5 class="text-secondary h2 h1Carrousel">COMODIDAD Y CONFORT</h5>
-                        <p class="text-primary"> Facilitamos los medios de pagos y envios adicionales para facilitar tu experiencia
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-
-            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions" type="button">
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions" type="button">
             <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions" type="button">
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions" type="button">
             <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        </div>
-        <!--Fin carrousel-->
-        <div data-aos="zoom-in-left " role="main " class="container-fluid wx-100 mh-100 h-75" style="width: 80%;">
-            <div class="row ">
-                <div class="my-5 shadow border-bottom ">
-                    <a href="./pages/products.html ">
-                        <img class="img-fluid " src="./img/productos.png ">
-                    </a>
+            </div>
+            <!--Fin carrousel-->
+            <div data-aos="zoom-in-left " role="main " class="container-fluid wx-100 mh-100 h-75" style="width: 80%;">
+                <div class="row ">
+                    <div class="my-5 shadow border-bottom">
+                        <a href="./pages/products.html ">
+                            <img class="img-fluid" src="./img/productos.png ">
+                        </a>
 
+                    </div>
                 </div>
             </div>
-        </div>
+
     </main>
     <!--Banner de sponsor-->
     <section class=" py-5">
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1 text-info">Sponsors</h1>
-                    <p class="h4 pt-3 text-warning">
+                    <h1 class="h1 text-secondary">Sponsors</h1>
+                    <p class="h7 pt-3 text-warning">
                         Estilo es usar lo que te hace sentir bien.
                     </p>
                 </div>

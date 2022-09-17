@@ -12619,4 +12619,22 @@ a {
 .goShop {
   height: 100%;
 }
+
+@media (min-width: 576px) {
+  .goShop {
+    height: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .goShop {
+    height: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .goShop {
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=custom.css.map */
