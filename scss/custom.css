@@ -12544,7 +12544,7 @@ a {
 }
 
 .marginCarrousel {
-  height: 350px;
+  height: 400px;
 }
 
 .imgCarrousel {
@@ -12583,13 +12583,14 @@ a {
 
 @media (min-width: 576px) {
   .marginCarrousel {
-    height: 350px;
+    height: 400px;
   }
   .imgCarrousel {
     height: 200px;
   }
   .imgSeccion {
     width: 90%;
+    max-height: 500px;
   }
   .containerTitleCarrousel {
     padding-top: 60px;
@@ -12613,5 +12614,9 @@ a {
   .h1Carrousel {
     font-size: 27px;
   }
+}
+
+.goShop {
+  height: 100%;
 }
 /*# sourceMappingURL=custom.css.map */
