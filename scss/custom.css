@@ -12502,6 +12502,7 @@ fieldset:disabled .btn {
 *::before,
 *::after {
   font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
 }
 
 a {
