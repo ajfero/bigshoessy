@@ -22,7 +22,7 @@
 
 <body>
 
-    <!--Top del navbar con contacto y social medias.-->
+    <!--top del navbar con contacto y social medias.-->
     <section class="container-fluid bg-white">
         <div class="row mx-md-5 ">
 
@@ -93,16 +93,47 @@
     </section>
 
     <!-- navigationBar -->
-    <nav class=" navbar navbar-expand-sm align-items-center bg-secondary ">
+    <nav class=" navbar navbar-expand-sm align-items-center bg-secondary">
         <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
 
-            <!-- Logo sm-->
-            <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
-                <!--  logo-sm -->
+            <!-- Tools -->
+            <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between">
+
+                <!-- logo-sm -->
                 <a class=" d-sm-none d-inline " href="#">
                     <img class=" align-text-top " src=" ./img/bssy-logo.svg " alt width="100" height="55"></a>
-                <a class=" d-sm-none d-inline " href="#">
-                    <img class=" align-text-top  pt-2 " src=" ./img/bssy.svg " alt width="100" height="54"></a>
+
+                <!--DropDown-->
+                <div class="dropdown d-sm-none d-xs-inline">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src=" ../img/bssy.svg " alt="" width="100" height="54" class="align-text-top pt-3">
+                    </button>
+                    <ul class="dropdown-menu bg-secondary d-sm-none" aria-labelledby="dropdownMenuButton1">
+                        <li class="dropdown.header bg-light text-center">MENU
+                        </li>
+                        <li class=" dropdown-divider">
+                            <hr />
+                        </li>
+                        <li class=" dropdown-item"><a href="../index.html">Home</a></li>
+                        <li class=" dropdown-divider">
+                            <hr />
+                        </li>
+                        <li class=" dropdown-item"><a href="./products.html">Productos</a></li>
+                        <li class=" dropdown-divider">
+                            <hr />
+                        </li>
+                        <li class=" dropdown-item"><a href="./ofers.html">Ofertas</a></li>
+                        <li class=" dropdown-divider">
+                            <hr />
+                        </li>
+                        <li class=" dropdown-item"><a href="./about.html">Nosotros</a></li>
+                        <li class=" dropdown-divider">
+                            <hr />
+                        </li>
+                        <li class=" dropdown-item"><a href="./contact.html">Contactanos</a></li>
+                    </ul>
+                </div>
 
                 <!--1. Button trigger modal -> signIn/singUp-sm -->
                 <div class=" d-sm-none m-4 ">
@@ -113,15 +144,16 @@
                         </a>
                     </div>
                 </div>
+
             </div>
 
-            <!-- navbar -->
+            <!-- navPages -->
             <div class="row d-lg-flex justify-content-center ">
                 <div class=" text-center d-none d-sm-inline-block ">
-                    <div class=" navbar navbar-nav  m-xl-0 ">
+                    <div class=" navbar navbar-nav m-xl-0 ">
 
                         <!-- logo-lg -->
-                        <div class=" container-expand text-center d-none  d-sm-inline-block ">
+                        <div class=" container-expand text-center d-none d-sm-inline-block ">
                             <a class=" d-none d-sm-inline align-items-sm-start ">
                                 <a class=" text-sm-center text-md-center " href="#">
                                     <img class="d-inline-block align-text-top " src="./img/bssy-logo.svg" alt
@@ -161,18 +193,15 @@
                         <!--4. signIn/singUp -->
                         <div class=" container text-center col-lg-2 text-center d-none d-xl-inline ">
                             <div class=" navbar navbar-nav ">
-
                                 <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button">
                                     <div class=" nav-link "><a href="#" aria-current="page">Iniciar</a></div>
                                 </div>
 
                                 <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
                                     <div class=" nav-link "><a href="#" aria-current="page">Registrase</a></div>
-
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -181,7 +210,7 @@
         </div>
     </nav>
 
-    <!--Main-->
+    <!--main-->
     <main class="container w-100">
 
         <!--1st banner-->
@@ -309,7 +338,7 @@
         </section>
     </main>
 
-    <!--Banner de sponsor-->
+    <!--banner de sponsor-->
     <section class=" py-5">
         <div class="container my-4">
             <div class="row text-center py-3">
@@ -424,7 +453,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer class=" navbar navbar-expand-lg bg-white align-items-center my-xs-0  ">
         <div class=" container-fluid d-sm-inline text-sm-center text-md-center bg-secondary align-self-end">
 
@@ -509,7 +538,7 @@
         </div>
     </div>
 
-    <!-- Modal logIn -->
+    <!-- modal logIn -->
     <div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content ">
