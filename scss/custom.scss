@@ -33,7 +33,7 @@ a {
     text-decoration: none;
 }
 
-//Contenido del footer.
+// footer content.
 .upFixed {
     position: none;
     bottom: none;
@@ -65,7 +65,7 @@ a {
 
 }
 
-//Contenido del Index Carrousel y Section Images.
+//Content Index Carrousel and Section Images.
 .marginCarrousel {
     height: 400px;
 }
@@ -112,7 +112,7 @@ a {
         height: 200px;
     }
     .imgSeccion {
-        width: 90%;
+        width: 100%;
         max-height: 500px;
     }
     .containerTitleCarrousel {
@@ -140,23 +140,36 @@ a {
 }
 
 .goShop {
-    height: 100%;
+    height: 65%;
+    width: 90%;
+}
+
+.TextGoShop {
+    font-weight: bolder;
 }
 
 @include media-breakpoint-up (sm) {
     .goShop {
         height: 70%;
     }
+    .contenedorGoShop {
+        padding: 20px;
+    }
 }
 
 @include media-breakpoint-up (md) {
     .goShop {
-        height: 80%;
+        height: 70%;
     }
 }
 
 @include media-breakpoint-up (lg) {
     .goShop {
-        height: 100%;
+        height: 90%;
     }
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
 }

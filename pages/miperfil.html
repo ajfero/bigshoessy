@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Shoes Sy</title>
+
+    <!-- bootstrap 5.2  -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" language="css">
+    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" language="css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- styles -->
+    <link type="image/x-icon" href="../img/bssy-logo.svg" rel="icon">
+    <link href="../scss/custom.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--Top del navbar con contacto y social medias.-->
+    <div class="container-fluid bg-white">
+        <div class="row mx-md-5 ">
+
+            <!-- contactos -->
+            <div class=" navbar navbar-flex col-6 aling-items-center text-start d-none d-sm-block">
+                <!--email-->
+                <div class="d-inline-block px-4">
+                    <a class="text-primary" href="mailto:info@bigshoessy.com?subject=Nos%20interesa,&body=Hola BigShoesSy, &">
+                        <svg class="bi bi-mailbox2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M9 8.5h2.793l.853.854A.5.5 0 0 0 13 9.5h1a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H9v1z">
+                            </path>
+
+                            <path
+                                d="M12 3H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a4 4 0 0 0-4-4zM8 7a3.99 3.99 0 0 0-1.354-3H12a3 3 0 0 1 3 3v6H8V7zm-3.415.157C4.42 7.087 4.218 7 4 7c-.218 0-.42.086-.585.157C3.164 7.264 3 7.334 3 7a1 1 0 0 1 2 0c0 .334-.164.264-.415.157z">
+                            </path>
+                        </svg> info@bigshoessy.com
+                    </a>
+                </div>
+                <!--telefono-->
+                <div class=" d-none d-lg-inline-block  aling-self-center ">
+                    <a class="text-primary" href="#">
+                        <svg class="bi bi-telephone-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                            </path>
+
+                        </svg> 001-983-283
+                    </a>
+                </div>
+            </div>
+
+            <!--Social medias-->
+            <div class="navbar navbar-flex px-4 col-12 col-sm-6 d-sm-inline-block text-sm-end ">
+                <a class="px-3" href="http://facebook.com/"><svg class="text-white bi bi-facebook"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                        </path>
+
+                    </svg>
+                </a>
+
+                <a class="px-3" href="https://www.instagram.com/"><svg class="text-white bi bi-instagram"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+
+                    </svg>
+                </a>
+
+                <a class="px-3" href="https://www.twitter.com/"><svg class="text-white bi bi-twitter"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                        </path>
+
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- navigationBar -->
+    <nav class=" navbar navbar-expand-sm align-items-center bg-secondary">
+        <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
+
+            <!-- Logo sm-->
+            <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
+                <!--  logo-sm -->
+                <a class=" d-sm-none d-inline " href="#">
+                    <img class=" align-text-top " src="../img/bssy-logo.svg " alt width="100" height="55"></a>
+                <a class=" d-sm-none d-inline " href="#">
+                    <img class=" align-text-top  pt-2 " src="../img/bssy.svg " alt width="100" height="54"></a>
+
+                <!--1. Button trigger modal -> signIn/singUp-sm -->
+                <div class=" d-sm-none m-4 ">
+                    <div class=" text-sm-center text-md-center " data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- navbar -->
+            <div class="row d-lg-flex justify-content-center ">
+                <div class=" text-center d-none d-sm-inline-block ">
+                    <div class=" navbar navbar-nav  m-xl-0 ">
+
+                        <!-- logo-lg -->
+                        <div class=" container-expand text-center d-none  d-sm-inline-block ">
+                            <a class=" d-none d-sm-inline align-items-sm-start ">
+                                <a class=" text-sm-center text-md-center " href="#">
+                                    <img class="d-inline-block align-text-top " src="../img/bssy-logo.svg" alt width="100" height="55">
+                                </a>
+                                <img src="../img/bigShoesSy-letter-black.svg" alt="" width="200" height="55" class="d-inline-block align-text-top ">
+                            </a>
+                        </div>
+
+                        <!--2. signIn/singUp-md -->
+                        <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                            <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                        </div>
+
+                        <!-- menu -->
+                        <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
+                            <div class=" navbar navbar-nav mx-md-5 mx-lg-0 ">
+                                <div class=" nav-link " s><a href="#" aria-current="../index.html">Home</a></div>
+                                <div class=" nav-link "><a href="../pages/products.html">Productos</a></div>
+                                <div class=" nav-link "><a href="../pages/ofers.html">Ofertas</a></div>
+                                <div class=" nav-link "><a href="../pages/about.html">Nosotros</a></div>
+                                <div class=" nav-link "><a href="../pages/contact.html">Contactanos</a></div>
+                            </div>
+                        </div>
+
+                        <!--3. signIn/singUp-md -->
+                        <div class=" d-none d-lg-inline d-xl-none mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                            <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                        </div>
+
+                        <!--4. signIn/singUp -->
+                        <div class=" container text-center col-lg-2 text-center d-none d-xl-inline ">
+                            <div class=" navbar navbar-nav ">
+
+                                <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button">
+                                    <div class=" nav-link "><a href="#" aria-current="page">Iniciar</a></div>
+                                </div>
+
+                                <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
+                                    <div class=" nav-link "><a href="#" aria-current="page">Registrase</a></div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Mi perfil-->
+    <main class="container">
+        <div class="row">
+            <section class="col-lg-3 pt-3 bg-light">
+                <div class="">
+                    <h4 class="justify-content-around pb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg> Mi cuenta
+                    </h4>
+                    <ul>
+                        <li class="pb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+                                <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
+                                <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <a><b>Facturación</b></a>
+                        </li>
+                        <li class="pb-3">
+                            <i class="bi bi-person-circle"></i>
+                            <a class="text-warning"><b>Mi Perfil</b></a>
+                        </li>
+                        <li>
+                            <i class="bi bi-gear"></i>
+                            <a class="pb-3"><b>Configuración</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="col-lg-9 mt-3">
+                <div class="col PerfilConfig">
+                    <div class="text-center">
+                        <img class="rounded-circle" src="../img/usuario-1.jpg" width="100px" height="100px">
+                    </div>
+                    <h1 class="text-center pb-5 pt-3">
+                        Usuario Bssy
+                    </h1>
+                    <div class="">
+                        <ul class="p-3">
+                            <li class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+                                    <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                    <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
+                                </svg> Mis datos
+                            </li>
+                            <hr>
+                            <li class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                </svg> Seguridad
+                            </li>
+                            <hr>
+                            <li class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                                    </svg> Mis tarjetas
+                            </li>
+                            <hr>
+                            <li class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg> Direcciones
+                            </li>
+                            <hr>
+                            <li class="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+                                    <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                                    <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"/>
+                                    </svg> Privacidad
+                            </li>
+                            <hr>
+                            <li class="pb-3 h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                </svg> Comunicaciones
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--Aca va a haber una pantalla de foto de perfil y datos personales.-->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class=" navbar navbar-expand-lg bg-white align-items-center my-xs-0  upFiexed centerClass">
+        <div class=" container-fluid d-sm-inline text-sm-center text-md-center bg-secondary align-self-end">
+
+            <!-- barra 1: Se muestra siempre al lado del logo -->
+            <div class="  container text-center d-none d-xs-none d-sm-inline d-xl-inline col-xl-2 ">
+                <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_190_1219)">
+                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_190_1219">
+                            <rect width="300" height="3.001" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- logo -->
+            <h2 class=" container-fluid text-center d-sm-inline d-xl-inline col-xl-3 ">
+                <a class="text-primary" href="#">
+                    <svg width="151" height="17" viewBox="0 0 151 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.3973 7.856C12.0693 8.832 12.4053 9.92 12.4053 11.12C12.4053 12.736 11.8293 14.12 10.6773 15.272C9.52534 16.424 8.14134 17 6.52534 17H0.645343V0.199999H4.84534C5.99734 0.199999 6.98134 0.615999 7.79734 1.448C8.62934 2.264 9.04534 3.248 9.04534 4.4C9.04534 5.152 8.85334 5.856 8.46934 6.512C8.94934 6.528 9.48534 6.648 10.0773 6.872C10.6693 7.096 11.1093 7.424 11.3973 7.856ZM4.00534 3.56V6.056H4.84534C5.10134 6.056 5.30134 5.904 5.44534 5.6C5.60534 5.296 5.68534 4.984 5.68534 4.664C5.68534 4.36 5.61334 4.104 5.46934 3.896C5.32534 3.672 5.11734 3.56 4.84534 3.56H4.00534ZM6.52534 13.64C7.21334 13.64 7.80534 13.4 8.30134 12.92C8.79734 12.424 9.04534 11.824 9.04534 11.12C9.04534 10.928 8.99734 10.744 8.90134 10.568C8.82134 10.376 8.68534 10.192 8.49334 10.016C8.31734 9.84 8.05334 9.696 7.70134 9.584C7.36534 9.472 6.97334 9.416 6.52534 9.416H4.00534V13.64H6.52534ZM18.1616 17H14.8016V0.199999H18.1616V17ZM37.1992 6.92C37.3112 7.448 37.3672 8.008 37.3672 8.6C37.3672 10.92 36.5432 12.904 34.8952 14.552C33.2472 16.184 31.2712 17 28.9672 17C26.6472 17 24.6632 16.184 23.0152 14.552C21.3832 12.904 20.5672 10.92 20.5672 8.6C20.5672 6.296 21.3832 4.32 23.0152 2.672C24.6632 1.024 26.6472 0.199999 28.9672 0.199999C30.1192 0.199999 31.1992 0.423999 32.2072 0.871999C33.2312 1.304 34.1352 1.896 34.9192 2.648L32.5432 5.048C31.5352 4.056 30.3432 3.56 28.9672 3.56C27.5752 3.56 26.3832 4.056 25.3912 5.048C24.4152 6.04 23.9272 7.224 23.9272 8.6C23.9272 9.992 24.4152 11.184 25.3912 12.176C26.3832 13.152 27.5752 13.64 28.9672 13.64C30.0552 13.64 31.0312 13.328 31.8952 12.704C32.7592 12.064 33.3672 11.256 33.7192 10.28H28.9672V6.92H37.1992ZM52.8675 7.472C53.3955 7.616 53.9475 7.864 54.5235 8.216C55.1155 8.568 55.6435 9.048 56.1075 9.656C56.5715 10.248 56.8035 11.016 56.8035 11.96C56.8035 13.352 56.3075 14.544 55.3155 15.536C54.3395 16.512 53.1555 17 51.7635 17C50.3715 17 49.1795 16.512 48.1875 15.536C47.2115 14.544 46.7235 13.352 46.7235 11.96H50.0835C50.0835 12.424 50.2435 12.824 50.5635 13.16C50.8995 13.48 51.2995 13.64 51.7635 13.64C52.2275 13.64 52.6195 13.48 52.9395 13.16C53.2755 12.824 53.4435 12.424 53.4435 11.96C53.4435 11.256 53.1635 10.792 52.6035 10.568C52.0115 10.36 51.6275 10.224 51.4515 10.16C51.2755 10.096 50.9715 9.992 50.5395 9.848C50.0275 9.672 49.4835 9.4 48.9075 9.032C48.3475 8.648 47.8435 8.152 47.3955 7.544C46.9475 6.92 46.7235 6.152 46.7235 5.24C46.7235 3.848 47.2115 2.664 48.1875 1.688C49.1795 0.695999 50.3715 0.199999 51.7635 0.199999C53.1555 0.199999 54.3395 0.695999 55.3155 1.688C56.3075 2.664 56.8035 3.848 56.8035 5.24H53.4435C53.4435 4.776 53.2755 4.384 52.9395 4.064C52.6195 3.728 52.2275 3.56 51.7635 3.56C51.2995 3.56 50.8995 3.728 50.5635 4.064C50.2435 4.384 50.0835 4.776 50.0835 5.24C50.0835 5.832 50.3235 6.288 50.8035 6.608C51.2995 6.912 51.6675 7.096 51.9075 7.16C52.0355 7.208 52.3555 7.312 52.8675 7.472ZM67.5922 0.199999H70.9522V17H67.5922V10.28H62.5522V17H59.1922V0.199999H62.5522V6.92H67.5922V0.199999ZM81.7485 0.199999C84.0525 0.199999 86.0285 1.024 87.6765 2.672C89.3245 4.32 90.1485 6.296 90.1485 8.6C90.1485 10.92 89.3245 12.904 87.6765 14.552C86.0285 16.184 84.0525 17 81.7485 17C79.4285 17 77.4445 16.184 75.7965 14.552C74.1645 12.904 73.3485 10.92 73.3485 8.6C73.3485 6.296 74.1645 4.32 75.7965 2.672C77.4445 1.024 79.4285 0.199999 81.7485 0.199999ZM81.7485 13.64C83.1245 13.64 84.3085 13.152 85.3005 12.176C86.2925 11.184 86.7885 9.992 86.7885 8.6C86.7885 7.224 86.2925 6.04 85.3005 5.048C84.3085 4.056 83.1245 3.56 81.7485 3.56C80.3565 3.56 79.1645 4.056 78.1725 5.048C77.1965 6.04 76.7085 7.224 76.7085 8.6C76.7085 9.992 77.1965 11.184 78.1725 12.176C79.1645 13.152 80.3565 13.64 81.7485 13.64ZM95.9038 10.28V13.64H102.624L101.28 17H92.5438V0.199999H102.624L101.28 3.56H95.9038V6.92H100.944L99.5998 10.28H95.9038ZM111.157 7.472C111.685 7.616 112.237 7.864 112.813 8.216C113.405 8.568 113.933 9.048 114.397 9.656C114.861 10.248 115.093 11.016 115.093 11.96C115.093 13.352 114.597 14.544 113.605 15.536C112.629 16.512 111.445 17 110.053 17C108.661 17 107.469 16.512 106.477 15.536C105.501 14.544 105.013 13.352 105.013 11.96H108.373C108.373 12.424 108.533 12.824 108.853 13.16C109.189 13.48 109.589 13.64 110.053 13.64C110.517 13.64 110.909 13.48 111.229 13.16C111.565 12.824 111.733 12.424 111.733 11.96C111.733 11.256 111.453 10.792 110.893 10.568C110.301 10.36 109.917 10.224 109.741 10.16C109.565 10.096 109.261 9.992 108.829 9.848C108.317 9.672 107.773 9.4 107.197 9.032C106.637 8.648 106.133 8.152 105.685 7.544C105.237 6.92 105.013 6.152 105.013 5.24C105.013 3.848 105.501 2.664 106.477 1.688C107.469 0.695999 108.661 0.199999 110.053 0.199999C111.445 0.199999 112.629 0.695999 113.605 1.688C114.597 2.664 115.093 3.848 115.093 5.24H111.733C111.733 4.776 111.565 4.384 111.229 4.064C110.909 3.728 110.517 3.56 110.053 3.56C109.589 3.56 109.189 3.728 108.853 4.064C108.533 4.384 108.373 4.776 108.373 5.24C108.373 5.832 108.613 6.288 109.093 6.608C109.589 6.912 109.957 7.096 110.197 7.16C110.325 7.208 110.645 7.312 111.157 7.472ZM130.586 7.472C131.114 7.616 131.666 7.864 132.242 8.216C132.834 8.568 133.362 9.048 133.826 9.656C134.29 10.248 134.522 11.016 134.522 11.96C134.522 13.352 134.026 14.544 133.034 15.536C132.058 16.512 130.874 17 129.482 17C128.09 17 126.898 16.512 125.906 15.536C124.93 14.544 124.442 13.352 124.442 11.96H127.802C127.802 12.424 127.962 12.824 128.282 13.16C128.618 13.48 129.018 13.64 129.482 13.64C129.946 13.64 130.338 13.48 130.658 13.16C130.994 12.824 131.162 12.424 131.162 11.96C131.162 11.256 130.882 10.792 130.322 10.568C129.73 10.36 129.346 10.224 129.17 10.16C128.994 10.096 128.69 9.992 128.258 9.848C127.746 9.672 127.202 9.4 126.626 9.032C126.066 8.648 125.562 8.152 125.114 7.544C124.666 6.92 124.442 6.152 124.442 5.24C124.442 3.848 124.93 2.664 125.906 1.688C126.898 0.695999 128.09 0.199999 129.482 0.199999C130.874 0.199999 132.058 0.695999 133.034 1.688C134.026 2.664 134.522 3.848 134.522 5.24H131.162C131.162 4.776 130.994 4.384 130.658 4.064C130.338 3.728 129.946 3.56 129.482 3.56C129.018 3.56 128.618 3.728 128.282 4.064C127.962 4.384 127.802 4.776 127.802 5.24C127.802 5.832 128.042 6.288 128.522 6.608C129.018 6.912 129.386 7.096 129.626 7.16C129.754 7.208 130.074 7.312 130.586 7.472ZM146.511 0.199999H150.351L146.655 6.32L144.951 3.104L146.511 0.199999ZM140.727 0.199999L142.311 3.104L145.311 8.672V17H141.951V9.464L136.911 0.199999H140.727Z"
+                            fill="#010101" fill-opacity="0.75"></path>
+                    </svg>
+                </a>
+            </h2>
+
+            <!-- barra 2: se mostrara solo en telefonos -->
+            <div class=" container text-center d-none d-xs-none d-sm-inline d-xl-none ">
+                <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_190_1219)">
+                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_190_1219">
+                            <rect width="300" height="3.001" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- menu -->
+            <div class=" container text-center d-xl-inline-block col-xl-5 text-decoration-underline ">
+                <div class=" navbar navbar-nav mx-5 m-xl-0 ">
+                    <div class=" nav-link "><a href="#" aria-current="../index.html">Home</a></div>
+                    <div class=" nav-link "><a href="../pages/products.html">Productos</a></div>
+                    <div class=" nav-link "><a href="../pages/ofers.html">Ofertas</a></div>
+                    <div class=" nav-link "><a href="../pages/about.html">Nosotros</a></div>
+                    <div class=" nav-link "><a href="../pages/contact.html">Contactanos</a></div>
+                </div>
+            </div>
+
+            <!-- barra 3: se mostrara solo en escritorios -->
+            <div class=" container text-center d-none d-sm-none d-sm-inline d-md-none d-lg-none d-xl-inline col-xl-2 ">
+                <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_190_1219)">
+                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_190_1219">
+                            <rect width="300" height="3.001" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- copyright -->
+    <div class="container-fluid text-center bg-white align-items-center">
+        <div class="row">
+            <div class="container d-block align-items-center">
+                <span>
+                    <a href="https://www.bigshoessy.com/"> © 2020 Copyright: </a>
+                </span>
+                <span>
+                    <a class="text-dark" href="https://bigshoessy.com/">bigshoessy.com</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal logIn -->
+    <div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+
+                <!-- header  -->
+                <div class="modal-header">
+                    <h5 class="modal-title " id="modal-login"> Iniciar sesion</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+                </div>
+
+                <!-- body  -->
+                <div class="modal-body px-5 ">
+                    <form>
+
+                        <!-- email -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control rounded-4" id="floatingInput" type="email" placeholder="name@example.com">
+                            <label for="floatingInput">Correo electronico</label>
+                        </div>
+
+                        <!-- password -->
+                        <div class="form-floating mb-4">
+                            <input class="form-control rounded-4" id="floatingPassword" type="password" placeholder="Password">
+                            <label for="floatingPassword">Contraseña</label>
+                            <a class="text-muted fw-bold d-block text-end" href="../pages/login.html"> Olvido su
+                                contraseña</a>
+                        </div>
+
+                        <!-- enviar form -->
+                        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" type="submit">Iniciar
+                            Sesion</button>
+
+                        <!-- divisor logIn/SignUp -->
+                        <div class="row m-2 ">
+                            <div class="col-5">
+                                <hr class=" my-6 ">
+                            </div>
+                            <div class="col-2 container text-center">
+                                <span>or</span>
+                            </div>
+                            <div class="col-5">
+                                <hr class=" my-6 ">
+                            </div>
+                        </div>
+                        <h2 class="fs-5 text-center ">Registrarse / Iniciar con tercero.</h2>
+
+                        <!-- github -->
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                            <svg class="bi me-1" width="20" height="20" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_310_656)">
+                                    <path
+                                        d="M8.00007 0C3.58233 0 0 3.58364 0 8.00446C0 11.541 2.29226 14.5415 5.47093 15.5999C5.87075 15.674 6.01754 15.4262 6.01754 15.2148C6.01754 15.0239 6.01012 14.3934 6.00667 13.7246C3.78105 14.2088 3.31141 12.7801 3.31141 12.7801C2.9475 11.8549 2.42315 11.6089 2.42315 11.6089C1.6973 11.1121 2.47786 11.1223 2.47786 11.1223C3.28121 11.1788 3.70421 11.9472 3.70421 11.9472C4.41774 13.1709 5.57572 12.8171 6.03224 12.6126C6.10404 12.0952 6.31137 11.7421 6.54016 11.5422C4.76324 11.3398 2.8953 10.6535 2.8953 7.5864C2.8953 6.71249 3.20782 5.99844 3.71958 5.43789C3.63651 5.23628 3.36268 4.42215 3.79708 3.3196C3.79708 3.3196 4.46887 3.10447 5.99766 4.14008C6.63581 3.96273 7.32019 3.87379 8.00007 3.87074C8.67994 3.87379 9.36485 3.96273 10.0042 4.14008C11.5311 3.10447 12.202 3.3196 12.202 3.3196C12.6375 4.42215 12.3635 5.23628 12.2804 5.43789C12.7934 5.99844 13.1038 6.71249 13.1038 7.5864C13.1038 10.6608 11.2323 11.3377 9.45083 11.5359C9.73778 11.7843 9.99346 12.2714 9.99346 13.0182C9.99346 14.0892 9.98419 14.9512 9.98419 15.2148C9.98419 15.4278 10.1282 15.6774 10.5337 15.5988C13.7107 14.5392 16 11.5399 16 8.00446C16 3.58364 12.4182 0 8.00007 0ZM2.99628 11.4025C2.97867 11.4423 2.91614 11.4542 2.85917 11.4269C2.80115 11.4008 2.76856 11.3466 2.78737 11.3067C2.80459 11.2657 2.86725 11.2543 2.92514 11.2818C2.9833 11.3079 3.01642 11.3626 2.99628 11.4025ZM3.3898 11.7538C3.35165 11.7892 3.27706 11.7728 3.22645 11.7169C3.17413 11.6611 3.16432 11.5864 3.20301 11.5505C3.24235 11.5151 3.31468 11.5317 3.36715 11.5875C3.41947 11.644 3.42968 11.7181 3.3898 11.7538ZM3.65977 12.2034C3.61075 12.2374 3.5306 12.2055 3.48105 12.1343C3.43204 12.0631 3.43204 11.9778 3.48211 11.9436C3.53179 11.9094 3.61075 11.9401 3.66096 12.0108C3.70984 12.0831 3.70984 12.1685 3.65977 12.2034ZM4.11633 12.7239C4.07248 12.7723 3.97909 12.7593 3.91073 12.6933C3.84078 12.6288 3.82131 12.5372 3.86529 12.4888C3.90967 12.4403 4.0036 12.4539 4.07248 12.5194C4.1419 12.5838 4.1631 12.6761 4.11633 12.7239ZM4.70641 12.8997C4.68707 12.9624 4.59711 12.9909 4.5065 12.9642C4.41602 12.9368 4.3568 12.8634 4.37508 12.8C4.39389 12.7369 4.48424 12.7072 4.57552 12.7357C4.66587 12.763 4.72522 12.8359 4.70641 12.8997ZM5.37793 12.9742C5.38019 13.0402 5.30335 13.095 5.20823 13.0962C5.11258 13.0983 5.03521 13.0449 5.03415 12.9799C5.03415 12.9133 5.10927 12.859 5.20492 12.8575C5.30004 12.8556 5.37793 12.9086 5.37793 12.9742ZM6.03763 12.9489C6.04903 13.0133 5.98292 13.0795 5.88846 13.0971C5.7956 13.1141 5.70962 13.0743 5.69783 13.0104C5.6863 12.9444 5.7536 12.8783 5.84634 12.8612C5.94093 12.8447 6.02558 12.8834 6.03763 12.9489Z"
+                                        fill="#161614" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_310_656">
+                                        <rect width="16" height="15.6336" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Registrase / Iniciar con GitHub
+                        </button>
+
+                        <!-- google -->
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                            <svg class="bi me-1" width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_310_647)">
+                                    <path
+                                        d="M19.9905 10.426C19.9905 9.58738 19.9224 8.97543 19.7752 8.34082H10.1992V12.1258H15.8201C15.7068 13.0664 15.0948 14.483 13.7349 15.4349L13.7159 15.5616L16.7436 17.9071L16.9534 17.9281C18.8798 16.1489 19.9905 13.5311 19.9905 10.426Z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M10.1992 20.3983C12.953 20.3983 15.2648 19.4917 16.9534 17.9279L13.7349 15.4347C12.8737 16.0353 11.7177 16.4546 10.1992 16.4546C7.50211 16.4546 5.21297 14.6754 4.39695 12.2163L4.27734 12.2265L1.12906 14.6629L1.08789 14.7774C2.76508 18.1091 6.21016 20.3983 10.1992 20.3983Z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M4.39695 12.2164C4.18164 11.5818 4.05703 10.9018 4.05703 10.1993C4.05703 9.4966 4.18164 8.81668 4.38563 8.18207L4.37992 8.04691L1.19219 5.57129L1.08789 5.6209C0.396641 7.00348 0 8.55605 0 10.1993C0 11.8425 0.396641 13.395 1.08789 14.7775L4.39695 12.2164Z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M10.1992 3.94367C12.1144 3.94367 13.4063 4.77094 14.1429 5.46227L17.0213 2.6518C15.2535 1.00859 12.953 0 10.1992 0C6.21016 0 2.76508 2.28914 1.08789 5.62086L4.38563 8.18203C5.21297 5.72289 7.50211 3.94367 10.1992 3.94367Z"
+                                        fill="#EB4335" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_310_647">
+                                        <rect width="20" height="20.4688" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Registrase / Iniciar con Google
+                        </button>
+
+                        <!-- linkedin -->
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
+                            <svg class="bi me-1" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_310_653)">
+                                    <path
+                                        d="M17.0409 17.0413H14.0776V12.4004C14.0776 11.2937 14.0578 9.86913 12.5363 9.86913C10.9929 9.86913 10.7567 11.0749 10.7567 12.3198V17.041H7.79337V7.49745H10.6382V8.80167H10.678C11.2581 7.80983 12.3367 7.21744 13.4849 7.26007C16.4884 7.26007 17.0422 9.23569 17.0422 11.8059L17.0409 17.0413ZM4.44969 6.19292C3.49994 6.19309 2.72987 5.42328 2.7297 4.47351C2.72953 3.52373 3.49932 2.75365 4.44907 2.75348C5.39883 2.75331 6.1689 3.52311 6.16907 4.47289C6.16915 4.92899 5.98805 5.36644 5.6656 5.68901C5.34316 6.01157 4.90578 6.19284 4.44969 6.19292ZM5.93138 17.0413H2.96492V7.49745H5.93138V17.0413ZM18.5183 0.00149131H1.47582C0.670359 -0.00759854 0.00983024 0.637609 0 1.44308V18.5566C0.00949368 19.3625 0.669969 20.0083 1.47582 19.9999H18.5183C19.3258 20.0099 19.9888 19.3641 20 18.5566V1.44185C19.9885 0.634783 19.3254 -0.0103876 18.5183 0.000126709"
+                                        fill="#0A66C2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_310_653">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Registrase / Iniciar con Linkein
+                        </button>
+
+                        <hr class="my-6 ">
+                        <small class="text-muted text-center">Con su registro acepta los terminos y condiciones de
+                            uso.</small>
+                    </form>
+                </div>
+
+                <!-- footer  -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- bootstrap 5.2  -->
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" language="javascript"></script>
+
+<!--scripts-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1400,
+        once: false,
+        delay: 0
+    });
+</script>
+
+</html>
