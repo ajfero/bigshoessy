@@ -49,7 +49,7 @@ a {
 //     font-size: xx-large;
 //     color: black ;
 // }
-@include media-breakpoint-up(xxxl) {
+@include media-breakpoint-up(md) {
     .upFixed {
         position: fixed;
         bottom: 0;
