@@ -21,16 +21,7 @@ $light: $sexto;
 $dark: $septimo;
 @import "../node_modules/bootstrap/scss/bootstrap";
 //Contenido general, variables y pages.
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px,
-    xxxl: 2000px
-);
-
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
 //
 *,
 *::before,
@@ -64,7 +55,6 @@ a {
         bottom: 0;
         width: 100%;
     }
-
     .centerClass {
         height: 90vh;
         display: flex;
@@ -116,21 +106,17 @@ a {
     .marginCarrousel {
         height: 400px;
     }
-
     .imgCarrousel {
         height: 200px;
     }
-
     .imgSeccion {
         width: 100%;
         max-height: 500px;
     }
-
     .containerTitleCarrousel {
         padding-top: 60px;
         font-size: 14px;
     }
-
     .h1Carrousel {
         font-size: 24px;
     }
@@ -140,15 +126,12 @@ a {
     .marginCarrousel {
         height: 450px;
     }
-
     .imgCarrousel {
         height: 250px;
     }
-
     .containerTitleCarrousel {
         font-size: 16px;
     }
-
     .h1Carrousel {
         font-size: 27px;
     }
@@ -168,7 +151,6 @@ a {
     .goShop {
         height: 70%;
     }
-
     .contenedorGoShop {
         padding: 20px;
     }
@@ -183,6 +165,12 @@ a {
 @include media-breakpoint-up (lg) {
     .goShop {
         height: 90%;
+    }
+}
+
+@include media-breakpoint-up (xl) {
+    .goShop {
+        height: 85%;
     }
 }
 

@@ -12646,6 +12646,12 @@ a {
   }
 }
 
+@media (min-width: 1200px) {
+  .goShop {
+    height: 85%;
+  }
+}
+
 li {
   list-style: none;
   text-decoration: none;
