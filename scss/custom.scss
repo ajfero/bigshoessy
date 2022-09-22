@@ -49,7 +49,6 @@ a {
 //     font-size: xx-large;
 //     color: black ;
 // }
-
 @include media-breakpoint-up(xxxl) {
     .upFixed {
         position: fixed;
@@ -62,7 +61,6 @@ a {
         justify-content: center;
         align-items: center;
     }
-
 }
 
 //Content Index Carrousel and Section Images.
@@ -139,6 +137,7 @@ a {
     }
 }
 
+//Go-Shop index
 .goShop {
     height: 65%;
     width: 90%;
@@ -169,7 +168,12 @@ a {
     }
 }
 
+// Estilos varios
 li {
     list-style: none;
     text-decoration: none;
+}
+
+.contenedorNavbar {
+    overflow-x: hidden;
 }
