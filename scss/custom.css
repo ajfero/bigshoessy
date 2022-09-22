@@ -12288,6 +12288,16 @@ a {
     height: 90%;
   }
 }
+<<<<<<< HEAD
+
+@media (min-width: 1200px) {
+  .goShop {
+    height: 85%;
+  }
+}
+
+=======
+>>>>>>> 753b685bebdec536e94add5398a3bb55f787cf2f
 li {
   list-style: none;
   text-decoration: none;
