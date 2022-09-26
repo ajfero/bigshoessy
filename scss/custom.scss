@@ -138,7 +138,8 @@ li {
 
 //Go-Shop index
 .contenedorGoshop {
-    padding: 0px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 .goShop {
@@ -150,7 +151,7 @@ li {
     font-weight: bolder;
 }
 
-// Estilos varios
+// Banner de MAIN
 .Banner {
     height: 100%;
     width: fit-content;
@@ -168,12 +169,23 @@ li {
     padding-top: 75px;
 }
 
+.bannerDos {
+    padding-bottom: 150px;
+}
+
+.bannerTres {
+    padding-bottom: 50px;
+}
+
 @include media-breakpoint-up (sm) {
     .goShop {
-        height: 70%;
+        height: 60%;
     }
     .contenedorGoShop {
         padding: 20px;
+    }
+    .bannerTres {
+        padding-top: 100px;
     }
 }
 
@@ -181,24 +193,26 @@ li {
     .contenedorGoshop {
         padding-top: 20px;
     }
-    .goShop {
-        height: 70%;
-    }
     .contenedorBanner {
         padding-top: 12px;
+        padding-bottom: 100px;
     }
 }
 
 @include media-breakpoint-up (lg) {
     .goShop {
-        height: 90%;
+        height: 75%;
     }
     .contenedorBanner {
         padding-top: 10px;
+        padding-bottom: 40px;
     }
     .Banner {
         width: 100%;
         height: 85%;
+    }
+    .bannerDos {
+        padding-bottom: 30px;
     }
 }
 
@@ -207,7 +221,7 @@ li {
         padding-bottom: 120px;
     }
     .goShop {
-        height: 85%;
+        height: 80%;
     }
     .contenedorBanner {
         padding-top: 10px;
