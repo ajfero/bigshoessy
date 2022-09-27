@@ -42,7 +42,6 @@ li {
     overflow: hidden;
 }
 
-// footer content.
 .upFixed {
     position: none;
     bottom: none;
@@ -50,15 +49,15 @@ li {
 }
 
 .centerClass {
+    -webkit-box-pack: none;
+    -ms-flex-pack: none;
     justify-content: none;
+    -webkit-box-align: none;
+    -ms-flex-align: none;
     align-items: none;
 }
 
-// .styleArrows {
-//     font-size: xx-large;
-//     color: black ;
-// }
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
     .upFixed {
         position: fixed;
         bottom: 0;
@@ -66,13 +65,18 @@ li {
     }
     .centerClass {
         height: 90vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
-//Content Index Carrousel and Section Images.
 .marginCarrousel {
     height: 400px;
 }
@@ -105,7 +109,7 @@ li {
     font-size: 12px;
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) {
     .marginCarrousel {
         height: 400px;
     }
@@ -121,7 +125,7 @@ li {
     }
 }
 
-@include media-breakpoint-up (md) {
+@media (min-width: 768px) {
     .marginCarrousel {
         height: 450px;
     }
@@ -136,9 +140,9 @@ li {
     }
 }
 
-//Go-Shop index
 .contenedorGoshop {
-    padding: 0px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 .goShop {
@@ -150,16 +154,20 @@ li {
     font-weight: bolder;
 }
 
-// Estilos varios
 .Banner {
     height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    -o-object-fit: cover;
     object-fit: cover;
     border: 2px solid rgba(70, 98, 136, 0.839);
-    box-shadow: -0.3em 0.3em 0.4em hsla(0, 0%, 0%, 0.353);
+    -webkit-box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
+    box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
 }
 
 .container img.Banner {
+    -o-object-fit: fill;
     object-fit: fill;
     padding: 2px;
 }
@@ -168,46 +176,59 @@ li {
     padding-top: 75px;
 }
 
-@include media-breakpoint-up (sm) {
+.bannerDos {
+    padding-bottom: 150px;
+}
+
+.bannerTres {
+    padding-bottom: 50px;
+}
+
+@media (min-width: 576px) {
     .goShop {
-        height: 70%;
+        height: 60%;
     }
     .contenedorGoShop {
         padding: 20px;
     }
+    .bannerTres {
+        padding-top: 100px;
+    }
 }
 
-@include media-breakpoint-up (md) {
+@media (min-width: 768px) {
     .contenedorGoshop {
         padding-top: 20px;
     }
-    .goShop {
-        height: 70%;
-    }
     .contenedorBanner {
         padding-top: 12px;
+        padding-bottom: 100px;
     }
 }
 
-@include media-breakpoint-up (lg) {
+@media (min-width: 992px) {
     .goShop {
-        height: 90%;
+        height: 75%;
     }
     .contenedorBanner {
         padding-top: 10px;
+        padding-bottom: 40px;
     }
     .Banner {
         width: 100%;
         height: 85%;
     }
+    .bannerDos {
+        padding-bottom: 30px;
+    }
 }
 
-@include media-breakpoint-up (xl) {
+@media (min-width: 1200px) {
     .contenedorGoshop {
         padding-bottom: 120px;
     }
     .goShop {
-        height: 85%;
+        height: 80%;
     }
     .contenedorBanner {
         padding-top: 10px;
