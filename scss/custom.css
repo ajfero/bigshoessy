@@ -12525,11 +12525,11 @@ li {
 
 .centerClass {
   -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -ms-flex-pack: none;
+  justify-content: none;
   -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
+  -ms-flex-align: none;
+  align-items: none;
 }
 
 @media (min-width: 768px) {
@@ -12544,11 +12544,11 @@ li {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -12616,7 +12616,8 @@ li {
 }
 
 .contenedorGoshop {
-  padding: 0px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .goShop {
@@ -12634,15 +12635,15 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 2px solid rgba(70, 98, 136, 0.839);
   -webkit-box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
-          box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
+  box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
 }
 
 .container img.Banner {
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   padding: 2px;
 }
 
@@ -12650,12 +12651,23 @@ li {
   padding-top: 75px;
 }
 
+.bannerDos {
+  padding-bottom: 150px;
+}
+
+.bannerTres {
+  padding-bottom: 50px;
+}
+
 @media (min-width: 576px) {
   .goShop {
-    height: 70%;
+    height: 60%;
   }
   .contenedorGoShop {
     padding: 20px;
+  }
+  .bannerTres {
+    padding-top: 100px;
   }
 }
 
@@ -12663,24 +12675,26 @@ li {
   .contenedorGoshop {
     padding-top: 20px;
   }
-  .goShop {
-    height: 70%;
-  }
   .contenedorBanner {
     padding-top: 12px;
+    padding-bottom: 100px;
   }
 }
 
 @media (min-width: 992px) {
   .goShop {
-    height: 90%;
+    height: 75%;
   }
   .contenedorBanner {
     padding-top: 10px;
+    padding-bottom: 40px;
   }
   .Banner {
     width: 100%;
     height: 85%;
+  }
+  .bannerDos {
+    padding-bottom: 30px;
   }
 }
 
@@ -12689,7 +12703,7 @@ li {
     padding-bottom: 120px;
   }
   .goShop {
-    height: 85%;
+    height: 80%;
   }
   .contenedorBanner {
     padding-top: 10px;
