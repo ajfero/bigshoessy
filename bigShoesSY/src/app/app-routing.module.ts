@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./shared/modules/components/componentes/componentes.module').then((m) => m.ComponentesModule),
+      import('./app.module').then((m) => m.AppModule),
   }
 ];
 
