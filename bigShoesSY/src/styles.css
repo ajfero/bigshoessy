@@ -12513,43 +12513,13 @@ li {
   text-decoration: none;
 }
 
-.contenedorNavbar {
-  overflow: hidden;
+.contendorMenu {
+  padding: 0;
 }
 
-.upFixed {
-  position: none;
-  bottom: none;
-  width: none;
-}
-
-.centerClass {
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
-}
-
-@media (min-width: 768px) {
-  .upFixed {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  .centerClass {
-    height: 90vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.mx {
+  margin-right: 5rem !important;
+  margin-left: 5rem !important;
 }
 
 .marginCarrousel {
@@ -12598,6 +12568,10 @@ li {
   .h1Carrousel {
     font-size: 24px;
   }
+  .mx {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12612,6 +12586,10 @@ li {
   }
   .h1Carrousel {
     font-size: 27px;
+  }
+  .mx {
+    margin-right: 7rem !important;
+    margin-left: 7rem !important;
   }
 }
 
@@ -12696,6 +12674,10 @@ li {
   .bannerDos {
     padding-bottom: 30px;
   }
+  .mx {
+    margin-right: 5rem !important;
+    margin-left: 1rem !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -12711,6 +12693,17 @@ li {
   .Banner {
     width: 100%;
     height: 80%;
+  }
+  .mx {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mx {
+    margin-right: 6rem !important;
+    margin-left: 6rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

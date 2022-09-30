@@ -38,38 +38,13 @@ li {
     text-decoration: none;
 }
 
-.contenedorNavbar {
-    overflow: hidden;
+.contendorMenu {
+    padding: 0;
 }
 
-// footer content.
-.upFixed {
-    position: none;
-    bottom: none;
-    width: none;
-}
-
-.centerClass {
-    justify-content: none;
-    align-items: none;
-}
-
-// .styleArrows {
-//     font-size: xx-large;
-//     color: black ;
-// }
-@include media-breakpoint-up(md) {
-    .upFixed {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    .centerClass {
-        height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.mx {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important;
 }
 
 //Content Index Carrousel and Section Images.
@@ -119,6 +94,10 @@ li {
     .h1Carrousel {
         font-size: 24px;
     }
+    .mx {
+        margin-right: 3rem !important;
+        margin-left: 3rem !important;
+    }
 }
 
 @include media-breakpoint-up (md) {
@@ -133,6 +112,10 @@ li {
     }
     .h1Carrousel {
         font-size: 27px;
+    }
+    .mx {
+        margin-right: 7rem !important;
+        margin-left: 7rem !important;
     }
 }
 
@@ -214,6 +197,10 @@ li {
     .bannerDos {
         padding-bottom: 30px;
     }
+    .mx {
+        margin-right: 5rem !important;
+        margin-left: 1rem !important;
+    }
 }
 
 @include media-breakpoint-up (xl) {
@@ -229,5 +216,16 @@ li {
     .Banner {
         width: 100%;
         height: 80%;
+    }
+    .mx {
+        margin-right: 5rem !important;
+        margin-left: 5rem !important;
+    }
+}
+
+@include media-breakpoint-up (xxl) {
+    .mx {
+        margin-right: 6rem !important;
+        margin-left: 6rem !important;
     }
 }

@@ -1,10 +1,12 @@
-.upFixed {
-    position: none;
-    bottom: none;
-    width: none;
-}
-
-.centerClass {
-    justify-content: none;
-    align-items: none;
-}
+ .upFixed {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }
+ 
+ .centerClass {
+     height: 90vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
