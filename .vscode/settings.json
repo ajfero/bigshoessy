@@ -1,6 +1,20 @@
 {
     "files.exclude": {
-        "tools": true
+        "node_modules": true,
+        "package-lock.json": true,
+        "package.json": true,
+        "tsconfig.app.json": true,
+        "tsconfig.json": true,
+        "tsconfig.spec.json": true,
+        "yarn.lock": true,
+        "angular.json": true,
+        "karma.conf.js": true,
+        ".editorconfig": true,
+        ".browserslistrc": true,
+        ".angular\\cache\\14.2.4": true,
+        ".angular\\cache": true,
+        ".angular": true,
+        "pnpm-lock.yaml": true
     },
     "workspace.isHidden": true
 }
