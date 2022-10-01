@@ -1,10 +1,26 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { NotfoundComponent } from './shared/views/notfound/notfound.component';
 
+const routes: Routes = [
+  {
+    path: '', // -> localhost:4200
+    // component: HomeComponent
+    //Este comando es lazy loading.
+    loadChildren: () =>
+      import('./shared/modules/components/components.module').then((m) => m.ComponentsModule),
+  },
+
+  { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
+  {
+    // Wildcard
+    path: '**',
+    component: NotfoundComponent,
+  },
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
