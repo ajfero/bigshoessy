@@ -33,6 +33,11 @@ a {
     text-decoration: none;
 }
 
+.mx {
+    margin-right: 7rem !important;
+    margin-left: 7rem !important;
+}
+
 li {
     list-style: none;
     text-decoration: none;
@@ -42,12 +47,27 @@ li {
     padding: 0;
 }
 
-.mx {
-    margin-right: 5rem !important;
-    margin-left: 5rem !important;
+//Propiedades del footer
+@media (min-width: 768px) {
+    .upFixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .centerClass {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
 }
 
-//Content Index Carrousel and Section Images.
+//Aca arranca el carrousel
 .marginCarrousel {
     height: 400px;
 }
@@ -80,7 +100,7 @@ li {
     font-size: 12px;
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) {
     .marginCarrousel {
         height: 400px;
     }
@@ -94,13 +114,9 @@ li {
     .h1Carrousel {
         font-size: 24px;
     }
-    .mx {
-        margin-right: 3rem !important;
-        margin-left: 3rem !important;
-    }
 }
 
-@include media-breakpoint-up (md) {
+@media (min-width: 768px) {
     .marginCarrousel {
         height: 450px;
     }
@@ -113,9 +129,105 @@ li {
     .h1Carrousel {
         font-size: 27px;
     }
-    .mx {
-        margin-right: 7rem !important;
-        margin-left: 7rem !important;
+}
+
+//Aca arranca el GO shop
+.contenedorGoshop {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.goShop {
+    height: 65%;
+    width: 90%;
+}
+
+.TextGoShop {
+    font-weight: bolder;
+}
+
+.Banner {
+    height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 2px solid rgba(70, 98, 136, 0.839);
+    -webkit-box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
+    box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
+}
+
+.container img.Banner {
+    -o-object-fit: fill;
+    object-fit: fill;
+    padding: 2px;
+}
+
+.contenedorBanner {
+    padding-top: 75px;
+}
+
+.bannerDos {
+    padding-bottom: 150px;
+}
+
+.bannerTres {
+    padding-bottom: 50px;
+}
+
+@media (min-width: 576px) {
+    .goShop {
+        height: 60%;
+    }
+    .contenedorGoShop {
+        padding: 20px;
+    }
+    .bannerTres {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedorGoshop {
+        padding-top: 20px;
+    }
+    .contenedorBanner {
+        padding-top: 12px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .goShop {
+        height: 75%;
+    }
+    .contenedorBanner {
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    .Banner {
+        width: 100%;
+        height: 85%;
+    }
+    .bannerDos {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedorGoshop {
+        padding-bottom: 120px;
+    }
+    .goShop {
+        height: 80%;
+    }
+    .contenedorBanner {
+        padding-top: 10px;
+    }
+    .Banner {
+        width: 100%;
+        height: 80%;
     }
 }
 
@@ -129,6 +241,10 @@ li {
     .bannerTres {
         padding-top: 100px;
     }
+    .mx {
+        margin-right: 5rem !important;
+        margin-left: 5rem !important;
+    }
 }
 
 @include media-breakpoint-up (md) {
@@ -138,6 +254,10 @@ li {
     .contenedorBanner {
         padding-top: 12px;
         padding-bottom: 100px;
+    }
+    .mx {
+        margin-right: 2rem !important;
+        margin-left: 2rem !important;
     }
 }
 
