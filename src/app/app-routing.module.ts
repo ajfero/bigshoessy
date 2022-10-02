@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './modules/pages/views/home/home.component';
+import { ComponentsModule } from './shared/modules/components/components.module';
 
 import { NotfoundComponent } from './shared/views/notfound/notfound.component';
 
@@ -13,14 +13,13 @@ const routes: Routes = [
       import('./shared/modules/components/components.module').then((m) => m.ComponentsModule),
   },
   {
-    // Wildcard
-    path: '**',
-    component: HomeComponent,
-  },
-
-  {
     path: 'home',
     loadChildren: () => import('./modules/pages/pages.module').then((m) => m.PagesModule),
+  },
+  {
+    // Wildcard siempre que no machee, altuqui roque con este path
+    path: '**',
+    component: NotfoundComponent,
   },
 ];
 @NgModule({

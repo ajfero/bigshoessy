@@ -19,7 +19,11 @@ $info: $cuarto;
 $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
+//Import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+//Import OWN Carrousel
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 //Contenido general, variables y pages.
 $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
 //
@@ -50,11 +54,11 @@ li {
 //Propiedades del footer
 @media (min-width: 768px) {
     .upFixed {
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
     .centerClass {
+        height: 90vh;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

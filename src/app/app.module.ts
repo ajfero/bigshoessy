@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 
 
 import { ComponentsModule } from './shared/modules/components/components.module';
-
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +15,8 @@ import { ComponentsModule } from './shared/modules/components/components.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -83,10 +83,8 @@
                     <!-- menu -->
                     <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
                         <div class="contendorMenu navbar navbar-nav mx mx-lg-0 ">
-                            <div class=" nav-link " s><a href="#" aria-current="page">Home</a></div>
-                            <div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
-                            <div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
-                            <div class=" nav-link "><a href="./pages/contact.html">Contactanos</a></div>
+                            <div class=" nav-item " *ngFor="let option of menuOptions">
+                                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a></div>
                         </div>
                     </div>
 
