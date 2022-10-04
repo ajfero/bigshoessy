@@ -2,7 +2,6 @@
 
 - Framework Angular
 - Language JavaScript
-- 
 
 # Execution of the application in descending order
 
@@ -11,9 +10,14 @@
 
 # Execution of the application with Docker
 
-- ng build --configuration production --aot
-- docker build -t bssy-docker .
-- docker container run --name bssy-docker --publish 4200:80 --detach bssy-docker
+ - docker pull ajfero/bssy-docker
+ - docker container run --name bssy-v1.5.0 --publish 4200:80 --detach ajfero/bssy-docker:v1.5.0
+
+## Construction of docker-app
+
+  - ng build --configuration production --aot
+  - docker build -t bssy-docker .
+  - docker container run --name bssy-docker --publish 4200:80 --detach bssy-docker
 
 ---
 
