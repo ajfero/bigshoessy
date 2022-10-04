@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './modules/pages/views/home/home.component';
 
 import { NotfoundComponent } from './shared/views/notfound/notfound.component';
 
@@ -15,12 +14,7 @@ const routes: Routes = [
   {
     // Wildcard
     path: '**',
-    component: HomeComponent,
-  },
-
-  {
-    path: 'home',
-    loadChildren: () => import('./modules/pages/pages.module').then((m) => m.PagesModule),
+    component: NotfoundComponent,
   },
 ];
 @NgModule({
