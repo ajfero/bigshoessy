@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './shared/modules/components/components.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ProductsModule } from './modules/pages/views/products/products.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +17,6 @@ import { ProductsModule } from './modules/pages/views/products/products.module';
     AppRoutingModule,
     ComponentsModule,
     NgbModule,
-    ProductsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
