@@ -22,8 +22,8 @@ $dark: $septimo;
 //Import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 //Import OWN Carrousel
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 //Contenido general, variables y pages.
 $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
 //

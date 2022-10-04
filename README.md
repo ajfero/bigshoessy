@@ -9,6 +9,12 @@
 - pnpm install
 - ng serve
 
+# Execution of the application with Docker
+
+- ng build --configuration production --aot
+- docker build -t bssy-docker .
+- docker container run --name bssy-docker --publish 4200:80 --detach bssy-docker
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
