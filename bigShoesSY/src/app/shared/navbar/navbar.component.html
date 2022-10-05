@@ -1,0 +1,123 @@
+<nav class="navbar navbar-expand-sm align-items-center bg-secondary sticky-top">
+    <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
+
+        <!-- Tools -->
+        <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between">
+
+            <!-- logo-sm -->
+            <a class=" d-sm-none d-inline " href="#">
+                <img class=" align-text-top " src="../../../assets/img/bssy-logo.svg" alt width="100" height="55"></a>
+
+            <!--DropDown-->
+            <div class="dropdown d-sm-none d-xs-inline">
+                <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" fill="currentColor" class="bi bi-list align-text-top" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+                <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" aria-labelledby="dropdownMenuButton1">
+                    <li class="dropdown.header bg-light"><b>MENU</b>
+                    </li>
+                    <li class=" dropdown-divider">
+                        <hr />
+                    </li>
+                    <li class=" dropdown-item "><a href="../index.html">Home</a></li>
+                    <li class=" dropdown-divider">
+                        <hr />
+                    </li>
+                    <li class=" dropdown-item"><a href="./products.html">Productos</a></li>
+                    <li class=" dropdown-divider">
+                        <hr />
+                    </li>
+                    <li class=" dropdown-item"><a href="./ofers.html">Ofertas</a></li>
+                    <li class=" dropdown-divider">
+                        <hr />
+                    </li>
+                    <li class=" dropdown-item"><a href="./about.html">Nosotros</a></li>
+                    <li class=" dropdown-divider">
+                        <hr />
+                    </li>
+                    <li class=" dropdown-item"><a href="./contact.html">Contactanos</a></li>
+                </ul>
+            </div>
+
+            <!--1. Button trigger modal -> signIn/singUp-sm -->
+            <div class=" d-sm-none m-4 ">
+                <div class=" text-sm-center text-md-center " data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                    <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- navPages -->
+        <div class="row d-lg-flex justify-content-center ">
+            <div class=" text-center d-none d-sm-inline-block ">
+                <div class=" navbar navbar-nav">
+
+                    <!-- logo-lg -->
+                    <div class=" container-expand text-center d-none d-sm-inline-block ">
+                        <a class=" d-none d-sm-inline align-items-sm-start ">
+                            <a class=" text-sm-center" href="#">
+                                <img class="d-inline-block align-text-top " src="../../../assets/img/bssy-logo.svg" alt width="100" height="55">
+                            </a>
+                            <img class="d-inline-block align-text-top " src="../../../assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
+                        </a>
+                    </div>
+
+                    <!--2. signIn/singUp-md -->
+                    <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- menu -->
+                    <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
+                        <div class="contendorMenu navbar navbar-nav mx mx-lg-0 ">
+                            <div class=" nav-link " s><a href="#" aria-current="page">Home</a></div>
+                            <div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
+                            <div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
+                            <div class=" nav-link "><a href="./pages/contact.html">Contactanos</a></div>
+                        </div>
+                    </div>
+
+                    <!--3. signIn/singUp-md -->
+                    <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--4. signIn/singUp -->
+                    <div class=" container text-center col-lg-2 text-center d-none d-xl-inline ">
+                        <div class=" navbar navbar-nav ">
+
+                            <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button">
+                                <div class=" nav-link "><a href="#" aria-current="page">Iniciar</a></div>
+                            </div>
+
+                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
+                                <div class=" nav-link "><a href="#" aria-current="page">Registrase</a></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
