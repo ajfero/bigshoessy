@@ -1,6 +1,0 @@
-{
-    "files.exclude": {
-        "tools": true
-    },
-    "workspace.isHidden": true
-}
