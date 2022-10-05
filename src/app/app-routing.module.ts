@@ -13,18 +13,12 @@ const routes: Routes = [
       import('./shared/modules/components/components.module').then((m) => m.ComponentsModule),
   },
   {
-    path: 'home',
+    path: 'views', //test se mostraria en esta URL.
+    // 'views/contact'
+    // 'views/aboutme'
+    // '/contact'
     loadChildren: () => import('./modules/pages/pages.module').then((m) => m.PagesModule),
   },
-  {
-    path: 'contact',
-    loadChildren: () => import('./modules/pages/views/contact/contact.module').then((m) => m.ContactModule),
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./modules/pages/views/products/products.module').then((m) => m.ProductsModule),
-  },
-
   //Hasta acá son las vistas principales.
   {
     // Wildcard siempre que no machee, altuqui roque con este path
