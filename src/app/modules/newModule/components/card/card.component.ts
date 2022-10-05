@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input('information') data!: string
-  @Input() card!: Card
+  // @Input('information') data!: string
+  // @Input() card!: Card
+  //Parte del ejemplo
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class CardComponent implements OnInit {
 
 }
 
-interface Card {
-  name: string
-  id: number
-}
+// interface Card {
+//   name: string
+//   id: number
+// } Ejemplo
