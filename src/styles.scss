@@ -9,6 +9,7 @@ $quinto: #056FA8;
 $sexto: #e3f4fb;
 $septimo: #165164;
 $textDecorationNone: none;
+
 ///
 /// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
 /// 
@@ -19,14 +20,21 @@ $info: $cuarto;
 $warning: $quinto;
 $light: $sexto;
 $dark: $septimo;
+
 //Import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 //Import OWN Carrousel
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-//Contenido general, variables y pages.
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
+
 //
+//  Contenido general, variables y pages.
+//
+
+// grids-breakpoints
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
+
 *,
 *::before,
 *::after {
