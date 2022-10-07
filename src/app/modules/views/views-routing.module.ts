@@ -22,10 +22,6 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'contact',
-        component: ContactComponent,
-      },
-      {
         path: 'products',
         component: ProductsComponent,
       },
@@ -36,6 +32,10 @@ const routes: Routes = [
       {
         path: 'about-us',
         component: AboutUsComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
       },
       {
         path: '**',
