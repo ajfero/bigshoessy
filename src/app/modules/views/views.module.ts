@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+//Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 //Routing
 import { ViewsRoutingModule } from './views-routing.module';
 
@@ -13,6 +16,7 @@ import { ProductsSidebarComponent } from './components/products-sidebar/products
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
 import { SponsorsCarouselComponent } from './components/sponsors-carousel/sponsors-carousel.component';
 import { GoShopComponent } from './components/go-shop/go-shop.component';
+import { NgSliderComponent } from './components/ng-slider/ng-slider.component';
 
 //  views
 import { HomeComponent } from './views/home/home.component';
@@ -29,13 +33,14 @@ import { NavegationComponentsModule } from 'src/app/shared/modules/navegationCom
 import { CardProductsComponent } from './components/card-products/card-products.component';
 
 
-const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule];
-const components = [BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
+
+const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule, NgbModule];
+const components = [GoShopComponent, CardProductsComponent, NgSliderComponent, BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
 const views = [HomeComponent, ProductsComponent, ContactComponent, OffersComponent, AboutUsComponent];
 
 @NgModule({
 
-  declarations: [...components, ...views, GoShopComponent, CardProductsComponent],
+  declarations: [...components, ...views],
   imports: [...modules],
   exports: [...components]
 
