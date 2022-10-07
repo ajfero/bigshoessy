@@ -5,6 +5,7 @@ import { NotFoundComponent } from './shared/views/not-found/not-found.component'
 
 const routes: Routes = [
 
+  //Acá linkeamos nuestra ruta de views.
   {
     path: 'views',
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
