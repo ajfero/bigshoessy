@@ -12,6 +12,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { ProductsSidebarComponent } from './components/products-sidebar/products-sidebar.component';
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
 import { SponsorsCarouselComponent } from './components/sponsors-carousel/sponsors-carousel.component';
+import { GoShopComponent } from './components/go-shop/go-shop.component';
 
 //  views
 import { HomeComponent } from './views/home/home.component';
@@ -25,6 +26,7 @@ import { WrapperComponent } from './views/wrapper/wrapper.component';
 
 //Module navegation
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
+import { CardProductsComponent } from './components/card-products/card-products.component';
 
 
 const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule];
@@ -33,7 +35,7 @@ const views = [HomeComponent, ProductsComponent, ContactComponent, OffersCompone
 
 @NgModule({
 
-  declarations: [...components, ...views],
+  declarations: [...components, ...views, GoShopComponent, CardProductsComponent],
   imports: [...modules],
   exports: [...components]
 
