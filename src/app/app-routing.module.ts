@@ -6,7 +6,7 @@ import { NotFoundComponent } from './shared/views/not-found/not-found.component'
 const routes: Routes = [
 
   {
-    path: '',
+    path: 'views',
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
   },
 
