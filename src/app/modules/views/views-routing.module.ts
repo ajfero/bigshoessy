@@ -8,6 +8,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { OffersComponent } from './views/offers/offers.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
+import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 
 // usar el slash no te deja tener control sobre la root padre.
 // (Ésta ruta la hace relativa a la raiz del proyecto)
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'contact',
         component: ContactComponent,
+      },
+      {
+        path: 'profile',
+        component: MiProfileComponent,
       },
       {
         path: '**',

@@ -14,6 +14,12 @@ import { ProductsSidebarComponent } from './components/products-sidebar/products
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
 import { SponsorsCarouselComponent } from './components/sponsors-carousel/sponsors-carousel.component';
 import { GoShopComponent } from './components/go-shop/go-shop.component';
+import { SectionAboutUsComponent } from './components/section-about-us/section-about-us.component';
+import { CardProductsComponent } from './components/card-products/card-products.component';
+import { UploadPicComponent } from './components/upload-pic/upload-pic.component';
+import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
+import { ChangePasswdComponent } from './components/change-passwd/change-passwd.component';
+import { ButtonsUploadDeleteComponent } from './components/buttons-upload-delete/buttons-upload-delete.component';
 
 //  views
 import { HomeComponent } from './views/home/home.component';
@@ -21,23 +27,27 @@ import { ProductsComponent } from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { OffersComponent } from './views/offers/offers.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
+import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 
 //Box container for components, introducing views pages.
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 
-//Module navegation
+//Module
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
-import { CardProductsComponent } from './components/card-products/card-products.component';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { PaymentProfileComponent } from './components/payment-profile/payment-profile.component';
 
 
 
-const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule];
-const components = [GoShopComponent, CardProductsComponent, BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
+
+
+const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule, AngularFullpageModule];
+const components = [UploadPicComponent, ProfileContactComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent, SectionAboutUsComponent, GoShopComponent, CardProductsComponent, BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
 const views = [HomeComponent, ProductsComponent, ContactComponent, OffersComponent, AboutUsComponent];
 
 @NgModule({
 
-  declarations: [...components, ...views],
+  declarations: [...components, ...views, PaymentProfileComponent,],
   imports: [...modules],
   exports: [...components]
 

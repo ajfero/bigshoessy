@@ -96,7 +96,8 @@
                             "src/sass/styles.scss"
                         ],
                         "scripts": [
-
+                            "src/assets/fullpage.scrollHorizontally.min.js",
+                            "node_modules/fullpage.js/vendors/scrolloverflow.min.js"
                         ]
                     }
                 }

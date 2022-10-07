@@ -7,7 +7,7 @@ const routes: Routes = [
 
   //Acá linkeamos nuestra ruta de views.
   {
-    path: 'views',
+    path: '',
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
   },
 
