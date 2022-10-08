@@ -1,19 +1,48 @@
 <!--main-->
 <main class="container">
     <!-- 1er banner-->
-    <app-banner-one></app-banner-one>
+    <section data-aos="fade-down-right" role="main" class="contenedorBanner container-fluid d-flex justify-content-center">
+        <app-banner-one></app-banner-one>
+    </section>
 
     <!--Go shop-->
-    <app-go-shop></app-go-shop>
+    <div class="row">
+        <app-go-shop></app-go-shop>
+    </div>
     <!-- 2nd banner -->
-    <app-banner-two></app-banner-two>
+    <section data-aos="fade-down" role="main" class="container-fluid">
+        <app-banner-two></app-banner-two>
+    </section> -->
     <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
-    <app-products-carousel></app-products-carousel>
-
-
+    <section class=" carousel slide marginCarrousel d-none d-sm-block" id="carouselExampleCaptions" data-bs-ride="carousel">
+        <app-products-carousel></app-products-carousel>
+    </section>
     <!-- 3st banner  -->
-    <app-banner-three></app-banner-three>
+    <section data-aos="zoom-in-left " role="main " class="container-fluid row d-flex justify-content-center wx-100 mh-100 h-75">
+        <app-banner-three></app-banner-three>
+    </section>
     <!--Sponsors Etiquetas-->
-    <app-sponsors-carousel></app-sponsors-carousel>
-
+    <div class=" py-5">
+        <app-sponsors-carousel></app-sponsors-carousel>
+    </div>
 </main>
+<!-- 
+    <div fullpage id="fullpage">
+        <div class="section data-anchor">
+            <app-banner-one></app-banner-one>
+        </div>
+
+        <div class="section data-anchor">
+            <app-go-shop></app-go-shop>
+        </div>
+        <div class="section data-anchor">
+            <div class="slide">
+                <app-banner-two></app-banner-two>
+            </div>
+            <div class="slide carousel slide marginCarrousel d-none d-sm-block">
+                <app-products-carousel></app-products-carousel>
+            </div>
+            <div class="slide">
+                <app-banner-three></app-banner-three>
+            </div>
+        </div> -->

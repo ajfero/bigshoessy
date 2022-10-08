@@ -1,41 +1,45 @@
+<!--Contenedor para encuadrar y respetar el footer-->
 <div class="container light-style flex-grow-1 container-p-y">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
-
-    <div class="container">
-        <div class="row">
-            <!-- Page title -->
-            <div class="my-5">
-                <h3>My Profile</h3>
-                <hr>
-            </div>
-            <!-- Form START -->
-            <form class="file-upload">
-
+    <!--Contenedor de la sección Mi Profile-->
+    <div class="container row">
+        <!-- Page title -->
+        <div class="my-5">
+            <h3>My Profile</h3>
+            <hr>
+        </div>
+        <!-- Form START -->
+        <form class="file-upload">
+            <div class="col-lg-12 pb-5">
                 <app-upload-pic></app-upload-pic>
-
-                <!-- Row END -->
+            </div>
+            <!-- data principal -->
+            <div class="col-lg-12 bg-secondary-soft px-4 py-5 rounded">
                 <app-profile-contact></app-profile-contact>
+            </div>
 
-                <div class="row mb-5 gx-5 mt-5">
-                    <app-change-passwd></app-change-passwd>
-
-                    <div class="mx-4 mt-5" style="background: rgba(208, 212, 217, 0.1) !important;">
-                        <app-payment-profile></app-payment-profile>
-                    </div>
-                    <!-- Row END -->
-                    <div>
-                        <app-buttons-upload-delete></app-buttons-upload-delete>
-                    </div>
-                </div>
-            </form>
-
-
-
-
-
-
-
+            <!--change password-->
+            <div class="bg-secondary-soft px-4 py-5 rounded co-lg-12 mb-5 gx-5 mt-5">
+                <app-change-passwd></app-change-passwd>
+            </div>
+            <!-- Metodo de pago / añadir la tarjeta (credito o débito)-->
+            <div class="tab-pane pt-5 pb-5 col-lg-12 mt-5" id="billing" style=" background: rgba(208, 212, 217, 0.1) !important; ">
+                <app-payment-profile></app-payment-profile>
+            </div>
+            <!-- Botones de upload y delete-->
+            <div class="col-lg-12 mt-5 mb-5">
+                <app-buttons-upload-delete></app-buttons-upload-delete>
+            </div>
+        </form>
+        <!--Cerramos el formulario-->
+    </div>
+    <!--Cerramos el ROW-->
 
 
-            <!-- Form END -->
+
+
+
+
+
+
+
+    <!-- Form END -->
