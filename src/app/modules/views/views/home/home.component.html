@@ -1,5 +1,16 @@
 <!--main-->
-<main class="container">
+<main class="container-fluid">
+
+    <!--Sponsors Etiquetas-->
+    <div class=" py-5">
+        <app-sponsors-carousel></app-sponsors-carousel>
+    </div>
+
+    <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
+    <section class=" carousel slide marginCarrousel d-none d-sm-block" id="carouselExampleCaptions" data-bs-ride="carousel">
+        <app-products-carousel></app-products-carousel>
+    </section>
+
     <!-- 1er banner-->
     <section data-aos="fade-down-right" role="main" class="contenedorBanner container-fluid d-flex justify-content-center">
         <app-banner-one></app-banner-one>
@@ -12,19 +23,13 @@
     <!-- 2nd banner -->
     <section data-aos="fade-down" role="main" class="container-fluid">
         <app-banner-two></app-banner-two>
-    </section> -->
-    <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
-    <section class=" carousel slide marginCarrousel d-none d-sm-block" id="carouselExampleCaptions" data-bs-ride="carousel">
-        <app-products-carousel></app-products-carousel>
     </section>
+
     <!-- 3st banner  -->
     <section data-aos="zoom-in-left " role="main " class="container-fluid row d-flex justify-content-center wx-100 mh-100 h-75">
         <app-banner-three></app-banner-three>
     </section>
-    <!--Sponsors Etiquetas-->
-    <div class=" py-5">
-        <app-sponsors-carousel></app-sponsors-carousel>
-    </div>
+
 </main>
 <!-- 
     <div fullpage id="fullpage">

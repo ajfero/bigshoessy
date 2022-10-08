@@ -12,10 +12,7 @@ export class FooterComponent implements OnInit {
       label: 'Home',
       url: 'home',
     },
-    {
-      label: 'Contact',
-      url: 'contact',
-    },
+
     {
       label: 'Products',
       url: 'products',
@@ -23,6 +20,10 @@ export class FooterComponent implements OnInit {
     {
       label: 'About us',
       url: 'about-us',
+    },
+    {
+      label: 'Contact',
+      url: 'contact',
     },
   ]
 

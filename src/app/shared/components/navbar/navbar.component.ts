@@ -14,16 +14,16 @@ export class NavbarComponent implements OnInit {
       url: 'home',
     },
     {
-      label: 'Contact',
-      url: 'contact',
-    },
-    {
       label: 'Products',
       url: 'products',
     },
     {
       label: 'About us',
       url: 'about-us',
+    },
+    {
+      label: 'Contact',
+      url: 'contact',
     },
   ]
 

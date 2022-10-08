@@ -20,6 +20,8 @@ import { UploadPicComponent } from './components/upload-pic/upload-pic.component
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
 import { ChangePasswdComponent } from './components/change-passwd/change-passwd.component';
 import { ButtonsUploadDeleteComponent } from './components/buttons-upload-delete/buttons-upload-delete.component';
+import { PaymentProfileComponent } from './components/payment-profile/payment-profile.component';
+import { ContactOpcionalComponent } from './components/contact-opcional/contact-opcional.component';
 
 //  views
 import { HomeComponent } from './views/home/home.component';
@@ -35,19 +37,19 @@ import { WrapperComponent } from './views/wrapper/wrapper.component';
 //Module
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
-import { PaymentProfileComponent } from './components/payment-profile/payment-profile.component';
+
 
 
 
 
 
 const modules = [CommonModule, ViewsRoutingModule, NavegationComponentsModule, AngularFullpageModule];
-const components = [UploadPicComponent, ProfileContactComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent, SectionAboutUsComponent, GoShopComponent, CardProductsComponent, BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
+const components = [PaymentProfileComponent, ContactOpcionalComponent, UploadPicComponent, ProfileContactComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent, SectionAboutUsComponent, GoShopComponent, CardProductsComponent, BannerOneComponent, BannerTwoComponent, BannerThreeComponent, ContactFormComponent, WrapperComponent, ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent,];
 const views = [HomeComponent, ProductsComponent, ContactComponent, OffersComponent, AboutUsComponent];
 
 @NgModule({
 
-  declarations: [...components, ...views, PaymentProfileComponent,],
+  declarations: [...components, ...views],
   imports: [...modules],
   exports: [...components]
 

@@ -9,7 +9,6 @@ import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 //componentes
 
-
 const modules = [BrowserModule, AppRoutingModule, AngularFullpageModule];
 const components = [AppComponent];
 
