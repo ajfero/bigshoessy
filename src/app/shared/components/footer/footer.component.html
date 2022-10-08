@@ -42,14 +42,9 @@
         </div>
 
         <!-- menu -->
-        <div class=" container text-center d-xl-inline-block col-xl-5 text-decoration-underline ">
-            <div class=" navbar navbar-nav mx-5 m-xl-0 ">
-                <div class=" nav-link "><a href="#" aria-current="page">Home</a></div>
-                <div class=" nav-link "><a href="./pages/products.html">Productos</a></div>
-                <div class=" nav-link "><a href="./pages/ofers.html">Ofertas</a></div>
-                <div class=" nav-link "><a href="./pages/about.html">Nosotros</a></div>
-                <div class=" nav-link "><a href="./pages/contact.html">Contactanos</a></div>
-            </div>
+        <div class="container text-center d-xl-inline-block col-xl-5 text-decoration-underline ">
+            <div class="row navbar navbar-nav mx-5 m-xl-0 d-xl-inline-block" *ngFor="let option of menuOptions">
+                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a></div>
         </div>
 
         <!-- barra 3: se mostrara solo en escritorios -->

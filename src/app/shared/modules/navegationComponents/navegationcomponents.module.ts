@@ -10,8 +10,10 @@ import { FooterComponent } from 'src/app/shared/components/footer/footer.compone
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
 import { TopNavbarComponent } from 'src/app/shared/components/top-navbar/top-navbar.component';
 
+
 // declaraciones
-const components = [FooterComponent, NavbarComponent, TopNavbarComponent];
+const components = [FooterComponent, NavbarComponent, TopNavbarComponent
+];
 const views = [NotFoundComponent];
 
 @NgModule({

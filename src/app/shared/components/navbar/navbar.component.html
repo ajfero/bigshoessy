@@ -6,40 +6,29 @@
 
             <!-- logo-sm -->
             <a class=" d-sm-none d-inline " href="#">
-                <img class=" align-text-top " src="../../../../assets/img/bssy-logo.svg" alt width="100" height="55"></a>
+                <img class=" align-text-top " src="assets/img/bssy-logo.svg" alt width="100" height="55"></a>
 
             <!--DropDown-->
-            <div class="dropdown d-sm-none d-xs-inline">
-                <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" fill="currentColor" class="bi bi-list align-text-top" viewBox="0 0 16 16">
+            <div class="d-sm-none d-xs-inline dropdown-center">
+                <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-labelledby="dropdownMenuButton1" aria-expanded="false">
+                     <!--Menu de hamburguesa-->   
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="70" fill="currentColor" class="bi bi-list align-text-top" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </button>
-                <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" aria-labelledby="dropdownMenuButton1">
+                <!--Menu de navegación-->
+                <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" *ngFor="let option of menuOptions" aria-labelledby="dropdownMenuButton1">
                     <li class="dropdown.header bg-light"><b>MENU</b>
-                    </li>
-                    <li class=" dropdown-divider">
-                        <hr />
-                    </li>
-                    <li class=" dropdown-item "><a href="../index.html">Home</a></li>
-                    <li class=" dropdown-divider">
-                        <hr />
-                    </li>
-                    <li class=" dropdown-item"><a href="./products.html">Productos</a></li>
-                    <li class=" dropdown-divider">
-                        <hr />
-                    </li>
-                    <li class=" dropdown-item"><a href="./ofers.html">Ofertas</a></li>
-                    <li class=" dropdown-divider">
-                        <hr />
-                    </li>
-                    <li class=" dropdown-item"><a href="./about.html">Nosotros</a></li>
-                    <li class=" dropdown-divider">
-                        <hr />
-                    </li>
-                    <li class=" dropdown-item"><a href="./contact.html">Contactanos</a></li>
+                        <li class=" dropdown-divider ">
+                            <li class=" dropdown-item "><a href="index" [routerLink]="[option.url]"> {{ option.label }}</a></li>
                 </ul>
             </div>
+
+
+            <!-- <div class="dropdown-menu" *ngFor="let option of menuOptions" #cricket (change)="($event)">
+                <a class="dropdown-item" [routerLink]="[option.url]">{{ option.label }}</a>
+            </div> -->
+
 
             <!--1. Button trigger modal -> signIn/singUp-sm -->
             <div class=" d-sm-none m-4 ">
@@ -64,9 +53,9 @@
                     <div class=" container-expand text-center d-none d-sm-inline-block ">
                         <a class=" d-none d-sm-inline align-items-sm-start ">
                             <a class=" text-sm-center" href="#">
-                                <img class="d-inline-block align-text-top " src="../../../../assets/img/bssy-logo.svg" alt width="100" height="55">
+                                <img class="d-inline-block align-text-top " src="assets/img/bssy-logo.svg" alt width="100" height="55">
                             </a>
-                            <img class="d-inline-block align-text-top " src="../../../../assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
+                            <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
                         </a>
                     </div>
 
