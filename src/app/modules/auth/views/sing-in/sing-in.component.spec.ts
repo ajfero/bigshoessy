@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaymentProfileComponent } from './payment-profile.component';
+import { SingInComponent } from './sing-in.component';
 
-describe('PaymentProfileComponent', () => {
-  let component: PaymentProfileComponent;
-  let fixture: ComponentFixture<PaymentProfileComponent>;
+describe('SingInComponent', () => {
+  let component: SingInComponent;
+  let fixture: ComponentFixture<SingInComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PaymentProfileComponent ]
+      declarations: [ SingInComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PaymentProfileComponent);
+    fixture = TestBed.createComponent(SingInComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

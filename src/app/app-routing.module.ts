@@ -11,6 +11,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
   },
 
+  // auth-routing Login -> Test
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
+
   // Wildcard siempre que no machee, altuqui roque con este path
   {
     path: '**',
