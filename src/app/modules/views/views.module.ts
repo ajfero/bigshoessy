@@ -28,7 +28,9 @@ import { ContactComponent } from './views/contact/contact.component';
 import { OffersComponent } from './views/offers/offers.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
-//Box container for components, introducing views pages.
+
+
+//Box container for views, introducing views pages.
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 
 //Module

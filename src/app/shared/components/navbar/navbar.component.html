@@ -24,7 +24,9 @@
                         <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" aria-labelledby="dropdownMenuButton1">
                             <li class="dropdown-header bg-light"> <b> MENU </b> </li>
                             <!--1. Button trigger modal -> signIn/singUp-sm -->
-                            <div class=" text-sm-center text-md-center" data-bs-target="#modal-login" data-bs-toggle="modal" type="button"> Sing In</div>
+                            <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
+                                <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
+                            </div>
                             <!--Menu-->
                             <li class=" dropdown-item "><a href="../index.html"> Home </a></li>
                             <li class=" dropdown-item"><a href="./products.html"> Productos </a></li>
@@ -52,11 +54,9 @@
                     </div>
                     <!--2. signIn/singUp-md -->
                     <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
-                        <a routerLink="[login.url]" class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                            <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
+
                         </a>
                     </div>
                     <!-- menu -->
@@ -69,10 +69,7 @@
                     <!--3. signIn/singUp-md -->
                     <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
                         <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>
+                            <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
                         </a>
                     </div>
 
@@ -83,10 +80,6 @@
                             <!-- signIn -->
                             <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
                                 <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
-                                <div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
-                                    <!-- Componente login -->
-                                    <!-- <app-login></app-login> -->
-                                </div>
                             </div>
 
                             <!-- /singUp -->
@@ -102,6 +95,25 @@
                 </div>
             </div>
         </div>
-
     </div>
 </nav>
+
+<div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
+    <!-- Componente login -->
+    <app-modal-login></app-modal-login>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal-signup" id="modal-signup" aria-hidden="true">
+    <app-modal-register></app-modal-register>
+</div>
+
+
+<!--Ng template para los SVG-->
+
+<!--SVG UserIcon-->
+<ng-template #iconUser>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+</ng-template>

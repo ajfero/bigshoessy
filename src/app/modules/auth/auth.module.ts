@@ -7,20 +7,24 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+//Moduls
+import { NavegationComponentsModule } from 'src/app/shared/modules';
 
 //Views
-import { SingInComponent } from './views/sing-in/sing-in.component';
 import { ViewDashboardComponent } from './views/view-dashboard/view-dashboard.component';
 
-const components = [LoginComponent, RegisterComponent,]
+const moduls = [NavegationComponentsModule];
 
-const views = [SingInComponent, ViewDashboardComponent]
+const components = [LoginComponent, RegisterComponent,];
+
+const views = [ViewDashboardComponent];
 
 @NgModule({
   declarations: [...components, ...views],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ...moduls
   ]
 })
 export class AuthModule {

@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 
 //Extension de seccionamiento
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { NavegationComponentsModule } from './shared/modules';
+
+
 
 //componentes
 
-const modules = [BrowserModule, AppRoutingModule, AngularFullpageModule];
+const modules = [BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 
 @NgModule({
