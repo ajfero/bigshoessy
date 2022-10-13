@@ -194,14 +194,14 @@ li {
 
 @media (min-width: 576px) {
     .imagen_goShop {
-        height: 60%;
+        height: 100%;
     }
     .contenedor_goShop {
         padding: 20px;
     }
     .contenedor_banner-productos {
         padding-top: 100px;
-        width: 100vh;
+        width: auto;
     }
 }
 
@@ -290,8 +290,8 @@ li {
         padding-bottom: 1px;
     }
     .imagen_banner-home {
-        width: 100%;
-        height: 85%;
+        width: auto;
+        height: 75%;
     }
     .contenedor_banner-ofertas {
         padding-top: 40px;
@@ -304,8 +304,11 @@ li {
 }
 
 @include media-breakpoint-up (xl) {
+    .contenedor_banners-home {
+        text-align: center;
+    }
     .contenedor_goShop {
-        padding-bottom: 120px;
+        padding-top: 100px;
     }
     .imagen_goShop {
         height: 70%;
@@ -314,8 +317,8 @@ li {
         padding-top: 10px;
     }
     .imagen_banner-home {
-        width: 100%;
-        height: 78%;
+        width: 80%;
+        height: 60%;
     }
     .contenedor_banner-productos {
         padding-top: 70px;
@@ -395,5 +398,55 @@ li {
     }
     .contact {
         margin-bottom: 60px;
+    }
+}
+
+.contenedor_goShop {
+    display: block; //Posicion en bloque
+    position: relative; //Que se posicione relativamente
+    text-transform: uppercase; //Que se ponga en mayúsculas
+    color: rgba(51, 139, 255, 0.815); //Le asignamos un color
+    text-decoration: none; //Le sacamos los estilos por defecto.
+    text-align: center; //lo alineamos al centro
+    cursor: pointer; //Le decimos que se ponga como puntero cuando se pare arriba del texto.
+    z-index: 0;
+    transition: all 450ms ease;
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 300ms;
+    }
+}
+
+.titulo_goShop {
+    padding: 0;
+    &::before,
+    &::after {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        background-color: $info;
+        right: 0;
+    }
+    &:hover {
+        color: $quinto;
+        &::before {
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: $info;
+        }
+        &::after {
+            width: 100%;
+            background-color: transparent;
+        }
     }
 }
