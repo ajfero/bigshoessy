@@ -4,15 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//Extension de seccionamiento
+// Bootstrap NgBModule. Bootstrap 5 CSS with APIs designed for the Angular ecosystem. 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+// Extension de seccionamiento
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { NavegationComponentsModule } from './shared/modules';
 
-
-
-//componentes
-
-const modules = [BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
+const modules = [NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 
 @NgModule({

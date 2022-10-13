@@ -1,0 +1,146 @@
+/* Cards Go-Shop */ 
+
+//Aca arranca el GO shop
+.contenedor_goShop {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.imagen_goShop {
+    height: 55%;
+    width: 90%;
+}
+
+.titulo_goShop {
+    font-weight: bolder;
+}
+
+.titulo_goShop {
+    padding: 0;
+    &::before,
+    &::after {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        background-color: $info;
+        right: 0;
+    }
+    &:hover {
+        color: $quinto;
+        &::before {
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: $info;
+        }
+        &::after {
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}
+
+.contenedor_goShop {
+    display: block; //Posicion en bloque
+    position: relative; //Que se posicione relativamente
+    text-transform: uppercase; //Que se ponga en mayúsculas
+    color: rgba(51, 139, 255, 0.815); //Le asignamos un color
+    text-decoration: none; //Le sacamos los estilos por defecto.
+    text-align: center; //lo alineamos al centro
+    cursor: pointer; //Le decimos que se ponga como puntero cuando se pare arriba del texto.
+    z-index: 0;
+    transition: all 450ms ease;
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 300ms;
+    }
+}
+
+@media (min-width: 576px) {
+    .imagen_goShop {
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor_goShop {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .imagen_goShop {
+        height: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .imagen_goShop {
+        height: 80%;
+    }
+}
+//////////////////////////////////////////
+// @include media-breakpoint-up (sm) {
+//     .imagen_goShop {
+//         height: 60%;
+//     }
+//     .contenedor_goShop {
+//         padding: 20px;
+//     }
+//     .mx {
+//         margin-right: 2rem !important;
+//         margin-left: 2rem !important;
+//     }
+// }
+
+// @include media-breakpoint-up (md) {
+//     .contenedor_goShop {
+//         padding-top: 20px;
+//     }
+//     .mx {
+//         margin-right: 8rem !important;
+//         margin-left: 8rem !important;
+//     }
+// }
+
+// @include media-breakpoint-up (lg) {
+//     .imagen_goShop {
+//         height: 75%;
+//     }
+//     .mx {
+//         margin-right: 5rem !important;
+//         margin-left: 1rem !important;
+//     }
+// }
+
+// @include media-breakpoint-up (xl) {
+//     .contenedor_goShop {
+//         padding-top: 100px;
+//     }
+//     .imagen_goShop {
+//         height: 70%;
+//     }
+//     .mx {
+//         margin-right: 5rem !important;
+//         margin-left: 5rem !important;
+//     }
+// }
+
+// @include media-breakpoint-up (xxl) {
+//     .mx {
+//         margin-right: 6rem !important;
+//         margin-left: 6rem !important;
+//     }
+// }
+
+
+

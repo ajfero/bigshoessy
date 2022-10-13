@@ -1,35 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can import in to this file Vendors styles, and also import  other external libraries */
 
-// 1_ PATROÓN DE COLORES
-$principal: #165164;
-$secundario: #60d6f3;
-$tercero: #0791DB;
-$cuarto: #1E465C;
-$quinto: #056FA8;
-$sexto: #e3f4fb;
-$septimo: #165164;
-$textDecorationNone: none;
-///
-/// 2_ MODIFICACION DE LAS VARIABLES DE BOOTSTRAP.
-/// 
-$primary: $principal;
-$secondary: $secundario;
-$success: $tercero;
-$info: $cuarto;
-$warning: $quinto;
-$light: $sexto;
-$dark: $septimo;
 
-/* Importing Bootstrap SCSS file. */
+/*
+*! Import styles */
 
-@import '~bootstrap/scss/bootstrap';
-// Import section models 
-@import url(~fullpage.js/dist/fullpage.min.css);
-//Bootstrap icons
+// Import local Vendors
+@import 'utilities/vendors';
+
+// Bootstrap v5.2.2.
+@import "~bootstrap/scss/bootstrap";
+
+
+/*
+*! Import Externals */
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js");
+
+// Scripts
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
-/* General Content */
+// Import section models 
+// @import url(~fullpage.js/dist/fullpage.min.css);
 
+<<<<<<< Updated upstream
 $grid-breakpoints: ( xs: 0,
 sm: 576px,
 md: 768px,
@@ -397,3 +391,7 @@ li {
         margin-bottom: 60px;
     }
 }
+=======
+// script de angular json   
+// "src/assets/fullpage.scrollHorizontally.min.js",
+>>>>>>> Stashed changes

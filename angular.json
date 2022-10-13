@@ -96,10 +96,11 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/sass/styles.scss"
+                            "src/sass/styles.scss",
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css"
                         ],
                         "scripts": [
-                            "src/assets/fullpage.scrollHorizontally.min.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
                             "node_modules/fullpage.js/vendors/scrolloverflow.min.js"
                         ]
                     }

@@ -1,0 +1,60 @@
+/* Contact Form */ 
+
+@media only screen and (max-width:768px) {
+    .single_address {
+        padding-left: 0px;
+    }
+    .contact {
+        margin-bottom: 60px;
+    }
+}
+
+.contenedor_goShop {
+    display: block; //Posicion en bloque
+    position: relative; //Que se posicione relativamente
+    text-transform: uppercase; //Que se ponga en mayúsculas
+    color: rgba(51, 139, 255, 0.815); //Le asignamos un color
+    text-decoration: none; //Le sacamos los estilos por defecto.
+    text-align: center; //lo alineamos al centro
+    cursor: pointer; //Le decimos que se ponga como puntero cuando se pare arriba del texto.
+    z-index: 0;
+    transition: all 450ms ease;
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 300ms;
+    }
+}
+
+.titulo_goShop {
+    padding: 0;
+    &::before,
+    &::after {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        background-color: $info;
+        right: 0;
+    }
+    &:hover {
+        color: $quinto;
+        &::before {
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: $info;
+        }
+        &::after {
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}

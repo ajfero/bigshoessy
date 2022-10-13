@@ -13,10 +13,7 @@ import { ModalRegisterComponent } from '../../components/modal-register/modal-re
 import { ModalLoginComponent } from 'src/app/shared/components/modal-login/modal-login.component';
 import { ModalRecoverComponent } from '../../components/modal-recover/modal-recover.component';
 
-
-// declaraciones
-const components = [FooterComponent, NavbarComponent, TopNavbarComponent
-  , ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
+const components = [FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 
 @NgModule({
