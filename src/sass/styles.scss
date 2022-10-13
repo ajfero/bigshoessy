@@ -2,7 +2,7 @@
 
 // 1_ PATROÓN DE COLORES
 $principal: #165164;
-$secundario: #8adaef;
+$secundario: #60d6f3;
 $tercero: #0791DB;
 $cuarto: #1E465C;
 $quinto: #056FA8;
@@ -62,6 +62,14 @@ li {
     padding: 0;
 }
 
+.contenedor_banner-home {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #dc3545;
+}
+
 //Propiedades del footer
 @media (min-width: 768px) {
     .upFixed {
@@ -83,7 +91,7 @@ li {
 }
 
 //Aca arranca el carrousel
-.marginCarrousel {
+.contenedor_carousel-products {
     height: 400px;
 }
 
@@ -92,168 +100,162 @@ li {
     height: 180px;
 }
 
-.elementTheCarrousel {
+.carousel_products-elements {
     height: 350px;
 }
 
-.containerCarrousel {
+.section_carousel-products {
     height: 500px;
 }
 
-.pCarrousel {
+.elementCarousel_text-parrafo {
     width: auto;
 }
 
-.h1Carrousel {
+.elementCarousel_text-title {
     width: auto;
     font-size: 22px;
 }
 
-.containerTitleCarrousel {
+.products_element-text {
     opacity: 0.80;
     padding-top: 60px;
     font-size: 12px;
 }
 
 @media (min-width: 576px) {
-    .marginCarrousel {
+    .contenedor_carousel-products {
         height: 400px;
     }
     .imgCarrousel {
         height: 200px;
     }
-    .containerTitleCarrousel {
+    .products_element-text {
         padding-top: 60px;
         font-size: 14px;
     }
-    .h1Carrousel {
+    .elementCarousel_text-title {
         font-size: 24px;
     }
 }
 
 @media (min-width: 768px) {
-    .marginCarrousel {
-        height: 450px;
+    .contenedor_carousel-products {
+        height: 400px;
     }
     .imgCarrousel {
-        height: 250px;
+        height: 200px;
+        margin-top: 0;
     }
-    .containerTitleCarrousel {
+    .products_element-text {
         font-size: 16px;
     }
-    .h1Carrousel {
+    .elementCarousel_text-title {
         font-size: 27px;
     }
 }
 
 //Aca arranca el GO shop
-.contenedorGoshop {
+.contenedor_goShop {
     padding-top: 50px;
     padding-bottom: 10px;
 }
 
-.goShop {
+.imagen_goShop {
     height: 55%;
     width: 90%;
 }
 
-.TextGoShop {
+.titulo_goShop {
     font-weight: bolder;
 }
 
-.Banner {
+.imagen_banner-home {
     height: 100%;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    -o-object-fit: cover;
-    object-fit: cover;
     border: 2px solid rgba(70, 98, 136, 0.839);
     -webkit-box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
     box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
 }
 
-.container img.Banner {
-    -o-object-fit: fill;
-    object-fit: fill;
-    padding: 2px;
-}
-
-.contenedorBanner {
+.contenedor_banner-destacados {
     padding-top: 20px;
 }
 
-.bannerDos {
+.contenedor_banner-ofertas {
     padding-bottom: 0px;
 }
 
-.bannerTres {
+.contenedor_banner-productos {
     padding-bottom: 0;
 }
 
 @media (min-width: 576px) {
-    .goShop {
+    .imagen_goShop {
         height: 60%;
     }
-    .contenedorGoShop {
+    .contenedor_goShop {
         padding: 20px;
     }
-    .bannerTres {
+    .contenedor_banner-productos {
         padding-top: 100px;
+        width: 100vh;
     }
 }
 
 @media (min-width: 768px) {
-    .contenedorGoshop {
+    .contenedor_goShop {
         padding-top: 20px;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 12px;
         padding-bottom: 100px;
     }
 }
 
 @media (min-width: 992px) {
-    .goShop {
+    .imagen_goShop {
         height: 75%;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 10px;
         padding-bottom: 40px;
     }
-    .Banner {
+    .imagen_banner-home {
         width: 100%;
         height: 85%;
     }
-    .bannerDos {
+    .contenedor_banner-ofertas {
         padding-bottom: 30px;
     }
 }
 
 @media (min-width: 1200px) {
-    .contenedorGoshop {
+    .contenedor_goShop {
         padding-bottom: 120px;
     }
-    .goShop {
+    .imagen_goShop {
         height: 80%;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 10px;
     }
-    .Banner {
+    .imagen_banner-home {
         width: 100%;
         height: 80%;
     }
 }
 
 @include media-breakpoint-up (sm) {
-    .goShop {
+    .imagen_goShop {
         height: 60%;
     }
-    .contenedorGoShop {
+    .contenedor_goShop {
         padding: 20px;
     }
-    .bannerTres {
+    .contenedor_banner-productos {
         padding-top: 100px;
     }
     .mx {
@@ -263,14 +265,14 @@ li {
 }
 
 @include media-breakpoint-up (md) {
-    .contenedorGoshop {
+    .contenedor_goShop {
         padding-top: 20px;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 12px;
         padding-bottom: 15px;
     }
-    .bannerTres {
+    .contenedor_banner-productos {
         padding-top: 0;
     }
     .mx {
@@ -280,18 +282,18 @@ li {
 }
 
 @include media-breakpoint-up (lg) {
-    .goShop {
+    .imagen_goShop {
         height: 75%;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 50px;
         padding-bottom: 1px;
     }
-    .Banner {
+    .imagen_banner-home {
         width: 100%;
         height: 85%;
     }
-    .bannerDos {
+    .contenedor_banner-ofertas {
         padding-top: 40px;
         padding-bottom: 0px;
     }
@@ -302,20 +304,20 @@ li {
 }
 
 @include media-breakpoint-up (xl) {
-    .contenedorGoshop {
+    .contenedor_goShop {
         padding-bottom: 120px;
     }
-    .goShop {
+    .imagen_goShop {
         height: 70%;
     }
-    .contenedorBanner {
+    .contenedor_banner-destacados {
         padding-top: 10px;
     }
-    .Banner {
+    .imagen_banner-home {
         width: 100%;
         height: 78%;
     }
-    .bannerTres {
+    .contenedor_banner-productos {
         padding-top: 70px;
     }
     .mx {
@@ -329,11 +331,6 @@ li {
         margin-right: 6rem !important;
         margin-left: 6rem !important;
     }
-}
-
-//Mi profile styles
-.bg-secondary-soft {
-    background-color: rgba(208, 212, 217, 0.1) !important;
 }
 
 .rounded {
@@ -358,11 +355,6 @@ li {
     border: 1px solid #e5dfe4;
     background-color: #fff;
     border-radius: 5px;
-}
-
-.text-secondary {
-    --bs-text-opacity: 1;
-    color: rgba(208, 212, 217, 0.5) !important;
 }
 
 .btn-success-soft {
