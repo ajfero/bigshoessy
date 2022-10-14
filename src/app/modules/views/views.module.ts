@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 //Routing
 import { ViewsRoutingModule } from './views-routing.module';
 
@@ -36,6 +34,7 @@ import { WrapperComponent } from './views/wrapper/wrapper.component';
 //Module
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -47,8 +46,8 @@ const views = [HomeComponent, ProductsComponent, ContactComponent, OffersCompone
 
 @NgModule({
 
-  declarations: [...components, ...views],
-  imports: [...modules],
+  declarations: [...components, ...views, CardComponent],
+  imports: [...modules,],
   exports: [...components]
 
 })

@@ -6,23 +6,19 @@
 
 // Import local Vendors
 @import 'utilities/vendors';
-
 // Bootstrap v5.2.2.
 @import "~bootstrap/scss/bootstrap";
 
-
 /*
 *! Import Externals */
-// @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js");
 
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js");
 // Scripts
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-
 // Import section models 
 // @import url(~fullpage.js/dist/fullpage.min.css);
-
 // <<<<<<< Updated upstream
 // $grid-breakpoints: ( xs: 0,
 // sm: 576px,
@@ -37,25 +33,20 @@
 //     font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 //     scroll-behavior: smooth;
 // }
-
 // a {
 //     text-decoration: none;
 // }
-
 // .mx {
 //     margin-right: 7rem !important;
 //     margin-left: 7rem !important;
 // }
-
 // li {
 //     list-style: none;
 //     text-decoration: none;
 // }
-
 // .contendorMenu {
 //     padding: 0;
 // }
-
 // .contenedor_banner-home {
 //     display: flex;
 //     width: auto;
@@ -63,7 +54,6 @@
 //     justify-content: center;
 //     border: 10px solid #dc3545;
 // }
-
 // //Propiedades del footer
 // @media (min-width: 768px) {
 //     .upFixed {
@@ -83,40 +73,32 @@
 //         align-items: center;
 //     }
 // }
-
 // //Aca arranca el carrousel
 // .contenedor_carousel-products {
 //     height: 400px;
 // }
-
 // .imgCarrousel {
 //     padding-top: 50px;
 //     height: 180px;
 // }
-
 // .carousel_products-elements {
 //     height: 350px;
 // }
-
 // .section_carousel-products {
 //     height: 500px;
 // }
-
 // .elementCarousel_text-parrafo {
 //     width: auto;
 // }
-
 // .elementCarousel_text-title {
 //     width: auto;
 //     font-size: 22px;
 // }
-
 // .products_element-text {
 //     opacity: 0.80;
 //     padding-top: 60px;
 //     font-size: 12px;
 // }
-
 // @media (min-width: 576px) {
 //     .contenedor_carousel-products {
 //         height: 400px;
@@ -132,7 +114,6 @@
 //         font-size: 24px;
 //     }
 // }
-
 // @media (min-width: 768px) {
 //     .contenedor_carousel-products {
 //         height: 400px;
@@ -148,22 +129,18 @@
 //         font-size: 27px;
 //     }
 // }
-
 // //Aca arranca el GO shop
 // .contenedor_goShop {
 //     padding-top: 50px;
 //     padding-bottom: 10px;
 // }
-
 // .imagen_goShop {
 //     height: 55%;
 //     width: 90%;
 // }
-
 // .titulo_goShop {
 //     font-weight: bolder;
 // }
-
 // .imagen_banner-home {
 //     height: 100%;
 //     width: -webkit-fit-content;
@@ -173,19 +150,15 @@
 //     -webkit-box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
 //     box-shadow: -0.3em 0.3em 0.4em rgba(0, 0, 0, 0.353);
 // }
-
 // .contenedor_banner-destacados {
 //     padding-top: 20px;
 // }
-
 // .contenedor_banner-ofertas {
 //     padding-bottom: 0px;
 // }
-
 // .contenedor_banner-productos {
 //     padding-bottom: 0;
 // }
-
 // @media (min-width: 576px) {
 //     .imagen_goShop {
 //         height: 100%;
@@ -198,7 +171,6 @@
 //         width: auto;
 //     }
 // }
-
 // @media (min-width: 768px) {
 //     .contenedor_goShop {
 //         padding-top: 20px;
@@ -208,7 +180,6 @@
 //         padding-bottom: 100px;
 //     }
 // }
-
 // @media (min-width: 992px) {
 //     .imagen_goShop {
 //         height: 75%;
@@ -225,7 +196,6 @@
 //         padding-bottom: 30px;
 //     }
 // }
-
 // @media (min-width: 1200px) {
 //     .contenedor_goShop {
 //         padding-bottom: 120px;
@@ -241,7 +211,6 @@
 //         height: 80%;
 //     }
 // }
-
 // @include media-breakpoint-up (sm) {
 //     .imagen_goShop {
 //         height: 60%;
@@ -257,7 +226,6 @@
 //         margin-left: 2rem !important;
 //     }
 // }
-
 // @include media-breakpoint-up (md) {
 //     .contenedor_goShop {
 //         padding-top: 20px;
@@ -274,7 +242,6 @@
 //         margin-left: 8rem !important;
 //     }
 // }
-
 // @include media-breakpoint-up (lg) {
 //     .imagen_goShop {
 //         height: 75%;
@@ -296,7 +263,6 @@
 //         margin-left: 1rem !important;
 //     }
 // }
-
 // @include media-breakpoint-up (xl) {
 //     .contenedor_banners-home {
 //         text-align: center;
@@ -322,28 +288,23 @@
 //         margin-left: 5rem !important;
 //     }
 // }
-
 // @include media-breakpoint-up (xxl) {
 //     .mx {
 //         margin-right: 6rem !important;
 //         margin-left: 6rem !important;
 //     }
 // }
-
 // .rounded {
 //     border-radius: 5px !important;
 // }
-
 // .py-5 {
 //     padding-top: 3rem !important;
 //     padding-bottom: 3rem !important;
 // }
-
 // .px-4 {
 //     padding-right: 1.5rem !important;
 //     padding-left: 1.5rem !important;
 // }
-
 // .file-upload .square {
 //     height: 250px;
 //     width: 250px;
@@ -353,17 +314,14 @@
 //     background-color: #fff;
 //     border-radius: 5px;
 // }
-
 // .btn-success-soft {
 //     color: #28a745;
 //     background-color: rgba(40, 167, 69, 0.1);
 // }
-
 // .btn-danger-soft {
 //     color: #dc3545;
 //     background-color: rgba(220, 53, 69, 0.1);
 // }
-
 // .form-control {
 //     display: block;
 //     width: 100%;
@@ -384,7 +342,6 @@
 //     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 //     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 // }
-
 // //Contact form
 // @media only screen and (max-width:768px) {
 //     .single_address {
