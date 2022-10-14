@@ -1,3 +1,7 @@
+.mi-n1 {
+  margin-inline: -0.25rem !important;
+}
+
 .contenedorNavbar {
     overflow: hidden;
 }
@@ -8,6 +12,15 @@
     justify-content: center;
 }
 
+// Ocultar nav-xs
+@media only screen and (min-width: 578px) {
+    
+    .navHidden {
+       display: none;
+    }
+    
+}    
+// Ocultar pages
 @media only screen and (max-width: 578px) {
     
     .navPages {
@@ -15,3 +28,4 @@
     }
     
 }    
+
