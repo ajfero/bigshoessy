@@ -26,14 +26,14 @@ export class NavbarComponent implements OnInit {
       label: 'Contact',
       url: 'contact',
     },
-  ]
+  ];
 
   modal = [
     {
       label: 'modal',
       url: '/src/app/modules/auth/components/login/login.component.html',
     }
-  ]
+  ];
 
   constructor() { }
 

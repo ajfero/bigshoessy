@@ -1,9 +1,17 @@
 .contenedorNavbar {
     overflow: hidden;
 }
+    
+.navCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 578px) {
+    
     .navPages {
        display: none;
     }
-}
+    
+}    

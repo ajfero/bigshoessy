@@ -1,70 +1,87 @@
-<!-- navbar -->
-<nav class="navbar navbar-expand-sm align-items-center bg-secondary sticky-top">
+<!-- nav -->
+<nav class="navbar navbar-expand-sm align-items-center bg-light sticky-top">
     <div class="container container-fluid container-lg d-lg-inline text-center justify-content-between">
 
-        <!-- isotipo-sm (logo tipo imagen)-->
-        <a class=" d-sm-none d-inline " href="#">
-            <img class=" align-text-top " src="assets/img/bssy-logo.svg" alt width="100" height="55">
-        </a>
+        <!-- Tools -->
+        <div class="nav navbar-collapse mx-3 m-xl-0 justify-content-between">
 
-        <!-- logotipo-sm (logo tipo letra)-->
-        <a class="d-sm-none d-inline btn btn-secondary " type="button" href="#" aria-expanded="false">
-            <img class="align-text-top pt-3" src="assets/img/bssy.svg " alt width="100" height="54">
-        </a>
+            <!-- isotipo-xs (logo tipo imagen)-->
+            <a class="d-inline d-sm-none  " href="#">
+                <img class=" align-text-top " src="assets/img/bssy-logo.png" alt width="55" height="55">
+            </a>
 
-        <!--dropDown-->
-        <div class="dropdown d-sm-none d-xs-inline ">
-            <!-- Icon -->
-            <div class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                <button class="btn btn-secondary dropdown" id="dropdownMenuButton1" data-bs-toggle="dropdown" type="button" aria-expanded="false">
-                    <svg class="bi bi-list align-text-top" xmlns="http://www.w3.org/2000/svg" width="60" height="70" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
-                    </svg>
-                </button>
-                <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" aria-labelledby="dropdownMenuButton1">
-                    <li class="dropdown-header bg-light"> <b> MENU </b> </li>
-                    <!--1. Button trigger modal -> signIn/singUp-sm -->
-                    <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
-                        <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
+            <!-- logotipo-xs (logo tipo letra)-->
+            <a class="d-inline d-sm-none " type="button" aria-expanded="false">
+                <img src="assets/img/bssy.svg " alt="" width="100" height="54" class="align-text-top pt-3">
+            </a>
+
+            <!-- dropDown -->
+            <div class="dropdown dropstart d-sm-none  ">
+                <div class="text-center text-sm-center d-sm-none">
+
+                    <!-- Icon -->
+                    <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                        <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 " style="font-size: 2.5rem;"></i>
                     </div>
-                    <!--Menu-->
-                    <li class="dropdown-item"><a href="../index.html"> Home </a></li>
-                    <li class="dropdown-item"><a href="./products.html"> Productos </a></li>
-                    <li class="dropdown-item"><a href="./ofers.html"> Ofertas </a></li>
-                    <li class="dropdown-item"><a href="./about.html"> Nosotros </a></li>
-                    <li class="dropdown-item"><a href="./contact.html"> Contactanos </a></li>
-                </ul>
+                    <li><hr class="dropdown-divider"></li>
+                    
+                    <!-- Body -->
+                    <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
+
+                        <!-- signIn-sm -->
+                        <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
+                            <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
+                        </div>
+
+                        <!-- singUp-sm -->
+                        <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
+                            <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing Up</a> </div>
+                        </div>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <!-- Menu -->
+                        <li class="dropdown-header bg-light"> <b> MENU </b> </li>
+                        <li class="dropdown-item"><a href="../index.html"> Home </a></li>
+                        <li class="dropdown-item"><a href="./products.html"> Productos </a></li>
+                        <li class="dropdown-item"><a href="./ofers.html"> Ofertas </a></li>
+                        <li class="dropdown-item"><a href="./about.html"> Nosotros </a></li>
+                        <li class="dropdown-item"><a href="./contact.html"> Contactanos </a></li>
+
+                    </ul>
+
+                </div>
             </div>
+
         </div>
 
         <!-- navPages -->
-        <div class="navPages d-lg-flex justify-content-center ">
+        <div class="row d-lg-flex justify-content-center ">
             <div class=" text-center d-none d-sm-inline-block ">
-                <div class="navbar navbar-nav">
+                <div class=" navbar navbar-nav">
 
                     <!-- logo-lg -->
                     <div class=" container-expand text-center d-none d-sm-inline-block ">
-                        <a class=" d-none d-sm-inline align-items-sm-start ">
-                            <a class=" text-sm-center" href="#">
-                                <img class="d-inline-block align-text-top " src="assets/img/bssy-logo.svg" alt width="100" height="55">
+                        <div class=" d-none d-sm-inline align-items-sm-start " >
+                            <a class="text-sm-center" href="#">
+                                <img class=" align-text-top " src="assets/img/bssy-logo.png" alt width="55" height="55">
+                                <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
                             </a>
-                            <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
-                        </a>
+                        </div>
                     </div>
 
                     <!--2. signIn/singUp-md -->
                     <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
                         <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
+
                         </a>
                     </div>
 
                     <!-- menu -->
                     <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
-                        <div class="contendorMenu navbar navbar-nav mx-sm-5 mx-lg-0 ">
+                        <div class="contendorMenu navbar navbar-nav mx mx-lg-0 ">
                             <div class=" nav-item " *ngFor="let option of menuOptions">
-                                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a>
-                            </div>
+                                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a></div>
                         </div>
                     </div>
 
@@ -92,97 +109,33 @@
                                 <app-modal></app-modal>
                             </div> -->
 
-                        </div>
                     </div>
 
+                    </div>
+                    
                 </div>
             </div>
         </div>
 
+
     </div>
 </nav>
 
+<!-- component modal-login -->
 <div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
     <!-- Componente login -->
     <app-modal-login></app-modal-login>
 </div>
 
+<!-- component modal-signup-->
 <div class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true" aria-labelledby="modal-signup" tabindex="-1">
     <app-modal-register></app-modal-register>
 </div>
 
-
-<!--Ng template para los SVG-->
-
-<!--SVG UserIcon-->
+<!--Ng template para los SVG -> SVG UserIcon-->
 <ng-template #iconUser="">
     <svg class="bi bi-person-circle" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
-        </svg>
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+    </svg>
 </ng-template>
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <!-- isotipo-sm (logo tipo imagen)-->
-    <a class="navbar-brand d-sm-none d-inline " href="#">
-        <img class=" align-text-top " src="assets/img/bssy-logo.svg" alt width="100" height="55">
-    </a>
-
-    <!-- logotipo-sm (logo tipo letra)-->
-    <a class="navbar-brand d-sm-none d-inline " type="button" href="#" aria-expanded="false">
-        <img class="align-text-top pt-3" src="assets/img/bssy.svg " alt width="100" height="54">
-    </a>
-
-    <!--dropDown-->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="dropdown d-sm-none d-xs-inline ">
-            <!-- Icon -->
-            <div class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                    <svg class="bi bi-list align-text-top" xmlns="http://www.w3.org/2000/svg" width="60" height="70" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
-                    </svg>
-                <ul class="dropMenu dropdown-menu bg-secondary d-sm-none text-center" aria-labelledby="dropdownMenuButton1">
-                    <li class="dropdown-header bg-light"> <b> MENU </b> </li>
-                    <!--1. Button trigger modal -> signIn/singUp-sm -->
-                    <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
-                        <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
-                    </div>
-                    <!--Menu-->
-                    <li class="dropdown-item"><a href="../index.html"> Home </a></li>
-                    <li class="dropdown-item"><a href="./products.html"> Productos </a></li>
-                    <li class="dropdown-item"><a href="./ofers.html"> Ofertas </a></li>
-                    <li class="dropdown-item"><a href="./about.html"> Nosotros </a></li>
-                    <li class="dropdown-item"><a href="./contact.html"> Contactanos </a></li>
-                </ul>
-            </div>
-        </div>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-            </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-
-    </div>
-</nav>
