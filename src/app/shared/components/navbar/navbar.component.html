@@ -24,11 +24,10 @@
                     <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
                         <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 " style="font-size: 2.5rem;"></i>
                     </div>
-                    <li><hr class="dropdown-divider"></li>
                     
                     <!-- Body -->
                     <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
-
+                        <li class="dropdown-header bg-light"> <b> AUTH </b> </li>
                         <!-- signIn-sm -->
                         <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
                             <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
@@ -38,16 +37,13 @@
                         <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
                             <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing Up</a> </div>
                         </div>
-                        <li><hr class="dropdown-divider"></li>
 
-                        <!-- Menu -->
+                        <!-- menu -->
                         <li class="dropdown-header bg-light"> <b> MENU </b> </li>
-                        <li class="dropdown-item"><a href="../index.html"> Home </a></li>
-                        <li class="dropdown-item"><a href="./products.html"> Productos </a></li>
-                        <li class="dropdown-item"><a href="./ofers.html"> Ofertas </a></li>
-                        <li class="dropdown-item"><a href="./about.html"> Nosotros </a></li>
-                        <li class="dropdown-item"><a href="./contact.html"> Contactanos </a></li>
-
+                        <div class=" nav-item  " *ngFor="let option of menuOptions">
+                            <li class="dropdown-item"><a class="dropdown-item" [routerLink]="[option.url]">{{ option.label }}</a></li>
+                        </div>
+                        
                     </ul>
 
                 </div>
