@@ -7,6 +7,7 @@
     section {
         position: relative;
         display: flex;
+        grid-template-columns: 3;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -14,13 +15,30 @@
         cursor: pointer;
         overflow: hidden;
 
+
         figure {
             position: relative;
             transition: all 0.4s;
             display: flex;
             justify-content: center;
             align-items: center;
-
+            cursor: pointer;
         }
+
     }
+}
+
+.contenedor_section-two {
+    display: flex;
+    background: rgb(22, 81, 100);
+    background: linear-gradient(90deg, rgba(22, 81, 100, 1) 0%, rgba(227, 244, 251, 1) 38%, rgba(227, 244, 251, 1) 51%);
+    box-shadow: -4px 1px 79px 26px rgba(22, 81, 100, 0.42);
+    -webkit-box-shadow: -4px 1px 79px 26px rgba(22, 81, 100, 0.42);
+    -moz-box-shadow: -4px 1px 79px 26px rgba(22, 81, 100, 0.42);
+    flex-wrap: row;
+    grid-template-columns: 12;
+    margin-bottom: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
 }
