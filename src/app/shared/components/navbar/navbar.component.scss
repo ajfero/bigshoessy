@@ -1,12 +1,47 @@
+.animacion_logo-xs {
+    animation: lightSpeedInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.animacion_bssy-xs {
+    animation: rotateInDownRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.animacion_hamburguesa-xs {
+    animation: lightSpeedInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.animacion_logo-lg {
+    animation: backInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.animacion_user-lg {
+    animation: backInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
 .mi-n1 {
-  margin-inline: -0.25rem !important;
+    margin-inline: -0.25rem !important;
 }
 
 .contenedorNavbar {
     overflow: hidden;
 }
-    
-.navCenter{
+
+.navCenter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,18 +49,14 @@
 
 // Ocultar nav-xs
 @media only screen and (min-width: 578px) {
-    
     .navHidden {
-       display: none;
+        display: none;
     }
-    
-}    
+}
+
 // Ocultar pages
 @media only screen and (max-width: 578px) {
-    
     .navPages {
-       display: none;
+        display: none;
     }
-    
-}    
-
+}

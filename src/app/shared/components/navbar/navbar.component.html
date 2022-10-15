@@ -1,30 +1,34 @@
 <!-- nav -->
 <nav class="navbar navbar-expand-sm align-items-center bg-light sticky-top">
     <!-- //todo: resolver contenedor extra -->
-    <div class=" container container-fluid container-lg d-lg-inline text-center justify-content-between">
+    <div class=" container container-fluid container-lg d-lg-inline text-center justify-content-between ">
 
         <!-- Tools -->
-        <div class="navHidden nav navbar-collapse mx-3 m-xl-0 justify-content-between">
+        <div class="navHidden nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
 
             <!-- isotipo-xs (logo tipo imagen)-->
-            <a class="d-inline d-sm-none  " href="#">
-                <img class=" align-text-top " src="assets/img/bssy-logo.png" alt width="55" height="55">
-            </a>
+            <div class="animacion_logo-xs">
+                <a class="d-inline d-sm-none  " href="#">
+                    <img class=" align-text-top" src="assets/img/bssy-logo.png" alt width="55" height="55">
+                </a>
+            </div>
 
             <!-- logotipo-xs (logo tipo letra)-->
-            <a class="d-inline d-sm-none " type="button" aria-expanded="false">
-                <img src="assets/img/bssy.svg " alt="" width="100" height="54" class="align-text-top pt-3">
-            </a>
+            <div class="animacion_bssy-xs">
+                <a class="d-inline d-sm-none " type="button" aria-expanded="false">
+                    <img src="assets/img/bssy.svg " alt="" width="100" height="54" class="align-text-top pt-3">
+                </a>
+            </div>
 
             <!-- dropDown -->
-            <div class="dropdown dropstart d-sm-none  ">
+            <div class="dropdown dropstart d-sm-none animacion_hamburguesa-xs ">
                 <div class="text-center text-sm-center d-sm-none">
 
                     <!-- Icon -->
-                    <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 " style="font-size: 2.5rem;"></i>
                     </div>
-                    
+
                     <!-- Body -->
                     <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
                         <li class="dropdown-header bg-light"> <b> AUTH </b> </li>
@@ -43,7 +47,7 @@
                         <div class=" nav-item  " *ngFor="let option of menuOptions">
                             <li class="dropdown-item"><a class="dropdown-item" [routerLink]="[option.url]">{{ option.label }}</a></li>
                         </div>
-                        
+
                     </ul>
 
                 </div>
@@ -57,8 +61,8 @@
                 <div class=" navbar navbar-nav">
 
                     <!-- logo-lg -->
-                    <div class=" container-expand text-center d-none d-sm-inline-block ">
-                        <div class=" d-none d-sm-inline align-items-sm-start " >
+                    <div class=" container-expand text-center d-none d-sm-inline-block animacion_logo-lg">
+                        <div class=" d-none d-sm-inline align-items-sm-start ">
                             <a class="text-sm-center" href="#">
                                 <img class=" align-text-top " src="assets/img/bssy-logo.png" alt width="55" height="55">
                                 <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
@@ -67,7 +71,7 @@
                     </div>
 
                     <!--1. signIn/singUp-md -->
-                    <div class=" d-lg-none d-inline mx-4" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                    <div class=" d-lg-none d-inline mx-4 animacion_user-lg" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
                         <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
 
@@ -106,10 +110,10 @@
                                 <app-modal></app-modal>
                             </div> -->
 
-                    </div>
+                        </div>
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
