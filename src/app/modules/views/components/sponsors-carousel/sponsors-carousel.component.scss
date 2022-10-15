@@ -1,0 +1,19 @@
+.container_sponsors-carousel {
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+    .container_sponsors-carousel {
+        width: 75%;
+        height: 75%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 768) {
+    .container_sponsors-carousel {
+        width: auto;
+        height: 100vh;
+    }
+}

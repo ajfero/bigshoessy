@@ -7,24 +7,19 @@
 // Import local Vendors
 @import 'utilities/vendors';
 
-
 /*
 *! Import Externals */
 
+@import 'animate.css';
 // Scripts
-
 // @import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js");
 // @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js");
 // Bootstrap v5.2.2.
 @import "~bootstrap/scss/bootstrap";
-
 // @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js");
 // @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-
-
 // @import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");
 // @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
 // Import section models 
 // @import url(~fullpage.js/dist/fullpage.min.css);
 // <<<<<<< Updated upstream

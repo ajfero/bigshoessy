@@ -17,7 +17,11 @@
 }
 
 .contenedor_banner-destacados {
-    padding-top: 20px;
+    padding-top: 50px;
+    animation: backInLeft;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s;
+    /* don't forget to set a duration! */
 }
 
 .contenedor_banner-ofertas {
@@ -29,9 +33,13 @@
 }
 
 @media (min-width: 576px) {
+    .contenedor_banner-destacados {
+        padding-top: 15px;
+    }
     .contenedor_banner-productos {
         padding-top: 100px;
         width: auto;
+        height: 75vh;
     }
 }
 
@@ -40,29 +48,38 @@
         padding-top: 12px;
         padding-bottom: 100px;
     }
+    .contenedor_banner-ofertas {
+        padding-bottom: 100px;
+    }
 }
 
 @media (min-width: 992px) {
+    .contenedor_banner-ofertas {
+        text-align: center;
+    }
+    .contenedor_banner-productos {
+        text-align: center;
+    }
     .contenedor_banner-destacados {
+        text-align: center;
         padding-top: 10px;
         padding-bottom: 40px;
+        justify-content: center;
     }
     .imagen_banner-home {
-        width: 100%;
+        width: 85%;
         height: 85%;
+        align-items: center;
     }
     .contenedor_banner-ofertas {
         padding-bottom: 30px;
     }
 }
 
-@media (min-width: 1200px) {
-    .contenedor_banner-destacados {
-        padding-top: 10px;
-    }
+@media (min-width: 1400px) {
     .imagen_banner-home {
-        width: 100%;
-        height: 80%;
+        width: 90%;
+        height: 60%;
     }
 }
 

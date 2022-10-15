@@ -1,11 +1,8 @@
 /* Cards Go-Shop */
 
 .contenedor_goShop-home {
-    background: linear-gradient( $secondary, $info);
-    box-shadow: -0.3em -0.3em 0.2em rgba(0, 0, 0, 0.353);
-    padding-bottom: 40px;
-    padding-top: 35px;
-    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 40px;
 }
 
 //Aca arranca el GO shop
@@ -48,7 +45,8 @@
 
 @media (min-width: 768px) {
     .contenedor_goShop {
-        padding-top: 20px;
+        padding-top: 50px;
+        padding-bottom: 100px;
     }
 }
 
