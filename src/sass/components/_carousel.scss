@@ -1,21 +1,23 @@
-/* Carousel Products */ 
+/* Carousel Products */
+$contenedorHeigth: 400px;
+
 
 // Aca arranca el carrousel
 .contenedor_carousel-products {
-    height: 400px;
+    height: $contenedorHeigth;
 }
 
 .imgCarrousel {
     padding-top: 50px;
-    height: 180px;
+    height: ($contenedorHeigth/2) - 20;
 }
 
 .carousel_products-elements {
-    height: 350px;
+    height: ($contenedorHeigth - 50);
 }
 
 .section_carousel-products {
-    height: 500px;
+    height: $contenedorHeigth + 100;
 }
 
 .elementCarousel_text-parrafo {
@@ -35,15 +37,18 @@
 
 @media (min-width: 576px) {
     .contenedor_carousel-products {
-        height: 400px;
+        height: $contenedorHeigth;
     }
+
     .imgCarrousel {
-        height: 200px;
+        height: $contenedorHeigth / 2;
     }
+
     .products_element-text {
         padding-top: 60px;
         font-size: 14px;
     }
+
     .elementCarousel_text-title {
         font-size: 24px;
     }
@@ -51,15 +56,18 @@
 
 @media (min-width: 768px) {
     .contenedor_carousel-products {
-        height: 400px;
+        height: $contenedorHeigth;
     }
+
     .imgCarrousel {
-        height: 200px;
+        height: $contenedorHeigth / 2;
         margin-top: 0;
     }
+
     .products_element-text {
         font-size: 16px;
     }
+
     .elementCarousel_text-title {
         font-size: 27px;
     }

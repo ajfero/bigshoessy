@@ -1,19 +1,19 @@
 <!-- footer -->
-<footer class="navbar navbar-expand-lg bg-white align-items-center my-xs-0 " style="bottom: 0;">
+<footer class="upFixed centerClass navbar navbar-expand-lg bg-white align-items-center my-xs-0 " style="bottom: 0;">
     <div class=" container-fluid d-sm-inline text-sm-center text-md-center bg-light align-self-end">
 
         <!-- barra 1: Se muestra siempre al lado del logo -->
         <div class="container text-center d-none d-xs-none d-sm-inline d-xl-inline col-xl-2 ">
             <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_190_1219)">
-                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_190_1219">
-                            <rect width="300" height="3.001" fill="white"></rect>
-                        </clipPath>
-                    </defs>
-                </svg>
+                <g clip-path="url(#clip0_190_1219)">
+                    <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                </g>
+                <defs>
+                    <clipPath id="clip0_190_1219">
+                        <rect width="300" height="3.001" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </svg>
         </div>
 
         <!-- logo -->
@@ -30,50 +30,52 @@
         <!-- barra 2: se mostrara solo en telefonos -->
         <div class="container text-center d-none d-xs-none d-sm-inline d-xl-none ">
             <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_190_1219)">
-                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_190_1219">
-                            <rect width="300" height="3.001" fill="white"></rect>
-                        </clipPath>
-                    </defs>
-                </svg>
+                <g clip-path="url(#clip0_190_1219)">
+                    <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                </g>
+                <defs>
+                    <clipPath id="clip0_190_1219">
+                        <rect width="300" height="3.001" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </svg>
         </div>
 
         <!-- menu -->
         <div class="container text-center d-xl-inline-block col-xl-5 text-decoration-underline ">
             <div class="row navbar navbar-nav mx-5 m-xl-0 d-xl-inline-block" *ngFor="let option of menuOptions">
-                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a></div>
+                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a>
+            </div>
         </div>
 
         <!-- barra 3: se mostrara solo en escritorios -->
         <div class=" container text-center d-none d-sm-none d-sm-inline d-md-none d-lg-none d-xl-inline col-xl-2 ">
             <svg width="150" height="3" viewBox="0 0 300 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_190_1219)">
-                        <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_190_1219">
-                            <rect width="300" height="3.001" fill="white"></rect>
-                        </clipPath>
-                    </defs>
-                </svg>
+                <g clip-path="url(#clip0_190_1219)">
+                    <rect width="300" height="3.001" fill="#1C1C1C" fill-opacity="0.15"></rect>
+                </g>
+                <defs>
+                    <clipPath id="clip0_190_1219">
+                        <rect width="300" height="3.001" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </svg>
         </div>
 
     </div>
 </footer>
+
 
 <!-- copyright -->
 <div class="container-fluid text-center bg-white align-items-center">
     <div class="row">
         <div class="container d-block align-items-center">
             <span>
-                    <a href="https://www.bigshoessy.com/"> © 2020 Copyright: </a>
-                </span>
+                <a href="https://www.bigshoessy.com/"> © 2020 Copyright: </a>
+            </span>
             <span>
-                    <a class="text-dark" href="https://bigshoessy.com/">bigshoessy.com</a>
-                </span>
+                <a class="text-dark" href="https://bigshoessy.com/">bigshoessy.com</a>
+            </span>
         </div>
     </div>
 </div>

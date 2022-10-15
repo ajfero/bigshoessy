@@ -1,16 +1,37 @@
 /* Cards Go-Shop */
 
+//Vars
+$globalPadding: 50px;
+//Class
+
 .contenedor_goShop-home {
-    padding-bottom: 50px;
-    padding-top: 40px;
+    padding-bottom: $globalPadding;
+    padding-top: $globalPadding - 10;
 }
 
 //Aca arranca el GO shop
 .contenedor_goShop {
-    display: inline-block;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    display: block; //Posicion en bloque
+    position: relative; //Que se posicione relativamente
+    padding-top: $globalPadding;
+    padding-bottom: ($globalPadding / 2) - 10;
+    text-decoration: none; //Le sacamos los estilos por defecto.
+    text-transform: uppercase; //Que se ponga en mayúsculas
+    text-align: center; //lo alineamos al centro
     align-items: center;
+    cursor: pointer; //Le decimos que se ponga como puntero cuando se pare arriba del texto.
+    color: rgba(51, 139, 255, 0.815); //Le asignamos un color
+    z-index: 0;
+    transition: all 450ms ease;
+
+    .titulo_goShop {
+
+
+        &:hover {
+            color: $quinto;
+
+        }
+    }
 }
 
 @mixin imagen_goShop {
@@ -45,8 +66,8 @@
 
 @media (min-width: 768px) {
     .contenedor_goShop {
-        padding-top: 50px;
-        padding-bottom: 100px;
+        padding-top: $globalPadding;
+        padding-bottom: $globalPadding * 2;
     }
 }
 

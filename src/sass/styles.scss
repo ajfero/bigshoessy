@@ -11,6 +11,7 @@
 *! Import Externals */
 
 @import 'animate.css';
+@import 'fullpage.js/dist/fullpage.min.css';
 // Scripts
 // @import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js");
 // @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js");
@@ -21,7 +22,34 @@
 // @import url("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js");
 // @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 // Import section models 
-// @import url(~fullpage.js/dist/fullpage.min.css);
+//Mixins
+$light-background: hsla(199, 33%, 80%, 0.219);
+$dark-text: #000000;
+$dark-background: #000000;
+$light-text: #d2e1dd;
+
+
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+        background-color: $light-background;
+        color: $dark-text;
+    }
+
+    @else {
+        background-color: $dark-background;
+        color: $light-text;
+    }
+}
+
+body {
+    @include theme-colors(true)
+}
+
+//Class
+
+
+
 // <<<<<<< Updated upstream
 // $grid-breakpoints: ( xs: 0,
 // sm: 576px,

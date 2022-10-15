@@ -1,35 +1,57 @@
-$grid-breakpoints-up: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxxl: 2000px);
+//Maps and Vars.
+$grid-breakpoints-up: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 2000px
+);
 
-@mixin from($breakpoint){
-    @media screen and (min-width: map-get($grid-breakpoints-up, $breakpoint)){
+// Mixins
+
+@mixin from($breakpoint) {
+    @media screen and (min-width: map-get($grid-breakpoints-up, $breakpoint)) {
         @content
     }
-};
+}
 
-@mixin to($breakpoint){
-    @media screen and (max-width: map-get($grid-breakpoints-up, $breakpoint)){
+;
+
+@mixin to($breakpoint) {
+    @media screen and (max-width: map-get($grid-breakpoints-up, $breakpoint)) {
         @content
     }
-};
- 
-@include from(sm){
+}
+
+;
+
+//Includes
+
+@include from(sm) {
     .contenedor__home-shopping {
         height: 70%;
     }
+
     .contenedor__carrousel-buttons {
         height: 400px;
     }
+
     .container__carrousel-img-primary {
         height: 200px;
     }
+
     .imgSeccion {
         width: 90%;
         max-height: 500px;
     }
+
     .container__text-carrousel {
         padding-top: 60px;
         font-size: 14px;
     }
+
     .title__carrousel {
         font-size: 24px;
     }
@@ -40,20 +62,25 @@ $grid-breakpoints-up: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:
     .contenedor__home-shopping {
         height: 70%;
     }
+
     .contenedor__carrousel-buttons {
         height: 400px;
     }
+
     .container__carrousel-img-primary {
         height: 200px;
     }
+
     .imgSeccion {
         width: 90%;
         max-height: 500px;
     }
+
     .container__text-carrousel {
         padding-top: 60px;
         font-size: 14px;
     }
+
     .title__carrousel {
         font-size: 24px;
     }
@@ -63,15 +90,19 @@ $grid-breakpoints-up: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:
     .contenedor__home-shopping {
         height: 80%;
     }
+
     .contenedor__carrousel-buttons {
         height: 450px;
     }
+
     .carrousel__images {
         height: 250px;
     }
+
     .container__text-carrousel {
         font-size: 16px;
     }
+
     .title__carrousel {
         font-size: 27px;
     }
@@ -89,6 +120,7 @@ $grid-breakpoints-up: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:
         bottom: 0;
         width: 100%;
     }
+
     .centerClass {
         height: 90vh;
         display: flex;
