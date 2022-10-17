@@ -6,9 +6,10 @@ import { HomeComponent } from './views/home/home.component';
 import { ProductsComponent } from './views/products/products.component';
 import { OffersComponent } from './views/offers/offers.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { AboutUsComponent } from './views/about-us/about-us.component';
 import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 import { WrapperComponent } from './views/wrapper/wrapper.component';
+import { AboutComponent } from './views/about/about.component';
+
 
 // usar el slash no deja tener control sobre la root padre.
 // (Ésta ruta la hace relativa a la raiz del proyecto)
@@ -34,7 +35,7 @@ const routes: Routes = [
       },
       {
         path: 'about-us', // http://localhost/about-us
-        component: AboutUsComponent,
+        component: AboutComponent,
       },
       {
         path: 'contact', // http://localhost/contact

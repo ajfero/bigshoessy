@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 // Bootstrap NgBModule. Bootstrap 5 CSS with APIs designed for the Angular ecosystem. 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
 // Extension de seccionamiento
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { NavegationComponentsModule } from './shared/modules';
@@ -24,4 +23,5 @@ const components = [AppComponent];
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }
