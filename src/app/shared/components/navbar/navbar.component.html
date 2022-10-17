@@ -25,27 +25,32 @@
                 <div class="text-center text-sm-center d-sm-none">
 
                     <!-- Icon -->
-                    <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 " style="font-size: 2.5rem;"></i>
+                    <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 "
+                            style="font-size: 2.5rem;"></i>
                     </div>
 
                     <!-- Body -->
                     <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
                         <li class="dropdown-header bg-light"> <b> AUTH </b> </li>
                         <!-- signIn-sm -->
-                        <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
+                        <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button"
+                            *ngFor="let traer of modal">
                             <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing In</a> </div>
                         </div>
 
                         <!-- singUp-sm -->
-                        <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button" *ngFor="let traer of modal">
+                        <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button"
+                            *ngFor="let traer of modal">
                             <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing Up</a> </div>
                         </div>
 
                         <!-- menu -->
                         <li class="dropdown-header bg-light"> <b> MENU </b> </li>
                         <div class=" nav-item  " *ngFor="let option of menuOptions">
-                            <li class="dropdown-item"><a class="dropdown-item" [routerLink]="[option.url]">{{ option.label }}</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" [routerLink]="[option.url]">{{
+                                    option.label }}</a></li>
                         </div>
 
                     </ul>
@@ -56,7 +61,7 @@
         </div>
 
         <!-- navPages -->
-        <div class="navPages row d-lg-flex justify-content-center ">
+        <div class="navPages row d-lg-flex justify-content-center">
             <div class=" text-center d-none d-sm-inline-block ">
                 <div class=" navbar navbar-nav">
 
@@ -65,13 +70,15 @@
                         <div class=" d-none d-sm-inline align-items-sm-start ">
                             <a class="text-sm-center" href="#">
                                 <img class=" align-text-top " src="assets/img/bssy-logo.png" alt width="55" height="55">
-                                <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg" alt width="200" height="55">
+                                <img class="d-inline-block align-text-top " src="assets/img/bigShoesSy-letter-black.svg"
+                                    alt width="200" height="55">
                             </a>
                         </div>
                     </div>
 
                     <!--1. signIn/singUp-md -->
-                    <div class=" d-lg-none d-inline mx-4 animacion_user-lg" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                    <div class=" d-lg-none d-inline mx-4 animacion_user-lg" data-bs-target="#modal-login"
+                        data-bs-toggle="modal" type="button">
                         <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
 
@@ -82,12 +89,14 @@
                     <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
                         <div class="contendorMenu navbar navbar-nav mx mx-5 px-xl-5 ">
                             <div class=" nav-item " *ngFor="let option of menuOptions">
-                                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a></div>
+                                <a class="nav-link" [routerLink]="[option.url]">{{ option.label }}</a>
+                            </div>
                         </div>
                     </div>
 
                     <!--2. signIn/singUp-md -->
-                    <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                    <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal"
+                        type="button">
                         <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
                         </a>
@@ -128,14 +137,23 @@
 </div>
 
 <!-- component modal-signup-->
-<div class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true" aria-labelledby="modal-signup" tabindex="-1">
+<div class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true"
+    aria-labelledby="modal-signup" tabindex="-1">
     <app-modal-register></app-modal-register>
+</div>
+
+<!--component modal-recover-->
+<div class="modal fade" id="modal-recover" aria-hidden="true" aria-labelledby="modal-recover" tabindex="">
+    <app-modal-recover></app-modal-recover>
 </div>
 
 <!--Ng template para los SVG -> SVG UserIcon-->
 <ng-template #iconUser="">
-    <svg class="bi bi-person-circle" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+    <svg class="bi bi-person-circle" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+        viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+        <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+        </path>
     </svg>
 </ng-template>

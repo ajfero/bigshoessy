@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
       url: 'products',
     },
     {
-      label: 'About us',
+      label: 'Team',
       url: 'about-us',
     },
     {
