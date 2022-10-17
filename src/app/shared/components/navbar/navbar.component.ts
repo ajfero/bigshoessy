@@ -26,6 +26,12 @@ export class NavbarComponent implements OnInit {
       label: 'Contact',
       url: 'contact',
     },
+    // Muestro de ruta Profile
+    {
+      label: 'Profile',
+      url: 'profile',
+    },
+
   ];
 
   modal = [

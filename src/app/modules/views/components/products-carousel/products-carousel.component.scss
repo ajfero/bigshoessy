@@ -1,0 +1,177 @@
+/* Carousel Products */
+
+// variables
+$contenedorHeigth: 400px;
+
+
+// Contenedor de buttons de carousel
+.contenedor_carousel-products {
+    height: $contenedorHeigth;
+}
+
+// Contenedor de imagenes
+.container__carrousel-imgs {
+    height: 500px;
+}
+
+// Contenedor anidado
+.container__carrousel-img-primary {
+    height: 350px;
+}
+
+// Imagenes del carousel
+.carrousel__images {
+    padding-top: 50px;
+    height: 180px;
+}
+
+// Contenedor de los textos del carousel.
+.container__text-carrousel {
+    opacity: 0.80;
+    padding-top: 60px;
+    font-size: 12px;
+}
+
+.title__carrousel {
+    width: auto;
+    font-size: 22px;
+}
+
+.parrafo__carousel {
+    width: auto;
+}
+
+///////////////////////////////
+.imgCarrousel {
+    padding-top: 50px;
+    height: ($contenedorHeigth/2) - 20;
+}
+
+.carousel_products-elements {
+    height: ($contenedorHeigth - 50);
+}
+
+.section_carousel-products {
+    height: $contenedorHeigth + 100;
+}
+
+.elementCarousel_text-parrafo {
+    width: auto;
+}
+
+.elementCarousel_text-title {
+    width: auto;
+    font-size: 22px;
+}
+
+.products_element-text {
+    opacity: 0.80;
+    padding-top: 60px;
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .contenedor_carousel-products {
+        height: $contenedorHeigth;
+    }
+
+    .imgCarrousel {
+        height: $contenedorHeigth / 2;
+    }
+
+    .products_element-text {
+        padding-top: 60px;
+        font-size: 14px;
+    }
+
+    .elementCarousel_text-title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor_carousel-products {
+        height: $contenedorHeigth;
+    }
+
+    .imgCarrousel {
+        height: $contenedorHeigth / 2;
+        margin-top: 0;
+    }
+
+    .products_element-text {
+        font-size: 16px;
+    }
+
+    .elementCarousel_text-title {
+        font-size: 27px;
+    }
+}
+
+////////////////////////////
+
+
+///////////////////////////////////
+// Aca arranca el carrousel viejo
+.marginCarrousel {
+    height: 400px;
+}
+
+.imgCarrousel {
+    padding-top: 50px;
+    height: 180px;
+}
+
+.elementTheCarrousel {
+    height: 350px;
+}
+
+.containerCarrousel {
+    height: 500px;
+}
+
+.pCarrousel {
+    width: auto;
+}
+
+.h1Carrousel {
+    width: auto;
+    font-size: 22px;
+}
+
+.containerTitleCarrousel {
+    opacity: 0.80;
+    padding-top: 60px;
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .marginCarrousel {
+        height: 400px;
+    }
+    .imgCarrousel {
+        height: 200px;
+    }
+    .containerTitleCarrousel {
+        padding-top: 60px;
+        font-size: 14px;
+    }
+    .h1Carrousel {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .marginCarrousel {
+        height: 450px;
+    }
+    .imgCarrousel {
+        height: 250px;
+    }
+    .containerTitleCarrousel {
+        font-size: 16px;
+    }
+    .h1Carrousel {
+        font-size: 27px;
+    }
+}
