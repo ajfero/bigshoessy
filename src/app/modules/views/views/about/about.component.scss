@@ -25,6 +25,14 @@
             cursor: pointer;
         }
 
+        &:hover {
+            background: rgb(22, 81, 100);
+        }
+
+        &hover figure {
+            width: 100%;
+            transform: scale(1, 1);
+        }
     }
 }
 

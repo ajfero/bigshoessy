@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { NavegationComponentsModule } from './shared/modules';
 
+
 const modules = [NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 
