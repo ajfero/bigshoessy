@@ -23,4 +23,5 @@ const components = [AppComponent];
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }

@@ -17,8 +17,9 @@ const components = [FooterComponent, NavbarComponent, TopNavbarComponent, ModalL
 const views = [NotFoundComponent];
 
 @NgModule({
-  declarations: [...views, components],
-  exports: [...views, components],
+  declarations: [...views, ...components],
+  exports: [...views, ...components],
   imports: [CommonModule, RouterModule]
 })
+
 export class NavegationComponentsModule { }
