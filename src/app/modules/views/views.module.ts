@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 // Routing
 import { ViewsRoutingModule } from './views-routing.module';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 // Modules
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
@@ -13,7 +14,6 @@ import { BannerOneComponent } from './components/banner-one/banner-one.component
 import { BannerTwoComponent } from './components/banner-two/banner-two.component';
 import { BannerThreeComponent } from './components/banner-three/banner-three.component';
 import { SponsorsCarouselComponent } from './components/sponsors-carousel/sponsors-carousel.component';
-import { GoShopComponent } from './components/go-shop/go-shop.component';
 import { ProductsSidebarComponent } from './components/products-sidebar/products-sidebar.component';
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
 import { ContactOpcionalComponent } from './components/contact-opcional/contact-opcional.component';
@@ -41,13 +41,15 @@ const modules = [
   CommonModule,
   ViewsRoutingModule,
   NavegationComponentsModule,
-  AngularFullpageModule
+  AngularFullpageModule,
+  HttpClientModule,
+  FormsModule
 
 ];
 
 const components = [
 
-  BannerOneComponent, BannerTwoComponent, BannerThreeComponent, GoShopComponent, CardComponent,
+  BannerOneComponent, BannerTwoComponent, BannerThreeComponent, CardComponent,
   ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent, CardProductsComponent,
   ContactOpcionalComponent,
   ProfileContactComponent, UploadPicComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent

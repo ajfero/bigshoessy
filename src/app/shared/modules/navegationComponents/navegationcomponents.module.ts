@@ -11,6 +11,8 @@ import { FooterComponent } from 'src/app/shared/components/footer/footer.compone
 import { ModalLoginComponent } from 'src/app/shared/components/modal-login/modal-login.component';
 import { ModalRegisterComponent } from '../../components/modal-register/modal-register.component';
 import { ModalRecoverComponent } from '../../components/modal-recover/modal-recover.component';
+import { RenderComponent } from '../../components/render/render.component';
+
 
 //loader
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
@@ -20,7 +22,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
 
 //Components and moduls.
-const components = [SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
+const components = [RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 const moduls = [CommonModule, RouterModule, HttpClientModule]
 

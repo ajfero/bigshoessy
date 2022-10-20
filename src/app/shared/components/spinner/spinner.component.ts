@@ -13,8 +13,6 @@ import { SpinnerService } from '../../services/spinner.service';
 })
 export class SpinnerComponent {
   isLoading$ = this.spinnerSvc.isLoading$;
-  constructor(private spinnerSvc: SpinnerService) {
-
-  }
+  constructor(private spinnerSvc: SpinnerService) { }
 
 }
