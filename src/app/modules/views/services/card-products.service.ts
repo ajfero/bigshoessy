@@ -10,8 +10,9 @@ export class CardProductsService {
   constructor(
     private http: HttpClient
   ) { }
-}
 
-getAllProducts(){
-  return this.http.get<Product[]>('https://fakestoreapi.com/products')
+
+  getAllProducts() {
+    return this.http.get<Product[]>('https://fakestoreapi.com/products')
+  }
 }

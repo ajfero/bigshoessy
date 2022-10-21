@@ -43,7 +43,7 @@ const modules = [
   NavegationComponentsModule,
   AngularFullpageModule,
   HttpClientModule,
-  FormsModule
+  FormsModule,
 
 ];
 

@@ -9,6 +9,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
+import { CardComponent } from './components/card/card.component';
 
 
 // usar el slash no deja tener control sobre la root padre.
@@ -17,6 +18,11 @@ import { AboutComponent } from './views/about/about.component';
 const routes: Routes = [
   {
 
+
+    path: 'card',
+    component: CardComponent,
+  },
+  {
     path: '',
     component: WrapperComponent,
     children: [

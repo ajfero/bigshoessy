@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-render',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./render.component.scss']
 })
 export class RenderComponent implements OnInit {
+
+
+  @Input() img: string = '';
 
   constructor() { }
 

@@ -10,7 +10,7 @@ export class CardProductsComponent implements OnInit {
 
   // myShoppingCart: Card[] = [];
   total = 0;
-  products: Product[] = [];
+  // products: Product[] = [];
 
 
   constructor(
@@ -19,10 +19,10 @@ export class CardProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.CardProductsService.getAllProducts()
-      //Debo correr un .subscribe para poder obtener toda la información (Function)
-      .subscribe(data => {
-        this.products = data;
-      });
+    //Debo correr un .subscribe para poder obtener toda la información (Function)
+    // .subscribe(data => {
+    //   this.products = data;
+    // });
 
   }
 

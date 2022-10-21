@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 // views
 import { NotFoundComponent } from '../../views/not-found/not-found.component';
 
@@ -24,7 +25,7 @@ import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
 //Components and moduls.
 const components = [RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
-const moduls = [CommonModule, RouterModule, HttpClientModule]
+const moduls = [FormsModule, CommonModule, RouterModule, HttpClientModule]
 
 @NgModule({
   declarations: [...views, components],

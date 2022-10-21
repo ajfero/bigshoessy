@@ -1,49 +1,51 @@
 <!--Card 1-->
-<div class="col-6 pt-5 mt-2 gx-4">
-    <div class="card shadow text-center d-flex flex-content justify-content-center align-items-center">
-        <!--Imagen del producto-->
-        <app-render *ngIf="product.images.length > 0" [img]="product.image[0]"></app-render>
-        <!--Marca-->
-        <h5 class=" text-center" fill="#eceeef">
-            <B>NIKE</B>
-        </h5>
-        <!--Modelo-->
-        <h5>
+<!-- <div class="col-6 pt-5 mt-2 gx-4">
+    <div class="card shadow text-center d-flex flex-content justify-content-center align-items-center"> -->
+<!--Imagen del producto-->
+<p><input type="text" [(ngModel)]="imgParent"></p>
+<app-render [img]="imgParent"></app-render>
+<!--Marca-->
+<!-- <h5 class=" text-center" fill="#eceeef">
+            <B>NIKE</B> -->
+<!-- </h5> -->
+<!--Modelo-->
+<!-- <h5>
             <B>AIR FORCE 2</B>
-        </h5>
-        <!--Puntuación del producto-->
-        <ul class="list-unstyled d-flex justify-content-center mb-1">
+        </h5> -->
+<!--Puntuación del producto-->
+<!-- <ul class="list-unstyled d-flex justify-content-center mb-1">
             <li>
                 <ng-template [ngTemplateOutlet]="Stars"></ng-template>
             </li>
-        </ul>
-        <!--Button group-->
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <!--Detalle en el template-->
-                <div class="btn-group">
-                    <!--Ver características-->
-                    <button type="button " class="btn btn-sm btn-outline-secondary ">
+        </ul> -->
+<!--Button group-->
+<!-- <div class="card-body">
+            <div class="d-flex justify-content-center"> -->
+<!--Detalle en el template-->
+<!-- <div class="btn-group"> -->
+<!--Ver características-->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                         <ng-template [ngTemplateOutlet]="CaracIcon"></ng-template>
-                    </button>
-                    <!--Agregar al carrito-->
-                    <button type="button " class="btn btn-sm btn-outline-secondary ">
+                    </button> -->
+<!--Agregar al carrito-->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                         <ng-template (click)="onAddToCart()" [ngTemplateOutlet]="Cart"></ng-template>
-                    </button>
-                    <!--Añadir a favoritos-->
-                    <button type="button " class="btn btn-sm btn-outline-secondary ">
+                    </button> -->
+<!--Añadir a favoritos-->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                         <ng-template [ngTemplateOutlet]="Favs"></ng-template>
-                    </button>
-                </div>
-                <div>
-                    <h6>
-                        {{product.price | currency:'COP'}}
-                    </h6>
-                </div>
+                    </button> -->
+<!-- </div>
+                <div> -->
+<!--Precio-->
+<!-- <h6>
+
+                    </h6> -->
+<!-- </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->

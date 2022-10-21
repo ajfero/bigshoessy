@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Product } from '../../models/card.model';
 
 @Component({
   selector: 'app-card',
@@ -8,16 +7,18 @@ import { Product } from '../../models/card.model';
 })
 export class CardComponent {
 
-  @Input() product: Product = {
-    id: '',
-    title: '',
-    price: 0,
-    images: [],
-    description: '',
-    category: '',
-  };
+  imgParent = '...';
 
-  @Output() addedProduct = new EvetEmitter<Product>();
+  // @Input() product: Product = {
+  //   id: '',
+  //   title: '',
+  //   price: 0,
+  //   images: [],
+  //   description: '',
+  //   category: '',
+  // };
+
+  // @Output() addedProduct = new EvetEmitter<Product>();
 
 
 }

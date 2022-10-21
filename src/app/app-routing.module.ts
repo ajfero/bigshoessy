@@ -10,6 +10,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
   },
+  {
+    path: 'card',
+    loadChildren: () => import('./shared/modules/navegationComponents/navegationcomponents.module').then(m => m.NavegationComponentsModule)
+  },
 
   // auth-routing Login -> Test
   // {
