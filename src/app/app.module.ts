@@ -15,6 +15,7 @@ import { NavegationComponentsModule } from './shared/modules';
 
 
 
+
 const modules = [FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 

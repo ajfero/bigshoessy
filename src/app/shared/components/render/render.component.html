@@ -1,4 +1,12 @@
-<img width="200" [src]="img" *ngIf="img;" />
+<!--El componente se encarga de renderizar una imagen-->
+<img class="w-100 img-fluid" (load)="imgLoaded" (error)="imgError()" [src]="img" *ngIf="img; else elseImg" />
+<!--Damos un ngIF para declarar que sino se ejecuta lo que queremos, haya una imagen por defecto.-->
 <ng-template #elseImg>
-    <img src="/src/assets/img/brand_01.png" />
+    <!--Declaramos nuestra imagen por defecto.-->
+    <img width="200" [src]="imageDefault" alta="imagen" />
 </ng-template>
+
+<!--Seteamos nuestra imagen por defecto, pero si la URL en vez de estar vacía, es ¿NULL?
+Debemos: crear un evento y comunicarselos al contenedor padre del RENDER-->
+
+<!--event (error)-->

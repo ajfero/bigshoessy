@@ -44,7 +44,6 @@ const modules = [
   AngularFullpageModule,
   HttpClientModule,
   FormsModule,
-
 ];
 
 const components = [
