@@ -1,12 +1,32 @@
-<main class="container py-5">
+<!--Search-->
+<div class="container py-5">
+    <app-search class=""></app-search>
+</div>
+
+<main class="container">
     <aside class="row">
         <!--Sidebar-->
         <div class=" col-lg-3">
             <app-products-sidebar></app-products-sidebar>
         </div>
         <!--Seccion con cards-->
-        <div class="col-lg-9">
+        <div class="col-lg-9 ">
             <app-card-products></app-card-products>
         </div>
+        <!--Pagination-->
+        <!--We have to define use: scroll loading or pagination-->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
     </aside>
 </main>

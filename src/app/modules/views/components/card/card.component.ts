@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+//Interface CARD
+import { Product } from '../../models/card.model';
+
 
 @Component({
   selector: 'app-card',
@@ -7,7 +11,26 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
-  imgParent = '...';
+  imgParent = '';
+
+  @Input('myProduct') product: Product = {
+    id: '',
+    title: '',
+    model: '',
+    price: 0,
+  };
+  @Output() addedProduct = new EventEmitter<Product>();
+  //Aca declaramos el evento que creamos en el hijo, para darle la indicación de escucha.
+  onLoaded(img: string): void {
+    console.log('log padre', img);
+  }
+  //Events
+  onAddToCart(): void {
+    this.addedProduct.emit(this.product);
+    console.log('Click me');
+  }
+}
+
 
   // @Input() product: Product = {
   //   id: '',
@@ -19,6 +42,3 @@ export class CardComponent {
   // };
 
   // @Output() addedProduct = new EvetEmitter<Product>();
-
-
-}

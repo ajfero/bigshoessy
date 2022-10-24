@@ -1,20 +1,31 @@
-<!--Llamado a la API-Products-->
-<!-- <div class="products--grid">
-    <app-card [product]="product" *ngFor="let product of products">
+<!--Probamos éste modelo-->
+<p>
+    la cantidad {{ myShoppingCart.length }}
+</p>
+<p>
+    Total: ${{ total }}
+</p>
+<div class="row g-3">
+    <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product' *ngFor="let product of products"
+        (addedProduct)="onAddToShoppingCart($event)">
+
+    </app-card>
+</div>
+
+
+<!--grid function steady-->
+<!---------------------------------->
+<!-- <div class="row g-3">
+    <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product' *ngFor="let product of products">
     </app-card>
 </div> -->
+<!---------------------------------->
 
-
-
-
-<!--Comandos a utilizar luego-->
-<!---->
-<!-- (addedProduct)="onAddToShoppingCart($event) -->
-<!------------------------------------------------------------>
-<!--Aca está la sección de productos anidada.-->
-<!------------------------------------------------------------>
-<!-- <div class="row g-3">
-    Card 1
+<!--old model cards-->
+<!---------------------------------->
+<!---------------------------------->
+<!-- <div class="row g-3"> -->
+<!-- Card 1
     <div class="col-md-4">
         <div class="card shadow text-center">
             <img class="img-fluid" src="../../../../../assets/img/producto-1.jpg" style="height: 220px;">
@@ -34,22 +45,22 @@
             </ul>
             Button group
             <div class="card-body">
-                <div class="d-flex justify-content-center">
-                    Detalle en el template
-                    <div class="btn-group">
-                        Ver características
-                        <button type="button " class="btn btn-sm btn-outline-secondary ">
+                <div class="d-flex justify-content-center"> -->
+<!-- Detalle en el template -->
+<!-- <div class="btn-group">
+                         Ver características -->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                             <ng-template [ngTemplateOutlet]="CaracIcon"></ng-template>
-                        </button>
-                        Agregar al carrito
-                        <button type="button " class="btn btn-sm btn-outline-secondary ">
+                        </button> -->
+<!-- Agregar al carrito -->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                             <ng-template [ngTemplateOutlet]="Cart"></ng-template>
-                        </button>
-                        Añadir a favoritos
-                        <button type="button " class="btn btn-sm btn-outline-secondary ">
+                        </button> -->
+<!-- Añadir a favoritos -->
+<!-- <button type="button " class="btn btn-sm btn-outline-secondary ">
                             <ng-template [ngTemplateOutlet]="Favs"></ng-template>
-                        </button>
-                    </div>
+                        </button> -->
+<!-- </div>
                 </div>
             </div>
         </div>
@@ -57,8 +68,8 @@
 
     Card 2
     <div class="col-md-4">
-        <div class="card shadow" STYLE="height: 417px;">
-            <img class="img-fluid" src="../../../../../assets/img/producto-7.jpg" style="height: 220px;">
+        <div class="card shadow" STYLE="height: 417px;"> -->
+<!-- <img class="img-fluid" src="../../../../../assets/img/producto-7.jpg" style="height: 220px;">
             <h6 class="p-4 text-center h5" fill="#eceeef">
                 <B>JASON RETROS</B>
             </h6>
@@ -66,10 +77,10 @@
                 <li>
                     <ng-template [ngTemplateOutlet]="Stars"></ng-template>
                 </li>
-            </ul>
+            </ul> -->
 
-            Button group
-            <div class="card-body ">
+<!-- Button group -->
+<!-- <div class="card-body ">
                 <div class="d-flex justify-content-center align-items-center ">
                     <div class="btn-group ">
                         <button type="button " class="btn btn-sm btn-outline-secondary ">
@@ -86,8 +97,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Card 3
+    </div> -->
+<!-- Card 3
     <div class="col-md-4">
         <div class="card shadow" STYLE="height: 417px;">
             <img class="img-fluid cover" src="../../../../../assets/img/producto-3.jpg" STYLE="height: 220px;">
@@ -101,8 +112,8 @@
                 </li>
             </ul>
 
-            Button group
-            <div class="card-body">
+           Button group -->
+<!-- <div class="card-body">
 
                 <div class="d-flex justify-content-center align-items-center ">
                     <div class="btn-group ">
@@ -120,8 +131,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Card 4
+    </div> -->
+<!-- Card 4
     <div class="col-md-4">
         <div class="card shadow " STYLE="height: 417px;">
             <img class="img-fluid" src="../../../../../assets/img/producto-4.jpg" STYLE="height: 220px;">
@@ -153,8 +164,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Card 5
+    </div> -->
+<!-- Card 5
     <div class="col-md-4">
         <div class="card shadow">
             <img class="img-fluid" src="../../../../../assets/img/producto-5.jpg" STYLE="height: 220px;">
@@ -219,8 +230,8 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> -->
+<!-- 
     Card 7
     <div class="col-md-4">
         <div class="card shadow">
@@ -251,8 +262,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Card 8
+    </div> -->
+<!-- Card 8
     <div class="col-md-4">
         <div class="card shadow">
             <img class="productosImg img-fluid" src="../../../../../assets/img/producto-3.jpg" STYLE="height: 220px;">
@@ -283,8 +294,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    Card 9
+    </div> -->
+<!-- Card 9
     <div class="col-md-4">
         <div class="card shadow">
             <img class="productosImg img-fluid" src="../../../../../assets/img/producto-9.jpg" STYLE="height: 220px;">
@@ -295,9 +306,9 @@
                 <li>
                     <ng-template [ngTemplateOutlet]="Stars"></ng-template>
                 </li>
-            </ul>
-            Button group
-            <div class="card-body ">
+            </ul> -->
+<!-- Button group -->
+<!-- <div class="card-body ">
 
                 <div class="d-flex justify-content-center align-items-center ">
                     <div class="btn-group ">
@@ -315,8 +326,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div div="row">
+    </div> -->
+<!-- <div div="row">
         <ul class="pagination pagination-lg justify-content-end">
             <li class="page-item disabled">
                 <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
@@ -329,8 +340,8 @@
                 <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
             </li>
         </ul>
-    </div>
-</div> -->
+    </div> -->
+<!-- </div> -->
 
 
 
