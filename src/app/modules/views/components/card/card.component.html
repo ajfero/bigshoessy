@@ -2,15 +2,20 @@
 
 <div class="card shadow text-center d-flex flex-content justify-content-center align-items-center">
     <!--Imagen del producto -->
-    <!-- <p><input type="text" [(ngModel)]="imgParent"></p> -->
-    <app-render (loaded)="onLoaded($event)" [img]="imgParent"></app-render>
-    <!--Marca-->
+    <img class="img-fluid d-md-none d-lg-flex" [src]="product.media.imageUrl">
+    <img class="img-fluid d-none d-md-flex d-lg-none" [src]="product.media.smallImageUrl">
+    <img class="img-fluid d-flex d-md-none" [src]="product.media.thumblrUrl">
+    <!--     -->
+    <!-- <app-render (loaded)="onLoaded($event)" [img]="imgParent"></app-render> -->
+
+
+    <!--Modelo-->
     <h5 class=" text-center pt-2" fill="#eceeef">
         <B>{{ product.title }}</B>
     </h5>
-    <!--Modelo-->
+    <!--Marca-->
     <h5>
-        {{ product.model }}
+        <!-- <B>{{ product.brand }}</B> -->
     </h5>
     <!--Descripcion-->
     <p>
@@ -43,7 +48,7 @@
             <div>
                 <!--Precio-->
                 <button type="button" class="btn btn-sm btn-outline-secondary text-info align-items-center px-5">
-                    ${{product.price}}
+                    ${{product.retailPrice}}
                 </button>
 
             </div>

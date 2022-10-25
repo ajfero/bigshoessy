@@ -1,11 +1,12 @@
 //Default
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 //Interface
 import { Product } from '../../models/card.model';
 
 //Service
 import { StoreService } from 'src/app/shared/services/store.service';
+import { ProductsService } from '../../services/products.service';
 
 //Injectores
 @Component({
@@ -13,39 +14,33 @@ import { StoreService } from 'src/app/shared/services/store.service';
   templateUrl: './card-products.component.html',
   styleUrls: ['./card-products.component.scss']
 })
-export class CardProductsComponent {
+export class CardProductsComponent implements OnInit {
 
   //Array products.
   myShoppingCart: Product[] = [];
   //Default of total.
   total = 0;
   //Array products
-  products: Product[] = [
-    {
-      id: '1',
-      title: 'Nike',
-      model: 'Air Force',
-      price: 9995,
-    },
-    {
-      id: '2',
-      title: 'Nike',
-      model: 'Air Force',
-      price: 9996,
-    },
-    {
-      id: '3',
-      title: 'Nike',
-      model: 'Air Force',
-      price: 9997,
-    },
-  ];
+  products: Product[] = [];
 
   //Injected service
   constructor(
-    private storeService: StoreService) {
+    //Store service
+    private storeService: StoreService,
+    //API service - async method. -> ngOnInit declared.
+    private productsService: ProductsService
+  ) {
     this.myShoppingCart = this.storeService.getShoppingCart();
+
   }
+  //Async Methods
+  ngOnInit(): void {
+    this.productsService.getAllProducts()
+      .subscribe(data => {
+        this.products = data;
+      });
+  }
+
 
   //Loaded render.
   onLoaded(img: string): void {

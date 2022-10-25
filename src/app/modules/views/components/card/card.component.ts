@@ -15,9 +15,17 @@ export class CardComponent {
 
   @Input('myProduct') product: Product = {
     id: '',
-    title: '',
-    model: '',
+    brand: '',
     price: 0,
+    styleId: '',
+    title: '',
+    colorway: '',
+    media: {
+      imageUrl: '',
+      smallImageUrl: '',
+      thumblrUrl: ''
+    },
+    retailPrice: 0,
   };
   @Output() addedProduct = new EventEmitter<Product>();
   //Aca declaramos el evento que creamos en el hijo, para darle la indicación de escucha.
@@ -30,15 +38,3 @@ export class CardComponent {
     console.log('Click me');
   }
 }
-
-
-  // @Input() product: Product = {
-  //   id: '',
-  //   title: '',
-  //   price: 0,
-  //   images: [],
-  //   description: '',
-  //   category: '',
-  // };
-
-  // @Output() addedProduct = new EvetEmitter<Product>();
