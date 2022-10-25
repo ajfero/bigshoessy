@@ -20,13 +20,13 @@ export class StoreService {
   addProduct(product: Product) {
     this.myShoppingCart.push(product);
   }
-
+  //Get Cart.
   getShoppingCart() {
     return this.myShoppingCart;
   }
 
-  //Get total products to Cart.
+  //Get total products to Cart. Item + price.
   getTotal() {
-    return this.myShoppingCart.reduce((sum, item) => sum + item.price, 0)
+    return this.myShoppingCart.reduce((sum, item) => sum + item.retailPrice, 0)
   }
 }

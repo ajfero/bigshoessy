@@ -1,24 +1,16 @@
-//Este es el modelo para las conecciónes y las pruebas.
-
 export interface Product {
 
-    id: string,
-    title: string,
-    model: string,
+    id: string | number,
+    brand: string,
     price: number,
+    styleId: string,
+    colorway: string | number,
+    media: {
+        imageUrl: string,
+        smallImageUrl: string,
+        thumblrUrl: string
+    },
+    title: string,
+    retailPrice: number,
 
 }
-
-//Éste es el modelo de la API con el que vamos a trabajar.
-
-// export interface Products {
-
-//     id: string | number,
-//     brand: string,
-//     styleId: string,
-//     colorway: string | number,
-//     imageUrl: string[],
-//     smallImageUrl: string[],
-//     retailPrice: number,
-
-// }
