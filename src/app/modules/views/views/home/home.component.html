@@ -15,8 +15,9 @@
     <!--Card-products / Go shop-->
     <section class="container-fluid" role="redirecTo-products">
         <div class="row justify-content-around mx-lg-0 mb-4">
-            <app-card class="col-sm-6 col-lg-4"></app-card>
-            <app-card class="col-sm-6 col-lg-4"></app-card>
+            <app-card class="col-sm-6 col-lg-5 col-xl-4" (addedProduct)="onAddToShoppingCart($event)"
+                [myProduct]='product' *ngFor="let product of randomProducts">
+            </app-card>
         </div>
     </section>
 

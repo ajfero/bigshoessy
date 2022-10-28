@@ -33,7 +33,7 @@
             <!--Detalle en el template-->
             <div class="btn-group">
                 <!--Ver características-->
-                <button type="button " class="btn btn-sm btn-outline-secondary ">
+                <button (click)="onShowDetail()" type="button " class="btn btn-sm btn-outline-secondary ">
                     <ng-template [ngTemplateOutlet]="CaracIcon"></ng-template>
                 </button>
                 <!--Agregar al carrito-->

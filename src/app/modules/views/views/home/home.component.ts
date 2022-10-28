@@ -4,8 +4,7 @@ import { ProductsService } from '../../services/products.service';
 import { StoreService } from 'src/app/shared/services/store.service';
 //Models
 import { Product } from '../../models/card.model';
-//Component
-import { ProductsComponent } from '../products/products.component';
+
 
 @Component({
   selector: 'app-home',
@@ -20,6 +19,8 @@ export class HomeComponent {
   myShoppingCart: Product[] = [];
   //Array products
   products: Product[] = [];
+  //One Product
+  randomProducts: Product[] = [];
 
   //Injected service
   constructor(
@@ -35,10 +36,29 @@ export class HomeComponent {
   //Async Methods
   ngOnInit(): void {
     this.productsService.getAllProducts()
-      .subscribe(data => {
-        this.products = data;
+      .subscribe((productsIncoming: Product[]) => {
+
+        this.products = productsIncoming;
+
+        const index0: number = this.random(0, this.products.length - 1)
+        const index1: number = this.random(0, this.products.length - 1)
+        this.randomProducts.push(this.products[index0], this.products[index1]);
+
+        // console.log(this.randomProducts);
+
       });
   }
+
+  random(min: number, max: number): number {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+  }
+
+  // function getObjectRandom() {
+  //   const objectLength = products;
+  //   return Math.floor(Math.random() * objectLength.Length) + 1;
+  // }
+
+
 
   //Adding product at Cart.
   onAddToShoppingCart(product: Product) {

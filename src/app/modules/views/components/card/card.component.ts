@@ -28,6 +28,7 @@ export class CardComponent {
     retailPrice: 0,
   };
   @Output() addedProduct = new EventEmitter<Product>();
+  @Output() showProduct = new EventEmitter<string>();
   //Aca declaramos el evento que creamos en el hijo, para darle la indicación de escucha.
   onLoaded(img: string): void {
     console.log('log padre', img);
@@ -36,5 +37,9 @@ export class CardComponent {
   onAddToCart(): void {
     this.addedProduct.emit(this.product);
     console.log('Click me');
+  }
+
+  onShowDetail() {
+    this.showProduct.emit(this.product.id);
   }
 }

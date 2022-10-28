@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+//Service
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
+
+  counter = 0;
 
   menuOptions = [
     {
@@ -41,9 +44,14 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private storeService: StoreService
+  ) { }
 
   ngOnInit(): void {
+    this.storeService.myCart$.subscribe(products => {
+      this.counter = products.length;
+    })
   }
 
 }

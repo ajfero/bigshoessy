@@ -1,16 +1,26 @@
-<!--Sidebar Body-->
-<div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-    <div class="offcanvas-header">
-        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas"><b>Bag Shopping Cart</b></h6>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<p>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+        aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+        aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+        aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                Some placeholder content for the first collapse component of this multi-collapse example. This panel is
+                hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+        </div>
     </div>
-</div>
-<!--Botton desplegable-->
-<div class="container-fluid">
-    <div class="row">
-        <!-- toggler -->
-        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-            <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-        </button>
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+                hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+        </div>
     </div>
 </div>

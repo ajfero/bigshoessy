@@ -1,4 +1,5 @@
 <!--Probamos éste modelo-->
+<button (click)="toggleProductDetail()">CLICK</button>
 <p>
     la cantidad {{ myShoppingCart.length }}
 </p>
@@ -8,12 +9,18 @@
 </p>
 <div class="row g-3">
     <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product' *ngFor="let product of products"
-        (addedProduct)="onAddToShoppingCart($event)">
-
-    </app-card>
+        (addedProduct)="onAddToShoppingCart($event)" (showProduct)="onShowDetail($event)"></app-card>
+</div>
+<app-sidebar class="product-detail" [class.active]="showProductDetail"></app-sidebar>
+<div>
+    <button (click)="toggleProductDetail()">Close</button>
+    Contenido
 </div>
 
 
+
+
+<!-- (showDetail)="onShowDetail($event)" -->
 <!--grid function steady-->
 <!---------------------------------->
 <!-- <div class="row g-3">

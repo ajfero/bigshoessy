@@ -16,12 +16,14 @@ import { ProductsService } from '../../services/products.service';
 })
 export class CardProductsComponent implements OnInit {
 
-  //Array products.
+  //Array Cart products.
   myShoppingCart: Product[] = [];
   //Default of total.
   total = 0;
   //Array products
   products: Product[] = [];
+  //Id Product
+  showProductDetail = false;
 
   //Injected service
   constructor(
@@ -39,6 +41,10 @@ export class CardProductsComponent implements OnInit {
       .subscribe(data => {
         this.products = data;
       });
+    this.productsService.getAllProducts()
+      .subscribe(data => {
+        this.products = data;
+      });
   }
 
 
@@ -51,4 +57,18 @@ export class CardProductsComponent implements OnInit {
     this.storeService.addProduct(product);
     this.total = this.storeService.getTotal();
   }
+
+
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail;
+
+  }
+  onShowDetail(id: string) {
+    this.productsService.getProduct(id)
+      .subscribe(data => {
+        console.log('product', data);
+      })
+  }
+
+
 }

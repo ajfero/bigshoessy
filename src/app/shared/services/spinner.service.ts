@@ -13,13 +13,13 @@ export class SpinnerService {
   //When to show
   show(): void {
     this.isLoading$.next(true);
-    console.log('El show esta andando amigo');
+
   }
 
   //when to hide.
   hide(): void {
     this.isLoading$.next(false);
-    console.log('El show esta andando amigo');
+
   }
 
   constructor() { }
