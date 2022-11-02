@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 // views
 import { NotFoundComponent } from '../../views/not-found/not-found.component';
+import { CartComponent } from '../../views/cart/cart.component';
 
 // Components
 import { TopNavbarComponent } from 'src/app/shared/components/top-navbar/top-navbar.component';
@@ -24,7 +25,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
 
 //Components and moduls.
-const components = [SidebarComponent, SearchComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
+const components = [CartComponent, SidebarComponent, SearchComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 const moduls = [FormsModule, CommonModule, RouterModule, HttpClientModule]
 

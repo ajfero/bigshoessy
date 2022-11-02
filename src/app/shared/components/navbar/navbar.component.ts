@@ -12,6 +12,12 @@ export class NavbarComponent implements OnInit {
 
   counter = 0;
 
+  pathCart = {
+    label: '',
+    url: 'cart',
+  }
+
+
   menuOptions = [
     {
       label: 'Home',
@@ -53,5 +59,9 @@ export class NavbarComponent implements OnInit {
       this.counter = products.length;
     })
   }
+
+
+
+
 
 }

@@ -10,6 +10,7 @@ import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
 import { CardComponent } from './components/card/card.component';
+import { CartComponent } from 'src/app/shared/views/cart/cart.component';
 
 
 // usar el slash no deja tener control sobre la root padre.
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'profile', // http://localhost/profile
         component: MiProfileComponent,
+      },
+      {
+        path: 'cart', // http://localhost/cart
+        component: CartComponent,
       },
       {
         path: '**', // http://localhost/aeftwef

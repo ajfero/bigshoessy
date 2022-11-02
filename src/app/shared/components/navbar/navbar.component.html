@@ -22,8 +22,9 @@
             <!--Shopping Cart-->
             <div class="d-flex align-items-center">
                 <div class="d-sm-none">
-                    <button class="btn btn-secondary">
+                    <button class="btn btn-secondary" [routerLink]="['cart']">
                         <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
+                        <span class="counter">{{counter}}</span>
                     </button>
                 </div>
                 <!-- dropDown -->
@@ -103,8 +104,9 @@
                         </div>
                     </div>
                     <div class="d-none d-sm-flex col-12 container_cart-md justify-content-between d-lg-none ">
-                        <button class="btn btn-secondary cart_button-md">
+                        <button class="btn btn-secondary cart_button-md" [routerLink]="['cart']">
                             <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
+                            <span class="counter">{{counter}}</span>
                         </button>
                     </div>
 
@@ -118,13 +120,10 @@
                         </div>
                         <!--Shopping Cart-->
                         <div class="d-none d-lg-inline-block pt-2 px-3">
-                            <button class="btn btn-secondary">
+                            <button class="btn btn-secondary" [routerLink]="['cart']">
                                 <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
                                 <span class="counter">{{counter}}</span>
                             </button>
-
-                            <p>
-                            </p>
                         </div>
                     </div>
                     <!--3. Login/Register -->

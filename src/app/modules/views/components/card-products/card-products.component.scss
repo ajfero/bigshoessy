@@ -1,0 +1,32 @@
+.product-detail {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out 0.7s;
+    transform: translateX(100%);
+    z-index: 1050;
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+}
+
+.product-detail_container {
+    z-index: 1051;
+
+}
+
+@media screen and (min-width: 992px) {
+    .product-detail {
+        left: 70%;
+    }
+}

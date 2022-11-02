@@ -11,21 +11,24 @@ import { Product } from '../../models/card.model';
 })
 export class CardComponent {
 
+  showProductDetail = false;
   imgParent = '';
+
 
   @Input('myProduct') product: Product = {
     id: '',
     brand: '',
-    price: 0,
-    styleId: '',
-    title: '',
     colorway: '',
+    gender: '',
     media: {
       imageUrl: '',
       smallImageUrl: '',
       thumblrUrl: ''
     },
     retailPrice: 0,
+    styleId: '',
+    title: '',
+    year: 0,
   };
   @Output() addedProduct = new EventEmitter<Product>();
   @Output() showProduct = new EventEmitter<string>();
@@ -36,10 +39,11 @@ export class CardComponent {
   //Events
   onAddToCart(): void {
     this.addedProduct.emit(this.product);
-    console.log('Click me');
+    window.alert('Your product has been added to the cart!');
+    console.log(this.product);
   }
 
   onShowDetail() {
-    this.showProduct.emit(this.product.id);
+    this.showProduct.emit(this.product.id)
   }
 }
