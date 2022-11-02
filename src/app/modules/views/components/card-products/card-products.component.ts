@@ -1,6 +1,5 @@
 //Default
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 //Interface
 import { Product } from '../../models/card.model';
 
@@ -45,8 +44,6 @@ export class CardProductsComponent implements OnInit {
 
   //Injected service
   constructor(
-    //Route
-    private route: ActivatedRoute,
     //Store service
     private storeService: StoreService,
     //API service - async method. -> ngOnInit declared.

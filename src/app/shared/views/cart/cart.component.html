@@ -24,8 +24,10 @@
                 <span class="h3 col-12 d-flex">{{ item.title }}</span>
             </div>
             <!--Delete method-->
-            <div class="col-3 d-flex btn btn-info justify-content-center w-25">
-                Delete
+            <div class="col-3 d-flex justify-content-center w-25">
+                <button [ngClass]="'alert alert-info'" class="btn btn-info" (click)="clearOneProduct()">
+                    Delete
+                </button>
             </div>
         </div>
     </div>
@@ -43,7 +45,7 @@
             <button class="mx-2 btn btn-secondary" type="submit" name="saveData" id="saved">
                 Saved
             </button>
-            <button class="btn btn-danger" type="reset" name="allDelete" id="reset">
+            <button (click)="clearCart()" class="btn btn-danger" type="reset" name="allDelete" id="reset">
                 Delete
             </button>
         </div>

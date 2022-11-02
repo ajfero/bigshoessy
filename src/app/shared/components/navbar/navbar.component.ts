@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 //Service
 import { StoreService } from '../../services/store.service';
+import { ProductsService } from 'src/app/modules/views/services/products.service';
+//Components
+import { Product } from 'src/app/modules/views/models/card.model';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 
 export class NavbarComponent implements OnInit {
 
-  counter = 0;
+  myShoppingCart: Product[] = [];
 
   pathCart = {
     label: '',
@@ -54,14 +57,8 @@ export class NavbarComponent implements OnInit {
     private storeService: StoreService
   ) { }
 
+
   ngOnInit(): void {
-    this.storeService.myCart$.subscribe(products => {
-      this.counter = products.length;
-    })
+    this.myShoppingCart = this.storeService.getShoppingCart();
   }
-
-
-
-
-
 }
