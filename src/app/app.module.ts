@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 // Bootstrap NgBModule. Bootstrap 5 CSS with APIs designed for the Angular ecosystem. 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//Swiper CSS
+import { SwiperModule } from 'swiper/angular';
 
 // Extension de seccionamiento
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
@@ -16,7 +18,7 @@ import { NavegationComponentsModule } from './shared/modules';
 
 
 
-const modules = [FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
+const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 
 @NgModule({

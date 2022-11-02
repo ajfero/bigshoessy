@@ -112,6 +112,10 @@ $grid-breakpoints-up: (
     .contenedor__home-shopping {
         height: 100%;
     }
+
+    .product-detail {
+        left: 70%;
+    }
 }
 
 @include from (xxxl) {
@@ -126,5 +130,9 @@ $grid-breakpoints-up: (
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .product-detail {
+        left: 100%;
     }
 }

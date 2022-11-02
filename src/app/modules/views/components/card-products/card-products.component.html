@@ -1,26 +1,51 @@
 <!--Probamos éste modelo-->
-<button (click)="toggleProductDetail()">CLICK</button>
 <p>
     la cantidad {{ myShoppingCart.length }}
 </p>
-<!--Precio-->
 <p>
     Total: ${{ total }}
 </p>
+<!--Card with events-->
 <div class="row g-3">
     <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product' *ngFor="let product of products"
         (addedProduct)="onAddToShoppingCart($event)" (showProduct)="onShowDetail($event)"></app-card>
 </div>
-<app-sidebar class="product-detail" [class.active]="showProductDetail"></app-sidebar>
-<div>
-    <button (click)="toggleProductDetail()">Close</button>
-    Contenido
+<div></div>
+<!--Side-bar DETAILS-->
+<div class="product-detail border border-secondary p-2" [class.active]="showProductDetail">
+    <div class="product-detail_container " *ngIf="productChosen">
+        <!--Accions-->
+        <button (click)="toggleProductDetail()" class="btn">
+            <ng-template [ngTemplateOutlet]="Close">Close</ng-template>
+        </button>
+        <!--Brand-->
+        <h1 class="text-center">{{productChosen.brand}}</h1>
+        <!--Line divide-->
+        <hr />
+        <!--Media-->
+        <img class="img-fluid d-md-none d-lg-flex" [src]="productChosen.media.imageUrl">
+        <img class="img-fluid d-none d-md-flex d-lg-none" [src]="productChosen.media.smallImageUrl">
+        <img class="img-fluid d-flex d-md-none" [src]="productChosen.media.thumblrUrl">
+        <!--Description-->
+        <h4 class="text-center"><B>Model</B><br /> {{productChosen.title}}</h4>
+
+        <h5 class="text-center py-2"><B>Year</B> <br /> {{productChosen.year}}</h5>
+        <h5 class="text-center py-2">
+            <b>Gender</b> <br /> {{productChosen.gender}}
+        </h5>
+        <hr />
+    </div>
 </div>
 
 
 
 
-<!-- (showDetail)="onShowDetail($event)" -->
+
+
+
+
+
+<!-- (showDetail)=" onShowDetail($event)" -->
 <!--grid function steady-->
 <!---------------------------------->
 <!-- <div class="row g-3">
@@ -418,5 +443,13 @@ Favoritos -->
         class="bi bi-chat-heart-fill " viewBox="0 0 16 16 ">
         <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15Zm0-9.007c1.664-1.711
                                 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z " />
+    </svg>
+</ng-template>
+
+<ng-template #Close>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill"
+        viewBox="0 0 16 16">
+        <path
+            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
     </svg>
 </ng-template>

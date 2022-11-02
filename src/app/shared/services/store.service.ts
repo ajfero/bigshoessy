@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -10,7 +11,9 @@ import { Product } from '../../modules/views/models/card.model';
 export class StoreService {
 
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
 
   }
 
@@ -20,18 +23,25 @@ export class StoreService {
 
   myCart$ = this.myCart.asObservable();
 
+  itemsCount() {
+    return this.myShoppingCart.length;
+  }
+
   //Add products
   addProduct(product: Product) {
     this.myShoppingCart.push(product);
     this.myCart.next(this.myShoppingCart);
   }
-  //Get Cart.
+
+  // Get Cart.
   getShoppingCart() {
     return this.myShoppingCart;
   }
+
 
   //Get total products to Cart. Item + price.
   getTotal() {
     return this.myShoppingCart.reduce((sum, item) => sum + item.retailPrice, 0)
   }
+
 }

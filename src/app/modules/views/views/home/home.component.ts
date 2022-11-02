@@ -13,6 +13,8 @@ import { Product } from '../../models/card.model';
 })
 export class HomeComponent {
 
+  //Id Product
+  showProductDetail = false;
   //Default of total.
   total = 0;
   //Array products.
@@ -58,12 +60,27 @@ export class HomeComponent {
   //   return Math.floor(Math.random() * objectLength.Length) + 1;
   // }
 
-
-
   //Adding product at Cart.
   onAddToShoppingCart(product: Product) {
     this.storeService.addProduct(product);
     this.total = this.storeService.getTotal();
   }
 
+
+  //Event sidebar.
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail;
+  }
+
+  // //Show id product
+  // onShowDetail(id: string) {
+  //   this.productsService.detailProduct(id)
+  //     .subscribe(data => {
+  //       //Show toggle
+  //       this.toggleProductDetail();
+  //       //Product Date
+  //       this.productChosen = data[0];
+  //       console.log(data);
+  //     });
+  // }
 }
