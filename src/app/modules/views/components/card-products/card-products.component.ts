@@ -16,8 +16,8 @@ import { ProductsService } from '../../services/products.service';
 export class CardProductsComponent implements OnInit {
 
 
-  //Array Cart products.
-  myShoppingCart: Product[] = [];
+  myShoppingCart = this.storeService.getShoppingCart();
+
   //Default of total.
   total = 0;
   //Array products
@@ -41,7 +41,8 @@ export class CardProductsComponent implements OnInit {
     year: 0,
   };
 
-
+  // Las cosas asincronas, son peticiones a otro servidor. 
+  // Y el mejor momento para manejar cosas asincronas, es NgOnInit.
   //Injected service
   constructor(
     //Store service
@@ -51,7 +52,6 @@ export class CardProductsComponent implements OnInit {
 
   ) {
     this.myShoppingCart = this.storeService.getShoppingCart();
-
   }
 
   //Async Methods

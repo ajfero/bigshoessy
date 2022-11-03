@@ -4,6 +4,7 @@ import { StoreService } from '../../services/store.service';
 import { ProductsService } from 'src/app/modules/views/services/products.service';
 //Components
 import { Product } from 'src/app/modules/views/models/card.model';
+import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -14,6 +15,7 @@ import { Product } from 'src/app/modules/views/models/card.model';
 export class NavbarComponent implements OnInit {
 
   myShoppingCart: Product[] = [];
+
 
   pathCart = {
     label: '',
@@ -55,10 +57,14 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private storeService: StoreService
-  ) { }
+  ) {
+
+  }
 
 
   ngOnInit(): void {
     this.myShoppingCart = this.storeService.getShoppingCart();
+
+
   }
 }

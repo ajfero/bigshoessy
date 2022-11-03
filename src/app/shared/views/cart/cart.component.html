@@ -1,9 +1,8 @@
 <div class="d-flex justify-content-center my-5">
     <h3 class="h1"> <b>Shopping Cart</b></h3>
-
 </div>
-<p class="h5 text-center text-dark"> El carrito está vacío, por favor selecciona productos para
-    realizar una compra.
+<p class="cart_sold-out h5 text-center text-dark"> {{ today | timeAgo}}
+<p class="cart_sold-out h5 text-center text-dark"> {{ today | date}}
 </p>
 <hr>
 <div class="cart-item col-12" *ngFor="let item of myShoppingCart">
@@ -45,7 +44,7 @@
             <button class="mx-2 btn btn-secondary" type="submit" name="saveData" id="saved">
                 Saved
             </button>
-            <button (click)="clearCart()" class="btn btn-danger" type="reset" name="allDelete" id="reset">
+            <button (click)="clearCart()" class="deleteButton btn btn-danger" type="reset">
                 Delete
             </button>
         </div>

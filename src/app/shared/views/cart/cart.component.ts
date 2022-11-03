@@ -5,6 +5,7 @@ import { StoreService } from '../../services/store.service';
 import { ProductsService } from 'src/app/modules/views/services/products.service';
 
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -13,22 +14,21 @@ import { ProductsService } from 'src/app/modules/views/services/products.service
 export class CartComponent implements OnChanges {
 
 
-
   myShoppingCart = this.storeService.getShoppingCart();
 
   total = 0;
 
+  showTitle = document.querySelector('.cart_sold-out');
 
-
+  today = new Date();
+  date = new Date(2021, 1, 21);
 
   constructor(
     //Store service
     private storeService: StoreService,
     private productsService: ProductsService
   ) {
-
     this.total = this.storeService.getTotal();
-    console.log('hay cambios', this.total)
   }
 
 
@@ -45,7 +45,6 @@ export class CartComponent implements OnChanges {
     //   }
     // }
   }
-
   //Clear One Product
   clearOneProduct() {
     this.myShoppingCart.shift()
@@ -55,6 +54,7 @@ export class CartComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
 
   }
+
 }
 
 
