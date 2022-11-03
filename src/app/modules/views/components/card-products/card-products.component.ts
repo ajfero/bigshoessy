@@ -1,5 +1,5 @@
 //Default
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 //Interface
 import { Product } from '../../models/card.model';
 
@@ -18,13 +18,16 @@ export class CardProductsComponent implements OnInit {
 
   myShoppingCart = this.storeService.getShoppingCart();
 
-  //Default of total.
+
+  // Filter of searching
+  filterPost = '';
+  // Default of total.
   total = 0;
-  //Array products
+  // Array products
   products: Product[] = [];
-  //Id Product
+  // Id Product
   showProductDetail = false;
-  //Detail in sidebar
+  // Detail in sidebar
   productChosen: Product = {
     id: '',
     brand: '',

@@ -21,7 +21,7 @@ export class CartComponent implements OnChanges {
   showTitle = document.querySelector('.cart_sold-out');
 
   today = new Date();
-  date = new Date(2021, 1, 21);
+  date = new Date();
 
   constructor(
     //Store service

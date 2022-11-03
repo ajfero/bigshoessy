@@ -25,9 +25,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
 // PIPES
 import { TimeAgoPipe } from '../../pipes/timeAgo.pipe';
+import { FilterPipe } from '../../pipes/filter.pipe';
 
 // Components and moduls.
-const pipes = [TimeAgoPipe]
+const pipes = [FilterPipe, TimeAgoPipe]
 const components = [CartComponent, SidebarComponent, SearchComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 const moduls = [FormsModule, CommonModule, RouterModule, HttpClientModule]

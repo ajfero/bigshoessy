@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 //Interface
 // import { Product } from '../../models/card.model';
@@ -10,28 +11,11 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
-  // products: Product[] = [
-  //   {
-  //     id: '1',
-  //     title: 'Nike',
-  //     model: 'Air Force',
-  //     price: 9995,
-  //   },
-  //   {
-  //     id: '2',
-  //     title: 'Nike',
-  //     model: 'Air Force',
-  //     price: 9996,
-  //   },
-  //   {
-  //     id: '3',
-  //     title: 'Nike',
-  //     model: 'Air Force',
-  //     price: 9997,
-  //   },
-  // ];
 
-  // onLoaded(img: string): void {
-  //   console.log('log padre', img);
-  // }
+
+  constructor(
+    private productsService: ProductsService
+  ) {
+
+  }
 }
