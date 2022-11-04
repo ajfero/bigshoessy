@@ -1,52 +1,135 @@
-<div class="d-flex justify-content-center my-5">
+<!-- Header -->
+<header class="d-flex justify-content-center my-5">
     <h3 class="h1"> <b>Shopping Cart</b></h3>
+</header>
+<!-- Datatime -->
+<div class="container-fluid">
+    <p class="cart_sold-out h5 text-center text-dark"> {{ today | timeAgo}}</p>
+    <p class="cart_sold-out h5 text-center text-dark"> {{ today | date}} </p>
 </div>
-<p class="cart_sold-out h5 text-center text-dark"> {{ today | timeAgo}}
-<p class="cart_sold-out h5 text-center text-dark"> {{ today | date}}
-</p>
 <hr>
+<!-- Container Cart Items -->
 <div class="cart-item col-12" *ngFor="let item of myShoppingCart">
     <div class="container-fluid">
         <div class="row d-flex align-items-center">
-            <!--Images-->
+            <!-- Images -->
             <div class="col-6 col-lg-3 px-5 py-5">
                 <img class="img-fluid d-md-none d-lg-flex" [src]="item.media.imageUrl">
                 <img class="img-fluid d-none d-md-flex d-lg-none" [src]="item.media.smallImageUrl">
                 <img class="img-fluid d-flex d-md-none" [src]="item.media.thumblrUrl">
             </div>
-            <!--Price-->
+            <!-- Price -->
             <div class="col-3 col-lg 3 d-inline-block px-5 py-5 justify-content-center">
                 <span class="h3">{{ item.retailPrice | currency }}</span>
             </div>
-            <!--Brand -->
+            <!-- Brand -->
             <div class="col-8 col-md-5 col-lg-3 justify-content-center">
                 <span class="h3 col-12 d-flex">{{ item.title }}</span>
             </div>
-            <!--Delete method-->
+            <!-- Clear Cart method -->
             <div class="col-3 d-flex justify-content-center w-25">
                 <button [ngClass]="'alert alert-info'" class="btn btn-info" (click)="clearOneProduct()">
                     Delete
                 </button>
+
             </div>
+
         </div>
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <span class="col-12 text-center"><b>Total: {{ total | currency }}</b></span>
     </div>
 </div>
+
 <hr>
+<!-- Buttons -->
 <div class="container">
     <div class="row">
-        <div class="d-flex justify-content-start align-items-center col-6">
-            <button class="mx-2 btn btn-warning px-3" type="submit" name="Buy" id="comprar">
-                Buy =
-                <span><b>{{ total | currency }}</b></span>
+        <!-- Buy button -->
+        <div class="d-flex justify-content-start align-items-center col-6" data-bs-target="#modal-data-users"
+            data-bs-toggle="modal" type="button">
+            <button aria-current="page" class="mx-2 btn btn-warning px-3" type="submit" name="continuar-compra"
+                id="comprar">
+                Continuar compra <ng-template [ngTemplateOutlet]="IconArrow">
+                </ng-template>
             </button>
         </div>
+        <!--Container saved and delete-->
         <div class="d-flex justify-content-end col-6">
+            <!-- Saved button -->
             <button class="mx-2 btn btn-secondary" type="submit" name="saveData" id="saved">
                 Saved
             </button>
+            <!-- Delete button -->
             <button (click)="clearCart()" class="deleteButton btn btn-danger" type="reset">
                 Delete
             </button>
         </div>
     </div>
 </div>
+
+<!-- Modal Terminar Compra -->
+<div class="modal fade" id="modal-data-users" aria-hidden="true" aria-labelledby="modal-data-users" tabindex="-1"
+    role="dialog">
+    <!-- Contenedor del modal -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+                <h5 class="modal-title">Datos de compra</h5>
+                <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close">
+                </button>
+            </div>
+            <!-- Validator -->
+            <div class="modal-body border border-warning m-3">
+                <i class="bi bi-exclamation-circle">Ingrese sus datos para validar la compra.</i>
+            </div>
+            <!-- Inputs  -->
+            <div class="container-fluid px-3">
+                <!-- Username -->
+                <div class="input-group mb-3 my-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <!-- E-mail -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="E-mail" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@</span>
+                    <input type="text" class="form-control" placeholder="syloper.com" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                </div>
+                <!-- Location -->
+                <div class="input-group mb-3 my-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-fill"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Location" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+                <span class="col-12 text-center">Productos seleccionados<b> {{ myShoppingCart.length }}</b></span>
+                <span class="col-12 text-center">Total a pagar<b> {{ total | currency }}</b></span>
+            </div>
+            <!-- Realizar pedido -->
+            <button type="button" class="btn btn-warning mx-5">Realizar pedido</button>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+<!-- Icons -->
+<ng-template #IconArrow>
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+        class="bi bi-arrow-right-circle mx-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+    </svg>
+</ng-template>

@@ -1,7 +1,5 @@
 // Angular tools
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-// Service
-import { StoreService } from 'src/app/shared/services/store.service';
 // Interface CARD
 import { Product } from '../../models/card.model';
 

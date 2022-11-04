@@ -11,7 +11,7 @@
 
     <!--Modelo-->
     <h5 class=" text-center pt-3" fill="#eceeef">
-        <B>{{ product.brand }}</B>
+        <B>{{ product.brand | uppercase }}</B>
     </h5>
     <hr>
     <!--Marca-->
@@ -40,10 +40,6 @@
                 <!--Agregar al carrito-->
                 <button (click)="onAddToCart()" type="button " class="btn btn-sm btn-outline-secondary ">
                     <ng-template [ngTemplateOutlet]="Cart"></ng-template>
-                </button>
-                <!--Añadir a favoritos-->
-                <button type="button " class="btn btn-sm btn-outline-secondary ">
-                    <ng-template [ngTemplateOutlet]="Favs"></ng-template>
                 </button>
             </div>
             <div>

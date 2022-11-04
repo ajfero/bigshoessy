@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 // views
 import { NotFoundComponent } from '../../views/not-found/not-found.component';
 import { CartComponent } from '../../views/cart/cart.component';
@@ -14,7 +14,6 @@ import { ModalLoginComponent } from 'src/app/shared/components/modal-login/modal
 import { ModalRegisterComponent } from '../../components/modal-register/modal-register.component';
 import { ModalRecoverComponent } from '../../components/modal-recover/modal-recover.component';
 import { RenderComponent } from '../../components/render/render.component';
-import { SearchComponent } from '../../components/search/search.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 
 // loader
@@ -29,9 +28,9 @@ import { FilterPipe } from '../../pipes/filter.pipe';
 
 // Components and moduls.
 const pipes = [FilterPipe, TimeAgoPipe]
-const components = [CartComponent, SidebarComponent, SearchComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
+const components = [CartComponent, SidebarComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
-const moduls = [FormsModule, CommonModule, RouterModule, HttpClientModule]
+const moduls = [ReactiveFormsModule, CommonModule, RouterModule, HttpClientModule]
 
 @NgModule({
   declarations: [...views, components, pipes],

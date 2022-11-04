@@ -1,5 +1,5 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 // Service
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from 'src/app/modules/views/services/products.service';
@@ -13,6 +13,7 @@ import { ProductsService } from 'src/app/modules/views/services/products.service
 })
 export class CartComponent implements OnChanges {
 
+  nameField = new FormControl('Soy un control');
 
   myShoppingCart = this.storeService.getShoppingCart();
 
