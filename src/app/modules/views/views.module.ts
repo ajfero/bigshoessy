@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 // Routing
 import { ViewsRoutingModule } from './views-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 // Modules
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
-
 // Components
 import { BannerOneComponent } from './components/banner-one/banner-one.component';
 import { BannerTwoComponent } from './components/banner-two/banner-two.component';
@@ -17,7 +18,6 @@ import { BannerThreeComponent } from './components/banner-three/banner-three.com
 import { SponsorsCarouselComponent } from './components/sponsors-carousel/sponsors-carousel.component';
 import { ProductsSidebarComponent } from './components/products-sidebar/products-sidebar.component';
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
-import { ContactOpcionalComponent } from './components/contact-opcional/contact-opcional.component';
 import { CardComponent } from './components/card/card.component';
 import { CardProductsComponent } from './components/card-products/card-products.component';
 import { UploadPicComponent } from './components/upload-pic/upload-pic.component';
@@ -45,13 +45,13 @@ const modules = [
   AngularFullpageModule,
   HttpClientModule,
   FormsModule,
+  ReactiveFormsModule
 ];
 
 const components = [
 
   BannerOneComponent, BannerTwoComponent, BannerThreeComponent, CardComponent,
   ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent, CardProductsComponent,
-  ContactOpcionalComponent,
   ProfileContactComponent, UploadPicComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent
 
 ];

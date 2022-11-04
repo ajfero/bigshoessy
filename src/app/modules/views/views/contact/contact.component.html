@@ -1,7 +1,85 @@
 <body>
-    <!--Main-->
+
+    <!-- Main -->
     <main class=" container-fluid ">
-        <app-contact-opcional></app-contact-opcional>
+        <div class="contact-area section-padding col-12" id="contact">
+            <div class="container ">
+
+                <!-- Title -->
+                <div class="section-title text-center mt-4">
+                    <!--Header-->
+                    <h1>Contáctanos</h1>
+                </div>
+
+                <!-- ContactForm -->
+                <div class="row" style="overflow: hidden;">
+
+                    <!--- Contact -->
+                    <div class="col-lg-6 col-xl-8">
+                        <div class="contact ">
+
+                            <!-- Form -->
+                            <form class="form" name="enq" [formGroup]="contactForm" method="post" action="contact.php" onsubmit="return validation();">
+                                <div class="row">
+
+                                    <!-- name -->
+                                    <div class="form-group col-md-6 mb-2">
+                                        <input class="form-control" id="name" name="name" type="text" formControlName="name" placeholder="Name" required="required" value="">
+                                    </div>
+
+                                    <!-- email -->
+                                    <div class="form-group col-md-6 ">
+                                        <input class="form-control" id="email" name="email" type="email" [class.errorInput]="contactForm.controls.email.touched" formControlName="email" placeholder="Email" required="required">
+                                    </div>
+
+                                    <!-- subject -->
+                                    <div class="form-group col-md-12 mb-2">
+                                        <input class="form-control" id="subject" name="subject" type="text" formControlName="subject" placeholder="Subject" required="required">
+                                    </div>
+
+                                    <!-- message -->
+                                    <div class="form-group col-md-12 mb-4">
+                                        <textarea class="form-control" id="message" name="message" type="text" formControlName="message" rows="6" placeholder="Your Message" required="required"></textarea>
+                                    </div>
+
+                                    <!-- submit -->
+                                    <div class="col-md-12 text-center mt-3 mb-4">
+                                        <button class="btn btn-contact-bg" id="submitButton" name="submit" type="button" title="Submit Your Message!" (click)="onSubmit()" value="Send message">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!--- Iconos laterales -->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="single_address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location</h4>
+                            <p>Syloper S.A, Rosario</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email</h4>
+                            <p>anthonyAndTomy@syloper.com</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="bi bi-telephone"></i>
+                            <h4>Phone</h4>
+                            <p>(+1) 517 397 7100</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="bi bi-alarm"></i>
+                            <h4>Work Time</h4>
+                            <p>Mon - Fri: 00 : 00 hs <br>Sat: 00 : 00 hs</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </main>
 
 </body>
