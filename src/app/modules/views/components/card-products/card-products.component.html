@@ -1,19 +1,25 @@
-<!--Probamos éste modelo-->
-<p>
-    la cantidad {{ myShoppingCart.length }}
-</p>
-<p>
-    Total: ${{ total }}
-</p>
 <!--Card with events-->
-<div class="row g-3">
-    <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product' *ngFor="let product of products"
-        (addedProduct)="onAddToShoppingCart($event)" (showProduct)="onShowDetail($event)"></app-card>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 justify-content-around justify-content-lg-end">
+            <form class="d-flex col-10 col-lg-6 pb-5 pt-5 pt-lg-0 " role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    [(ngModel)]="filterPost" name="filterPost">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="row g-3">
+            <app-card class="col-sm-6 col-lg-5 col-xl-4" [myProduct]='product'
+                *ngFor="let product of products | filter: filterPost" (addedProduct)="onAddToShoppingCart($event)"
+                (showProduct)="onShowDetail($event)"></app-card>
+        </div>
+        <div>
+        </div>
+    </div>
 </div>
-<div></div>
 <!--Side-bar DETAILS-->
 <div class="product-detail border border-secondary p-2" [class.active]="showProductDetail">
-    <div class="product-detail_container " *ngIf="productChosen">
+    <div class="product-detail_container " *ngIf="productChosen ">
         <!--Accions-->
         <button (click)="toggleProductDetail()" class="btn">
             <ng-template [ngTemplateOutlet]="Close">Close</ng-template>

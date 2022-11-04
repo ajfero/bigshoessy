@@ -10,9 +10,10 @@
 
 
     <!--Modelo-->
-    <h5 class=" text-center pt-2" fill="#eceeef">
-        <B>{{ product.title }}</B>
+    <h5 class=" text-center pt-3" fill="#eceeef">
+        <B>{{ product.brand }}</B>
     </h5>
+    <hr>
     <!--Marca-->
     <h5>
         <!-- <B>{{ product.brand }}</B> -->
@@ -33,7 +34,7 @@
             <!--Detalle en el template-->
             <div class="btn-group">
                 <!--Ver características-->
-                <button (click)="onShowDetail()" type="button " class="btn btn-sm btn-outline-secondary ">
+                <button (click)="onShowDetail()" type="button " class="seeDetail btn btn-sm btn-outline-secondary ">
                     <ng-template [ngTemplateOutlet]="CaracIcon"></ng-template>
                 </button>
                 <!--Agregar al carrito-->

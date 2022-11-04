@@ -1,6 +1,5 @@
 //Default
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Output } from '@angular/core';
 //Interface
 import { Product } from '../../models/card.model';
 
@@ -17,15 +16,18 @@ import { ProductsService } from '../../services/products.service';
 export class CardProductsComponent implements OnInit {
 
 
-  //Array Cart products.
-  myShoppingCart: Product[] = [];
-  //Default of total.
+  myShoppingCart = this.storeService.getShoppingCart();
+
+
+  // Filter of searching
+  filterPost = '';
+  // Default of total.
   total = 0;
-  //Array products
+  // Array products
   products: Product[] = [];
-  //Id Product
+  // Id Product
   showProductDetail = false;
-  //Detail in sidebar
+  // Detail in sidebar
   productChosen: Product = {
     id: '',
     brand: '',
@@ -42,11 +44,10 @@ export class CardProductsComponent implements OnInit {
     year: 0,
   };
 
-
+  // Las cosas asincronas, son peticiones a otro servidor. 
+  // Y el mejor momento para manejar cosas asincronas, es NgOnInit.
   //Injected service
   constructor(
-    //Route
-    private route: ActivatedRoute,
     //Store service
     private storeService: StoreService,
     //API service - async method. -> ngOnInit declared.
@@ -54,7 +55,6 @@ export class CardProductsComponent implements OnInit {
 
   ) {
     this.myShoppingCart = this.storeService.getShoppingCart();
-
   }
 
   //Async Methods

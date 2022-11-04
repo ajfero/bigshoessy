@@ -17,21 +17,25 @@ import { RenderComponent } from '../../components/render/render.component';
 import { SearchComponent } from '../../components/search/search.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 
-//loader
+// loader
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 
-//Import for Https Services
+// Import for Https Services
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
+// PIPES
+import { TimeAgoPipe } from '../../pipes/timeAgo.pipe';
+import { FilterPipe } from '../../pipes/filter.pipe';
 
-//Components and moduls.
+// Components and moduls.
+const pipes = [FilterPipe, TimeAgoPipe]
 const components = [CartComponent, SidebarComponent, SearchComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 const moduls = [FormsModule, CommonModule, RouterModule, HttpClientModule]
 
 @NgModule({
-  declarations: [...views, components],
-  exports: [...views, components],
+  declarations: [...views, components, pipes],
+  exports: [...views, components, pipes],
   imports: [...moduls],
   //Declaramos provide, para llamar al interceptor.
   //Primero decimos que és, despues llamamos a la clase del interceptor y luego al multi.

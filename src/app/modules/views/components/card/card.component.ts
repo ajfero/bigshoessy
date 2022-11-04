@@ -1,6 +1,8 @@
+// Angular tools
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-//Interface CARD
+// Service
+import { StoreService } from 'src/app/shared/services/store.service';
+// Interface CARD
 import { Product } from '../../models/card.model';
 
 
@@ -12,6 +14,7 @@ import { Product } from '../../models/card.model';
 export class CardComponent {
 
   showProductDetail = false;
+
   imgParent = '';
 
 

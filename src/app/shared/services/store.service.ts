@@ -25,6 +25,7 @@ export class StoreService {
 
   itemsCount() {
     return this.myShoppingCart.length;
+
   }
 
   //Add products
@@ -45,3 +46,7 @@ export class StoreService {
   }
 
 }
+
+
+
+
