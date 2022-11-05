@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
 		private messageService: MessageService,
 
 	) {
-		this.contactForm = this._buildForm()
+		// this.contactForm = this._buildForm()
 	}
 
 	ngOnInit(): void { }
@@ -108,7 +108,6 @@ We will be in contact with you!! at email: ${email}
 			],
 		})
 	}
-
 }
 
 //// Suplabtar por el modelo arriba.

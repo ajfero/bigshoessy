@@ -47,4 +47,7 @@ export class CardComponent {
   onShowDetail() {
     this.showProduct.emit(this.product.id)
   }
+
+
+
 }

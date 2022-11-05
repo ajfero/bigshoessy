@@ -43,6 +43,7 @@ export class CardProductsComponent implements OnInit {
     title: '',
     year: 0,
   };
+  statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
 
   // Las cosas asincronas, son peticiones a otro servidor. 
   // Y el mejor momento para manejar cosas asincronas, es NgOnInit.
@@ -80,6 +81,7 @@ export class CardProductsComponent implements OnInit {
 
   //Show id product
   onShowDetail(id: string) {
+    this.statusDetail = 'loading';
     this.productsService.detailProduct(id)
       .subscribe(data => {
         //Show toggle
@@ -87,7 +89,11 @@ export class CardProductsComponent implements OnInit {
         //Product Date
         this.productChosen = data[0];
         console.log(data);
-      });
+        this.statusDetail = 'sucess';
+      }, response => {
+        console.log(response.error.message);
+        this.statusDetail = 'error';
+      })
   }
 
   //Loaded render.

@@ -1,7 +1,6 @@
 // model for message-form
 
 export interface Message {
-
     name: string,
     email: string,
     subject: string,

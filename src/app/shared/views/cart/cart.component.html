@@ -22,23 +22,25 @@
             <div class="col-3 col-lg 3 d-inline-block px-5 py-5 justify-content-center">
                 <span class="h3">{{ item.retailPrice | currency }}</span>
             </div>
+
             <!-- Brand -->
             <div class="col-8 col-md-5 col-lg-3 justify-content-center">
                 <span class="h3 col-12 d-flex">{{ item.title }}</span>
             </div>
             <!-- Clear Cart method -->
-            <div class="col-3 d-flex justify-content-center w-25">
-                <button [ngClass]="'alert alert-info'" class="btn btn-info" (click)="clearOneProduct()">
-                    Delete
+            <div class="col-3 d-flex justify-content-center align-items-center w-25">
+                <p class="p-2 pl-3" value="0">
+                    Cantidad <b> 0</b>
+                </p>
+                <button [ngClass]="'alert alert-secondary'" class="btn btn-secondary" (click)="clearOneProduct()">
+                    <i class="bi bi-trash"></i>
                 </button>
-
             </div>
-
         </div>
-
     </div>
 
 </div>
+<!-- Total Cart-->
 <div class="container-fluid">
     <div class="row">
         <span class="col-12 text-center"><b>Total: {{ total | currency }}</b></span>
@@ -61,11 +63,11 @@
         <!--Container saved and delete-->
         <div class="d-flex justify-content-end col-6">
             <!-- Saved button -->
-            <button class="mx-2 btn btn-secondary" type="submit" name="saveData" id="saved">
+            <button class="mx-2 btn btn-warning" type="submit" name="saveData" id="saved">
                 Saved
             </button>
             <!-- Delete button -->
-            <button (click)="clearCart()" class="deleteButton btn btn-danger" type="reset">
+            <button (click)="clearCart()" class="deleteButton btn btn-light" type="reset">
                 Delete
             </button>
         </div>
@@ -93,43 +95,55 @@
                 <!-- Username -->
                 <div class="input-group mb-3 my-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                    <input type="text" [formControl]="nameField" class="form-control" placeholder="Username"
+                        aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <!-- E-mail -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="E-mail" aria-label="Recipient's username"
-                        aria-describedby="basic-addon2">
-                    <span class="input-group-text" id="basic-addon2">@</span>
-                    <input type="text" class="form-control" placeholder="syloper.com" aria-label="Recipient's username"
-                        aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-envelope"></i></span>
+                    <input type="text" [formControl]="emailField" class="form-control" placeholder="syloper@syloper.com"
+                        aria-label="Recipient's email" aria-describedby="basic-addon2">
+                    <!-- Buy Method -->
+                    <div class="container-fluid mb-4 pt-5">
+                        <h4 class="border border-warning h6 py-3 text-center text-secondary">
+                            <i>payment method under construction ...</i>
+                        </h4>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="input-group mb-3 my-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-fill"></i>
+                        </span>
+                        <input type="text" [formControl]="locationField" class="form-control"
+                            placeholder="Add your location" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <!-- Direction -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-house-door"></i></span>
+                        <input type="text" [formControl]="adressField" class="form-control"
+                            placeholder="Add your adress" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                 </div>
-                <!-- Location -->
-                <div class="input-group mb-3 my-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-fill"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Location" aria-label="Username"
-                        aria-describedby="basic-addon1">
+
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <span class="col-12 text-center">Productos seleccionados<b> {{ myShoppingCart.length }}</b></span>
+                    <span class="col-12 text-center">Total a pagar<b> {{ total | currency }}</b></span>
                 </div>
+                <!-- Realizar pedido -->
+                <button type="button" class="btn btn-warning mx-5">Realizar pedido</button>
+                <hr>
             </div>
-            <!-- Footer -->
-            <div class="modal-footer">
-                <span class="col-12 text-center">Productos seleccionados<b> {{ myShoppingCart.length }}</b></span>
-                <span class="col-12 text-center">Total a pagar<b> {{ total | currency }}</b></span>
-            </div>
-            <!-- Realizar pedido -->
-            <button type="button" class="btn btn-warning mx-5">Realizar pedido</button>
-            <hr>
         </div>
     </div>
-</div>
 
 
-<!-- Icons -->
-<ng-template #IconArrow>
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-        class="bi bi-arrow-right-circle mx-1" viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-    </svg>
-</ng-template>
+    <!-- Icons -->
+    <ng-template #IconArrow>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            class="bi bi-arrow-right-circle mx-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+        </svg>
+    </ng-template>

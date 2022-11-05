@@ -1,10 +1,7 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 // Service
 import { StoreService } from '../../services/store.service';
-import { ProductsService } from 'src/app/modules/views/services/products.service';
-
-
 
 @Component({
   selector: 'app-cart',
@@ -13,24 +10,31 @@ import { ProductsService } from 'src/app/modules/views/services/products.service
 })
 export class CartComponent implements OnChanges {
 
-  nameField = new FormControl('Soy un control');
 
+  // Vars of Reactive Forms
+  nameField = new FormControl('');
+  emailField = new FormControl('');
+  locationField = new FormControl('');
+  adressField = new FormControl('');
+
+
+  // Vars of Store Services
   myShoppingCart = this.storeService.getShoppingCart();
-
   total = 0;
 
-  showTitle = document.querySelector('.cart_sold-out');
-
+  // Pipes
   today = new Date();
   date = new Date();
 
+  // Lo primero que se inicia.
   constructor(
     //Store service
     private storeService: StoreService,
-    private productsService: ProductsService
   ) {
     this.total = this.storeService.getTotal();
+    this.myShoppingCart = this.storeService.getShoppingCart();
   }
+
 
 
 
@@ -55,6 +59,9 @@ export class CartComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
 
   }
+
+
+
 
 }
 

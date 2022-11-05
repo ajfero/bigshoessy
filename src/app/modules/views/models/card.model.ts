@@ -14,6 +14,7 @@ export interface Product {
     styleId: string,
     title: string,
     year: number,
+    taxes?: number,
 
 };
 

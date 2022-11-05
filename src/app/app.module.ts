@@ -1,23 +1,19 @@
+// Angular tools
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+// Components
 import { AppComponent } from './app.component';
-
-// Bootstrap NgBModule. Bootstrap 5 CSS with APIs designed for the Angular ecosystem. 
+// Moduls
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-//Swiper CSS
-import { SwiperModule } from 'swiper/angular';
-
-// Extension de seccionamiento
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { SwiperModule } from 'swiper/angular';
 import { NavegationComponentsModule } from './shared/modules';
-
-
-
-
+// Interceptors
+import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
+// Const
 const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];
 
@@ -25,7 +21,9 @@ const components = [AppComponent];
 
   declarations: [...components],
   imports: [...modules],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 
 })

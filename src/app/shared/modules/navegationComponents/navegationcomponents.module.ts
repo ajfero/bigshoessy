@@ -20,8 +20,7 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 
 // Import for Https Services
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { SpinnerInterceptor } from '../../interceptor/spinner.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 // PIPES
 import { TimeAgoPipe } from '../../pipes/timeAgo.pipe';
 import { FilterPipe } from '../../pipes/filter.pipe';
@@ -40,7 +39,7 @@ const moduls = [ReactiveFormsModule, CommonModule, RouterModule, HttpClientModul
   //Primero decimos que és, despues llamamos a la clase del interceptor y luego al multi.
   //Multi nos dice que podemos usar multiples interceptors.
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }
+
   ]
 })
 
