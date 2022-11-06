@@ -19,39 +19,45 @@
                         <div class="contact ">
 
                             <!-- Form -->
-                            <form class="form" name="enq" [formGroup]="contactForm" method="post" action="contact.php" onsubmit="return validation();">
+                            <form class="form" name="enq" [formGroup]="contactForm" method="post" action="contact.php"
+                                onsubmit="return validation();">
                                 <div class="row">
 
                                     <!-- name -->
                                     <div class="form-group col-md-6 mb-2">
-                                        <input class="form-control" id="name" name="name" type="text" formControlName="name" placeholder="Name" required="required" value="">
+                                        <input class="form-control" id="name" name="name" type="text"
+                                            formControlName="name" placeholder="Name" required="required" value="">
                                     </div>
 
                                     <!-- email -->
                                     <div class="form-group col-md-6 ">
-                                        <input class="form-control" id="email" name="email" type="email" [class.errorInput]="contactForm.controls.email.touched" formControlName="email" placeholder="Email" required="required">
+                                        <input class="form-control" id="email" name="email" type="email"
+                                            [class.errorInput]="contactForm.controls.email.touched"
+                                            formControlName="email" placeholder="Email" required="required">
                                     </div>
 
                                     <!-- subject -->
                                     <div class="form-group col-md-12 mb-2">
-                                        <input class="form-control" id="subject" name="subject" type="text" formControlName="subject" placeholder="Subject" required="required">
+                                        <input class="form-control" id="subject" name="subject" type="text"
+                                            formControlName="subject" placeholder="Subject" required="required">
                                     </div>
-
                                     <!-- message -->
                                     <div class="form-group col-md-12 mb-4">
-                                        <textarea class="form-control" id="message" name="message" type="text" formControlName="message" rows="6" placeholder="Your Message" required="required"></textarea>
+                                        <textarea class="form-control" id="message" name="message" type="text"
+                                            formControlName="message" rows="6" placeholder="Your Message"
+                                            required="required"></textarea>
                                     </div>
 
                                     <!-- submit -->
                                     <div class="col-md-12 text-center mt-3 mb-4">
-                                        <button class="btn btn-contact-bg" id="submitButton" name="submit" type="button" title="Submit Your Message!" (click)="onSubmit()" value="Send message">Send Message</button>
+                                        <button class="btn btn-contact-bg" id="submitButton" name="submit" type="button"
+                                            title="Submit Your Message!" (click)="onSubmit()" value="Send message">Send
+                                            Message</button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
-
                     <!--- Iconos laterales -->
                     <div class="col-lg-6 col-xl-4">
                         <div class="single_address">
@@ -75,11 +81,8 @@
                             <p>Mon - Fri: 00 : 00 hs <br>Sat: 00 : 00 hs</p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </main>
-
 </body>

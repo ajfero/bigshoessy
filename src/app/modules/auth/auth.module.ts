@@ -7,8 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { NavegationComponentsModule } from 'src/app/shared/modules';
 // Views
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 import { ViewDashboardComponent } from './views/view-dashboard/view-dashboard.component';
 // Service logger
 ////////////////////////////////

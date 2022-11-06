@@ -1,10 +1,11 @@
 // Angular tools
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
 // Shared
 import { mustMatch } from '../../validators';
-
+// Service
+import { UserService } from 'src/app/shared/services/user.service';
+import { User, createUserDTO } from '../../models/user';
 @Component({
   selector: 'app-modal-register',
   templateUrl: './modal-register.component.html',
@@ -12,37 +13,24 @@ import { mustMatch } from '../../validators';
 })
 export class ModalRegisterComponent {
   // ReactiveForm ->
-  registerForm: FormGroup<{
-    name: FormControl<string>
-    email: FormControl<string>
-    password: FormControl<string>
-    confirmPassword: FormControl<string>
-  }>
 
   constructor(
-    private _fb: FormBuilder,
-    private _router: Router,
-
+    private userService: UserService,
   ) {
-    this.registerForm = this._buildForm()
+
   }
 
 
-
-
-  // Complete the form
-  private _buildForm(): FormGroup {
-    return this._fb.group(
-      {
-        name: ['', { nonNullable: true, validators: [Validators.required] }],
-        email: ['', { nonNullable: true, validators: [Validators.required, Validators.email] }],
-        password: ['', { nonNullable: true, validators: [Validators.required] }],
-        confirmPassword: ['', { nonNullable: true, validators: [Validators.required] }],
-      },
-      {
-        validators: mustMatch('password', 'confirmPassword'),
-      }
-    )
+  createUser() {
+    this.userService.create({
+      name: 'tomascapo',
+      email: 'tomascapo@gmail.com',
+      password: 'admin123',
+    })
+      .subscribe(rta => {
+        console.log(rta);
+      })
   }
+
 }
 
