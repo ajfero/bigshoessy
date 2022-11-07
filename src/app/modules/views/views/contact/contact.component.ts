@@ -30,6 +30,7 @@ export class ContactComponent implements OnInit {
 
 	});
 
+	// Constructor of Service and tools
 	constructor(
 
 		private fb: FormBuilder,
@@ -41,7 +42,7 @@ export class ContactComponent implements OnInit {
 
 	ngOnInit(): void { }
 
-	// Create a message with  contactForm data.
+	// Create a message with contactForm data.
 	createNewMessage(contactValue: any) {
 
 		const message: CreateMessageDTO = {
@@ -74,9 +75,7 @@ We will be in contact with you!! at email: ${email}
 		if (this.contactForm.valid) {
 
 			this.createNewMessage(this.contactForm.value)
-
 			this.contactForm.reset();
-
 			console.log('contactForm Send')
 
 		} else {
