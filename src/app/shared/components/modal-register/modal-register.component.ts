@@ -18,31 +18,23 @@ export class ModalRegisterComponent {
   // Init variables
   registers: SignupPost[] = [];
 
-  // ReactiveForm -> contactForm
+  // ReactiveForm -> RegisterForm
   registerForm = this.fb.group({
-
     name: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
     confirmPassword: ['', Validators.required]
-
   });
 
   // Constructor of Service and tools
   constructor(
     private fb: FormBuilder,
     private userService: UserService
-  )
-
-  // init reactive/form
-  {
-    this.registerForm = this._buildForm()
+  ) {
+    this.registerForm = this._buildForm() // init -> build_form
   }
-
-  ngOnInit(): void { }
-
-  // value.true === function create form
-  createUser(registerValue: any) { // Create a User with contactForm data.
+  // Create a User with registerForm data.
+  createUser(registerValue: any) {
 
     const register: SignupPost = {
       name: registerValue.name,
@@ -92,10 +84,10 @@ Thanks a lot for register!!
   private _buildForm(): FormGroup {
 
     return this.fb.group({
-      name: ['AnthonyF', { nonNullable: true, validators: [Validators.required] }],
-      email: ['ing.ajfernandez@gmail.com', { nonNullable: true, validators: [Validators.required, Validators.email] },],
-      password: ['AguilasDesert-23', { nonNullable: true, validators: [Validators.required] }],
-      confirmPassword: ['AguilasDesert-23', { nonNullable: true, validators: [Validators.required] }],
+      name: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      email: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] },],
+      password: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      confirmPassword: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
     },
       {
         validators: mustMatch('password', 'confirmPassword'),

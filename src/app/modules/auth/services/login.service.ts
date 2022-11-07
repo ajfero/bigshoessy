@@ -16,12 +16,12 @@ export class LoginService {
     private http: HttpClient,
   ) { }
 
-  login(email: string, password: string) {
-    return this.http.post<SigninPost>(this.apiUrlLogin, { email, password });
+  login(dto: SigninPost) {
+    return this.http.post<SigninPost>(this.apiUrlLogin, dto);
   }
 
-  profile() {
-    return this.http.get(this.apiUrlgetProfile);
+  profile(dto: SigninGet) {
+    return this.http.get<SigninGet>(this.apiUrlgetProfile);
   }
 
 }

@@ -1,5 +1,5 @@
 export interface SigninPost {
-    email: string
+    email: string,
     password: string
 }
 export interface SignupPost {
