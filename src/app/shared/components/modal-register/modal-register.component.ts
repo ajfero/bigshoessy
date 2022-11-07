@@ -1,11 +1,14 @@
-// Angular tools
+// Angular Imports
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
-import { SignupPost } from 'src/app/modules/auth/model/login.model';
 import { mustMatch } from '../../validators';
 
 // Service
 import { UserService } from '../../services/user.service';
+
+// Models
+import { SignupPost } from 'src/app/modules/auth/model/login.model';
+
 
 @Component({
   selector: 'app-modal-register',
@@ -33,6 +36,7 @@ export class ModalRegisterComponent {
   ) {
     this.registerForm = this._buildForm() // init -> build_form
   }
+
   // Create a User with registerForm data.
   createUser(registerValue: any) {
 
@@ -84,10 +88,10 @@ Thanks a lot for register!!
   private _buildForm(): FormGroup {
 
     return this.fb.group({
-      name: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
-      email: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] },],
-      password: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
-      confirmPassword: ['', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      name: ['Anthony', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      email: ['ing.ajfernandez@gmail.com', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] },],
+      password: ['AguilarDesert-23', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      confirmPassword: ['AguilarDesert-23', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
     },
       {
         validators: mustMatch('password', 'confirmPassword'),

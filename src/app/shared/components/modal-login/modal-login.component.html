@@ -14,28 +14,29 @@
 
                 <!-- email -->
                 <div class="form-floating mb-3">
-                    <input class="form-control rounded-4" id="floatingInput" name="email" type="email"
-                        placeholder="name@example.com" required="required" formControlName="email">
-                    <label for="floatingInput">Correo electronico</label>
+                    <input class="form-control rounded-4" id="floatingEmail" type="email" placeholder="name@example.com" formControlName="email">
+                    <label for="floatingEmail">Email</label>
                 </div>
 
                 <!-- password -->
                 <div class="form-floating mb-4">
-                    <input class="form-control rounded-4" id="floatingPassword" name="password" type="password"
-                        placeholder="Password" required="required" formControlName="password">
-                    <label for="floatingPassword">Contraseña</label>
+                    <input class="form-control rounded-4" id="floatingPassword" type="password" placeholder="Password" formControlName="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
 
+                <div>
                     <!-- recover Password -->
                     <div class="text-muted fw-bold d-block text-end">
                         <div class=" nav-link " data-bs-target="#modal-recover" data-bs-toggle="modal" type="button"><a
-                                aria-current="page">Olvido su contraseña</a></div>
+                                aria-current="page">Forget Password?</a></div>
                     </div>
                 </div>
 
                 <!-- enviar form -->
-                <button type="submit" [disabled]="!loginForm.value"
-                    class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" (click)="onSubmit()">Iniciar
-                    Sesion</button>
+                <button type="submit"
+                    class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
+                    (click)="onSubmit()">Sign In
+                </button>
 
                 <!-- divisor logIn/SignUp -->
                 <div class="row m-2 ">
@@ -49,28 +50,28 @@
                         <hr class=" my-6 ">
                     </div>
                 </div>
-                <h2 class="fs-5 text-center ">Registrarse / Iniciar con tercero.</h2>
-
+                <h2 class="fs-5 text-center ">Register / Sign In with with third parties</h2>
                 <!-- github -->
                 <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
                     <ng-template [ngTemplateOutlet]="iconGithub"> </ng-template>
-                    Registrase / Iniciar con GitHub
+                     Register / SignIn with GitHub
                 </button>
 
                 <!-- google -->
                 <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
                     <ng-template [ngTemplateOutlet]="iconGoogle"></ng-template>
-                    Registrase / Iniciar con Google
+                    Register / SignIn with Google
                 </button>
 
                 <!-- linkedin -->
                 <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="submit">
                     <ng-template [ngTemplateOutlet]="iconLinkedin"></ng-template>
-                    Registrase / Iniciar con Linkein
+                    Register / SignIn with Linkedin
                 </button>
+
                 <hr class="my-6 ">
                 <small class="text-muted text-center">
-                    Con su registro acepta los terminos y condiciones de uso.
+                    With your register you accept the term of use!
                 </small>
             </form>
         </div>
