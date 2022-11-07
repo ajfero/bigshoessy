@@ -9,36 +9,47 @@
         <!-- body  -->
         <div class="modal-body px-5 ">
             <!-- Aca arranca el formulario-->
-            <form class="">
+            <form class="form" [formGroup]="registerForm">
                 <div class="row d-inline-flex ">
                     <!-- name -->
                     <div class="col-md-6 col-12 d-inline-block d-sm-inline form-floating mb-3 ">
                         <input class="form-control rounded-4 " id="floatingInput" type="email"
-                            placeholder="name@example.com">
+                            placeholder="name@example.com" formControlName="name">
                         <label for=" floatingInput " class="px-4">Nombre</label>
-                    </div>
-                    <!-- password -->
-                    <div class=" col-md-6 col-12 d-inline-block d-sm-inline form-floating mb-4">
-                        <input class="form-control rounded-4" id="floatingPassword" type="password"
-                            placeholder="Password">
-                        <label for="floatingPassword" class="px-4">Contraseña</label>
+                        <span *ngIf="f['name'].getError('required')!=null" class="text-danger">Enter username, should be
+                            min 6 letters</span>
+
                     </div>
                     <!-- email -->
                     <div class=" col-md-6 col-12 d-inline-block d-sm-inline form-floating mb-3">
                         <input class="form-control rounded-4" id="floatingInput" type="email"
-                            placeholder="name@example.com">
-                        <label for="floatingInput" class="px-4">Correo electronico</label>
+                            placeholder="name@example.com" formControlName="email">
+                        <label for="floatingInput" class="px-4">Email adress</label>
+                        <span *ngIf="f['email'].getError('required')!=null" class="text-danger">Enter valid email
+                            adress</span>
                     </div>
+                    <!-- password -->
+                    <div class=" col-md-6 col-12 d-inline-block d-sm-inline form-floating mb-4">
+                        <input class="form-control rounded-4" id="floatingPassword" type="password"
+                            placeholder="Password" formControlName="password">
+                        <label for="floatingPassword" class="px-4">Contraseña</label>
+                        <span *ngIf="f['password'].getError('required')!=null" class="text-danger">Enter
+                            password, should be min 6 digits</span>
+                    </div>
+
                     <!-- confirm password -->
                     <div class=" col-md-6 col-12 d-inline-block d-sm-inline form-floating mb-4">
                         <input class="form-control rounded-4" id="floatingPassword" type="password"
-                            placeholder="Password">
-                        <label for="floatingPassword" class="px-4">Confirmar contraseña</label>
+                            placeholder="Password" formControlName="confirmPassword">
+                        <label for="floatingPassword" class="px-4">Confirm password</label>
+                        <span *ngIf="f['confirmPassword'].getError('required')!=null" class="text-danger">Confirm your
+                            password</span>
+
                     </div>
                 </div>
                 <!-- enviar form -->
                 <button class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" type="submit"
-                    (click)="createUser()">Registrarse
+                    [disabled]="!registerForm.value" (click)="onSubmit()">Registrarse
                 </button>
                 <!-- divisor logIn/SignUp -->
                 <div class="row m-2 ">

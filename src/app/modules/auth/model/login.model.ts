@@ -4,8 +4,9 @@ export interface SigninPost {
 }
 export interface SignupPost {
     email: string
-    password: string
-    name: string
+    name: string,
+    password: string,
+    confirmPassword?: string,
 }
 
 export interface SigninGet {

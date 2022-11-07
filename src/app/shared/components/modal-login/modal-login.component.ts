@@ -28,8 +28,8 @@ export class ModalLoginComponent {
   // login guardarmos el user para enviarlo.
   private _buildForm(): FormGroup {
     return this.fb.group({
-      email: ['admin@admin.com', { nonNullable: true, validators: [Validators.required, Validators.email] },],
-      password: ['admin1234', { nonNullable: true, validators: [Validators.required] }],
+      email: ['', { nonNullable: true, validators: [Validators.required, Validators.email] },],
+      password: ['', { nonNullable: true, validators: [Validators.required] }],
     })
   }
   login() {

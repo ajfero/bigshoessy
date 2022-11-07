@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 // Ambient
 import { environment } from 'src/environments/environment';
 // Model
-import { User, createUserDTO } from 'src/app/shared/models/user';
+import { InformationUser } from '../models/user';
+import { SignupPost, SignupGet } from 'src/app/modules/auth/model/login.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,7 @@ import { User, createUserDTO } from 'src/app/shared/models/user';
 export class UserService {
 
   private apiUrlFindAll = 'http://localhost:3000/api/users/find/all';
-
   private apiUrlFind = 'http://localhost:3000/api/register';
-
   private apiUrlUpdate = 'http://localhost:3000/api/users/:id';
 
   constructor(
@@ -22,11 +21,11 @@ export class UserService {
   ) { }
   // Get all data user's
   dataUser() {
-    return this.http.get<User[]>(this.apiUrlFindAll);
+    return this.http.get<InformationUser[]>(this.apiUrlFindAll);
   }
   // Create new user
-  create(dto: createUserDTO) {
-    return this.http.post<User>(this.apiUrlFind, dto)
+  create(dto: SignupPost) {
+    return this.http.post<SignupPost>(this.apiUrlFind, dto)
   }
 
 }

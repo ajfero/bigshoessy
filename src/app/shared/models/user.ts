@@ -1,9 +1,7 @@
-export interface User {
-    id: string,
-    name?: string,
-    email: string,
-    password: string,
-}
-
-export interface createUserDTO extends Omit<User, 'id'> {
+export interface InformationUser {
+    id: string
+    email: string
+    name: string
+    createdAt: string
+    updatedAt: string
 }
