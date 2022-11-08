@@ -16,12 +16,17 @@ export class LoginService {
     private http: HttpClient,
   ) { }
 
+  // Post data user in DB
   login(dto: SigninPost) {
     return this.http.post<SigninPost>(this.apiUrlLogin, dto);
   }
-
+  // Get data Profile ID DB
   profile(dto: SigninGet) {
     return this.http.get<SigninGet>(this.apiUrlgetProfile);
   }
+
+  // Post data Profile for Update
+
+
 
 }

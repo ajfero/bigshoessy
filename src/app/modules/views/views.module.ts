@@ -20,10 +20,8 @@ import { ProductsSidebarComponent } from './components/products-sidebar/products
 import { ProductsCarouselComponent } from './components/products-carousel/products-carousel.component';
 import { CardComponent } from './components/card/card.component';
 import { CardProductsComponent } from './components/card-products/card-products.component';
-import { UploadPicComponent } from './components/upload-pic/upload-pic.component';
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
 import { ChangePasswdComponent } from './components/change-passwd/change-passwd.component';
-import { ButtonsUploadDeleteComponent } from './components/buttons-upload-delete/buttons-upload-delete.component';
 
 // Views
 import { HomeComponent } from './views/home/home.component';
@@ -52,7 +50,7 @@ const components = [
 
   BannerOneComponent, BannerTwoComponent, BannerThreeComponent, CardComponent,
   ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent, CardProductsComponent,
-  ProfileContactComponent, UploadPicComponent, ChangePasswdComponent, ButtonsUploadDeleteComponent, MiProfileComponent
+  ProfileContactComponent, ChangePasswdComponent, MiProfileComponent
 
 ];
 

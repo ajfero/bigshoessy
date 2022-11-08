@@ -10,11 +10,12 @@ export interface SignupPost {
 }
 
 export interface SigninGet {
-    token: string
+    id: string,
+    token: string,
     tokenType: string
 }
 export interface SignupGet {
-    token: string
+    token: string,
     tokenType: string
 }
 

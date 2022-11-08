@@ -4,9 +4,10 @@ import { HttpClient } from '@angular/common/http';
 // Ambient
 import { environment } from 'src/environments/environment';
 
-// Model
+// Model`s
 import { InformationUser } from '../models/user';
 import { SignupPost, SignupGet } from 'src/app/modules/auth/model/login.model';
+import { ProfileInformation } from 'src/app/modules/views/models/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,11 @@ export class UserService {
   // Create new user
   create(dto: SignupPost) {
     return this.http.post<SignupPost>(this.apiUrlRegister, dto)
+  }
+
+  // Profile
+  ProfileTransit(dto: ProfileInformation) {
+    return this.http.patch<ProfileInformation>(this.apiUrlUpdateUser, dto)
   }
 
 }

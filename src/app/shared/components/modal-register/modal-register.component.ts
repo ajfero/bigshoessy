@@ -1,12 +1,11 @@
 // Angular tools
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
-import { SignupPost } from 'src/app/modules/auth/model/login.model';
 import { mustMatch } from '../../validators';
-
 // Service
 import { UserService } from '../../services/user.service';
-
+// Model
+import { SignupPost } from 'src/app/modules/auth/model/login.model';
 @Component({
   selector: 'app-modal-register',
   templateUrl: './modal-register.component.html',
@@ -72,7 +71,7 @@ Thanks a lot for register!!
       console.log('registerForm Send')
 
     } else {
-      console.log('Sorry!! your register failed, try again')
+      alert('Sorry!! your register failed, try again')
       this.registerForm.markAllAsTouched()
     }
 
@@ -100,6 +99,26 @@ Thanks a lot for register!!
     return this.registerForm.controls;
   }
 
+
+  // Must Match function
+  MustMatch(password: any, confirmPassword: any) {
+
+    return (FormGroup: FormGroup) => {
+
+      const passwordcontrol = FormGroup.controls[password];
+      const confirmPasswordcontrol = FormGroup.controls[confirmPassword];
+
+      if (confirmPasswordcontrol.errors && !confirmPasswordcontrol.errors['MustMatch']) {
+        return;
+      }
+
+      if (passwordcontrol.value !== confirmPasswordcontrol.value) {
+        confirmPasswordcontrol.setErrors([true]);
+      } else {
+        confirmPasswordcontrol.setErrors([null]);
+      }
+    }
+  }
 }
 
 // ReactiveForm -> registerForm
