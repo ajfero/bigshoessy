@@ -14,13 +14,15 @@
 
                 <!-- email -->
                 <div class="form-floating mb-3">
-                    <input class="form-control rounded-4" id="floatingEmail" type="email" placeholder="name@example.com" formControlName="email">
+                    <input class="form-control rounded-4" id="floatingEmail" type="email" placeholder="name@example.com"
+                        formControlName="email">
                     <label for="floatingEmail">Email</label>
                 </div>
 
                 <!-- password -->
                 <div class="form-floating mb-4">
-                    <input class="form-control rounded-4" id="floatingPassword" type="password" placeholder="Password" formControlName="password">
+                    <input class="form-control rounded-4" id="floatingPassword" type="password" placeholder="Password"
+                        formControlName="password">
                     <label for="floatingPassword">Password</label>
                 </div>
 
@@ -33,9 +35,10 @@
                 </div>
 
                 <!-- enviar form -->
-                <button type="submit"
-                    class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
-                    (click)="onSubmit()">Sign In
+                <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" (click)="onSubmit()">Sign In
+                </button>
+                <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" (click)="Profile()">
+                    Apreta aca para ver tu perfil
                 </button>
 
                 <!-- divisor logIn/SignUp -->
@@ -54,7 +57,7 @@
                 <!-- github -->
                 <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
                     <ng-template [ngTemplateOutlet]="iconGithub"> </ng-template>
-                     Register / SignIn with GitHub
+                    Register / SignIn with GitHub
                 </button>
 
                 <!-- google -->

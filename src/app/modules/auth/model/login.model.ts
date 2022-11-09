@@ -3,22 +3,17 @@ export interface SigninPost {
     password: string
 }
 export interface SignupPost {
-    email: string
+    email: string,
     name: string,
     password: string,
-    confirmPassword?: string,
+    confirmPassword?: string
 }
-
 export interface SigninGet {
     id: string,
     token: string,
     tokenType: string
 }
-export interface SignupGet {
-    token: string,
-    tokenType: string
-}
-
 export interface Auth {
-    acess_token: string,
+    id: string
+    token: string
 }

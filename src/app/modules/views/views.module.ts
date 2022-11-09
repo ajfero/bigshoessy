@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 // Routing
 import { ViewsRoutingModule } from './views-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 // Modules
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
@@ -22,21 +19,18 @@ import { CardComponent } from './components/card/card.component';
 import { CardProductsComponent } from './components/card-products/card-products.component';
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
 import { ChangePasswdComponent } from './components/change-passwd/change-passwd.component';
-
 // Views
 import { HomeComponent } from './views/home/home.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { OffersComponent } from './views/offers/offers.component';
 import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
-
 // Box container for views, introducing views pages.
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
 
 
 const modules = [
-
   CommonModule,
   ViewsRoutingModule,
   NavegationComponentsModule,
@@ -58,9 +52,8 @@ const views = [HomeComponent, ProductsComponent, OffersComponent, ContactCompone
 
 @NgModule({
 
-  declarations: [...views, ...components,],
   imports: [...modules],
-  exports: []
-
+  declarations: [...views, ...components,],
+  exports: [],
 })
 export class ViewsModule { }

@@ -46,7 +46,7 @@ export class ModalRegisterComponent {
       confirmPassword: registerValue.confirmPassword
     }
 
-    this.userService.create(register)
+    this.userService.registerUser(register)
       .subscribe({
         next: (res: any) => {
           console.log(res, '¡¡Your user account has been successfully created!!');
@@ -98,37 +98,4 @@ Thanks a lot for register!!
 
   }
 
-  // Required min lenght.
-  get f() {
-    return this.registerForm.controls;
-  }
-
-
-  // Must Match function
-  MustMatch(password: any, confirmPassword: any) {
-
-    return (FormGroup: FormGroup) => {
-
-      const passwordcontrol = FormGroup.controls[password];
-      const confirmPasswordcontrol = FormGroup.controls[confirmPassword];
-
-      if (confirmPasswordcontrol.errors && !confirmPasswordcontrol.errors['MustMatch']) {
-        return;
-      }
-
-      if (passwordcontrol.value !== confirmPasswordcontrol.value) {
-        confirmPasswordcontrol.setErrors([true]);
-      } else {
-        confirmPasswordcontrol.setErrors([null]);
-      }
-    }
-  }
 }
-
-// ReactiveForm -> registerForm
-// registerForm: FormGroup<{
-//   name: FormControl<string>
-//   email: FormControl<string>
-//   password: FormControl<string>
-//   confirmPassword: FormControl<string>
-// }>

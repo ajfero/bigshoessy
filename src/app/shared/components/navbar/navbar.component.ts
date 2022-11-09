@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 //Service
 import { StoreService } from '../../services/store.service';
-import { ProductsService } from 'src/app/modules/views/services/products.service';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 //Components
 import { Product } from 'src/app/modules/views/models/card.model';
-import { ElementRef, ViewChild } from '@angular/core';
+//Models
+import { SigninPost } from 'src/app/modules/auth/model/login.model';
+
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +17,6 @@ import { ElementRef, ViewChild } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   myShoppingCart: Product[] = [];
-
 
   pathCart = {
     label: '',
@@ -55,13 +56,37 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
+  token = '';
+
+
   constructor(
-    private storeService: StoreService
+    private storeService: StoreService,
+    private authService: AuthService
   ) {
 
   }
 
+  // dataUser with loginForm data.
+  dataLogin(loggerValue: any) {
 
+    const logger: SigninPost = {
+      email: loggerValue.email,
+      password: loggerValue.password
+    }
+    this.authService.login(loggerValue.email, loggerValue.password)
+      .subscribe({
+        next: (res) => {
+          this.token = res.token;
+        },
+        error: () => { }
+      });
+  }
+  Profile() {
+    this.authService.getProfile(this.token)
+      .subscribe(profile => {
+        console.log(profile);
+      })
+  }
   ngOnInit(): void {
     this.myShoppingCart = this.storeService.getShoppingCart();
 

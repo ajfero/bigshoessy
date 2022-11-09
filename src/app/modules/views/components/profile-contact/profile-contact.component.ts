@@ -1,12 +1,14 @@
 // Angular tools.
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { ValidatorFn, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 import { mustMatch } from 'src/app/shared/validators';
 // Service
 import { UserService } from 'src/app/shared/services/user.service';
 // Model
 import { ProfileInformation } from '../../models/profile';
+import { InformationUser } from 'src/app/shared/models/user';
+
 @Component({
   selector: 'app-profile-contact',
   templateUrl: './profile-contact.component.html',
@@ -16,9 +18,21 @@ export class ProfileContactComponent {
 
   // Data saved form
   profiles: ProfileInformation[] = [];
-  // Form group
+  // Form model
+  profileModel: ProfileInformation = {
+    id: '',
+    userId: '',
+    name: '',
+    email: '',
+    lastName: '',
+    socialRed: '',
+    phone: 0,
+    imageUrl: ''
+  };
+  // Form
   profileForm = this.fb.group({
-    userId: [''],
+    id: '',
+    userId: ['', Validators.required],
     name: ['', Validators.required],
     email: ['', Validators.required],
     lastName: [''],
@@ -26,17 +40,22 @@ export class ProfileContactComponent {
     phone: [''],
     ImageUrl: ['']
   });
+  // Type status
+  statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
 
   constructor(
     private fb: FormBuilder,
     private userService: UserService // PUT data.
   ) {
+
     this.profileForm = this._buildForm() // Declared build form
   }
+
   // Validators form
   private _buildForm(): FormGroup {
     return this.fb.group({
-      userId: '',
+      id: ['', Validators.required],
+      userId: ['', Validators.required],
       name: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       lastName: [''],
       email: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
@@ -49,6 +68,7 @@ export class ProfileContactComponent {
   patchProfile(profileValue: any) {
 
     const profile: ProfileInformation = {
+      id: profileValue.id,
       userId: profileValue.userId,
       name: profileValue.email,
       lastName: profileValue.lastName,
@@ -57,12 +77,12 @@ export class ProfileContactComponent {
       phone: profileValue.phone,
       imageUrl: profileValue.imageUrl
     }
-
-    this.userService.ProfileTransit(profile)
+    this.userService.updateProfile(profile)
       .subscribe({
         next: (res: any) => {
           console.log(res, '¡¡Update profile!!');
           this.profiles.unshift(profile);
+          const id = this.profileForm.value.id;
           const userId = this.profileForm.value.userId;
           const name = this.profileForm.value.name;
           const lastName = this.profileForm.value.lastName;
@@ -75,12 +95,8 @@ export class ProfileContactComponent {
         error: () => { }
       })
   }
-
-
-
   // Function for send form
   onSubmit() {
-
     if (this.profileForm.valid) {
 
       this.patchProfile(this.profileForm.value)

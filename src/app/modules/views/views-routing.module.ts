@@ -11,6 +11,8 @@ import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
 import { CardComponent } from './components/card/card.component';
 import { CartComponent } from 'src/app/shared/views/cart/cart.component';
+// Guards
+import { AuthGuard } from 'src/app/shared/guards/auth/auth.guard';
 
 
 // usar el slash no deja tener control sobre la root padre.

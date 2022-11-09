@@ -6,21 +6,17 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class SpinnerService {
-
   //True or false loaded.
   isLoading$ = new Subject<boolean>();
+
+  constructor() { }
 
   //When to show
   show(): void {
     this.isLoading$.next(true);
-
   }
-
   //when to hide.
   hide(): void {
     this.isLoading$.next(false);
-
   }
-
-  constructor() { }
 }

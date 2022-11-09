@@ -3,10 +3,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 
 // Service
-import { LoginService } from 'src/app/modules/auth/services/login.service';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 // Models
 import { SigninPost } from 'src/app/modules/auth/model/login.model';
+import { Token } from '@angular/compiler';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-modal-login',
@@ -14,6 +16,10 @@ import { SigninPost } from 'src/app/modules/auth/model/login.model';
   styleUrls: ['./modal-login.component.scss']
 })
 export class ModalLoginComponent {
+  // Almacenamos el token para autenticaciones
+  token = '';
+  // Almacenamos el ID para relaciones.
+  id = '';
 
   // Init variables
   logins: SigninPost[] = [];
@@ -25,7 +31,8 @@ export class ModalLoginComponent {
   });
   constructor(
     private fb: FormBuilder,
-    private loginService: LoginService
+    private authService: AuthService,
+    private userService: UserService
   ) {
     this.loginForm = this._buildForm()
   }
@@ -37,16 +44,18 @@ export class ModalLoginComponent {
       email: loggerValue.email,
       password: loggerValue.password
     }
-
-    this.loginService.login(logger)
+    this.authService.login(loggerValue.email, loggerValue.password)
       .subscribe({
-        next: (res: any) => {
-          console.log(res, '¡¡Great!! Data match in database...');
-          this.logins.unshift(logger);
-          const email = this.loginForm.value.email;
-          const password = this.loginForm.value.password;
+        next: (res) => {
+          this.token = res.token;
         },
         error: () => { }
+      });
+  }
+  Profile() {
+    this.authService.getProfile(this.token)
+      .subscribe(profile => {
+        console.log(profile);
       })
   }
 
@@ -60,7 +69,7 @@ export class ModalLoginComponent {
     } else {
       console.log('Logged failed, please type data try again')
     }
-    console.warn('¡¡Welcome to the Big Shoes SY!! Enjoy your demurrage in our store')
+    console.log('¡¡Welcome to the Big Shoes SY!! Enjoy your demurrage in our store')
   }
 
   // Params form : Hardcode an User for send data.

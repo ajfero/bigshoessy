@@ -8,7 +8,7 @@
             <div class="text-center">
                 <!-- Image upload -->
                 <div class="square position-relative display-2 mb-3">
-                    <img formControlName="imageUrl" class="img-fluid" width="300px" height="300px">
+                    <img class="img-fluid" width="300px" height="300px">
                 </div>
                 <!-- Button -->
                 <input type="file" id="customFile" name="file" hidden="">
@@ -17,6 +17,10 @@
                 <!-- Content -->
                 <p class="text-muted mt-3 mb-0"><span class="me-1">Note:</span>Minimum size 300px * 300px
                 </p>
+                <div>
+                    {{profileModel.userId}}
+                    {{profileModel.email}}
+                </div>
             </div>
         </div>
     </div>

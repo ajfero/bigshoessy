@@ -1,9 +1,8 @@
+// Angular tools
 import { HttpClient } from '@angular/common/http';
-import { Call } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+// Observable
 import { BehaviorSubject, bindCallback } from 'rxjs';
-import { ProductsCarouselComponent } from 'src/app/modules/views/components/products-carousel/products-carousel.component';
-
 //Interface
 import { Product } from '../../modules/views/models/card.model';
 
@@ -12,23 +11,15 @@ import { Product } from '../../modules/views/models/card.model';
 })
 export class StoreService {
 
-
-  constructor(
-    private http: HttpClient
-  ) {
-
-  }
-
   //Agrego private para que sea solo uso del servicio y que pueda ser usado en otros lugares mediante un metodo establecido.
   private myShoppingCart: Product[] = [];
-
   private myCart = new BehaviorSubject<Product[]>([]);
-
   myCart$ = this.myCart.asObservable();
+
+  constructor(private http: HttpClient) { }
 
   itemsCount() {
     return this.myShoppingCart.length;
-
   }
 
   //Add products
@@ -42,7 +33,6 @@ export class StoreService {
   getShoppingCart() {
     return this.myShoppingCart;
   }
-
 
   //Get total products to Cart. Item + price.
   getTotal() {

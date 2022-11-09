@@ -1,4 +1,5 @@
 export interface ProfileInformation {
+    id: string,
     userId: string,
     name: string
     email: string
