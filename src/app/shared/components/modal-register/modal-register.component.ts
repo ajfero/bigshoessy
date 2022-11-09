@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { mustMatch } from '../../validators';
 // Service
-import { UserService } from '../../services/user.service';
-
+import { UserService } from '../../services/user/user.service';
 // Models
-import { SignupPost } from 'src/app/modules/auth/model/login.model';
+import { SignupPost } from 'src/app/shared/models/login.model';
+
+
 
 
 @Component({

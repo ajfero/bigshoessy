@@ -1,14 +1,14 @@
 // Angular Imports
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 // Service
-import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 
 // Models
-import { SigninPost } from 'src/app/modules/auth/model/login.model';
-import { Token } from '@angular/compiler';
-import { UserService } from '../../services/user.service';
+import { SigninPost } from 'src/app/shared/models/login.model';
+
 
 @Component({
   selector: 'app-modal-login',

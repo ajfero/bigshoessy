@@ -2,9 +2,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // Model`s
-import { InformationUser } from '../models/user'; // User model
-import { SignupPost } from 'src/app/modules/auth/model/login.model'; // Login models
-import { ProfileInformation } from 'src/app/modules/views/models/profile'; // Profile model
+import { InformationUser } from '../../models/user';
+import { SignupPost } from 'src/app/shared/models/login.model'; // Login models
+import { ProfileInformation } from '../../models/profile'; // Profile model
 
 @Injectable({
   providedIn: 'root'

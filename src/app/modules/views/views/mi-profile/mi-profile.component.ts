@@ -1,9 +1,9 @@
 //Angular tools
 import { Component } from '@angular/core';
 // Model and Services
-import { UserService } from 'src/app/shared/services/user.service';
 import { InformationUser } from 'src/app/shared/models/user';
-import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { UserService } from 'src/app/shared/services/user/user.service';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-mi-profile',

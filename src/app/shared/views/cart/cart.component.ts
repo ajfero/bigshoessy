@@ -1,7 +1,8 @@
 import { Component, OnChanges, SimpleChanges, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 // Service
-import { StoreService } from '../../services/store.service';
+import { CartService } from '../../services/cart/cart.service';
+
 
 @Component({
   selector: 'app-cart',
@@ -19,7 +20,7 @@ export class CartComponent implements OnChanges {
 
 
   // Vars of Store Services
-  myShoppingCart = this.storeService.getShoppingCart();
+  myShoppingCart = this.cartService.getShoppingCart();
   total = 0;
 
   // Pipes
@@ -29,10 +30,10 @@ export class CartComponent implements OnChanges {
   // Lo primero que se inicia.
   constructor(
     //Store service
-    private storeService: StoreService,
+    private cartService: CartService,
   ) {
-    this.total = this.storeService.getTotal();
-    this.myShoppingCart = this.storeService.getShoppingCart();
+    this.total = this.cartService.getTotal();
+    this.myShoppingCart = this.cartService.getShoppingCart();
   }
 
 
@@ -42,7 +43,7 @@ export class CartComponent implements OnChanges {
   clearCart() {
     // METODO LENGHT PARA VACIAR EL ARRAY.
     this.myShoppingCart.length = 0;
-    this.total = this.storeService.getTotal();
+    this.total = this.cartService.getTotal();
     // METODO FOR PARA VACIAR EL ARRAY.
     //   for(var i = myShoppingCart.length - 1; i >= 0; i--) {
     //   if (myShoppingCart[i]) {
@@ -53,7 +54,7 @@ export class CartComponent implements OnChanges {
   //Clear One Product
   clearOneProduct() {
     this.myShoppingCart.shift()
-    this.total = this.storeService.getTotal();
+    this.total = this.cartService.getTotal();
   }
 
   ngOnChanges(changes: SimpleChanges): void {

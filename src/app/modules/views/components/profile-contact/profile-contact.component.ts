@@ -4,9 +4,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { mustMatch } from 'src/app/shared/validators';
 // Service
-import { UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/user/user.service';
 // Model
-import { ProfileInformation } from '../../models/profile';
+import { ProfileInformation } from '../../../../shared/models/profile';
 import { InformationUser } from 'src/app/shared/models/user';
 
 @Component({
@@ -45,7 +45,7 @@ export class ProfileContactComponent {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService // PUT data.
+    private userService: UserService  // PUT data.
   ) {
 
     this.profileForm = this._buildForm() // Declared build form

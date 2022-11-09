@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 //Service
-import { StoreService } from '../../services/store.service';
-import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { CartService } from '../../services/cart/cart.service';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 //Components
 import { Product } from 'src/app/modules/views/models/card.model';
 //Models
-import { SigninPost } from 'src/app/modules/auth/model/login.model';
+import { SigninPost } from 'src/app/shared/models/login.model';
+
 
 
 @Component({
@@ -60,7 +61,7 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(
-    private storeService: StoreService,
+    private cartService: CartService,
     private authService: AuthService
   ) {
 
@@ -88,7 +89,7 @@ export class NavbarComponent implements OnInit {
       })
   }
   ngOnInit(): void {
-    this.myShoppingCart = this.storeService.getShoppingCart();
+    this.myShoppingCart = this.cartService.getShoppingCart();
 
 
   }

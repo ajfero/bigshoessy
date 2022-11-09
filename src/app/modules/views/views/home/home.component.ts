@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 //Service
 import { ProductsService } from '../../services/products.service';
-import { StoreService } from 'src/app/shared/services/store.service';
+import { CartService } from 'src/app/shared/services/cart/cart.service';
 //Models
 import { Product } from '../../models/card.model';
 
@@ -27,11 +27,11 @@ export class HomeComponent {
   //Injected service
   constructor(
     //Store service
-    private storeService: StoreService,
+    private cartService: CartService,
     //API service - async method. -> ngOnInit declared.
     private productsService: ProductsService
   ) {
-    this.myShoppingCart = this.storeService.getShoppingCart();
+    this.myShoppingCart = this.cartService.getShoppingCart();
 
   }
 
@@ -62,8 +62,8 @@ export class HomeComponent {
 
   //Adding product at Cart.
   onAddToShoppingCart(product: Product) {
-    this.storeService.addProduct(product);
-    this.total = this.storeService.getTotal();
+    this.cartService.addProduct(product);
+    this.total = this.cartService.getTotal();
   }
 
 

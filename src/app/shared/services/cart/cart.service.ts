@@ -2,14 +2,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // Observable
-import { BehaviorSubject, bindCallback } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 //Interface
-import { Product } from '../../modules/views/models/card.model';
+import { Product } from 'src/app/modules/views/models/card.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StoreService {
+export class CartService {
 
   //Agrego private para que sea solo uso del servicio y que pueda ser usado en otros lugares mediante un metodo establecido.
   private myShoppingCart: Product[] = [];

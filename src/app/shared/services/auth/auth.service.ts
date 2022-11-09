@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 // Models
-import { Auth } from '../model/login.model';
-import { TokenService } from './token.service';
-import { ProfileInformation } from '../../views/models/profile';
+import { Auth } from '../../models/login.model';
+import { TokenService } from '../token/token.service';
+import { ProfileInformation } from '../../models/profile';
 import { InformationUser } from 'src/app/shared/models/user';
 @Injectable({
   providedIn: 'root'

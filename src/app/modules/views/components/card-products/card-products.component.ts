@@ -4,8 +4,8 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Product } from '../../models/card.model';
 
 //Service
-import { StoreService } from 'src/app/shared/services/store.service';
 import { ProductsService } from '../../services/products.service';
+import { CartService } from 'src/app/shared/services/cart/cart.service';
 
 //Injectores
 @Component({
@@ -16,7 +16,7 @@ import { ProductsService } from '../../services/products.service';
 export class CardProductsComponent implements OnInit {
 
   // Var with cart items.
-  myShoppingCart = this.storeService.getShoppingCart();
+  myShoppingCart = this.cartService.getShoppingCart();
   // Filter of searching
   filterPost = '';
   // Default of total.
@@ -48,11 +48,11 @@ export class CardProductsComponent implements OnInit {
   //Injected service
   constructor(
     //Store service
-    private storeService: StoreService,
+    private cartService: CartService,
     //API service - async method. -> ngOnInit declared.
     private productsService: ProductsService,
   ) {
-    this.myShoppingCart = this.storeService.getShoppingCart();
+    this.myShoppingCart = this.cartService.getShoppingCart();
   }
   //Async Methods
   ngOnInit(): void {
@@ -63,8 +63,8 @@ export class CardProductsComponent implements OnInit {
   }
   //Adding product at Cart.
   onAddToShoppingCart(product: Product) {
-    this.storeService.addProduct(product);
-    this.total = this.storeService.getTotal();
+    this.cartService.addProduct(product);
+    this.total = this.cartService.getTotal();
   }
   //Event sidebar.
   toggleProductDetail() {

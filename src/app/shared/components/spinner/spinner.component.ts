@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SpinnerService } from '../../services/spinner.service';
+import { SpinnerService } from '../../services/spinner/spinner.service';
+
 
 
 @Component({
@@ -12,7 +13,7 @@ import { SpinnerService } from '../../services/spinner.service';
 
 })
 export class SpinnerComponent {
-  isLoading$ = this.spinnerSvc.isLoading$;
-  constructor(private spinnerSvc: SpinnerService) { }
+  isLoading$ = this.spinerService.isLoading$;
+  constructor(private spinerService: SpinnerService) { }
 
 }
