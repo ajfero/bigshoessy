@@ -127,20 +127,22 @@
                         </div>
                     </div>
                     <!--3. Login/Register -->
-                    <div class=" container text-center col-lg-2 text-center d-none d-xl-inline mi-n1">
+                    <div class=" container text-center col-lg-2 text-center d-none d-xl-inline mi-n1 ">
                         <div class=" navbar navbar-nav ">
 
                             <!-- signIn -->
-                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button" *ngIf="!token">
+                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
                                 <div class=" nav-link "><a aria-current="page">Sing In</a></div>
                             </div>
 
                             <!-- /singUp -->
-                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button" *ngIf="!token">
+                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
                                 <div class=" nav-link "><a aria-current="page">Sing Up</a></div>
                             </div>
                         </div>
+                        <!-- <ng-template #elseBlock> {{  }}</ng-template> -->
                     </div>
+
                 </div>
             </div>
         </div>

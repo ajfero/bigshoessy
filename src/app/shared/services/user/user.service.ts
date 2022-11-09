@@ -5,6 +5,9 @@ import { HttpClient } from '@angular/common/http';
 import { InformationUser } from '../../models/user';
 import { SignupPost } from 'src/app/shared/models/login.model'; // Login models
 import { ProfileInformation } from '../../models/profile'; // Profile model
+import { environment } from 'src/environments/environment';
+//
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +15,11 @@ import { ProfileInformation } from '../../models/profile'; // Profile model
 
 export class UserService {
 
-  private apiUrlFindAllUsers = 'http://localhost:3000/api/users/find/all';
-  private apiUrlRegister = 'http://localhost:3000/api/register';
-  private apiUrlUpdateUser = 'http://localhost:3000/api/users/';
-  private apiUrlUpdateProfile = 'http://localhost:3000/api/profile';
+
+  private apiUrlFindAllUsers = `${environment.API_URL}/api/users/find/all`;
+  private apiUrlRegister = `${environment.API_URL}/api/register`;
+  private apiUrlUpdateUser = `${environment.API_URL}/api/users/`;
+  private apiUrlUpdateProfile = `${environment.API_URL}/api/profile`;
 
   constructor(
     private http: HttpClient,

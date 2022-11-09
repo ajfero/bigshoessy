@@ -18,11 +18,6 @@ import { SigninPost } from 'src/app/shared/models/login.model';
 export class ModalLoginComponent {
   // Almacenamos el token para autenticaciones
   token = '';
-  // Almacenamos el ID para relaciones.
-  id = '';
-
-  // Init variables
-  logins: SigninPost[] = [];
 
   // ReactiveForm -> loginForm
   loginForm = this.fb.group({
@@ -38,19 +33,20 @@ export class ModalLoginComponent {
   }
 
   // dataUser with loginForm data.
-  dataLogin(loggerValue: any) {
-
-    const logger: SigninPost = {
-      email: loggerValue.email,
-      password: loggerValue.password
+  async dataLogin(loggerValue: any) {
+    try {
+      const logger: SigninPost = {
+        email: loggerValue.email,
+        password: loggerValue.password
+      }
+      const res = await this.authService.login(loggerValue.email, loggerValue.password).toPromise()
+      if (!res) throw new TypeError('res is undefined')
+      // if (!res.token) throw new TypeError('token is undefined')
+      this.token = res.token;
+      console.log(this.token) //callbackhack
+    } catch (error) {
+      console.error(error);
     }
-    this.authService.login(loggerValue.email, loggerValue.password)
-      .subscribe({
-        next: (res) => {
-          this.token = res.token;
-        },
-        error: () => { }
-      });
   }
   Profile() {
     this.authService.getProfile(this.token)

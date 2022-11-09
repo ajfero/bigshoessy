@@ -1,19 +1,20 @@
 // Angular tools
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { switchMap, tap } from 'rxjs/operators';
 // Models
 import { Auth } from '../../models/login.model';
-import { TokenService } from '../token/token.service';
-import { ProfileInformation } from '../../models/profile';
 import { InformationUser } from 'src/app/shared/models/user';
+//Service
+import { TokenService } from '../token/token.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrlLogin = 'http://localhost:3000/api/login';
-  private apiUrlLogOut = 'http://localhost:3000/api/logout';
-  private apiUrlgetProfile = 'http://localhost:3000/api/profile';
+  private apiUrlLogin = `${environment.API_URL}/api/login`;
+  private apiUrlLogOut = `${environment.API_URL}/api/logout`;
+  private apiUrlgetProfile = `${environment.API_URL}/api/user/profile`;
 
 
   constructor(
@@ -24,16 +25,15 @@ export class AuthService {
   // Post data user in DB
   login(email: string, password: string) {
     return this.http.post<Auth>(this.apiUrlLogin, { email, password })
-    // .pipe(
-    //   tap(response => this.tokenService.saveToken(response.access_token))
-    // );
+      .pipe(
+        tap(response => this.tokenService.saveToken(response.token))
+      );
   }
 
   // Get Profile
   getProfile(token: string) { // Get userId for update data profile, without use the table User`s.
-    const headers = new HttpHeaders();
-    headers.set('Authorization', `Bearer ${token}`)
-    return this.http.get<InformationUser>("http://localhost:3000/api/users/find/all");
+    console.log({ HTTP_CLIENT: this.http });
+    return this.http.get<InformationUser[]>(this.apiUrlgetProfile);
   }
 
   // loginAndGet(email: string, password: string) {

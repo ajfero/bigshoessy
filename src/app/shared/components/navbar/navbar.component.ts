@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 //Service
 import { CartService } from '../../services/cart/cart.service';
-import { AuthService } from 'src/app/shared/services/auth/auth.service';
 //Components
 import { Product } from 'src/app/modules/views/models/card.model';
-//Models
-import { SigninPost } from 'src/app/shared/models/login.model';
 
 
 
@@ -16,15 +13,11 @@ import { SigninPost } from 'src/app/shared/models/login.model';
 })
 
 export class NavbarComponent implements OnInit {
-
   myShoppingCart: Product[] = [];
-
   pathCart = {
     label: '',
     url: 'cart',
   }
-
-
   menuOptions = [
     {
       label: 'Home',
@@ -57,36 +50,10 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  token = '';
-
-
   constructor(
-    private cartService: CartService,
-    private authService: AuthService
+    private cartService: CartService
   ) {
 
-  }
-
-  // dataUser with loginForm data.
-  dataLogin(loggerValue: any) {
-
-    const logger: SigninPost = {
-      email: loggerValue.email,
-      password: loggerValue.password
-    }
-    this.authService.login(loggerValue.email, loggerValue.password)
-      .subscribe({
-        next: (res) => {
-          this.token = res.token;
-        },
-        error: () => { }
-      });
-  }
-  Profile() {
-    this.authService.getProfile(this.token)
-      .subscribe(profile => {
-        console.log(profile);
-      })
   }
   ngOnInit(): void {
     this.myShoppingCart = this.cartService.getShoppingCart();
