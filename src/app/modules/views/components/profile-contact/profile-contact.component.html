@@ -1,33 +1,57 @@
 <!-- Contact detail -->
-<div class="row g-3">
+
+<form class="row g-3" [formGroup]="profileForm">
+    <!-- Upload profile -->
+    <div class="bg-secondary-soft px-4 py-5 rounded">
+        <div class="row g-3">
+            <h4 class="mb-4 mt-0 text-center">Upload your profile photo</h4>
+            <div class="text-center">
+                <!-- Image upload -->
+                <div class="square position-relative display-2 mb-3">
+                    <img class="img-fluid" width="300px" height="300px">
+                </div>
+                <!-- Button -->
+                <input type="file" id="customFile" name="file" hidden="">
+                <label class="btn btn-warning btn-block" for="customFile">Upload</label>
+                <button type="button" class="btn btn-light mx-2">Remove</button>
+                <!-- Content -->
+                <p class="text-muted mt-3 mb-0"><span class="me-1">Note:</span>Minimum size 300px * 300px
+                </p>
+                <div>
+                    {{profileModel.userId}}
+                    {{profileModel.email}}
+                </div>
+            </div>
+        </div>
+    </div>
     <h4 class="mb-4 mt-0">Contact detail</h4>
     <!-- First Name -->
     <div class="col-md-6">
         <label class="form-label">First Name *</label>
-        <input type="text" class="form-control" placeholder="" aria-label="First name" value="Scaralet">
+        <input type="text" class="form-control" formControlName="name" placeholder="" aria-label="First name">
     </div>
     <!-- Last name -->
     <div class="col-md-6">
         <label class="form-label">Last Name *</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name" value="Doe">
+        <input type="text" class="form-control" formControlName="lastName" placeholder="" aria-label="Last name">
     </div>
     <!-- Phone number -->
     <div class="col-md-6">
         <label class="form-label">Phone number *</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Phone number" value="(333) 000 555">
-    </div>
-    <!-- Mobile number -->
-    <div class="col-md-6">
-        <label class="form-label">Mobile number *</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Phone number" value="+91 9852 8855 252">
+        <input type="text" class="form-control" formControlName="phone" placeholder="" aria-label="Phone number">
     </div>
     <!-- Email -->
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email *</label>
-        <input type="email" class="form-control" id="inputEmail4" value="example@homerealty.com">
+        <input type="email" class="form-control" id="inputEmail4" formControlName="email">
     </div>
-    <!-- Skype -->
+    <!-- Instagram -->
     <div class="col-md-6">
-        <label class="form-label">Instagram *</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Phone number" value="Scaralet D">
+        <label class="form-label">Instagram</label>
+        <input type="text" class="form-control" formControlName="socialRed" placeholder="Complet with your social media"
+            aria-label="Social media">
     </div>
+    <div>
+        <button type="submit" (click)="onSubmit()" class="btn btn-warning"> Guardar</button>
+    </div>
+</form>

@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 // views
 import { NotFoundComponent } from '../../views/not-found/not-found.component';
 import { CartComponent } from '../../views/cart/cart.component';
-
 // Components
 import { TopNavbarComponent } from 'src/app/shared/components/top-navbar/top-navbar.component';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
@@ -15,10 +14,8 @@ import { ModalRegisterComponent } from '../../components/modal-register/modal-re
 import { ModalRecoverComponent } from '../../components/modal-recover/modal-recover.component';
 import { RenderComponent } from '../../components/render/render.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
-
 // loader
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
-
 // Import for Https Services
 import { HttpClientModule } from '@angular/common/http';
 // PIPES
@@ -35,9 +32,6 @@ const moduls = [ReactiveFormsModule, CommonModule, RouterModule, HttpClientModul
   declarations: [...views, components, pipes],
   exports: [...views, components, pipes],
   imports: [...moduls],
-  //Declaramos provide, para llamar al interceptor.
-  //Primero decimos que és, despues llamamos a la clase del interceptor y luego al multi.
-  //Multi nos dice que podemos usar multiples interceptors.
   providers: [
 
   ]

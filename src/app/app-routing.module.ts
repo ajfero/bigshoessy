@@ -1,25 +1,18 @@
+// Angular tools
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+// Views
 import { NotFoundComponent } from './shared/views/not-found/not-found.component';
 
 const routes: Routes = [
-
   //Acá linkeamos nuestra ruta de views.
   {
-    path: '',
+    path: '', // Guard - manejar token -  
+    // -> user CART PROFILE rutas privatizadas como macri con las empresas argentinas
     loadChildren: () => import('./modules/views/views.module').then(m => m.ViewsModule)
   },
-
-  // auth-routing Login -> Test
-  // {
-  //   path: 'login',
-  //   loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
-  // },
-
-  // Wildcard siempre que no machee, altuqui roque con este path
   {
-    path: '**',
+    path: '**', // admin CART PROFILE DASHBOARD
     component: NotFoundComponent,
   },
 

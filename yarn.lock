@@ -156,7 +156,7 @@
     "uuid" "8.3.2"
     "yargs" "17.5.1"
 
-"@angular/common@ ^14.0.0-rc.0 || ^14.0.0", "@angular/common@^14.1.0", "@angular/common@^14.2.0", "@angular/common@>=2.0.0", "@angular/common@14.2.8":
+"@angular/common@ ^14.0.0-rc.0 || ^14.0.0", "@angular/common@^14.1.0", "@angular/common@^14.2.0", "@angular/common@>=14.0.0-0", "@angular/common@>=2.0.0", "@angular/common@14.2.8":
   "integrity" "sha512-JSPN2h1EcyWjHWtOzRQmoX48ZacTjLAYwW9ZRmBpYs6Ptw5xZ39ARTJfQNcNnJleqYju2E6BNkGnLpbtWQjNDA=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-14.2.8.tgz"
   "version" "14.2.8"
@@ -186,7 +186,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/core@^14.0.0-rc.0 || ^14.0.0", "@angular/core@^14.1.0", "@angular/core@^14.2.0", "@angular/core@>=2.0.0", "@angular/core@14.2.8":
+"@angular/core@^14.0.0-rc.0 || ^14.0.0", "@angular/core@^14.1.0", "@angular/core@^14.2.0", "@angular/core@>=14.0.0-0", "@angular/core@>=2.0.0", "@angular/core@14.2.8":
   "integrity" "sha512-cgnII9vJGJDLsfr7KsBfU2l+QQUmQIRIP3ImKhBxicw2IHKCSb2mYwoeLV46jaLyHyUMTLRHKUYUR4XtSPnb8A=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-14.2.8.tgz"
   "version" "14.2.8"
@@ -216,7 +216,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/platform-browser@^14.2.0", "@angular/platform-browser@14.2.8":
+"@angular/platform-browser@^14.2.0", "@angular/platform-browser@>=14.0.0-0", "@angular/platform-browser@14.2.8":
   "integrity" "sha512-tSASBLXoBE0/Gt6d2nC6BJ1DvbGY5wo2Lb+8WCLSvkfsgVqOh4uRuJ2a0wwjeLFd0ZNmpjG42Ijba4btmCpIjg=="
   "resolved" "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-14.2.8.tgz"
   "version" "14.2.8"
@@ -4344,6 +4344,13 @@
   "integrity" "sha512-U0UNhaXfGhWjcGDxmvgvpOpig/3Cs33sQjtH7iahEEjBXmwCccSwZkmLC3HPattFhfUyH8OGFzH9ZlcA0R0gFQ=="
   "resolved" "https://registry.npmjs.org/ngx-owl-carousel-o/-/ngx-owl-carousel-o-14.0.1.tgz"
   "version" "14.0.1"
+  dependencies:
+    "tslib" "^2.3.0"
+
+"ngx-toastr@^15.2.1":
+  "integrity" "sha512-Fyik8+sTbmX4NftVWWd3SIaeH8qlRU0emAfpey/AXsXuUEXgOOXKKnVPLmMAK7XL7xLy0c/+UsYBwlPK4TJcmA=="
+  "resolved" "https://registry.npmjs.org/ngx-toastr/-/ngx-toastr-15.2.1.tgz"
+  "version" "15.2.1"
   dependencies:
     "tslib" "^2.3.0"
 

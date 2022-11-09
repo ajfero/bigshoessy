@@ -131,12 +131,12 @@
                         <div class=" navbar navbar-nav ">
 
                             <!-- signIn -->
-                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button" *ngIf="!token">
                                 <div class=" nav-link "><a aria-current="page">Sing In</a></div>
                             </div>
 
                             <!-- /singUp -->
-                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
+                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button" *ngIf="!token">
                                 <div class=" nav-link "><a aria-current="page">Sing Up</a></div>
                             </div>
                         </div>

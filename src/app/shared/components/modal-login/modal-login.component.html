@@ -33,9 +33,10 @@
                 </div>
 
                 <!-- enviar form -->
-                <button type="submit"
-                    class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary"
-                    (click)="onSubmit()">Sign In
+                <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" (click)="onSubmit()">Sign In
+                </button>
+                <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" (click)="Profile()">
+                    Apreta aca para ver tu perfil
                 </button>
 
                 <!-- divisor logIn/SignUp -->
@@ -54,7 +55,7 @@
                 <!-- github -->
                 <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
                     <ng-template [ngTemplateOutlet]="iconGithub"> </ng-template>
-                     Register / SignIn with GitHub
+                    Register / SignIn with GitHub
                 </button>
 
                 <!-- google -->

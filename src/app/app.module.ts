@@ -11,8 +11,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { SwiperModule } from 'swiper/angular';
 import { NavegationComponentsModule } from './shared/modules';
-// Interceptors
 import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
+// Interceptors
+
 // Const
 const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];

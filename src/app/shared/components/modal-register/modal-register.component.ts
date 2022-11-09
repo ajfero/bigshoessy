@@ -2,12 +2,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { mustMatch } from '../../validators';
-
 // Service
-import { UserService } from '../../services/user.service';
-
+import { UserService } from '../../services/user/user.service';
 // Models
-import { SignupPost } from 'src/app/modules/auth/model/login.model';
+import { SignupPost } from 'src/app/shared/models/login.model';
+
+
 
 
 @Component({
@@ -47,7 +47,7 @@ export class ModalRegisterComponent {
       confirmPassword: registerValue.confirmPassword
     }
 
-    this.userService.create(register)
+    this.userService.registerUser(register)
       .subscribe({
         next: (res: any) => {
           console.log(res, '¡¡Your user account has been successfully created!!');
@@ -76,7 +76,7 @@ Thanks a lot for register!!
       console.log('registerForm Send')
 
     } else {
-      console.log('Sorry!! your register failed, try again')
+      alert('Sorry!! your register failed, try again')
       this.registerForm.markAllAsTouched()
     }
 
@@ -99,17 +99,4 @@ Thanks a lot for register!!
 
   }
 
-  // Required min lenght.
-  get f() {
-    return this.registerForm.controls;
-  }
-
 }
-
-// ReactiveForm -> registerForm
-// registerForm: FormGroup<{
-//   name: FormControl<string>
-//   email: FormControl<string>
-//   password: FormControl<string>
-//   confirmPassword: FormControl<string>
-// }>
