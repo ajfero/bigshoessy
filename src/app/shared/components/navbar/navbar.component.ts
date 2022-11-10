@@ -16,10 +16,16 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 
 export class NavbarComponent implements OnInit {
+
+  // Model
   myShoppingCart: Product[] = [];
 
+  // Vars
+  singOut: any;
+  // Token var.
   token: any;
 
+  // Roots private`s. //
   pathCart = {
     label: '',
     url: 'cart',
@@ -28,6 +34,7 @@ export class NavbarComponent implements OnInit {
     label: 'Profile',
     url: 'profile',
   }
+  // Ruts global`s //
   menuOptions = [
     {
       label: 'Home',
@@ -47,26 +54,31 @@ export class NavbarComponent implements OnInit {
     },
 
   ];
-
+  // Log in and Log Out modal.
   modal = [
     {
       label: 'modal',
       url: '/src/app/modules/auth/components/login/login.component.html',
     }
   ];
-
   constructor(
-    private cartService: CartService, private tokenService: TokenService, private authService: AuthService) {
-
-  }
+    private cartService: CartService, private tokenService: TokenService, private authService: AuthService) { }
+  // Services.
   ngOnInit(): void {
     this.myShoppingCart = this.cartService.getShoppingCart();
     this.token = this.tokenService.getToken();
-
+    // Decode Token.
     if (this.token) {
       this.token = jwt_decode(this.token)
     } else {
-      console.log('Disculpa flaco no se entiende nada')
+    }
+  }
+  // Log out.
+  async Singout() {
+    try {
+      return this.tokenService.logout()
+    } catch (error) {
+      console.error(error)
     }
   }
 }

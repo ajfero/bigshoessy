@@ -1,11 +1,13 @@
 // Angular Imports
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { Router, RouterModule } from '@angular/router';
 // Service
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { UserService } from '../../services/user/user.service';
 // Models
 import { SigninPost } from 'src/app/shared/models/login.model';
+// Decode
 import jwt_decode from 'jwt-decode';
 
 
@@ -26,7 +28,8 @@ export class ModalLoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private userService: UserService
+    private userService: UserService,
+    private route: Router
   ) {
     this.loginForm = this._buildForm()
   }
@@ -39,26 +42,25 @@ export class ModalLoginComponent {
       }
       const res = await this.authService.login(loggerValue.email, loggerValue.password).toPromise()
       if (!res) throw new TypeError('res is undefined')
-      // if (!res.token) throw new TypeError('token is undefined')
       this.token = jwt_decode(res.token);
     } catch (error) {
       console.error(error);
     }
   }
-  // Function send login
+  // Function send login //
+
   onSubmit() {
     if (this.loginForm.valid) {
       this.dataLogin(this.loginForm.value)
-      this.loginForm.reset();
       console.log('Logged in process')
-
+      this.route.navigate(['/products'])
+      this.loginForm.reset();
     } else {
       console.log('Logged failed, please type data try again')
     }
     console.log('¡¡Welcome to the Big Shoes SY!! Enjoy your demurrage in our store')
   }
-
-  // Params form : Hardcode an User for send data.
+  // Params form : Hardcode an User for send data. //
   private _buildForm(): FormGroup {
     return this.fb.group({
       email: ['usuario@usuario.com', {}],
