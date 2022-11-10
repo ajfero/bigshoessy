@@ -1,13 +1,12 @@
 // Angular Imports
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-
 // Service
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { UserService } from '../../services/user/user.service';
-
 // Models
 import { SigninPost } from 'src/app/shared/models/login.model';
+import jwt_decode from 'jwt-decode';
 
 
 @Component({
@@ -16,10 +15,10 @@ import { SigninPost } from 'src/app/shared/models/login.model';
   styleUrls: ['./modal-login.component.scss']
 })
 export class ModalLoginComponent {
-  // Almacenamos el token para autenticaciones
-  token = '';
+  // Almacenamos el token para autenticaciones //
+  token: any;
 
-  // ReactiveForm -> loginForm
+  // ReactiveForm -> loginForm //
   loginForm = this.fb.group({
     email: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
     password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
@@ -31,8 +30,7 @@ export class ModalLoginComponent {
   ) {
     this.loginForm = this._buildForm()
   }
-
-  // dataUser with loginForm data.
+  // Confirm logged and response data of user logged. //
   async dataLogin(loggerValue: any) {
     try {
       const logger: SigninPost = {
@@ -42,19 +40,11 @@ export class ModalLoginComponent {
       const res = await this.authService.login(loggerValue.email, loggerValue.password).toPromise()
       if (!res) throw new TypeError('res is undefined')
       // if (!res.token) throw new TypeError('token is undefined')
-      this.token = res.token;
-      console.log(this.token) //callbackhack
+      this.token = jwt_decode(res.token);
     } catch (error) {
       console.error(error);
     }
   }
-  Profile() {
-    this.authService.getProfile(this.token)
-      .subscribe(profile => {
-        console.log(profile);
-      })
-  }
-
   // Function send login
   onSubmit() {
     if (this.loginForm.valid) {
@@ -71,12 +61,8 @@ export class ModalLoginComponent {
   // Params form : Hardcode an User for send data.
   private _buildForm(): FormGroup {
     return this.fb.group({
-      email: ['ing.ajfernandez@gmail.com', {}],
+      email: ['usuario@usuario.com', {}],
       password: ['AguilarDesert-23', {}],
     })
   }
-
 }
-
-
-

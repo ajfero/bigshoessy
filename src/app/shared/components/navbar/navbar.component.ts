@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 //Service
 import { CartService } from '../../services/cart/cart.service';
 //Components
+import { SigninPost } from '../../models/login.model';
 import { Product } from 'src/app/modules/views/models/card.model';
-
+import { TokenService } from '../../services/token/token.service';
+import jwt_decode from 'jwt-decode';
+import { AuthService } from '../../services/auth/auth.service';
 
 
 @Component({
@@ -14,9 +17,16 @@ import { Product } from 'src/app/modules/views/models/card.model';
 
 export class NavbarComponent implements OnInit {
   myShoppingCart: Product[] = [];
+
+  token: any;
+
   pathCart = {
     label: '',
     url: 'cart',
+  }
+  pathProfile = {
+    label: 'Profile',
+    url: 'profile',
   }
   menuOptions = [
     {
@@ -35,11 +45,6 @@ export class NavbarComponent implements OnInit {
       label: 'Contact',
       url: 'contact',
     },
-    // Muestro de ruta Profile
-    {
-      label: 'Profile',
-      url: 'profile',
-    },
 
   ];
 
@@ -51,13 +56,17 @@ export class NavbarComponent implements OnInit {
   ];
 
   constructor(
-    private cartService: CartService
-  ) {
+    private cartService: CartService, private tokenService: TokenService, private authService: AuthService) {
 
   }
   ngOnInit(): void {
     this.myShoppingCart = this.cartService.getShoppingCart();
+    this.token = this.tokenService.getToken();
 
-
+    if (this.token) {
+      this.token = jwt_decode(this.token)
+    } else {
+      console.log('Disculpa flaco no se entiende nada')
+    }
   }
 }

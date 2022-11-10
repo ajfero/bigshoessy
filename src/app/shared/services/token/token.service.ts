@@ -16,4 +16,12 @@ export class TokenService {
     return token;
   }
 
+  saveUser(id: string) {
+    localStorage.setItem('id', id);
+  }
+
+  getUser() {
+    const id = localStorage.getItem('id')
+    return id;
+  }
 }

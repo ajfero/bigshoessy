@@ -53,10 +53,12 @@ const routes: Routes = [
       {
         path: 'profile', // http://localhost/profile
         component: MiProfileComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'cart', // http://localhost/cart
         component: CartComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: '**', // http://localhost/aeftwef

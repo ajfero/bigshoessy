@@ -38,21 +38,36 @@
                         </div>
                         <!-- Body -->
                         <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
-                            <li class="dropdown-header bg-light"> <b> AUTH </b> </li>
+                            <li class="dropdown-header bg-light">
+                                <b *ngIf="token">PROFILE</b> <b *ngIf="!token">AUTH</b>
+                            </li>
                             <!-- signIn-sm -->
-                            <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button"
-                                *ngFor="let traer of modal">
-                                <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
-                                        In</a>
+                            <div *ngIf="!token">
+                                <div class="container-fluid">
+                                    <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button"
+                                        *ngFor="let traer of modal">
+                                        <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
+                                                In</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- singUp-sm -->
-                            <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button"
-                                *ngFor="let traer of modal">
-                                <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
-                                        Up</a>
+                            <div class="container-fluid" *ngIf="!token; else changeProfile">
+                                <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button"
+                                    *ngFor="let traer of modal">
+                                    <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]"
+                                            *ngIf="!token">Sing
+                                            Up</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Logged -->
+                            <ng-template #changeProfile class="d-flex">
+                                <a [routerLink]="['profile']" class=" text-xs-center text-sm-center text-md-center"
+                                    style="font-size: 12px;">{{token.email}}
+                                </a>
+                            </ng-template>
                             <!-- menu -->
                             <li class="dropdown-header bg-light"> <b> MENU </b> </li>
                             <div class=" nav-item  " *ngFor="let option of menuOptions">
@@ -85,13 +100,19 @@
                     </div>
 
 
-                    <!--1. signIn/singUp-md -->
+                    <!--1. signIn/singUp-sm -->
                     <div class=" d-lg-none d-inline mx-4 animacion_user-lg" data-bs-target="#modal-login"
                         data-bs-toggle="modal" type="button">
-                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;"
+                            *ngIf="!token; else elseBlockSM">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
-
                         </a>
+                        <!-- User logged switch it -->
+                        <ng-template #elseBlockSM class="d-flex else_Block-SM">
+                            <a [routerLink]="['profile']"
+                                class="block_SM text-xs-center text-sm-center text-md-center">{{token.email}}
+                            </a>
+                        </ng-template>
                     </div>
 
 
@@ -112,10 +133,18 @@
 
                     <!--2. signIn/singUp-md -->
                     <div class="d-flex align-items-center">
+
                         <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal"
                             type="button">
                             <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                                <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
+                                <ng-template [ngTemplateOutlet]="iconUser" *ngIf="!token; else elseBlockMD">
+                                </ng-template>
+                                <!-- User logged switch it -->
+                                <ng-template #elseBlockMD class="d-flex else_Block-MD">
+                                    <a [routerLink]="['profile']"
+                                        class="block_MD text-xs-center text-sm-center text-md-center">{{token.email}}
+                                    </a>
+                                </ng-template>
                             </a>
                         </div>
                         <!--Shopping Cart-->
@@ -131,24 +160,24 @@
                         <div class=" navbar navbar-nav ">
 
                             <!-- signIn -->
-                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button">
+                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button"
+                                *ngIf="!token; else elseBlock">
                                 <div class=" nav-link "><a aria-current="page">Sing In</a></div>
                             </div>
-
-                            <!-- /singUp -->
-                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button">
+                            <!-- User logged switch it -->
+                            <ng-template #elseBlock>
+                                <a [routerLink]="['profile']" class="text-dark d-flex px-5">{{token.email}}</a>
+                            </ng-template>
+                            <!-- singUp -->
+                            <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button" *ngIf="!token">
                                 <div class=" nav-link "><a aria-current="page">Sing Up</a></div>
                             </div>
                         </div>
-                        <!-- <ng-template #elseBlock> {{  }}</ng-template> -->
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-
 </nav>
 
 

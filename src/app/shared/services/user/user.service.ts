@@ -6,6 +6,7 @@ import { InformationUser } from '../../models/user';
 import { SignupPost } from 'src/app/shared/models/login.model'; // Login models
 import { ProfileInformation } from '../../models/profile'; // Profile model
 import { environment } from 'src/environments/environment';
+import { id } from 'date-fns/locale';
 //
 
 
@@ -30,8 +31,8 @@ export class UserService {
     return this.http.post<SignupPost>(this.apiUrlRegister, dto)
   }
   // Get all data user's
-  dataUser() {
-    return this.http.get<InformationUser[]>(this.apiUrlFindAllUsers);
+  dataUser(id: string) {
+    return this.http.get<InformationUser[]>(`${this.apiUrlUpdateUser}${id}`);
   }
 
   // Patch Profile
