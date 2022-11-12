@@ -6,6 +6,7 @@ import { mustMatch } from '../../validators';
 import { UserService } from '../../services/user/user.service';
 // Models
 import { SignupPost } from 'src/app/shared/models/login.model';
+import { AuthService } from '../../services/auth/auth.service';
 
 
 
@@ -32,7 +33,7 @@ export class ModalRegisterComponent {
   // Constructor of Service and tools
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private authService: AuthService
   ) {
     this.registerForm = this._buildForm() // init -> build_form
   }
@@ -47,7 +48,7 @@ export class ModalRegisterComponent {
       confirmPassword: registerValue.confirmPassword,
     }
 
-    this.userService.registerUser(register)
+    this.authService.registerUser(register)
       .subscribe({
         next: (res: any) => {
           console.log(res, '¡¡Your user account has been successfully created!!');

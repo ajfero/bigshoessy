@@ -9,6 +9,7 @@ import { UserService } from '../../services/user/user.service';
 import { SigninPost } from 'src/app/shared/models/login.model';
 // Decode
 import jwt_decode from 'jwt-decode';
+import { Store } from '../../models/store';
 
 
 @Component({
@@ -19,7 +20,7 @@ import jwt_decode from 'jwt-decode';
 export class ModalLoginComponent {
   // Almacenamos el token para autenticaciones //
   token: any;
-
+  user: any;
   // ReactiveForm -> loginForm //
   loginForm = this.fb.group({
     email: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
@@ -32,6 +33,7 @@ export class ModalLoginComponent {
     private route: Router
   ) {
     this.loginForm = this._buildForm()
+    this.user = this.userService.getUser();
   }
   // Confirm logged and response data of user logged. //
   async dataLogin(loggerValue: any) {
@@ -40,13 +42,22 @@ export class ModalLoginComponent {
         email: loggerValue.email,
         password: loggerValue.password
       }
+      // Get user token.
       const res = await this.authService.login(loggerValue.email, loggerValue.password).toPromise()
       if (!res) throw new TypeError('res is undefined')
       this.token = jwt_decode(res.token);
+      // Get data user.
+      const getUser = await this.authService.loginUser(loggerValue.email, loggerValue.password).toPromise()
+      if (!getUser) throw new TypeError('getUser is undefined')
+      this.user = (getUser.user.id);
+      console.log(this.user)
+      // Return error without match.
     } catch (error) {
       console.error(error);
     }
   }
+
+
   // Function send login //
 
   onSubmit() {

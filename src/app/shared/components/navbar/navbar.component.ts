@@ -7,6 +7,7 @@ import { Product } from 'src/app/modules/views/models/card.model';
 import { TokenService } from '../../services/token/token.service';
 import jwt_decode from 'jwt-decode';
 import { AuthService } from '../../services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 
 
 @Component({
@@ -17,6 +18,8 @@ import { AuthService } from '../../services/auth/auth.service';
 
 export class NavbarComponent implements OnInit {
 
+
+  getUser: any;
   // Model
   myShoppingCart: Product[] = [];
 
@@ -62,7 +65,7 @@ export class NavbarComponent implements OnInit {
     }
   ];
   constructor(
-    private cartService: CartService, private tokenService: TokenService, private authService: AuthService) { }
+    private cartService: CartService, private tokenService: TokenService, private authService: AuthService, private userService: UserService) { }
   // Services.
   ngOnInit(): void {
     this.myShoppingCart = this.cartService.getShoppingCart();
@@ -76,7 +79,7 @@ export class NavbarComponent implements OnInit {
   // Log out.
   async Singout() {
     try {
-      return this.tokenService.logout()
+      return this.authService.logOut()
     } catch (error) {
       console.error(error)
     }

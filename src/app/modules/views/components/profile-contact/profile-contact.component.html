@@ -18,8 +18,6 @@
                 <p class="text-muted mt-3 mb-0"><span class="me-1">Note:</span>Minimum size 300px * 300px
                 </p>
                 <div>
-                    {{profileModel.userId}}
-                    {{profileModel.email}}
                 </div>
             </div>
         </div>
@@ -43,7 +41,7 @@
     <!-- Email -->
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email *</label>
-        <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+        <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="{{token.email}}">
     </div>
     <!-- Instagram -->
     <div class="col-md-6">
@@ -52,6 +50,6 @@
             aria-label="Social media">
     </div>
     <div>
-        <button type="submit" (click)="onSubmit()" class="btn btn-warning"> Guardar</button>
+        <button type="submit" (click)="ngOnInit()" class="btn btn-warning"> Guardar</button>
     </div>
 </form>

@@ -21,15 +21,4 @@ export class TokenService {
     const token = localStorage.getItem('token');
     return token;
   }
-
-  logout(): void {
-    this.router.navigate(['/home'])
-    return localStorage.removeItem('token');
-    // return localStorage.removeItem(id)
-  }
-
-  getUser() {
-    const id = localStorage.getItem('id')
-    return id;
-  }
 }
