@@ -45,3 +45,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Backend -> endPoints 
+
+## Auth
+(post)   /api/register               "return user"
+(post)   /api/login                  "return userData + Token"
+(get)    /api/logout                  "return 200"
+(post)   /api/change-password         "return 200"
+
+## User
+(get)    /api/users/find/all          "return all usersData"             (all users)
+(get)    /api/users/:id               "return an user"                   (user + token)
+
+## Profile
+(get)    /api/user/profile/:id        "return all profilesData"          (all profiles)
+(get)    /api/user/profile/:id        "return a Profile"                 (profile)
+(patch)  /api/user/profile/:id        "return update of profileData"    (profile + user)
+
+(patch)  /api/user/profile            "return us profileData"            (profiles)

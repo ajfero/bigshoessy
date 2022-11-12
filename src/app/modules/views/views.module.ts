@@ -18,7 +18,6 @@ import { ProductsCarouselComponent } from './components/products-carousel/produc
 import { CardComponent } from './components/card/card.component';
 import { CardProductsComponent } from './components/card-products/card-products.component';
 import { ProfileContactComponent } from './components/profile-contact/profile-contact.component';
-import { ChangePasswdComponent } from './components/change-passwd/change-passwd.component';
 // Views
 import { HomeComponent } from './views/home/home.component';
 import { ProductsComponent } from './views/products/products.component';
@@ -28,9 +27,14 @@ import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 // Box container for views, introducing views pages.
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
+<<<<<<< Updated upstream
 // Interceptors
 import { TimeInterceptor } from 'src/app/shared/interceptor/timeRes/time.interceptor';
 import { TokenInterceptor } from 'src/app/shared/interceptor/token/token.interceptor';
+=======
+import { AccessComponent } from './components/access/access.component';
+
+>>>>>>> Stashed changes
 
 const modules = [
   CommonModule,
@@ -46,7 +50,7 @@ const components = [
 
   BannerOneComponent, BannerTwoComponent, BannerThreeComponent, CardComponent,
   ProductsSidebarComponent, ProductsCarouselComponent, SponsorsCarouselComponent, CardProductsComponent,
-  ProfileContactComponent, ChangePasswdComponent, MiProfileComponent
+  ProfileContactComponent, AccessComponent, MiProfileComponent
 
 ];
 
@@ -55,7 +59,7 @@ const views = [HomeComponent, ProductsComponent, OffersComponent, ContactCompone
 @NgModule({
 
   imports: [...modules],
-  declarations: [...views, ...components,],
+  declarations: [...views, ...components],
   exports: [],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },

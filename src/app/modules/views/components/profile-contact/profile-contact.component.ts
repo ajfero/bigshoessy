@@ -2,6 +2,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+<<<<<<< Updated upstream
+=======
+import { mustMatch } from 'src/app/shared/validators';
+
+>>>>>>> Stashed changes
 // Service
 import { UserService } from 'src/app/shared/services/user/user.service';
 import { TokenService } from 'src/app/shared/services/token/token.service';
@@ -10,6 +15,13 @@ import { ProfileInformation } from '../../../../shared/models/profile';
 import { InformationUser } from 'src/app/shared/models/user';
 // Decode
 import jwt_decode from 'jwt-decode';
+import { InformationUser } from 'src/app/shared/models/user';
+<<<<<<< Updated upstream
+import { id } from 'date-fns/locale';
+=======
+import { Profile } from '../../models/profile';
+>>>>>>> Stashed changes
+
 @Component({
   selector: 'app-profile-contact',
   templateUrl: './profile-contact.component.html',
@@ -17,6 +29,7 @@ import jwt_decode from 'jwt-decode';
 })
 export class ProfileContactComponent {
 
+<<<<<<< Updated upstream
   // Decode //
   token: any;
 
@@ -25,6 +38,13 @@ export class ProfileContactComponent {
 
   // Model for put profile response user data. //
   profileModel: InformationUser = {
+=======
+  // Data saved form
+  profiles: Profile[] = [];
+
+  // Form model
+  profileModel: Profile = {
+>>>>>>> Stashed changes
     id: '',
     name: '',
     email: '',
@@ -39,7 +59,12 @@ export class ProfileContactComponent {
       imageUrl: '',
     }
   };
+<<<<<<< Updated upstream
   // Form //
+=======
+
+  // Form
+>>>>>>> Stashed changes
   profileForm = this.fb.group({
     id: '',
     userId: ['', Validators.required],
@@ -51,6 +76,8 @@ export class ProfileContactComponent {
     ImageUrl: ['']
   });
   // Type status //
+
+  // Type status
   statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
 
   constructor(
@@ -77,6 +104,53 @@ export class ProfileContactComponent {
   }
 
   // Validators form //
+  // Value form === true : Value form !== false
+  // patchProfile(profileValue: any) {
+
+  //   const profile: ProfileInformation = {
+  //     id: profileValue.id,
+  //     userId: profileValue.userId,
+  //     name: profileValue.email,
+  //     lastName: profileValue.lastName,
+  //     email: profileValue.email,
+  //     socialRed: profileValue.socialRed,
+  //     phone: profileValue.phone,
+  //     imageUrl: profileValue.imageUrl
+  //   }
+  //   this.userService.updateProfile(profile)
+  //     .subscribe({
+  //       next: (res: any) => {
+  //         console.log(res, '¡¡Update profile!!');
+  //         this.profiles.unshift(profile);
+  //         const id = this.profileForm.value.id;
+  //         const userId = this.profileForm.value.userId;
+  //         const name = this.profileForm.value.name;
+  //         const lastName = this.profileForm.value.lastName;
+  //         const email = this.profileForm.value.email;
+  //         const socialRed = this.profileForm.value.socialRed;
+  //         const phone = this.profileForm.value.phone;
+  //         const image = this.profileForm.value.ImageUrl;
+  //         alert('Profile Update, thanks.')
+  //       },
+  //       error: () => { }
+  //     })
+  // }
+
+  // Function for send form
+  // onSubmit() {
+  //   if (this.profileForm.valid) {
+
+  //     this.patchProfile(this.profileForm.value)
+  //     console.log('Good !! You deserve it for your effort ')
+
+  //   } else {
+  //     alert('Sorry!! An error occurred while updating the changes')
+  //     console.warn(this.profileForm.value);
+  //   }
+  // }
+
+  // Validators form
+>>>>>>> Stashed changes
   private _buildForm(): FormGroup {
     return this.fb.group({
       id: ['', Validators.required],
@@ -89,6 +163,7 @@ export class ProfileContactComponent {
       imageUrl: ['']
     })
   }
+<<<<<<< Updated upstream
   // Value form ? true : false //
   async patchProfile(profileValue: any) {
     try {
@@ -130,4 +205,6 @@ export class ProfileContactComponent {
       console.warn(this.profileForm.value);
     }
   }
+=======
+>>>>>>> Stashed changes
 }

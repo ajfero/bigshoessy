@@ -8,18 +8,31 @@ import { Auth } from '../../models/login.model';
 import { SignupPost } from '../../models/login.model';
 //Service
 import { TokenService } from '../token/token.service';
+<<<<<<< Updated upstream
 import { UserService } from '../user/user.service';
 import { Store } from '../../models/store';
 import { RouterModule, Router } from '@angular/router';
 
 
+=======
+import { ProfileInformation } from '../../models/profile';
+import { InformationUser } from 'src/app/shared/models/user';
+import { Profile } from 'src/app/modules/views/models/profile';
+>>>>>>> Stashed changes
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+<<<<<<< Updated upstream
   private apiUrlLogin = `${environment.API_URL}/api/login`;
   private apiUrlLogOut = `${environment.API_URL}/api/logout`;
   private apiUrlRegister = `${environment.API_URL}/api/register`;
+=======
+
+  private apiUrlLogin = 'http://localhost:3000/api/login'; // login
+  private apiUrlLogOut = 'http://localhost:3000/api/logout'; // logout
+  private apiUrlgetProfile = 'http://localhost:3000/api/user/profile'; // profile
+>>>>>>> Stashed changes
 
 
   constructor(
@@ -47,6 +60,12 @@ export class AuthService {
           this.userService.saveUser(res.user)
         )
       );
+=======
+  // Get Profile
+  getProfile() { // Get userId for update data profile, without use the table User`s.
+    return this.http.get<Profile>(this.apiUrlgetProfile); // `${this.apiUrlgetProfile}${id}`
+
+>>>>>>> Stashed changes
   }
   // Create new user
   registerUser(dto: SignupPost) {
