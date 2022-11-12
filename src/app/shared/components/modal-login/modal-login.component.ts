@@ -1,7 +1,7 @@
 // Angular Imports
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 // Service
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { UserService } from '../../services/user/user.service';
@@ -9,7 +9,6 @@ import { UserService } from '../../services/user/user.service';
 import { SigninPost } from 'src/app/shared/models/login.model';
 // Decode
 import jwt_decode from 'jwt-decode';
-import { Store } from '../../models/store';
 
 
 @Component({

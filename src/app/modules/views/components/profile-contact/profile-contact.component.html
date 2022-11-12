@@ -19,6 +19,8 @@
                 </p>
                 <div>
                 </div>
+                {{profileModel.email}}
+                {{profileModel.profile.email}}
             </div>
         </div>
     </div>
@@ -41,7 +43,7 @@
     <!-- Email -->
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email *</label>
-        <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="{{token.email}}">
+        <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="">
     </div>
     <!-- Instagram -->
     <div class="col-md-6">
@@ -50,6 +52,6 @@
             aria-label="Social media">
     </div>
     <div>
-        <button type="submit" (click)="ngOnInit()" class="btn btn-warning"> Guardar</button>
+        <button type="submit" (click)="profileData()" class="btn btn-warning"> Guardar</button>
     </div>
 </form>

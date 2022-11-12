@@ -19,7 +19,6 @@ import { map, tap } from 'rxjs';
 export class UserService {
   // Const
   headers = new Headers();
-  id = this.getUser;
   token: any;
 
 
@@ -32,24 +31,26 @@ export class UserService {
     this.headers.append("Authorization", "Bearer " + localStorage.getItem('token'));
     this.headers.append("Content-Type", "application/json")
   }
-  // token.id > get
+  // Save user as item.
   saveUser(user: any) {
     localStorage.setItem('user', user);
   }
-
+  // Get user data.
   getUser() {
     const user = localStorage.getItem('user')
     return user;
   }
-
+  // Get user profile for dump information in view.
   profileUser(id: string) {
+    // Authorization match-rout in back.
     const headers = new HttpHeaders({
       Authorization: `${this.headers}`,
     })
-
+    // Get data at URL.
     return this.http.get(`${this.apiUrlUpdateProfile}${id}`, {
       headers,
     })
+      // Use tools pipe and map for manipulate data object and to receive in profileModel view profile.
       .pipe(
         catchError((error: HttpErrorResponse) => throwError(() => error)),
         map((response: any) => {

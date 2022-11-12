@@ -38,7 +38,7 @@ export class AuthService {
         )
       );
   }
-
+  // Get data user.
   loginUser(email: string, password: string) {
     // console.log({ HTTP_ERROR: this.http })
     return this.http.post<Store>(this.apiUrlLogin, { email, password })
@@ -48,13 +48,10 @@ export class AuthService {
         )
       );
   }
-
   // Create new user
   registerUser(dto: SignupPost) {
     return this.http.post<SignupPost>(this.apiUrlRegister, dto)
   }
-
-
   public logOut(): any {
     let headers = new Headers({
       'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
@@ -67,9 +64,4 @@ export class AuthService {
     localStorage.removeItem('token');
     return this.http.post(this.apiUrlLogOut, { header: headers });
   }
-  // profileUser(id: string) {
-  //   console.log({ HTTP_PROFILE: this.http })
-  //   return this.http.get<Store>(`${this.apiUrlUpdateProfile}${id}`)
-  // }
-
 }

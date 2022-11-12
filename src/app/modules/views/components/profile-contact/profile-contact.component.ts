@@ -1,44 +1,40 @@
 // Angular tools.
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
 // Service
 import { UserService } from 'src/app/shared/services/user/user.service';
+import { TokenService } from 'src/app/shared/services/token/token.service';
 // Model
 import { ProfileInformation } from '../../../../shared/models/profile';
-import { TokenService } from 'src/app/shared/services/token/token.service';
+import { InformationUser } from 'src/app/shared/models/user';
 // Decode
 import jwt_decode from 'jwt-decode';
-import { InformationUser } from 'src/app/shared/models/user';
-import { id } from 'date-fns/locale';
-
 @Component({
   selector: 'app-profile-contact',
   templateUrl: './profile-contact.component.html',
   styleUrls: ['./profile-contact.component.scss']
 })
-export class ProfileContactComponent implements OnInit {
+export class ProfileContactComponent {
 
   // Decode //
   token: any;
 
-  ider: any;
-  // Subscribe data profile`s //
-  userProfiles: InformationUser[] = [];
-
   // Data saved form //
-  profiles: ProfileInformation[] = [];
+  profiles: InformationUser[] = [];
 
-  // Form model //
+  // Model for put profile response user data. //
   profileModel: InformationUser = {
     id: '',
+    name: '',
+    email: '',
     profile: {
       id: '',
       userId: '',
-      name: '',
+      name: 'Tomas',
       email: '',
-      lastName: '',
-      socialRed: '',
+      lastName: 'Martinez',
+      socialRed: '/balu_tm',
       phone: 0,
       imageUrl: '',
     }
@@ -59,47 +55,26 @@ export class ProfileContactComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,  // PUT data.
+    private userService: UserService,
     private tokenService: TokenService
   ) {
-    this.profileForm = this._buildForm() // Declared build form
+    this.profileForm = this._buildForm()
     this.token = this.tokenService.getToken();
-    this.ider = this.userService.getUser();
     // Decode token for get user.ID. //
     if (this.token) {
       this.token = jwt_decode(this.token)
     } else {
-
     }
   }
 
-
-
-  // onShowProfile(id: string) {
-  //   this.statusDetail = 'loading';
-  //   this.userService.profileUser(this.ider.profile)
-  //     .subscribe(data => {
-  //       //Product Date
-  //       this.profileModel = data;
-  //       console.log(data);
-  //       this.statusDetail = 'sucess';
-  //     }, response => {
-  //       console.log(response.error.message);
-  //       this.statusDetail = 'error';
-  //     })
-  // }
-  async ngOnInit() {
-    let headers = new Headers({
-      'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
-      'Content-type': 'application/json',
-    })
+  // Subscribe data in profileModel //
+  async profileData() {
     this.userService.profileUser(this.token.id)
       .subscribe(res => {
         this.profileModel = res;
         console.log(this.profileModel)
       });
   }
-
 
   // Validators form //
   private _buildForm(): FormGroup {
@@ -127,9 +102,9 @@ export class ProfileContactComponent implements OnInit {
         phone: profileValue.phone,
         imageUrl: profileValue.imageUrl
       }
-      // const res = await this.authService.getProfiles(profile).toPromise()
+      // const res = await this.userService.profileUser(this.token.id).toPromise()
       // if (!res) throw new TypeError('res is undefined')
-      this.token.id = this.profiles.unshift(profile);
+      this.token.id = this.profiles.unshift();
       const id = this.profileForm.value.id;
       const userId = this.profileForm.value.userId;
       const name = this.profileForm.value.name;
