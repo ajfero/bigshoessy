@@ -8,11 +8,6 @@ export interface SignupPost {
     password: string,
     confirmPassword?: string
 }
-export interface SigninGet {
-    id: string,
-    token: string,
-    tokenType: string
-}
 export interface Auth {
     id: string
     token: string

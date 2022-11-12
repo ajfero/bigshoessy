@@ -21,26 +21,20 @@ export class CartService {
   itemsCount() {
     return this.myShoppingCart.length;
   }
-
   //Add products
   addProduct(product: Product) {
     this.myShoppingCart.push(product);
     this.myCart.next(this.myShoppingCart);
     console.log('asdassadad', this.myCart)
   }
-
   // Get Cart.
   getShoppingCart() {
     return this.myShoppingCart;
   }
-
   //Get total products to Cart. Item + price.
   getTotal() {
     return this.myShoppingCart.reduce((sum, item) => sum + item.retailPrice, 0)
   }
-
-
-
 }
 
 

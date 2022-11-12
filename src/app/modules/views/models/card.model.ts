@@ -1,6 +1,4 @@
-//Product model
 export interface Product {
-
     id: string,
     brand: string,
     colorway: string,
@@ -15,7 +13,6 @@ export interface Product {
     title: string,
     year: number,
     taxes?: number,
-
 };
 
 // Extend create DTO.

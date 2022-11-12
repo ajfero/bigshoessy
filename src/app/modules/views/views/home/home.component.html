@@ -1,62 +1,48 @@
 <!--main-->
 <main class="container">
-
     <!--Sponsors Etiquetas-->
     <section class=" container-fluid">
         <app-sponsors-carousel></app-sponsors-carousel>
     </section>
-
     <!--1st banner-->
     <section class="contenedorBanner container-fluid d-flex justify-content-center" data-aos="fade-down-right m-5"
         role="main">
         <app-banner-one></app-banner-one>
     </section>
-
     <!--Card-products / Go shop-->
-    <section class="container-fluid" role="redirecTo-products">
+    <section class="container-fluid" role="redirecTo-products" [routerLink]="['/offers']">
         <div class="row justify-content-around mx-lg-0 mb-4">
-            <app-card class="col-sm-6 col-lg-5 col-xl-4" (addedProduct)="onAddToShoppingCart($event)"
-                [myProduct]='product' *ngFor="let product of randomProducts">
+            <app-card class="col-sm-6 col-lg-5 col-xl-4 btn btn-light" (addedProduct)="onAddToShoppingCart($event)"
+                [myProduct]='product' *ngFor="let product of randomProducts" style="cursor:pointer; 
+                ">
             </app-card>
         </div>
     </section>
-
     <!-- 2nd banner -->
     <section class="container-fluid d-flex justify-content-center wx-100 mh-100 h-75 pt-4" data-aos="fade-up"
         role="main">
-        <app-banner-two></app-banner-two>
+        <app-banner-two [routerLink]="['offers']"></app-banner-two>
     </section>
-
     <!-- Dashboard Carrusel (   Carretel de imagenes productos aleatorios)-->
     <section class=" carousel slide marginCarrousel d-none d-sm-block" id="carouselExampleCaptions"
         data-bs-ride="carousel">
         <app-products-carousel> </app-products-carousel>
     </section>
-
     <!-- 3st banner  -->
     <section class="container-fluid d-flex justify-content-center wx-100 mh-100 h-75" data-aos="zoom-in-left "
         role="main ">
         <app-banner-three> </app-banner-three>
     </section>
-
     <!--Banner de sponsor-->
-    <section class="py-5">
-        <div class="container my-4">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1 text-secondary">Sponsors</h1>
-                    <p class="h7 pt-3 text-warning">
-                        Estilo es usar lo que te hace sentir bien.
-                    </p>
-                </div>
-                <app-sponsors-carousel></app-sponsors-carousel>
+    <section class="container-fluid py-5">
+        <div class="py-5 mt-5">
+            <app-sponsors-carousel></app-sponsors-carousel>
+            <div class="container col-lg-6 text-center">
+                <h3 class="d-flex text-secondary align-content-center justify-content-center">
+                    <b><i class="bi bi-shop"> Big Shoes is for YOU</i></b>
+                </h3>
             </div>
         </div>
     </section>
-
-    <!--Banner de sponsor-->
-    <!-- <section class="py-5">
-        <app-sponsors-carousel></app-sponsors-carousel>
-    </section> -->
 
 </main>

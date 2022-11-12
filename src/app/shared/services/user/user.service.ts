@@ -1,11 +1,6 @@
 // Angular tools
 import { Injectable } from '@angular/core';
-<<<<<<< Updated upstream
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-=======
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-
->>>>>>> Stashed changes
 // Model`s
 import { environment } from 'src/environments/environment';
 // Decode //
@@ -14,14 +9,8 @@ import jwtDecode from 'jwt-decode';
 import { TokenService } from '../token/token.service';
 import { catchError, throwError } from 'rxjs';
 import { InformationUser } from '../../models/user';
-<<<<<<< Updated upstream
-import { map, tap } from 'rxjs';
+import { map } from 'rxjs';
 
-=======
-import { ProfileInformation } from '../../models/profile'; // Profile model
-import { SignupPost } from 'src/app/shared/models/login.model'; // Login models
-import { Access } from 'src/app/modules/views/models/access.model';
->>>>>>> Stashed changes
 
 @Injectable({
   providedIn: 'root'
@@ -30,16 +19,13 @@ import { Access } from 'src/app/modules/views/models/access.model';
 export class UserService {
   // Const
   headers = new Headers();
-  token: any;
-
-<<<<<<< Updated upstream
 
   private apiUrlFindAllUsers = `${environment.API_URL}/api/users/find/all`;
   private apiUrlUpdateUser = `${environment.API_URL}/api/users/`;
   private apiUrlUpdateProfile = `${environment.API_URL}/api/user/profile/`;
 
   constructor(
-    private http: HttpClient, private tokenService: TokenService) {
+    private http: HttpClient) {
     this.headers.append("Authorization", "Bearer " + localStorage.getItem('token'));
     this.headers.append("Content-Type", "application/json")
   }
@@ -54,7 +40,7 @@ export class UserService {
   }
   // Get user profile for dump information in view.
   profileUser(id: string) {
-    // Authorization match-rout in back.
+    // Authorization match-rout in back-end.
     const headers = new HttpHeaders({
       Authorization: `${this.headers}`,
     })
@@ -85,55 +71,4 @@ export class UserService {
         })
       )
   };
-
-=======
-  // User routes
-  private apiUrlFindAllUsers = 'http://localhost:3000/api/users/find/all'; // allUsers
-  private apiUrlRegister = 'http://localhost:3000/api/register';           // register
-  private apiUrlUsers = 'http://localhost:3000/api/users/';               // updateUser //finOne user
-
-  // Profile routes
-  private apiUrlFindAllProfiles = 'http://localhost:3000/api/user/profile';
-  private apiUrlProfile = 'http://localhost:3000/api/user/profile';
-
-  constructor(
-    private http: HttpClient,
-  ) { }
-
-
-  //************ Users ******************/
-
-  // Create new user.
-  registerUser(dto: SignupPost) {
-    return this.http.post<SignupPost>(this.apiUrlRegister, dto)
-  }
-
-  // Create new user (email and password)
-  getUser() {
-    return this.http.get<SignupPost>(this.apiUrlUsers)
-  }
-
-  // Get all users with those data.
-  updateDataUserAccess(model: Access) {
-    return this.http.patch<Access>(this.apiUrlFindAllUsers, model);
-  }
-
-
-  //************ Profiles ****************/
-
-  // Get Profile
-  getProfile(token: string, id: string) { // Get userId for update data profile, without use the table User`s.
-    const headers = new HttpHeaders();
-    headers.set('Authorization', `Bearer ${token}`)
-    return this.http.get<InformationUser>(`${this.apiUrlProfile}${id}`); // `${this.apiUrlgetProfile}${id}`
-  }
-
-  // Update Profile
-  // updateProfile(dto: ProfileInformation, token: string, id: string) { // Get userId for update data profile, without use the table User`s.
-  //   const headers = new HttpHeaders();
-  //   headers.set('Authorization', `Bearer ${token}`)
-  //   return this.http.patch<InformationUser>(`${this.apiUrlProfiles}${id}`, dto); // `${this.apiUrlgetProfile}${id}`
-  // }
->>>>>>> Stashed changes
-
 }

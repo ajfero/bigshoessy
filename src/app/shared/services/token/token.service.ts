@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
-import { HomeComponent } from 'src/app/modules/views/views/home/home.component';
+import { Router } from '@angular/router';
+
 
 
 @Injectable({
@@ -9,9 +9,7 @@ import { HomeComponent } from 'src/app/modules/views/views/home/home.component';
 })
 export class TokenService {
 
-
-  constructor(private router: Router, private httpClient: HttpClient) {
-  }
+  constructor(private router: Router, private httpClient: HttpClient) { }
 
   saveToken(token: string) {
     localStorage.setItem('token', token);

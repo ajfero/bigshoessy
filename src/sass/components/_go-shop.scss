@@ -2,8 +2,8 @@
 
 //Vars
 $globalPadding: 50px;
-//Class
 
+//Class
 .contenedor_goShop-home {
     padding-bottom: $globalPadding;
     padding-top: $globalPadding - 10;
@@ -25,8 +25,6 @@ $globalPadding: 50px;
     transition: all 450ms ease;
 
     .titulo_goShop {
-
-
         &:hover {
             color: $quinto;
 
@@ -82,53 +80,3 @@ $globalPadding: 50px;
         height: 80%;
     }
 }
-
-//////////////////////////////////////////
-// @include media-breakpoint-up (sm) {
-//     .imagen_goShop {
-//         height: 60%;
-//     }
-//     .contenedor_goShop {
-//         padding: 20px;
-//     }
-//     .mx {
-//         margin-right: 2rem !important;
-//         margin-left: 2rem !important;
-//     }
-// }
-// @include media-breakpoint-up (md) {
-//     .contenedor_goShop {
-//         padding-top: 20px;
-//     }
-//     .mx {
-//         margin-right: 8rem !important;
-//         margin-left: 8rem !important;
-//     }
-// }
-// @include media-breakpoint-up (lg) {
-//     .imagen_goShop {
-//         height: 75%;
-//     }
-//     .mx {
-//         margin-right: 5rem !important;
-//         margin-left: 1rem !important;
-//     }
-// }
-// @include media-breakpoint-up (xl) {
-//     .contenedor_goShop {
-//         padding-top: 100px;
-//     }
-//     .imagen_goShop {
-//         height: 70%;
-//     }
-//     .mx {
-//         margin-right: 5rem !important;
-//         margin-left: 5rem !important;
-//     }
-// }
-// @include media-breakpoint-up (xxl) {
-//     .mx {
-//         margin-right: 6rem !important;
-//         margin-left: 6rem !important;
-//     }
-// }

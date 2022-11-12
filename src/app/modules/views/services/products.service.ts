@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { retry, catchError, map } from 'rxjs/operators';
-//Service request from angular.
 import { HttpClient } from '@angular/common/http';
-//Models
-import { createProductDTO, Product } from '../models/card.model';
+import { Product } from '../models/card.model';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  // incorporate model for other view of product, in this case of details.
   productChosen: Product = {
     id: '',
     brand: '',
@@ -23,19 +21,21 @@ export class ProductsService {
     title: '',
     year: 0,
   };
+
   // Vars
   private apiUrl = 'https://example-data.draftbit.com/sneakers?id=';
   private apiUrlList = 'https://example-data.draftbit.com/sneakers?_limit=50';
-  constructor(
-    private http: HttpClient
-  ) { }
+
+  constructor(private http: HttpClient) { }
   //Get list of products service.
   getAllProducts() {
     return this.http.get<Product[]>(this.apiUrlList);
   }
+  // Get two random products for home.
   getOneProduct() {
     return this.http.get<Product[]>("https://example-data.draftbit.com/sneakers?_limit=2");
   }
+  // Detail of product
   detailProduct(id: string) {
     return this.http.get<Product[]>(`${this.apiUrl}${id}`);
   }

@@ -15,6 +15,7 @@ import { NavegationComponentsModule } from './shared/modules';
 import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
 import { TimeInterceptor } from './shared/interceptor/timeRes/time.interceptor';
 import { TokenInterceptor } from './shared/interceptor/token/token.interceptor';
+
 // Const
 const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
 const components = [AppComponent];

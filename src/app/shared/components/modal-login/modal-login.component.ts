@@ -9,6 +9,8 @@ import { UserService } from '../../services/user/user.service';
 import { SigninPost } from 'src/app/shared/models/login.model';
 // Decode
 import jwt_decode from 'jwt-decode';
+import { id } from 'date-fns/locale';
+import { SpinnerService } from '../../services/spinner/spinner.service';
 
 
 @Component({
@@ -18,7 +20,6 @@ import jwt_decode from 'jwt-decode';
 })
 export class ModalLoginComponent {
   // Almacenamos el token para autenticaciones //
-  token: any;
   user: any;
   // ReactiveForm -> loginForm //
   loginForm = this.fb.group({
@@ -29,7 +30,8 @@ export class ModalLoginComponent {
     private fb: FormBuilder,
     private authService: AuthService,
     private userService: UserService,
-    private route: Router
+    private route: Router,
+    private spinner: SpinnerService
   ) {
     this.loginForm = this._buildForm()
     this.user = this.userService.getUser();
@@ -43,27 +45,20 @@ export class ModalLoginComponent {
       }
       // Get user token.
       const res = await this.authService.login(loggerValue.email, loggerValue.password).toPromise()
-      if (!res) throw new TypeError('res is undefined')
-      this.token = jwt_decode(res.token);
-      // Get data user.
-      const getUser = await this.authService.loginUser(loggerValue.email, loggerValue.password).toPromise()
-      if (!getUser) throw new TypeError('getUser is undefined')
-      this.user = (getUser.user.id);
-      console.log(this.user)
+      if (!res) throw new TypeError('res is undefined');
       // Return error without match.
     } catch (error) {
       console.error(error);
     }
   }
 
-
   // Function send login //
-
   onSubmit() {
     if (this.loginForm.valid) {
       this.dataLogin(this.loginForm.value)
       console.log('Logged in process')
       this.route.navigate(['/products'])
+      this.spinner;
       this.loginForm.reset();
     } else {
       console.log('Logged failed, please type data try again')
@@ -78,3 +73,7 @@ export class ModalLoginComponent {
     })
   }
 }
+// Get data user //
+// const getUser = await this.authService.loginUser(loggerValue.email, loggerValue.password).toPromise()
+// if (!getUser) throw new TypeError('getUser is undefined')
+// this.user = (getUser.user.id);

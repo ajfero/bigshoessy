@@ -1,13 +1,11 @@
-//Default
-import { Component, OnInit, Output } from '@angular/core';
+//Angular tools
+import { Component, OnInit } from '@angular/core';
 //Interface
 import { Product } from '../../models/card.model';
-
 //Service
 import { ProductsService } from '../../services/products.service';
 import { CartService } from 'src/app/shared/services/cart/cart.service';
 
-//Injectores
 @Component({
   selector: 'app-card-products',
   templateUrl: './card-products.component.html',
@@ -50,8 +48,7 @@ export class CardProductsComponent implements OnInit {
     //Store service
     private cartService: CartService,
     //API service - async method. -> ngOnInit declared.
-    private productsService: ProductsService,
-  ) {
+    private productsService: ProductsService,) {
     this.myShoppingCart = this.cartService.getShoppingCart();
   }
   //Async Methods

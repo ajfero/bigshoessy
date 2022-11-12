@@ -1,11 +1,8 @@
-// Modules
-import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
-
+// Angular tools
+import { Component } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 // Model
 import { Message, CreateMessageDTO } from '../../models/message.model';
-
 // Service
 import { MessageService } from '../../services/message.service';
 
@@ -15,43 +12,31 @@ import { MessageService } from '../../services/message.service';
 	styleUrls: ['./contact.component.scss']
 })
 
-export class ContactComponent implements OnInit {
-
+export class ContactComponent {
 	// Init variables
 	messages: Message[] = [];
 
 	// ReactiveForm -> contactForm
 	contactForm = this.fb.group({
-
 		name: ['', Validators.required],
 		email: ['', Validators.required],
 		subject: ['', Validators.required],
 		message: ['', Validators.required]
-
 	});
-
 	// Constructor of Service and tools
 	constructor(
-
 		private fb: FormBuilder,
-		private messageService: MessageService,
-
-	) {
+		private messageService: MessageService,) {
 		// this.contactForm = this._buildForm()
 	}
-
-	ngOnInit(): void { }
-
 	// Create a message with contactForm data.
 	createNewMessage(contactValue: any) {
-
 		const message: CreateMessageDTO = {
 			name: contactValue.name,
 			email: contactValue.email,
 			subject: contactValue.subject,
 			message: contactValue.message
 		}
-
 		this.messageService.postMessage(message)
 			.subscribe({
 				next: (resIter: any) => {
@@ -66,45 +51,27 @@ We will be in contact with you!! at email: ${email}
 				},
 				error: () => { }
 			})
-
 	}
-
 	// When the component detect an event click, validate the form and submit
 	onSubmit() {
-
 		if (this.contactForm.valid) {
-
 			this.createNewMessage(this.contactForm.value)
 			this.contactForm.reset();
 			console.log('contactForm Send')
-
 		} else {
 			console.log('Sorry!! we can`t send the contactForm ')
 			this.contactForm.markAllAsTouched()
 		}
-
 		console.warn(this.contactForm.value);
 	}
 
 	// harcode the contactForm
 	private _buildForm(): FormGroup {
 		return this.fb.group({
-			name: [
-				'Anthony',
-				{ nonNullable: true, validators: [Validators.required] },
-			],
-			email: [
-				'ing.ajfernandez@gmail.com',
-				{ nonNullable: true, validators: [Validators.required] },
-			],
-			subject: [
-				'Nuevo titulo del mensaje',
-				{ nonNullable: true, validators: [Validators.required] },
-			],
-			message: [
-				'Mensaje enviado por defecto, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-				{ nonNullable: true, validators: [Validators.required] },
-			],
+			name: ['Anthony', { nonNullable: true, validators: [Validators.required] },],
+			email: ['ing.ajfernandez@gmail.com', { nonNullable: true, validators: [Validators.required] },],
+			subject: ['Nuevo titulo del mensaje', { nonNullable: true, validators: [Validators.required] },],
+			message: ['Mensaje enviado por defecto, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry', { nonNullable: true, validators: [Validators.required] },],
 		})
 	}
 }

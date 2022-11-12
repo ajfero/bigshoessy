@@ -9,8 +9,5 @@ export class AppComponent {
 
   title = 'BigShoes';
 
-
-  constructor() {
-  }
-
+  constructor() { }
 }

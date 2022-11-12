@@ -10,7 +10,6 @@ $grid-breakpoints-up: (
 );
 
 // Mixins
-
 @mixin from($breakpoint) {
     @media screen and (min-width: map-get($grid-breakpoints-up, $breakpoint)) {
         @content

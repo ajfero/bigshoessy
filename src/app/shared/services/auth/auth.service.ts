@@ -1,39 +1,26 @@
 // Angular tools
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 // Models
 import { Auth } from '../../models/login.model';
 import { SignupPost } from '../../models/login.model';
+import { AllUser } from '../../models/alluser';
 //Service
 import { TokenService } from '../token/token.service';
-<<<<<<< Updated upstream
 import { UserService } from '../user/user.service';
-import { Store } from '../../models/store';
-import { RouterModule, Router } from '@angular/router';
 
 
-=======
-import { ProfileInformation } from '../../models/profile';
-import { InformationUser } from 'src/app/shared/models/user';
-import { Profile } from 'src/app/modules/views/models/profile';
->>>>>>> Stashed changes
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-<<<<<<< Updated upstream
+
   private apiUrlLogin = `${environment.API_URL}/api/login`;
   private apiUrlLogOut = `${environment.API_URL}/api/logout`;
   private apiUrlRegister = `${environment.API_URL}/api/register`;
-=======
-
-  private apiUrlLogin = 'http://localhost:3000/api/login'; // login
-  private apiUrlLogOut = 'http://localhost:3000/api/logout'; // logout
-  private apiUrlgetProfile = 'http://localhost:3000/api/user/profile'; // profile
->>>>>>> Stashed changes
-
 
   constructor(
     private http: HttpClient,
@@ -42,7 +29,7 @@ export class AuthService {
     private route: Router
   ) { }
 
-  // Post data user in DB
+  // Post data user in DB and get Token //
   login(email: string, password: string) {
     return this.http.post<Auth>(this.apiUrlLogin, { email, password })
       .pipe(
@@ -51,26 +38,23 @@ export class AuthService {
         )
       );
   }
-  // Get data user.
+
+  // Get data user for handle //
   loginUser(email: string, password: string) {
-    // console.log({ HTTP_ERROR: this.http })
-    return this.http.post<Store>(this.apiUrlLogin, { email, password })
+    return this.http.post<AllUser>(this.apiUrlLogin, { email, password })
       .pipe(
         tap(res =>
           this.userService.saveUser(res.user)
         )
       );
-=======
-  // Get Profile
-  getProfile() { // Get userId for update data profile, without use the table User`s.
-    return this.http.get<Profile>(this.apiUrlgetProfile); // `${this.apiUrlgetProfile}${id}`
-
->>>>>>> Stashed changes
   }
-  // Create new user
+
+  // Create new user //
   registerUser(dto: SignupPost) {
     return this.http.post<SignupPost>(this.apiUrlRegister, dto)
   }
+
+  //Remove logged session //
   public logOut(): any {
     let headers = new Headers({
       'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
@@ -78,8 +62,6 @@ export class AuthService {
     },
     )
     this.route.navigate(['/home'])
-    localStorage.removeItem('user');
-    localStorage.removeItem('profile');
     localStorage.removeItem('token');
     return this.http.post(this.apiUrlLogOut, { header: headers });
   }

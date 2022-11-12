@@ -15,5 +15,4 @@ import { SpinnerService } from '../../services/spinner/spinner.service';
 export class SpinnerComponent {
   isLoading$ = this.spinerService.isLoading$;
   constructor(private spinerService: SpinnerService) { }
-
 }

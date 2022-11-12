@@ -185,27 +185,22 @@
         </div>
     </div>
 </nav>
-
-
 <!-- component modal-login -->
 <div *ngIf="!token" class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
     <!-- Componente login -->
     <app-modal-login></app-modal-login>
 </div>
-
 <!-- component modal-signup-->
 <div *ngIf="!token" class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true"
     aria-labelledby="modal-signup" tabindex="-1">
     <app-modal-register></app-modal-register>
 </div>
-
 <!-- component modal-recover -->
 <div *ngIf="!token" class="modal fade " id="modal-recover" aria-hidden="true" aria-labelledby="modal-recover"
     tabindex="-1">
     <!-- Componente recover -->
     <app-modal-recover></app-modal-recover>
 </div>
-
 <!--Ng template para los SVG -> SVG UserIcon-->
 <ng-template #iconUser="">
     <svg class="bi bi-person-circle" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
@@ -216,7 +211,6 @@
         </path>
     </svg>
 </ng-template>
-
 <!--Icon Shopping-Cart-->
 <ng-template #iconCart>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4"

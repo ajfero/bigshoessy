@@ -2,11 +2,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
-<<<<<<< Updated upstream
-=======
-import { mustMatch } from 'src/app/shared/validators';
-
->>>>>>> Stashed changes
 // Service
 import { UserService } from 'src/app/shared/services/user/user.service';
 import { TokenService } from 'src/app/shared/services/token/token.service';
@@ -15,12 +10,6 @@ import { ProfileInformation } from '../../../../shared/models/profile';
 import { InformationUser } from 'src/app/shared/models/user';
 // Decode
 import jwt_decode from 'jwt-decode';
-import { InformationUser } from 'src/app/shared/models/user';
-<<<<<<< Updated upstream
-import { id } from 'date-fns/locale';
-=======
-import { Profile } from '../../models/profile';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-profile-contact',
@@ -28,43 +17,14 @@ import { Profile } from '../../models/profile';
   styleUrls: ['./profile-contact.component.scss']
 })
 export class ProfileContactComponent {
-
-<<<<<<< Updated upstream
+  // Type status
+  statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
   // Decode //
   token: any;
-
-  // Data saved form //
+  // Saved data information user.
   profiles: InformationUser[] = [];
 
-  // Model for put profile response user data. //
-  profileModel: InformationUser = {
-=======
-  // Data saved form
-  profiles: Profile[] = [];
-
-  // Form model
-  profileModel: Profile = {
->>>>>>> Stashed changes
-    id: '',
-    name: '',
-    email: '',
-    profile: {
-      id: '',
-      userId: '',
-      name: 'Tomas',
-      email: '',
-      lastName: 'Martinez',
-      socialRed: '/balu_tm',
-      phone: 0,
-      imageUrl: '',
-    }
-  };
-<<<<<<< Updated upstream
-  // Form //
-=======
-
-  // Form
->>>>>>> Stashed changes
+  // Declared and defined form profile.
   profileForm = this.fb.group({
     id: '',
     userId: ['', Validators.required],
@@ -75,11 +35,20 @@ export class ProfileContactComponent {
     phone: [''],
     ImageUrl: ['']
   });
-  // Type status //
-
-  // Type status
-  statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
-
+  // Validators form
+  private _buildForm(): FormGroup {
+    return this.fb.group({
+      id: ['', Validators.required],
+      userId: ['', Validators.required],
+      name: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      lastName: [''],
+      email: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      socialRed: [''],
+      phone: [''],
+      imageUrl: ['']
+    })
+  }
+  // Service and declarations.
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
@@ -93,7 +62,6 @@ export class ProfileContactComponent {
     } else {
     }
   }
-
   // Subscribe data in profileModel //
   async profileData() {
     this.userService.profileUser(this.token.id)
@@ -102,80 +70,39 @@ export class ProfileContactComponent {
         console.log(this.profileModel)
       });
   }
-
-  // Validators form //
-  // Value form === true : Value form !== false
-  // patchProfile(profileValue: any) {
-
-  //   const profile: ProfileInformation = {
-  //     id: profileValue.id,
-  //     userId: profileValue.userId,
-  //     name: profileValue.email,
-  //     lastName: profileValue.lastName,
-  //     email: profileValue.email,
-  //     socialRed: profileValue.socialRed,
-  //     phone: profileValue.phone,
-  //     imageUrl: profileValue.imageUrl
-  //   }
-  //   this.userService.updateProfile(profile)
-  //     .subscribe({
-  //       next: (res: any) => {
-  //         console.log(res, '¡¡Update profile!!');
-  //         this.profiles.unshift(profile);
-  //         const id = this.profileForm.value.id;
-  //         const userId = this.profileForm.value.userId;
-  //         const name = this.profileForm.value.name;
-  //         const lastName = this.profileForm.value.lastName;
-  //         const email = this.profileForm.value.email;
-  //         const socialRed = this.profileForm.value.socialRed;
-  //         const phone = this.profileForm.value.phone;
-  //         const image = this.profileForm.value.ImageUrl;
-  //         alert('Profile Update, thanks.')
-  //       },
-  //       error: () => { }
-  //     })
-  // }
-
-  // Function for send form
-  // onSubmit() {
-  //   if (this.profileForm.valid) {
-
-  //     this.patchProfile(this.profileForm.value)
-  //     console.log('Good !! You deserve it for your effort ')
-
-  //   } else {
-  //     alert('Sorry!! An error occurred while updating the changes')
-  //     console.warn(this.profileForm.value);
-  //   }
-  // }
-
-  // Validators form
->>>>>>> Stashed changes
-  private _buildForm(): FormGroup {
-    return this.fb.group({
-      id: ['', Validators.required],
-      userId: ['', Validators.required],
-      name: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-      lastName: [''],
-      email: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-      socialRed: [''],
-      phone: [''],
-      imageUrl: ['']
-    })
+  // Model for put profile response user data. //
+  profileModel: InformationUser = {
+    id: '',
+    name: '',
+    email: '',
+    profile: {
+      id: '',
+      userId: '',
+      name: 'Tomas',
+      email: '',
+      lastName: 'Martinez',
+      socialRed: '/balu_tm',
+      phone: 0,
+      imageUrl: '',
+    }
   }
-<<<<<<< Updated upstream
   // Value form ? true : false //
   async patchProfile(profileValue: any) {
     try {
-      const profile: ProfileInformation = {
+      const profile: InformationUser = {
         id: profileValue.id,
-        userId: profileValue.userId,
-        name: profileValue.email,
-        lastName: profileValue.lastName,
+        name: profileValue.name,
         email: profileValue.email,
-        socialRed: profileValue.socialRed,
-        phone: profileValue.phone,
-        imageUrl: profileValue.imageUrl
+        profile: {
+          id: profileValue.id,
+          userId: profileValue.userId,
+          name: profileValue.email,
+          lastName: profileValue.lastName,
+          email: profileValue.email,
+          socialRed: profileValue.socialRed,
+          phone: profileValue.phone,
+          imageUrl: profileValue.imageUrl
+        }
       }
       // const res = await this.userService.profileUser(this.token.id).toPromise()
       // if (!res) throw new TypeError('res is undefined')
@@ -193,7 +120,8 @@ export class ProfileContactComponent {
       console.error(error)
     }
   }
-  // Function for send form //
+
+  // Function for send form
   onSubmit() {
     if (this.profileForm.valid) {
 
@@ -205,6 +133,4 @@ export class ProfileContactComponent {
       console.warn(this.profileForm.value);
     }
   }
-=======
->>>>>>> Stashed changes
 }

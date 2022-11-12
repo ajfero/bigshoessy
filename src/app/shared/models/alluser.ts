@@ -1,6 +1,5 @@
 import { InformationUser } from "./user"
 
-
-export interface Store {
+export interface AllUser {
     user: InformationUser
 }

@@ -8,7 +8,7 @@
     <p class="cart_sold-out h5 text-center text-dark"> {{ today | date}} </p>
 </div>
 <hr>
-<!-- Container Cart Items -->
+<!-------- Container Cart Items -------->
 <div class="cart-item col-12" *ngFor="let item of myShoppingCart">
     <div class="container-fluid">
         <div class="row d-flex align-items-center">
@@ -22,7 +22,6 @@
             <div class="col-3 col-lg 3 d-inline-block px-5 py-5 justify-content-center">
                 <span class="h3">{{ item.retailPrice | currency }}</span>
             </div>
-
             <!-- Brand -->
             <div class="col-8 col-md-5 col-lg-3 justify-content-center">
                 <span class="h3 col-12 d-flex">{{ item.title }}</span>
@@ -38,15 +37,14 @@
             </div>
         </div>
     </div>
-
 </div>
-<!-- Total Cart-->
+
+<!------ Total Cart ------->
 <div class="container-fluid">
     <div class="row">
         <span class="col-12 text-center"><b>Total: {{ total | currency }}</b></span>
     </div>
 </div>
-
 <hr>
 <!-- Buttons -->
 <div class="container">
@@ -74,7 +72,7 @@
     </div>
 </div>
 
-<!-- Modal Terminar Compra -->
+<!-------- Modal Terminar Compra -------->
 <div class="modal fade" id="modal-data-users" aria-hidden="true" aria-labelledby="modal-data-users" tabindex="-1"
     role="dialog">
     <!-- Contenedor del modal -->
@@ -124,8 +122,6 @@
                             placeholder="Add your adress" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
-
-
                 <!-- Footer -->
                 <div class="modal-footer">
                     <span class="col-12 text-center">Productos seleccionados<b> {{ myShoppingCart.length }}</b></span>
@@ -137,8 +133,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- Icons -->
     <ng-template #IconArrow>
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
