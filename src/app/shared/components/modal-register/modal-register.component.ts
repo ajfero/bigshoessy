@@ -6,6 +6,7 @@ import { mustMatch } from '../../validators';
 import { UserService } from '../../services/user/user.service';
 // Models
 import { SignupPost } from 'src/app/shared/models/login.model';
+import { AuthService } from '../../services/auth/auth.service';
 
 
 
@@ -26,13 +27,13 @@ export class ModalRegisterComponent {
     name: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
-    confirmPassword: ['', Validators.required]
+    confirmPassword: ['', Validators.required],
   });
 
   // Constructor of Service and tools
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private authService: AuthService
   ) {
     this.registerForm = this._buildForm() // init -> build_form
   }
@@ -44,10 +45,10 @@ export class ModalRegisterComponent {
       name: registerValue.name,
       email: registerValue.email,
       password: registerValue.password,
-      confirmPassword: registerValue.confirmPassword
+      confirmPassword: registerValue.confirmPassword,
     }
 
-    this.userService.registerUser(register)
+    this.authService.registerUser(register)
       .subscribe({
         next: (res: any) => {
           console.log(res, '¡¡Your user account has been successfully created!!');
@@ -88,8 +89,8 @@ Thanks a lot for register!!
   private _buildForm(): FormGroup {
 
     return this.fb.group({
-      name: ['Anthony', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
-      email: ['ing.ajfernandez@gmail.com', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] },],
+      name: ['userNormal', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
+      email: ['usuario@usuario.com', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] },],
       password: ['AguilarDesert-23', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
       confirmPassword: ['AguilarDesert-23', { nonNullable: true, validators: [Validators.compose([Validators.required, Validators.minLength(6)])] }],
     },

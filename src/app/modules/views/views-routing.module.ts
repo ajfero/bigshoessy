@@ -15,6 +15,7 @@ import { CartComponent } from 'src/app/shared/views/cart/cart.component';
 import { AuthGuard } from 'src/app/shared/guards/auth/auth.guard';
 
 
+
 // usar el slash no deja tener control sobre la root padre.
 // (Ésta ruta la hace relativa a la raiz del proyecto)
 // La barra te dice : no, ignora esta estructura de rutas.
@@ -53,10 +54,12 @@ const routes: Routes = [
       {
         path: 'profile', // http://localhost/profile
         component: MiProfileComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'cart', // http://localhost/cart
         component: CartComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: '**', // http://localhost/aeftwef

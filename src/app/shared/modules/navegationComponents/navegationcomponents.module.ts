@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // views
 import { NotFoundComponent } from '../../views/not-found/not-found.component';
 import { CartComponent } from '../../views/cart/cart.component';
@@ -16,8 +17,8 @@ import { RenderComponent } from '../../components/render/render.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 // loader
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
-// Import for Https Services
-import { HttpClientModule } from '@angular/common/http';
+import { TimeInterceptor } from '../../interceptor/timeRes/time.interceptor';
+import { TokenInterceptor } from '../../interceptor/token/token.interceptor';
 // PIPES
 import { TimeAgoPipe } from '../../pipes/timeAgo.pipe';
 import { FilterPipe } from '../../pipes/filter.pipe';
@@ -33,7 +34,8 @@ const moduls = [ReactiveFormsModule, CommonModule, RouterModule, HttpClientModul
   exports: [...views, components, pipes],
   imports: [...moduls],
   providers: [
-
+    { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ]
 })
 

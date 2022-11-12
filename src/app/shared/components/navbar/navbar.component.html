@@ -2,17 +2,14 @@
 <nav class="navbar navbar-expand-sm align-items-center bg-light sticky-top">
     <!-- //todo: resolver contenedor extra -->
     <div class=" container container-fluid container-lg d-lg-inline text-center justify-content-between ">
-
         <!-- Tools -->
         <div class="navHidden nav navbar-collapse mx-3 m-xl-0 justify-content-between ">
-
             <!-- isotipo-xs (logo tipo imagen)-->
             <div class="animacion_logo-xs">
                 <a class="d-inline d-sm-none mx-3" href="#">
                     <img class=" align-text-top" src="assets/img/bssy-logo.png" alt width="55" height="55">
                 </a>
             </div>
-
             <!-- logotipo-xs (logo tipo letra)-->
             <div class="animacion_bssy-xs">
                 <a class="d-inline d-sm-none " type="button" aria-expanded="false">
@@ -22,7 +19,7 @@
             <!--Shopping Cart-->
             <div class="d-flex align-items-center">
                 <div class="d-sm-none">
-                    <button class="btn btn-secondary" [routerLink]="['cart']">
+                    <button class="btn btn-secondary cart" [routerLink]="['cart']">
                         <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
                         <span class="counter">{{ myShoppingCart.length }}</span>
                     </button>
@@ -31,48 +28,64 @@
                 <div class="dropdown dropstart d-sm-none animacion_hamburguesa-xs ">
                     <div class="text-center text-sm-center d-sm-none">
                         <!-- Icon -->
-                        <div class=" d-xs-inline " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        <div class=" d-xs-inline px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="btn btn-light bi bi-text-paragraph align-text-top px-0 "
                                 style="font-size: 2.5rem;"></i>
                         </div>
                         <!-- Body -->
                         <ul class=" dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
-                            <li class="dropdown-header bg-light"> <b> AUTH </b> </li>
+                            <li class="dropdown-header bg-light">
+                                <b *ngIf="token">PROFILE</b> <b *ngIf="!token">AUTH</b>
+                            </li>
                             <!-- signIn-sm -->
-                            <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button"
-                                *ngFor="let traer of modal">
-                                <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
-                                        In</a>
+                            <div *ngIf="!token">
+                                <div class="container-fluid">
+                                    <div data-bs-target=" #modal-login" data-bs-toggle="modal" type="button"
+                                        *ngFor="let traer of modal">
+                                        <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
+                                                In</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- singUp-sm -->
-                            <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button"
-                                *ngFor="let traer of modal">
-                                <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]">Sing
-                                        Up</a>
+                            <div class="container-fluid" *ngIf="!token; else changeProfile">
+                                <div data-bs-target=" #modal-signup" data-bs-toggle="modal" type="button"
+                                    *ngFor="let traer of modal">
+                                    <div class=" nav-link "><a aria-current="page" [routerLink]="[traer.url]"
+                                            *ngIf="!token">Sing
+                                            Up</a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Logged -->
+                            <ng-template #changeProfile class="d-flex">
+                                <div>
+                                    <a [routerLink]="['profile']"
+                                        class="btn btn-secondary text-xs-center text-sm-center text-md-center"
+                                        style="font-size: 12px;">{{token.email}}
+                                    </a>
+                                </div>
+                            </ng-template>
                             <!-- menu -->
                             <li class="dropdown-header bg-light"> <b> MENU </b> </li>
                             <div class=" nav-item  " *ngFor="let option of menuOptions">
                                 <li class="dropdown-item"><a class="dropdown-item" [routerLink]="[option.url]">{{
                                         option.label }}</a></li>
                             </div>
+                            <li class="dropdown-header bg-light" *ngIf="token" href="['Home']" (click)="Singout()">
+                                <b>Sing out</b>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
         <!-- navPages -->
         <div class="navPages row d-lg-flex justify-content-center">
             <div class=" text-center d-none d-sm-inline-block ">
                 <div class=" navbar navbar-nav">
-
                     <!-- logo-lg -->
                     <div class=" container-expand text-center d-none d-sm-inline-block animacion_logo-lg">
                         <div class=" d-none d-sm-inline align-items-sm-start ">
@@ -83,18 +96,23 @@
                             </a>
                         </div>
                     </div>
-
-
-                    <!--1. signIn/singUp-md -->
+                    <!--1. signIn/singUp-sm -->
                     <div class=" d-lg-none d-inline mx-4 animacion_user-lg" data-bs-target="#modal-login"
                         data-bs-toggle="modal" type="button">
-                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
+                        <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;"
+                            *ngIf="!token; else elseBlockSM">
                             <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
-
                         </a>
+                        <!-- User logged switch it -->
+                        <ng-template #elseBlockSM class="d-flex else_Block-SM">
+                            <a [routerLink]="['profile']"
+                                class="block_SM btn btn-secondary text-xs-center text-sm-center text-md-center">{{token.email}}
+                            </a>
+                            <a href="['Home']" (click)="Singout()" class="block_SM-two btn btn-info text-center d-flex">
+                                Sing Out
+                            </a>
+                        </ng-template>
                     </div>
-
-
                     <!-- menu -->
                     <div class=" container col-lg-6 text-center d-none d-sm-inline-block d-lg-inline-block ">
                         <div class="contendorMenu navbar navbar-nav mx mx-5 px-xl-5 ">
@@ -103,39 +121,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-none d-sm-flex col-12 container_cart-md justify-content-between d-lg-none ">
-                        <button class="btn btn-secondary cart_button-md" [routerLink]="['cart']">
+                    <div class="d-none d-sm-flex col-12 container_cart-md justify-content-between d-lg-none">
+                        <button class="btn btn-secondary cart_button-md cart" [routerLink]="['cart']">
                             <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
                             <span class="counter">{{myShoppingCart.length}}</span>
                         </button>
                     </div>
-
                     <!--2. signIn/singUp-md -->
                     <div class="d-flex align-items-center">
                         <div class=" d-none d-lg-inline d-xl-none" data-bs-target="#modal-login" data-bs-toggle="modal"
                             type="button">
-                            <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;">
-                                <ng-template [ngTemplateOutlet]="iconUser"></ng-template>
+                            <a class=" text-xs-center text-sm-center text-md-center" style="font-size: 2.5rem;"
+                                *ngIf="!token; else elseBlockMD">
+                                <ng-template [ngTemplateOutlet]="iconUser">
+                                </ng-template>
                             </a>
                         </div>
+                        <!-- User logged switch it -->
+                        <ng-template #elseBlockMD class="d-flex else_Block-MD ">
+                            <a href="['Home']" (click)="Singout()" class="block_MD-two btn btn-info text-center d-flex">
+                                Sing Out
+                            </a>
+                            <a [routerLink]="['profile']"
+                                class="block_MD btn btn-secondary text-xs-center text-sm-center text-md-center">{{token.email}}
+                            </a>
+                        </ng-template>
                         <!--Shopping Cart-->
-                        <div class="d-none d-lg-inline-block pt-2 px-3">
-                            <button class="btn btn-secondary" [routerLink]="['cart']">
+                        <div class="d-none d-lg-inline-block pt-2 px-3 ">
+                            <button class="btn btn-secondary cart py-2" [routerLink]="['cart']">
                                 <ng-template [ngTemplateOutlet]="iconCart"></ng-template>
                                 <span class="counter" id="contenido">{{myShoppingCart.length}}</span>
                             </button>
                         </div>
                     </div>
                     <!--3. Login/Register -->
-                    <div class=" container text-center col-lg-2 text-center d-none d-xl-inline mi-n1">
+                    <div class=" container text-center col-lg-2 text-center d-none d-xl-inline mi-n1 ">
                         <div class=" navbar navbar-nav ">
-
                             <!-- signIn -->
-                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button" *ngIf="!token">
+                            <div data-bs-target="#modal-login" data-bs-toggle="modal" type="button"
+                                *ngIf="!token; else elseBlock">
                                 <div class=" nav-link "><a aria-current="page">Sing In</a></div>
                             </div>
-
-                            <!-- /singUp -->
+                            <!-- User logged switch it -->
+                            <ng-template #elseBlock
+                                class="container-fluid d-flex align-items-center justify-content-center">
+                                <div class="row text-center mx-1">
+                                    <a href="['Home']" (click)="Singout()"
+                                        class="block_LG btn btn-info text-center d-flex">
+                                        Sing Out
+                                    </a>
+                                    <a [routerLink]="['profile']"
+                                        class="block_LG-two btn btn-secondary text-dark d-flex shadow">{{token.email}}</a>
+                                </div>
+                            </ng-template>
+                            <!-- singUp -->
                             <div data-bs-target="#modal-signup" data-bs-toggle="modal" type="button" *ngIf="!token">
                                 <div class=" nav-link "><a aria-current="page">Sing Up</a></div>
                             </div>
@@ -145,25 +184,24 @@
             </div>
         </div>
     </div>
-
-
 </nav>
 
 
 <!-- component modal-login -->
-<div class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
+<div *ngIf="!token" class="modal fade " id="modal-login" aria-hidden="true" aria-labelledby="modal-login" tabindex="-1">
     <!-- Componente login -->
     <app-modal-login></app-modal-login>
 </div>
 
 <!-- component modal-signup-->
-<div class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true"
+<div *ngIf="!token" class="modal fade bd-example-modal-lg" id="modal-signup" role="dialog" aria-hidden="true"
     aria-labelledby="modal-signup" tabindex="-1">
     <app-modal-register></app-modal-register>
 </div>
 
 <!-- component modal-recover -->
-<div class="modal fade " id="modal-recover" aria-hidden="true" aria-labelledby="modal-recover" tabindex="-1">
+<div *ngIf="!token" class="modal fade " id="modal-recover" aria-hidden="true" aria-labelledby="modal-recover"
+    tabindex="-1">
     <!-- Componente recover -->
     <app-modal-recover></app-modal-recover>
 </div>

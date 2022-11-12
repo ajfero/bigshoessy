@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ViewsRoutingModule } from './views-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // Modules
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
@@ -28,7 +28,9 @@ import { MiProfileComponent } from './views/mi-profile/mi-profile.component';
 // Box container for views, introducing views pages.
 import { WrapperComponent } from './views/wrapper/wrapper.component';
 import { AboutComponent } from './views/about/about.component';
-
+// Interceptors
+import { TimeInterceptor } from 'src/app/shared/interceptor/timeRes/time.interceptor';
+import { TokenInterceptor } from 'src/app/shared/interceptor/token/token.interceptor';
 
 const modules = [
   CommonModule,
@@ -55,5 +57,9 @@ const views = [HomeComponent, ProductsComponent, OffersComponent, ContactCompone
   imports: [...modules],
   declarations: [...views, ...components,],
   exports: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ]
 })
 export class ViewsModule { }

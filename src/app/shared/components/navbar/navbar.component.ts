@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 //Service
 import { CartService } from '../../services/cart/cart.service';
-import { AuthService } from 'src/app/shared/services/auth/auth.service';
 //Components
+import { SigninPost } from '../../models/login.model';
 import { Product } from 'src/app/modules/views/models/card.model';
-//Models
-import { SigninPost } from 'src/app/shared/models/login.model';
-
+import { TokenService } from '../../services/token/token.service';
+import jwt_decode from 'jwt-decode';
+import { AuthService } from '../../services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 
 
 @Component({
@@ -17,14 +18,26 @@ import { SigninPost } from 'src/app/shared/models/login.model';
 
 export class NavbarComponent implements OnInit {
 
+
+  getUser: any;
+  // Model
   myShoppingCart: Product[] = [];
 
+  // Vars
+  singOut: any;
+  // Token var.
+  token: any;
+
+  // Roots private`s. //
   pathCart = {
     label: '',
     url: 'cart',
   }
-
-
+  pathProfile = {
+    label: 'Profile',
+    url: 'profile',
+  }
+  // Ruts global`s //
   menuOptions = [
     {
       label: 'Home',
@@ -42,55 +55,33 @@ export class NavbarComponent implements OnInit {
       label: 'Contact',
       url: 'contact',
     },
-    // Muestro de ruta Profile
-    {
-      label: 'Profile',
-      url: 'profile',
-    },
 
   ];
-
+  // Log in and Log Out modal.
   modal = [
     {
       label: 'modal',
       url: '/src/app/modules/auth/components/login/login.component.html',
     }
   ];
-
-  token = '';
-
-
   constructor(
-    private cartService: CartService,
-    private authService: AuthService
-  ) {
-
-  }
-
-  // dataUser with loginForm data.
-  dataLogin(loggerValue: any) {
-
-    const logger: SigninPost = {
-      email: loggerValue.email,
-      password: loggerValue.password
-    }
-    this.authService.login(loggerValue.email, loggerValue.password)
-      .subscribe({
-        next: (res) => {
-          this.token = res.token;
-        },
-        error: () => { }
-      });
-  }
-  Profile() {
-    this.authService.getProfile(this.token)
-      .subscribe(profile => {
-        console.log(profile);
-      })
-  }
+    private cartService: CartService, private tokenService: TokenService, private authService: AuthService, private userService: UserService) { }
+  // Services.
   ngOnInit(): void {
     this.myShoppingCart = this.cartService.getShoppingCart();
-
-
+    this.token = this.tokenService.getToken();
+    // Decode Token.
+    if (this.token) {
+      this.token = jwt_decode(this.token)
+    } else {
+    }
+  }
+  // Log out.
+  async Singout() {
+    try {
+      return this.authService.logOut()
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
