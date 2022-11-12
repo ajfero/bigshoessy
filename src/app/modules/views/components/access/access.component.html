@@ -1,0 +1,32 @@
+<!-- Contact detail -->
+<form class="row g-3" >
+    <form class="row g-3" [formGroup]="accessDataForm">
+
+    <!-- Email -->
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+    </div>
+
+    <!-- Old password -->
+    <div class="col-md-6">
+        <label for="exampleInputPassword1" class="form-label">Old password *</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="oldPassword">
+    </div>
+    <!-- New password -->
+    <div class="col-md-6">
+        <label for="exampleInputPassword2" class="form-label">New password *</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" formControlName="newPassword">
+    </div>
+    <!-- Confirm password -->
+    <div class="col-md-6">
+        <label for="exampleInputPassword2" class="form-label">Confirm Password *</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" formControlName="confirmPassword">
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-warning" > Changed </button>
+        <!-- <button type="submit" class="btn btn-warning" (click)="onSubmit()"> Changed </button> -->
+    </div>
+
+</form>

@@ -2,15 +2,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+<<<<<<< Updated upstream
+=======
+import { mustMatch } from 'src/app/shared/validators';
+
+>>>>>>> Stashed changes
 // Service
 import { UserService } from 'src/app/shared/services/user/user.service';
+
 // Model
 import { ProfileInformation } from '../../../../shared/models/profile';
 import { TokenService } from 'src/app/shared/services/token/token.service';
 // Decode
 import jwt_decode from 'jwt-decode';
 import { InformationUser } from 'src/app/shared/models/user';
+<<<<<<< Updated upstream
 import { id } from 'date-fns/locale';
+=======
+import { Profile } from '../../models/profile';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-profile-contact',
@@ -19,6 +29,7 @@ import { id } from 'date-fns/locale';
 })
 export class ProfileContactComponent implements OnInit {
 
+<<<<<<< Updated upstream
   // Decode //
   token: any;
 
@@ -31,6 +42,13 @@ export class ProfileContactComponent implements OnInit {
 
   // Form model //
   profileModel: InformationUser = {
+=======
+  // Data saved form
+  profiles: Profile[] = [];
+
+  // Form model
+  profileModel: Profile = {
+>>>>>>> Stashed changes
     id: '',
     profile: {
       id: '',
@@ -43,7 +61,12 @@ export class ProfileContactComponent implements OnInit {
       imageUrl: '',
     }
   };
+<<<<<<< Updated upstream
   // Form //
+=======
+
+  // Form
+>>>>>>> Stashed changes
   profileForm = this.fb.group({
     id: '',
     userId: ['', Validators.required],
@@ -54,7 +77,12 @@ export class ProfileContactComponent implements OnInit {
     phone: [''],
     ImageUrl: ['']
   });
+<<<<<<< Updated upstream
   // Type status //
+=======
+
+  // Type status
+>>>>>>> Stashed changes
   statusDetail: 'loading' | 'sucess' | 'error' | 'init' = 'init';
 
   constructor(
@@ -73,6 +101,7 @@ export class ProfileContactComponent implements OnInit {
     }
   }
 
+<<<<<<< Updated upstream
 
 
   // onShowProfile(id: string) {
@@ -102,6 +131,54 @@ export class ProfileContactComponent implements OnInit {
 
 
   // Validators form //
+=======
+  // Value form === true : Value form !== false
+  // patchProfile(profileValue: any) {
+
+  //   const profile: ProfileInformation = {
+  //     id: profileValue.id,
+  //     userId: profileValue.userId,
+  //     name: profileValue.email,
+  //     lastName: profileValue.lastName,
+  //     email: profileValue.email,
+  //     socialRed: profileValue.socialRed,
+  //     phone: profileValue.phone,
+  //     imageUrl: profileValue.imageUrl
+  //   }
+  //   this.userService.updateProfile(profile)
+  //     .subscribe({
+  //       next: (res: any) => {
+  //         console.log(res, '¡¡Update profile!!');
+  //         this.profiles.unshift(profile);
+  //         const id = this.profileForm.value.id;
+  //         const userId = this.profileForm.value.userId;
+  //         const name = this.profileForm.value.name;
+  //         const lastName = this.profileForm.value.lastName;
+  //         const email = this.profileForm.value.email;
+  //         const socialRed = this.profileForm.value.socialRed;
+  //         const phone = this.profileForm.value.phone;
+  //         const image = this.profileForm.value.ImageUrl;
+  //         alert('Profile Update, thanks.')
+  //       },
+  //       error: () => { }
+  //     })
+  // }
+
+  // Function for send form
+  // onSubmit() {
+  //   if (this.profileForm.valid) {
+
+  //     this.patchProfile(this.profileForm.value)
+  //     console.log('Good !! You deserve it for your effort ')
+
+  //   } else {
+  //     alert('Sorry!! An error occurred while updating the changes')
+  //     console.warn(this.profileForm.value);
+  //   }
+  // }
+
+  // Validators form
+>>>>>>> Stashed changes
   private _buildForm(): FormGroup {
     return this.fb.group({
       id: ['', Validators.required],
@@ -114,6 +191,7 @@ export class ProfileContactComponent implements OnInit {
       imageUrl: ['']
     })
   }
+<<<<<<< Updated upstream
   // Value form ? true : false //
   async patchProfile(profileValue: any) {
     try {
@@ -155,4 +233,6 @@ export class ProfileContactComponent implements OnInit {
       console.warn(this.profileForm.value);
     }
   }
+=======
+>>>>>>> Stashed changes
 }
