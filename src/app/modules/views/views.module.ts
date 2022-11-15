@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // Modules
 import { NavegationComponentsModule } from 'src/app/shared/modules/navegationComponents/navegationcomponents.module';
-import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 // Components
 import { BannerOneComponent } from './components/banner-one/banner-one.component';
 import { BannerTwoComponent } from './components/banner-two/banner-two.component';
@@ -36,7 +35,6 @@ const modules = [
   CommonModule,
   ViewsRoutingModule,
   NavegationComponentsModule,
-  AngularFullpageModule,
   HttpClientModule,
   FormsModule,
   ReactiveFormsModule

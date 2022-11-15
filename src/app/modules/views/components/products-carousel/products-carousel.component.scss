@@ -1,8 +1,8 @@
 /* Carousel Products */
 
 // variables
-$contenedorHeigth: 400px;
-
+$contenedorHeigth: 400;
+$contenedorHeigthDiv: calc($contenedorHeigth / 2);
 
 // Contenedor de buttons de carousel
 .contenedor_carousel-products {
@@ -44,7 +44,7 @@ $contenedorHeigth: 400px;
 ///////////////////////////////
 .imgCarrousel {
     padding-top: 50px;
-    height: ($contenedorHeigth/2) - 20;
+    height: $contenedorHeigthDiv - 20;
 }
 
 .carousel_products-elements {
@@ -76,7 +76,7 @@ $contenedorHeigth: 400px;
     }
 
     .imgCarrousel {
-        height: $contenedorHeigth / 2;
+        height: $contenedorHeigthDiv;
     }
 
     .products_element-text {
@@ -95,7 +95,7 @@ $contenedorHeigth: 400px;
     }
 
     .imgCarrousel {
-        height: $contenedorHeigth / 2;
+        height: $contenedorHeigthDiv;
         margin-top: 0;
     }
 

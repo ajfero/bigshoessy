@@ -20,7 +20,6 @@
         "@angular/platform-browser": "^14.2.0",
         "@angular/platform-browser-dynamic": "^14.2.0",
         "@angular/router": "^14.2.0",
-        "@fullpage/angular-fullpage": "^0.0.16",
         "@ng-bootstrap/ng-bootstrap": "^13.0.0",
         "@popperjs/core": "^2.11.6",
         "animate.css": "^4.1.1",

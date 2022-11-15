@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // Moduls
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { SwiperModule } from 'swiper/angular';
 import { NavegationComponentsModule } from './shared/modules';
 // Interceptors
@@ -17,7 +16,7 @@ import { TimeInterceptor } from './shared/interceptor/timeRes/time.interceptor';
 import { TokenInterceptor } from './shared/interceptor/token/token.interceptor';
 
 // Const
-const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, AngularFullpageModule, NavegationComponentsModule];
+const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, NavegationComponentsModule];
 const components = [AppComponent];
 
 @NgModule({

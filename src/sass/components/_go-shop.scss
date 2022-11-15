@@ -1,7 +1,8 @@
 /* Cards Go-Shop */
 
 //Vars
-$globalPadding: 50px;
+$globalPadding: 50;
+$globalPaddingDiv:calc($globalPadding / 2);
 
 //Class
 .contenedor_goShop-home {
@@ -14,7 +15,7 @@ $globalPadding: 50px;
     display: block; //Posicion en bloque
     position: relative; //Que se posicione relativamente
     padding-top: $globalPadding;
-    padding-bottom: ($globalPadding / 2) - 10;
+    padding-bottom: $globalPaddingDiv - 10;
     text-decoration: none; //Le sacamos los estilos por defecto.
     text-transform: uppercase; //Que se ponga en mayúsculas
     text-align: center; //lo alineamos al centro
