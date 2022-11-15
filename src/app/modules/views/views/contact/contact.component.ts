@@ -75,25 +75,3 @@ We will be in contact with you!! at email: ${email}
 		})
 	}
 }
-
-//// Suplabtar por el modelo arriba.
-// Harcode object message
-// createNewMessage() {
-//   const message: CreateMessageDTO = {
-//     name: "Tomas",
-//     email: "Tomas@user.com",
-//     subject: "Titulo del mensaje enviado por Tomas",
-//     message: "Mensaje enviado por Tomas, desde la vista contactos; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"
-//   }
-
-//   this.messageService.postMessage(message)
-//     .subscribe(message => {
-//       this.messages.unshift(message);
-//     });
-//   // this.contactForm.value.name
-
-
-// alert(`
-// Thanks a lot for contact-us!! 	name: ${name}
-// We will be in contact with you!! at email: ${email}
-// 			`)

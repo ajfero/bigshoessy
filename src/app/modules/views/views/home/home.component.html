@@ -11,9 +11,10 @@
     </section>
     <!--Card-products / Go shop-->
     <section class="container-fluid" role="redirecTo-products" [routerLink]="['/offers']">
-        <div class="row justify-content-around mx-lg-0 mb-4">
-            <app-card class="col-sm-6 col-lg-5 col-xl-4 btn btn-light" (addedProduct)="onAddToShoppingCart($event)"
-                [myProduct]='product' *ngFor="let product of randomProducts" style="cursor:pointer; 
+        <div class="row justify-content-around mx-lg-0 mt-5 pt-4 mt-md-0 mt-lg-4 pt-md-0 mb-md-4 mb-lg-0">
+            <app-card class="col-5 my-3 col-sm-5 col-lg-5 col-xl-4 btn btn-light "
+                (addedProduct)="onAddToShoppingCart($event)" [myProduct]='product'
+                *ngFor="let product of randomProducts" style="cursor:pointer; 
                 ">
             </app-card>
         </div>
@@ -29,16 +30,18 @@
         <app-products-carousel> </app-products-carousel>
     </section>
     <!-- 3st banner  -->
-    <section class="container-fluid d-flex justify-content-center wx-100 mh-100 h-75" data-aos="zoom-in-left "
-        role="main ">
+    <section class="container-fluid d-flex justify-content-center wx-100 mh-100 h-75 mb-xl-5 py-xl-5"
+        data-aos="zoom-in-left " role="main ">
         <app-banner-three> </app-banner-three>
     </section>
     <!--Banner de sponsor-->
     <section class="container-fluid py-5">
-        <div class="py-5 mt-5">
-            <app-sponsors-carousel></app-sponsors-carousel>
+        <div class="col">
+            <div class="mb-5">
+                <app-sponsors-carousel></app-sponsors-carousel>
+            </div>
             <div class="container col-lg-6 text-center">
-                <h3 class="d-flex text-secondary align-content-center justify-content-center">
+                <h3 class="d-flex text-secondary align-content-center justify-content-center mb-5">
                     <b><i class="bi bi-shop"> Big Shoes is for YOU</i></b>
                 </h3>
             </div>
