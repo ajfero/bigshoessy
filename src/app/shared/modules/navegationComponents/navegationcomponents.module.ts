@@ -16,7 +16,6 @@ import { ModalRecoverComponent } from '../../components/modal-recover/modal-reco
 import { RenderComponent } from '../../components/render/render.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 // loader
-import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { TimeInterceptor } from '../../interceptor/timeRes/time.interceptor';
 import { TokenInterceptor } from '../../interceptor/token/token.interceptor';
 // PIPES
@@ -25,7 +24,7 @@ import { FilterPipe } from '../../pipes/filter.pipe';
 
 // Components and moduls.
 const pipes = [FilterPipe, TimeAgoPipe]
-const components = [CartComponent, SidebarComponent, RenderComponent, SpinnerComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
+const components = [CartComponent, SidebarComponent, RenderComponent, FooterComponent, NavbarComponent, TopNavbarComponent, ModalLoginComponent, ModalRegisterComponent, ModalRecoverComponent];
 const views = [NotFoundComponent];
 const moduls = [ReactiveFormsModule, CommonModule, RouterModule, HttpClientModule]
 

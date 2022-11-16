@@ -8,15 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // Moduls
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SwiperModule } from 'swiper/angular';
 import { NavegationComponentsModule } from './shared/modules';
 // Interceptors
-import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
-import { TimeInterceptor } from './shared/interceptor/timeRes/time.interceptor';
 import { TokenInterceptor } from './shared/interceptor/token/token.interceptor';
 
 // Const
-const modules = [SwiperModule, FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, NavegationComponentsModule];
+const modules = [FormsModule, HttpClientModule, NgbModule, BrowserModule, AppRoutingModule, NavegationComponentsModule];
 const components = [AppComponent];
 
 @NgModule({
@@ -24,8 +21,6 @@ const components = [AppComponent];
   declarations: [...components],
   imports: [...modules],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]

@@ -7,10 +7,6 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { UserService } from '../../services/user/user.service';
 // Models
 import { SigninPost } from 'src/app/shared/models/login.model';
-// Decode
-import jwt_decode from 'jwt-decode';
-import { id } from 'date-fns/locale';
-import { SpinnerService } from '../../services/spinner/spinner.service';
 
 
 @Component({
@@ -31,7 +27,6 @@ export class ModalLoginComponent {
     private authService: AuthService,
     private userService: UserService,
     private route: Router,
-    private spinner: SpinnerService
   ) {
     this.loginForm = this._buildForm()
     this.user = this.userService.getUser();
@@ -58,7 +53,6 @@ export class ModalLoginComponent {
       this.dataLogin(this.loginForm.value)
       console.log('Logged in process')
       this.route.navigate(['/products'])
-      this.spinner;
       this.loginForm.reset();
     } else {
       console.log('Logged failed, please type data try again')
