@@ -75,7 +75,7 @@
                                         option.label }}</a></li>
                             </div>
                             <li class="dropdown-header bg-light" *ngIf="token" href="['Home']" (click)="Singout()">
-                                <b>Sing out</b>
+                                <b>Log Out</b>
                             </li>
                         </ul>
                     </div>
@@ -109,7 +109,7 @@
                                 class="block_SM btn btn-secondary text-xs-center text-sm-center text-md-center">{{token.email}}
                             </a>
                             <a href="['Home']" (click)="Singout()" class="block_SM-two btn btn-info text-center d-flex">
-                                Sing Out
+                                Log Out
                             </a>
                         </ng-template>
                     </div>
@@ -140,7 +140,7 @@
                         <!-- User logged switch it -->
                         <ng-template #elseBlockMD class="d-flex else_Block-MD ">
                             <a href="['Home']" (click)="Singout()" class="block_MD-two btn btn-info text-center d-flex">
-                                Sing Out
+                                Log Out
                             </a>
                             <a [routerLink]="['profile']"
                                 class="block_MD btn btn-secondary text-xs-center text-sm-center text-md-center">{{token.email}}
@@ -168,7 +168,7 @@
                                 <div class="row text-center mx-1">
                                     <a href="['Home']" (click)="Singout()"
                                         class="block_LG btn btn-info text-center d-flex">
-                                        Sing Out
+                                        Log Out
                                     </a>
                                     <a [routerLink]="['profile']"
                                         class="block_LG-two btn btn-secondary text-dark d-flex shadow">{{token.email}}</a>

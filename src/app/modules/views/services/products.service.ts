@@ -24,7 +24,7 @@ export class ProductsService {
 
   // Vars
   private apiUrl = 'https://example-data.draftbit.com/sneakers?id=';
-  private apiUrlList = 'https://example-data.draftbit.com/sneakers?_limit=50';
+  private apiUrlList = 'https://example-data.draftbit.com/sneakers?_limit=100';
 
   constructor(private http: HttpClient) { }
   //Get list of products service.
